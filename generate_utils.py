@@ -17,9 +17,7 @@ def GetLength(df, num):
     idx = random.choices(range(len(df)), k=num)
     df = df.loc[df.index[idx]][["InputLen", "InferenceLatency"]]
     df = df.reset_index()
-    infer_latency = df["InferenceLatency"].tolist()
-    infer_latency = np.sort(infer_latency)
-    latencyP99 = infer_latency[int(num*99/100)]
+    latencyP99 = df[["InferenceLatency"]].quantile(0.99)["InferenceLatency"]
     df["InferenceLatencyP99"] = latencyP99
     return df
 
