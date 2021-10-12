@@ -27,26 +27,36 @@ translation_task = {"dataset": translation_dataset, "model": translation_model}
 task_content = {"chatbot": chatbot_task, "summarization": summarization_task, "translation": translation_task}
 
 
+def remove_outliers(df):
+    columns = df.columns
+    for column in columns:
+        q1 = df[[column]].quantile(0.25)[column]
+        q3 = df[[column]].quantile(0.75)[column]
+        iqr = q3 - q1
+        df = df.drop(df[(df[column]>(q3+(6*iqr))) | (df[column]<(q1-(6*iqr)))].index)
+    return df
+
+
 def plot(df, figsize=(16,5)):
     fig = plt.figure(figsize=figsize, dpi=300)
     axs = fig.subplot_mosaic('''ABC
                                 ABC
                              ''')
 
-    # InputLength vs RequestLength scatter
-    axs['A'].scatter(df.InputLength, df.RequestLength)
-    axs['A'].set_xlabel("InputLength")
-    axs['A'].set_ylabel("RequestLength (ms)")
+    # InputLen vs InferenceLatency scatter
+    axs['A'].scatter(df.InputLen, df.InferenceLatency)
+    axs['A'].set_xlabel("InputLen")
+    axs['A'].set_ylabel("InferenceLatency (ms)")
 
-    # OutputLength vs RequestLength scatter
-    axs['B'].scatter(df.OutputLength, df.RequestLength)
-    axs['B'].set_xlabel("OutputLength")
-    axs['B'].set_ylabel("RequestLength (ms)")
+    # OutputLen vs InferenceLatency scatter
+    axs['B'].scatter(df.OutputLen, df.InferenceLatency)
+    axs['B'].set_xlabel("OutputLen")
+    axs['B'].set_ylabel("InferenceLatency (ms)")
 
-    # InputLength vs OutputLength scatter
-    axs['C'].scatter(df.InputLength, df.OutputLength)
-    axs['C'].set_xlabel("InputLength")
-    axs['C'].set_ylabel("OutputLength")
+    # InputLen vs OutputLen scatter
+    axs['C'].scatter(df.InputLen, df.OutputLen)
+    axs['C'].set_xlabel("InputLen")
+    axs['C'].set_ylabel("OutputLen")
 
     return fig
 
@@ -76,7 +86,7 @@ if __name__ == '__main__':
                 print("INFO: Begin running model " + model_name + " and dataset " + dataset_name)
                 dataset= dataset_func()
                 # get the outputfile name
-                output_filename = "{}_{}_{}.csv".format(task_name, model_name, dataset_name)
+                output_filename = "{}_{}_{}_original.csv".format(task_name, model_name, dataset_name)
                 output_path = os.path.join(output_dir, output_filename)
                 with open(output_path, 'w+') as f:
                     def printer(*args, **kwargs):
@@ -84,7 +94,18 @@ if __name__ == '__main__':
                         f.flush()
                     args.print = printer
                     model_func(dataset, args)
+                # save the original df
                 df = pd.read_csv(output_path)
+                fig = plot(df)
+                plt.tight_layout()
+                fig.savefig(output_path[:-4] + ".png")
+                plt.cla()
+                plt.close("all")
+                # save the df without outliers
+                output_filename = "{}_{}_{}.csv".format(task_name, model_name, dataset_name)
+                output_path = os.path.join(output_dir, output_filename)
+                df = remove_outliers(df)
+                df.to_csv(output_path)
                 fig = plot(df)
                 plt.tight_layout()
                 fig.savefig(output_path[:-4] + ".png")

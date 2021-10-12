@@ -65,9 +65,9 @@ def plot(trace_df, job_df, figsize=(12, 12)):
     ax.set_ylabel('CDF')
     ax.set_xlabel('InferenceLatency (ms)')
 
-    # InputLength vs InferenceLatency scatter
+    # InputLen vs InferenceLatency scatter
     axs['D'].scatter(job_df.InputLen, job_df.InferenceLatency)
-    axs['D'].set_xlabel("InputLength")
+    axs['D'].set_xlabel("InputLen")
     axs['D'].set_ylabel("InferenceLatency (ms)")
 
     # job timeline
@@ -208,7 +208,7 @@ def generate_azure_job(args):
         # rate_df.to_csv(rate_path + get_day_name(day) +".csv", index=False)
         return trace_df
 
-    get_azure_dataset()
+    # get_azure_dataset()
 
     log_dir = os.path.join(args.output, "azure")
     if not os.path.exists(log_dir):
