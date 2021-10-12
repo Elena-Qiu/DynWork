@@ -7,7 +7,7 @@ def chatbot_blenderbot_model(dataset, args):
     tokenizer = BlenderbotSmallTokenizer.from_pretrained('facebook/blenderbot_small-90M')
     model =  BlenderbotSmallForConditionalGeneration.from_pretrained('facebook/blenderbot_small-90M')
     dataset = random.sample(dataset, args.num)
-    args.print('InputLength,RequestLength,OutputLength')
+    args.print('InputLen,InferenceLatency,OutputLen')
     for data in dataset:
         # print("Users: ", data)
         input_ids = tokenizer.encode(data + tokenizer.eos_token, return_tensors='pt')
@@ -26,7 +26,7 @@ def chatbot_gpt_model(dataset, args):
     tokenizer = AutoTokenizer.from_pretrained("microsoft/DialoGPT-small")
     model = AutoModelForCausalLM.from_pretrained("microsoft/DialoGPT-small")
     dataset = random.sample(dataset, args.num)
-    args.print('InputLength,RequestLength,OutputLength')
+    args.print('InputLen,InferenceLatency,OutputLen')
     for data in dataset:
         # print("Users: ", data)
         input_ids = tokenizer.encode(data + tokenizer.eos_token, return_tensors='pt')
@@ -46,7 +46,7 @@ def summarize_bart_model(dataset, args):
     model = BartForConditionalGeneration.from_pretrained('facebook/bart-large-cnn')
     tokenizer = BartTokenizer.from_pretrained('facebook/bart-large-cnn')
     random.shuffle(dataset)
-    args.print('InputLength,RequestLength,OutputLength')
+    args.print('InputLen,InferenceLatency,OutputLen')
     count = 0
     for data in dataset:
         if count >= args.num:
@@ -69,7 +69,7 @@ def summarize_t5_model(dataset, args):
     model = AutoModelForSeq2SeqLM.from_pretrained("t5-base")
     tokenizer = AutoTokenizer.from_pretrained("t5-base")
     random.shuffle(dataset)
-    args.print('InputLength,RequestLength,OutputLength')
+    args.print('InputLen,InferenceLatency,OutputLen')
     count = 0
     for data in dataset:
         if count >= args.num:
@@ -92,7 +92,7 @@ def translate_mbart_model(dataset, args):
     model = MBartForConditionalGeneration.from_pretrained("facebook/mbart-large-50-many-to-many-mmt")
     tokenizer = MBart50TokenizerFast.from_pretrained("facebook/mbart-large-50-many-to-many-mmt")
     dataset = random.sample(dataset, args.num)
-    args.print('InputLength,RequestLength,OutputLength')
+    args.print('InputLen,InferenceLatency,OutputLen')
     for data in dataset:
         tokenizer.src_lang = "en_XX"
         inputs = tokenizer(data, return_tensors="pt")
@@ -112,7 +112,7 @@ def translate_fsmt_model(dataset, args):
     tokenizer = FSMTTokenizer.from_pretrained("facebook/wmt19-en-de")
     model = FSMTForConditionalGeneration.from_pretrained("facebook/wmt19-en-de")
     dataset = random.sample(dataset, args.num)
-    args.print('InputLength,RequestLength,OutputLength')
+    args.print('InputLen,InferenceLatency,OutputLen')
     for data in dataset:
         tokenizer.src_lang = "en_XX"
         input_ids = tokenizer.encode(data, return_tensors="pt")
