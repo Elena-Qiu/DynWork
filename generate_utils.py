@@ -14,7 +14,10 @@ task_content = {"chatbot": chatbot_task, "summarization": summarization_task, "t
 
 
 def GetLength(df, num):
-    idx = random.choices(range(len(df)), k=num)
+    if num <= len(df):
+        idx = random.sample(range(len(df)), k=num)
+    else:
+        idx = random.choices(range(len(df)), k=num)
     df = df.loc[df.index[idx]][["InputLen", "InferenceLatency"]]
     df = df.reset_index()
     latencyP99 = df[["InferenceLatency"]].quantile(0.99)["InferenceLatency"]
