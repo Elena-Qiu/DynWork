@@ -18,11 +18,3 @@ if __name__ == '__main__':
         generate_utils.generate_worldcup_job(args)
     else:
         generate_utils.generate_azure_job(args)
-
-
-
-
-
-
-
-
