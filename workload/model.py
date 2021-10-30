@@ -51,12 +51,12 @@ def summarize_bart_model(dataset, args):
     for data in dataset:
         if count >= args.num:
             break
-        inputs = tokenizer([data], max_length=1024, truncation=True, return_tensors='pt')
+        inputs = tokenizer([data], max_length=512, truncation=True, return_tensors='pt')
         input_length = inputs["input_ids"].size()[1]
-        if input_length != 1024:
+        if input_length != 512:
             count += 1
             start = time.perf_counter()
-            summary_ids = model.generate(inputs['input_ids'], min_length=1, max_length=1024)
+            summary_ids = model.generate(inputs['input_ids'], min_length=1, max_length=512)
             end = time.perf_counter()
             latency = (end - start)*1000
             output_length = summary_ids.size()[1]
@@ -74,12 +74,12 @@ def summarize_t5_model(dataset, args):
     for data in dataset:
         if count >= args.num:
             break
-        inputs = tokenizer("summarize: " + data, max_length=1024, truncation=True, return_tensors='pt')
+        inputs = tokenizer("summarize: " + data, max_length=512, truncation=True, return_tensors='pt')
         input_length = inputs["input_ids"].size()[1]
-        if input_length != 1024:
+        if input_length != 512:
             count += 1
             start = time.perf_counter()
-            summary_ids = model.generate(inputs['input_ids'], min_length=1, max_length=1024)
+            summary_ids = model.generate(inputs['input_ids'], min_length=1, max_length=512)
             end = time.perf_counter()
             latency = (end - start)*1000
             output_length = summary_ids.size()[1]

@@ -63,7 +63,7 @@ def plot(df, figsize=(16,5)):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument("--num", type=int, help="Number of datapoints to get", default=2)
+    parser.add_argument("--num", type=int, help="Number of datapoints to get", default=100)
     parser.add_argument("--task", type=str, help="Specify the task",
                         choices=["chatbot", "summarization", "translation", "all"], default="chatbot")
     args = parser.parse_args()
