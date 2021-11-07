@@ -203,7 +203,7 @@ if __name__ == '__main__':
                         f.flush()
                     args.print = printer
                     model_func(dataset, args)
-                # save the batch_size vs df
+                # save the batch_size vs latency
                 df = pd.read_csv(output_path)
                 plt.figure(figsize=(8,8), dpi=300)
                 plt.plot(df.BatchSize, df.InferenceLatency)
