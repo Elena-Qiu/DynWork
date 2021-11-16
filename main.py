@@ -23,7 +23,6 @@ if __name__ == '__main__':
     args.num = 1000
     args.batch = 8
     args.trace_point = 300
-    # do not change it
     args.length_scale = 0.1
     args.rate_downgrade = 0.2
     with open(args.log, 'w+') as f:
