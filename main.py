@@ -25,10 +25,7 @@ if __name__ == '__main__':
     args.trace_point = 300
     args.length_scale = 0.1
     args.rate_downgrade = 0.2
-    with open(args.log, 'w+') as f:
-        def printer(*args, **kwargs):
-            print(*args, **{'file': f, **kwargs})
-            f.flush()
+
         '''
         max_throughput = batch_size/avg_latency (per second)
         we set rate = max_throughput * rate_interval * rate_downgrade (per second)
@@ -41,10 +38,7 @@ if __name__ == '__main__':
         scale_factor = trace_mean/rate for worldcup
         scale_factor = (trace_mean/60)/rate for azure
         '''
-        printer("Trace,Task,Model,Dataset,Rate_Downgrade,Length_Scale,Batch,Rate,Time_Interval,Rate_per_Interval,Trace_point,Scale_Factor")
-        args.print = printer
         gu.GenerateJobs(args)
-        gu.GenerateLatency(args)
     
 
 

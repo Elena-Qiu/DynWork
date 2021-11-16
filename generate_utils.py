@@ -179,70 +179,70 @@ def GenerateJobs(args):
         # get the trace df for calculate timestamp
         trace_func = trace_func_dict[trace_name]
         trace_df = trace_func(args.trace_root)
-        task_names = all_tasks if args.task == "all" else [args.task]
-        # begin generating requests for each task
-        for task_name in task_names:
-            print("INFO: Begin generating jobs of task "+ task_name)
-            task_dict = task_content[task_name]
-            for model_name in task_dict["model"]:
-                for dataset_name in task_dict["dataset"]:
-                    model_dataset_name = "{}_{}".format(model_name, dataset_name)
-                    # make the log directory for each model-dataset combination
-                    log_model_dataset_dir = os.path.join(args.output, trace_name, task_name, model_dataset_name)
-                    if not os.path.exists(log_model_dataset_dir):
-                        os.makedirs(log_model_dataset_dir)
-                    # get the sample df for this model-dataset
-                    input_filename = "{}_{}_{}.csv".format(task_name, model_name, dataset_name)
-                    input_path = os.path.join(args.sample_root, task_name, input_filename)
-                    input_df = pd.read_csv(input_path)
-                    # calculate the max_throughput and generate timestamp
-                    avg_latency = input_df["InferenceLatency"].mean() * args.length_scale
-                    max_throughput = args.batch/(avg_latency/1000)
-                    # rate is based on the second base
-                    rate = max_throughput * args.rate_downgrade
-                    timestamp, trace_sub_df, time_interval = GetTimestamp(rate, args, trace_df)
-                    target_trace_rate = rate * time_interval / 1000
-                    scale_factor = (trace_sub_df['count'].mean()/trace_per_dict[trace_name])/rate
-                    scaled_trace_df = trace_sub_df * rate / trace_sub_df['count'].mean()
-                    args.print("{},{},{},{},{},{},{},{},{},{},{},{}".format(trace_name,task_name,
-                                model_name,dataset_name,args.rate_downgrade,args.length_scale,
-                                args.batch,rate,time_interval, target_trace_rate,args.trace_point,scale_factor))
-                    # randomly choose requests from sample df
-                    length_df = GetLength(input_df, len(timestamp))
-                    length_df["Length"] *= args.length_scale
-                    # assign jobid for each request and concate all columns
-                    jobid = list(np.arange(len(timestamp)))
-                    job_df = pd.DataFrame(list(zip(jobid, timestamp)), columns = ["JobId", "Admitted"])
-                    job_df = pd.concat([job_df, length_df], axis=1)
-                    job_df = job_df[["JobId", "InputLen", "Length", "Admitted"]]
-                    # save jobs.csv
-                    job_filename = "jobs.csv"
-                    job_path = os.path.join(log_model_dataset_dir, job_filename)
-                    job_df.to_csv(job_path, index=False)
-                    # plot
-                    fig = plot(scaled_trace_df, job_df)
-                    plt.tight_layout()
-                    fig.savefig(job_path[:-4] + ".png")
-                    plt.cla()
-                    plt.close("all")
-                    print("INFO: Finish getting jobs of model {} and dataset {} ".format(model_name, dataset_name))
+        output_dir = os.path.join(args.output, trace_name, 'LenScale_{}'.format(args.length_scale))
+        if not os.path.exists(output_dir):
+            os.makedirs(output_dir)
+        scale_log_path = os.path.join(output_dir, args.log)
+        with open(scale_log_path, 'w+') as f:
+            def printer(*args, **kwargs):
+                print(*args, **{'file': f, **kwargs})
+                f.flush()
+            printer("Trace,Task,Model,Dataset,Rate_Downgrade,Length_Scale,Batch,Rate,Time_Interval,Rate_per_Interval,Trace_point,Scale_Factor")
+            task_names = all_tasks if args.task == "all" else [args.task]
+            # begin generating requests for each task
+            for task_name in task_names:
+                print("INFO: Begin generating jobs of task "+ task_name)
+                task_dict = task_content[task_name]
+                for model_name in task_dict["model"]:
+                    for dataset_name in task_dict["dataset"]:
+                        model_dataset_name = "{}_{}".format(model_name, dataset_name)
+                        # make the log directory for each model-dataset combination
+                        log_model_dataset_dir = os.path.join(output_dir, task_name, model_dataset_name)
+                        if not os.path.exists(log_model_dataset_dir):
+                            os.makedirs(log_model_dataset_dir)
+                        # get the sample df for this model-dataset
+                        input_filename = "{}_{}_{}.csv".format(task_name, model_name, dataset_name)
+                        input_path = os.path.join(args.sample_root, task_name, input_filename)
+                        input_df = pd.read_csv(input_path)
 
+                        # calculate the max_throughput and generate timestamp
+                        avg_latency = input_df["InferenceLatency"].mean() * args.length_scale
+                        max_throughput = args.batch/(avg_latency/1000)
+                        # rate is based on the second base
+                        rate = max_throughput * args.rate_downgrade
+                        timestamp, trace_sub_df, time_interval = GetTimestamp(rate, args, trace_df)
+                        target_trace_rate = rate * time_interval / 1000
+                        scale_factor = (trace_sub_df['count'].mean()/trace_per_dict[trace_name])/rate
+                        scaled_trace_df = trace_sub_df * rate / trace_sub_df['count'].mean()
+                        printer("{},{},{},{},{},{},{},{},{},{},{},{}".format(trace_name,task_name,
+                                    model_name,dataset_name,args.rate_downgrade,args.length_scale,
+                                    args.batch,rate,time_interval, target_trace_rate,args.trace_point,scale_factor))
+                        
+                        # randomly choose requests from sample df
+                        length_df = GetLength(input_df, len(timestamp))
+                        length_df["Length"] *= args.length_scale
+                        # assign jobid for each request and concate all columns
+                        jobid = list(np.arange(len(timestamp)))
+                        job_df = pd.DataFrame(list(zip(jobid, timestamp)), columns = ["JobId", "Admitted"])
+                        job_df = pd.concat([job_df, length_df], axis=1)
+                        job_df = job_df[["JobId", "InputLen", "Length", "Admitted"]]
 
-def GenerateLatency(args):
-    print("INFO: Begin updating latency")
-    trace_names = all_traces if args.trace == "all" else [args.trace]
-    for trace_name in trace_names:
-        task_names = all_tasks if args.task == "all" else [args.task]
-        for task_name in task_names:
-            task_dict = task_content[task_name]
-            for model_name in task_dict["model"]:
-                for dataset_name in task_dict["dataset"]:
-                    model_dataset_name = "{}_{}".format(model_name, dataset_name)
-                    model_dataset_dir = os.path.join(args.output, trace_name, task_name, model_dataset_name)
-                    batch_latencies_file_name = "{}_{}_batch.csv".format(task_name, model_dataset_name)
-                    batch_latencies_file_path = os.path.join(args.batch_root, task_name, batch_latencies_file_name)
-                    batch_df = pd.read_csv(batch_latencies_file_path)
-                    batch_df['InferenceLatency'] = batch_df['InferenceLatency'] * args.length_scale
-                    trace_batch_path = os.path.join(model_dataset_dir, "latencies.csv")
-                    batch_df.to_csv(trace_batch_path, index=False)
-    print("INFO: Finish updating latency")
+                        # save jobs.csv
+                        job_filename = "jobs.csv"
+                        job_path = os.path.join(log_model_dataset_dir, job_filename)
+                        job_df.to_csv(job_path, index=False)
+                        # plot
+                        fig = plot(scaled_trace_df, job_df)
+                        plt.tight_layout()
+                        fig.savefig(job_path[:-4] + ".png")
+                        plt.cla()
+                        plt.close("all")
+                        print("INFO: Finish getting jobs of model {} and dataset {} ".format(model_name, dataset_name))
+
+                        # update latencies.csv
+                        batch_latencies_file_name = "{}_{}_batch.csv".format(task_name, log_model_dataset_name)
+                        batch_latencies_file_path = os.path.join(args.batch_root, task_name, batch_latencies_file_name)
+                        batch_df = pd.read_csv(batch_latencies_file_path)
+                        batch_df['InferenceLatency'] = batch_df['InferenceLatency'] * args.length_scale
+                        trace_batch_path = os.path.join(log_model_dataset_dir, "latencies.csv")
+                        batch_df.to_csv(trace_batch_path, index=False)
