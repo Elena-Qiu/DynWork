@@ -240,7 +240,7 @@ def GenerateJobs(args):
                         print("INFO: Finish getting jobs of model {} and dataset {} ".format(model_name, dataset_name))
 
                         # update latencies.csv
-                        batch_latencies_file_name = "{}_{}_batch.csv".format(task_name, log_model_dataset_name)
+                        batch_latencies_file_name = "{}_{}_batch.csv".format(task_name, model_dataset_name)
                         batch_latencies_file_path = os.path.join(args.batch_root, task_name, batch_latencies_file_name)
                         batch_df = pd.read_csv(batch_latencies_file_path)
                         batch_df['InferenceLatency'] = batch_df['InferenceLatency'] * args.length_scale

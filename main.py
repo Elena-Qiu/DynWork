@@ -23,22 +23,22 @@ if __name__ == '__main__':
     args.num = 1000
     args.batch = 8
     args.trace_point = 300
-    args.length_scale = 0.1
+    args.length_scale = 0.01
     args.rate_downgrade = 0.2
 
-        '''
-        max_throughput = batch_size/avg_latency (per second)
-        we set rate = max_throughput * rate_interval * rate_downgrade (per second)
-        we set time_interval(ms) in order to get appropriate scaled value for each trace point
-        For example, if I have a workload of rate = 1 per second, then I choose the time_interval
-        as 3300 ms so that I can get the rate_per_interval as 3.3 per second. Then I scale the 
-        mean of trace points to 3.3, namely each trace point corresponds to the number of jobs in each
-        3300 ms.
-        trace_mean is original mean value of the trace points we choose, they originally are per second for worldcup and per minute for azure
-        scale_factor = trace_mean/rate for worldcup
-        scale_factor = (trace_mean/60)/rate for azure
-        '''
-        gu.GenerateJobs(args)
+    '''
+    max_throughput = batch_size/avg_latency (per second)
+    we set rate = max_throughput * rate_interval * rate_downgrade (per second)
+    we set time_interval(ms) in order to get appropriate scaled value for each trace point
+    For example, if I have a workload of rate = 1 per second, then I choose the time_interval
+    as 3300 ms so that I can get the rate_per_interval as 3.3 per second. Then I scale the 
+    mean of trace points to 3.3, namely each trace point corresponds to the number of jobs in each
+    3300 ms.
+    trace_mean is original mean value of the trace points we choose, they originally are per second for worldcup and per minute for azure
+    scale_factor = trace_mean/rate for worldcup
+    scale_factor = (trace_mean/60)/rate for azure
+    '''
+    gu.GenerateJobs(args)
     
 
 
