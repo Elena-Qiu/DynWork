@@ -1,0 +1,31 @@
+Using CUDA Driver 11040 Runtime 11010
+Starting Clockwork Worker
+user clockwork directory: /workdir/clockwork
+Loading Clockwork worker default config from /workdir/clockwork/config/default.cfg
+user clockwork directory: /workdir/clockwork
+GPUGPU00--GPU-0 started
+PCIe_H2D_Weights-0 started
+GPU0-PCIe_D2H_Output-0 started
+CPU-0 started
+AsyncTaskChecker-0 started
+GPU0-PCIe_H2D_Inputs-0 started
+IO service thread listening on 0.0.0.0:12345
+GPU Clocks Changed: GPU0=1245
+Closing connection 0x7f9fd4000d30, reason: End of file
+Received A0:GetWorkerState
+Sending R0:GetWorkerState:
+ page_size=16777216
+gpus=
+ GPU-0 weights_cache=21.5GB (1376 pages) io_pool=512.0MB workspace_pool=512.0MB 0 models currently on GPU
+models=
+
+Received A0:LoadModelFromDisk model=0 [0.0, 16809712925666.9] /workdir/models/jobs.bucketed_bucket0/model
+cudaMallocHost 102160300 (102160300 x 1)
+Sending R0:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=64.0 b2=75.3 b4=97.8 b8=142.9 duration=4835.0
+Network Status: Controller ✔✔✔✔✔ Worker (inputs forwarded by controller)
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [58.17]
+****** Fake: sleeping max time (ms) 58.17 cycles 92895475
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [69.06]
+****** Fake: sleeping max time (ms) 69.06 cycles 110286098
+GPU Clocks Changed: GPU0=1372
+GPU Clocks Changed: GPU0=1245

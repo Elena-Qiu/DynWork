@@ -1,0 +1,105 @@
+Waiting worker...
+Starting Clockwork Controller
+Logging requests to /local/clockwork_request_log.tsv
+Logging actions to /local/clockwork_action_log.tsv
+ConcurrentInferAndLoadScheduler using:
+	 default_slo=200000000
+	 latest_delta=10000000
+	 schedule_ahead=10000000
+	 max_allowable_exec_time=250000000
+	 max_batch_size=10
+	 generate_inputs=0
+	 max_gpus=1
+IO service thread listening for clients on 0.0.0.0:12346
+Connecting to worker localhost:12345
+Connection established
+(Startup) Running ControllerStartup
+(Startup-1) Bouncing LS and Infer requests until startup is complete
+(Startup-2) Querying current worker state
+Clockwork page_size=16777216
+Worker 0 1 GPUs 0 models
+GPU 0 21.5 GB (1376 pages) 0 loaded models
+
+(Startup-3) Awaiting LoadModel requests from clients
+Client  --> Req0:LoadModel path=/workdir/models/jobs.bucketed_bucket0/model
+(Startup-4) LoadModelStage has begun
+Worker <--  A0:LoadModelFromDisk model=0 [0.0, 16809700909281.6] /workdir/models/jobs.bucketed_bucket0/model
+Worker  --> R0:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=185.1 b2=249.1 duration=4989.8
+Client <--  Rsp0:LoadModel model_id=[0->0] input=602112 output=4000
+Client  --> Req1:LoadModel path=/workdir/models/jobs.bucketed_bucket1/model
+Worker <--  A1:LoadModelFromDisk model=1 [0.0, 16809700904290.3] /workdir/models/jobs.bucketed_bucket1/model
+Worker  --> R1:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=274.2 duration=4682.4
+Client <--  Rsp0:LoadModel model_id=[1->1] input=602112 output=4000
+Client  --> Req2:LoadModel path=/workdir/models/jobs.bucketed_bucket2/model
+Worker <--  A2:LoadModelFromDisk model=2 [0.0, 16809700899606.7] /workdir/models/jobs.bucketed_bucket2/model
+Worker  --> R2:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=292.6 duration=4855.6
+Client <--  Rsp0:LoadModel model_id=[2->2] input=602112 output=4000
+Client  --> Req3:LoadModel path=/workdir/models/jobs.bucketed_bucket3/model
+Worker <--  A3:LoadModelFromDisk model=3 [0.0, 16809700894749.7] /workdir/models/jobs.bucketed_bucket3/model
+Worker  --> R3:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=326.3 duration=4755.2
+Client <--  Rsp0:LoadModel model_id=[3->3] input=602112 output=4000
+Client  --> Req4:LoadModel path=/workdir/models/jobs.bucketed_bucket4/model
+Worker <--  A4:LoadModelFromDisk model=4 [0.0, 16809700889993.5] /workdir/models/jobs.bucketed_bucket4/model
+Worker  --> R4:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=351.9 duration=4790.3
+Client <--  Rsp0:LoadModel model_id=[4->4] input=602112 output=4000
+Client  --> Req5:LoadModel path=/workdir/models/jobs.bucketed_bucket5/model
+Worker <--  A5:LoadModelFromDisk model=5 [0.0, 16809700885202.1] /workdir/models/jobs.bucketed_bucket5/model
+Worker  --> R5:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=281.6 duration=4818.7
+Client <--  Rsp0:LoadModel model_id=[5->5] input=602112 output=4000
+Client  --> Req6:LoadModel path=/workdir/models/jobs.bucketed_bucket6/model
+Worker <--  A6:LoadModelFromDisk model=6 [0.0, 16809700880382.3] /workdir/models/jobs.bucketed_bucket6/model
+Worker  --> R6:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=389.1 duration=4907.4
+Client <--  Rsp0:LoadModel model_id=[6->6] input=602112 output=4000
+Client  --> Req7:LoadModel path=/workdir/models/jobs.bucketed_bucket7/model
+Worker <--  A7:LoadModelFromDisk model=7 [0.0, 16809700875473.9] /workdir/models/jobs.bucketed_bucket7/model
+Worker  --> R7:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=344.3 duration=4929.6
+Client <--  Rsp0:LoadModel model_id=[7->7] input=602112 output=4000
+Client  --> Req8:LoadModel path=/workdir/models/jobs.bucketed_bucket8/model
+Worker <--  A8:LoadModelFromDisk model=8 [0.0, 16809700870543.3] /workdir/models/jobs.bucketed_bucket8/model
+Worker  --> R8:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=383.9 duration=4947.4
+Client <--  Rsp0:LoadModel model_id=[8->8] input=602112 output=4000
+Client  --> Req9:LoadModel path=/workdir/models/jobs.bucketed_bucket9/model
+Worker <--  A9:LoadModelFromDisk model=9 [0.0, 16809700865594.8] /workdir/models/jobs.bucketed_bucket9/model
+Worker  --> R9:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=342.0 duration=4913.5
+Client <--  Rsp0:LoadModel model_id=[9->9] input=602112 output=4000
+Client  --> Req10:LoadModel path=/workdir/models/jobs.bucketed_bucket10/model
+Worker <--  A10:LoadModelFromDisk model=10 [0.0, 16809700860680.2] /workdir/models/jobs.bucketed_bucket10/model
+Worker  --> R10:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=408.8 duration=4678.5
+Client <--  Rsp0:LoadModel model_id=[10->10] input=602112 output=4000
+Client  --> Req11:LoadModel path=/workdir/models/jobs.bucketed_bucket11/model
+Worker <--  A11:LoadModelFromDisk model=11 [0.0, 16809700856000.6] /workdir/models/jobs.bucketed_bucket11/model
+Worker  --> R11:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=340.0 duration=4887.6
+Client <--  Rsp0:LoadModel model_id=[11->11] input=602112 output=4000
+Client  --> Req12:LoadModel path=/workdir/models/jobs.bucketed_bucket12/model
+Worker <--  A12:LoadModelFromDisk model=12 [0.0, 16809700851112.1] /workdir/models/jobs.bucketed_bucket12/model
+Worker  --> R12:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=397.8 duration=4695.8
+Client <--  Rsp0:LoadModel model_id=[12->12] input=602112 output=4000
+Client  --> Req13:LoadModel path=/workdir/models/jobs.bucketed_bucket13/model
+Worker <--  A13:LoadModelFromDisk model=13 [0.0, 16809700846415.1] /workdir/models/jobs.bucketed_bucket13/model
+Worker  --> R13:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=451.6 duration=4947.7
+Client <--  Rsp0:LoadModel model_id=[13->13] input=602112 output=4000
+Client  --> Req14:LoadModel path=/workdir/models/jobs.bucketed_bucket14/model
+Worker <--  A14:LoadModelFromDisk model=14 [0.0, 16809700841466.4] /workdir/models/jobs.bucketed_bucket14/model
+Worker  --> R14:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=387.7 duration=4907.9
+Client <--  Rsp0:LoadModel model_id=[14->14] input=602112 output=4000
+Client  --> Req15:LoadModel path=/workdir/models/jobs.bucketed_bucket15/model
+Worker <--  A15:LoadModelFromDisk model=15 [0.0, 16809700836557.4] /workdir/models/jobs.bucketed_bucket15/model
+Worker  --> R15:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=477.8 duration=4866.8
+Client <--  Rsp0:LoadModel model_id=[15->15] input=602112 output=4000
+Client  --> Req16:LoadModel path=/workdir/models/jobs.bucketed_bucket16/model
+Worker <--  A16:LoadModelFromDisk model=16 [0.0, 16809700831689.5] /workdir/models/jobs.bucketed_bucket16/model
+Worker  --> R16:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=539.3 duration=4940.5
+Client <--  Rsp0:LoadModel model_id=[16->16] input=602112 output=4000
+Client  --> Req17:LoadModel path=/workdir/models/jobs.bucketed_bucket17/model
+Worker <--  A17:LoadModelFromDisk model=17 [0.0, 16809700826747.9] /workdir/models/jobs.bucketed_bucket17/model
+Worker  --> R17:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=684.4 duration=4935.5
+Client <--  Rsp0:LoadModel model_id=[17->17] input=602112 output=4000
+Client  --> Req18:LoadModel path=/workdir/models/jobs.bucketed_bucket18/model
+Worker <--  A18:LoadModelFromDisk model=18 [0.0, 16809700821811.5] /workdir/models/jobs.bucketed_bucket18/model
+Worker  --> R18:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=453.0 duration=4774.6
+Client <--  Rsp0:LoadModel model_id=[18->18] input=602112 output=4000
+Client  --> Req19:LoadModel path=/workdir/models/jobs.bucketed_bucket19/model
+Worker <--  A19:LoadModelFromDisk model=19 [0.0, 16809700817035.9] /workdir/models/jobs.bucketed_bucket19/model
+Worker  --> R19:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=674.4 duration=4850.7
+Client <--  Rsp0:LoadModel model_id=[19->19] input=602112 output=4000
+Closing connection 0x7fd45e92d010, reason: End of file

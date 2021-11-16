@@ -1,0 +1,2223 @@
+Running with following arguments{
+    "batch_latencies": "/workdir/Trace/workload/batch/summarization/summarization_bart_cnn_batch_tmp.csv",
+    "bucketing": false,
+    "buckets": "/workdir/Trace/log/azure/summarization/bart_cnn/buckets.csv",
+    "debug": false,
+    "host": "localhost",
+    "max_b": 8,
+    "num_io": 5,
+    "output": "/workdir/Trace/log/azure/summarization/bart_cnn/2_x_P99/clockwork/output.csv",
+    "port": "12346",
+    "prepare_only": false,
+    "reqs": "/workdir/Trace/log/azure/summarization/bart_cnn/jobs.bucketed.csv",
+    "shared_tmp": "/workdir/models",
+    "shepherd_bucketing": false,
+    "slo_ms": 1503,
+    "verbose": false
+}
+Loading buckets info from: /workdir/Trace/log/azure/summarization/bart_cnn/buckets.csv
+Loading batch latencies info from: /workdir/Trace/workload/batch/summarization/summarization_bart_cnn_batch_tmp.csv
+user clockwork directory: /workdir/clockwork
+  Creating bucket: "/workdir/models/jobs.bucketed_bucket0"
+    Bucket initialized from "/workdir/clockwork/resources/resnet50_v2"
+    Discovered batch size 4
+    Discovered batch size 1
+    Discovered batch size 8
+    Discovered batch size 2
+    Removed larger than requested batch size: "/workdir/models/jobs.bucketed_bucket0/model.16.clockwork"
+    Removed larger than requested batch size: "/workdir/models/jobs.bucketed_bucket0/model.16.so"
+Connecting to clockwork @ localhost:12346
+Connection established
+Running csv trace workload from: /workdir/Trace/log/azure/summarization/bart_cnn/jobs.bucketed.csv
+Use bucketing: none
+Loaded 1094 requests
+user clockwork directory: /workdir/clockwork
+CsvTraceReplay started, jobs=1094
+Submit infer: now=0.0 ms id=0 bucketIdx=0 admittedMs=0.0 ms length=374.5 ms
+Submit infer: now=160.3 ms id=1 bucketIdx=0 admittedMs=160.3 ms length=348.1 ms
+Submit infer: now=320.7 ms id=2 bucketIdx=0 admittedMs=320.7 ms length=306.7 ms
+     now=455.0 ms id=0 req_length=374.5 ms latency=452.4 ms status=succeeded
+Submit infer: now=481.0 ms id=3 bucketIdx=0 admittedMs=481.0 ms length=409.3 ms
+Submit infer: now=641.4 ms id=4 bucketIdx=0 admittedMs=641.4 ms length=285.0 ms
+Submit infer: now=801.7 ms id=5 bucketIdx=0 admittedMs=801.7 ms length=286.8 ms
+     now=806.1 ms id=1 req_length=348.1 ms latency=643.3 ms status=succeeded
+Submit infer: now=1069.0 ms id=6 bucketIdx=0 admittedMs=1069.0 ms length=526.6 ms
+     now=1113.0 ms id=2 req_length=306.7 ms latency=789.9 ms status=succeeded
+Submit infer: now=1336.2 ms id=7 bucketIdx=0 admittedMs=1336.2 ms length=578.3 ms
+     now=1523.8 ms id=3 req_length=409.3 ms latency=1040.4 ms status=succeeded
+Submit infer: now=1603.4 ms id=8 bucketIdx=0 admittedMs=1603.4 ms length=640.2 ms
+Submit infer: now=1737.1 ms id=9 bucketIdx=0 admittedMs=1737.1 ms length=368.7 ms
+     now=1809.0 ms id=4 req_length=285.0 ms latency=1165.2 ms status=succeeded
+Submit infer: now=1870.7 ms id=10 bucketIdx=0 admittedMs=1870.7 ms length=283.4 ms
+Submit infer: now=2004.3 ms id=11 bucketIdx=0 admittedMs=2004.3 ms length=346.2 ms
+     now=2097.3 ms id=5 req_length=286.8 ms latency=1293.3 ms status=succeeded
+Submit infer: now=2137.9 ms id=12 bucketIdx=0 admittedMs=2137.9 ms length=558.9 ms
+Submit infer: now=2271.5 ms id=13 bucketIdx=0 admittedMs=2271.5 ms length=415.9 ms
+Submit infer: now=2405.2 ms id=14 bucketIdx=0 admittedMs=2405.2 ms length=330.9 ms
+Submit infer: now=2519.7 ms id=15 bucketIdx=0 admittedMs=2519.7 ms length=443.2 ms
+     now=2625.4 ms id=6 req_length=526.6 ms latency=1554.2 ms status=succeeded
+Submit infer: now=2634.2 ms id=16 bucketIdx=0 admittedMs=2634.2 ms length=270.8 ms
+Submit infer: now=2748.8 ms id=17 bucketIdx=0 admittedMs=2748.8 ms length=388.1 ms
+     now=2836.6 ms id=7 req_length=578.3 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=2863.3 ms id=18 bucketIdx=0 admittedMs=2863.3 ms length=734.3 ms
+Submit infer: now=2977.8 ms id=19 bucketIdx=0 admittedMs=2977.8 ms length=224.5 ms
+Submit infer: now=3092.4 ms id=20 bucketIdx=0 admittedMs=3092.4 ms length=598.1 ms
+Submit infer: now=3206.9 ms id=21 bucketIdx=0 admittedMs=3206.9 ms length=409.0 ms
+     now=3237.4 ms id=9 req_length=368.7 ms latency=1498.0 ms status=failed (7): 
+     now=3265.8 ms id=8 req_length=640.2 ms latency=1659.9 ms status=succeeded
+     now=3371.1 ms id=10 req_length=283.4 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=3407.3 ms id=22 bucketIdx=0 admittedMs=3407.3 ms length=433.6 ms
+     now=3504.6 ms id=11 req_length=346.2 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=3607.7 ms id=23 bucketIdx=0 admittedMs=3607.7 ms length=308.6 ms
+     now=3771.9 ms id=13 req_length=415.9 ms latency=1498.0 ms status=failed (4): 
+Submit infer: now=3808.2 ms id=24 bucketIdx=0 admittedMs=3808.2 ms length=313.7 ms
+     now=3824.8 ms id=12 req_length=558.9 ms latency=1684.5 ms status=succeeded
+     now=3905.5 ms id=14 req_length=330.9 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=4008.6 ms id=25 bucketIdx=0 admittedMs=4008.6 ms length=233.5 ms
+     now=4020.2 ms id=15 req_length=443.2 ms latency=1498.0 ms status=failed (7): 
+     now=4049.3 ms id=19 req_length=224.5 ms latency=1069.2 ms status=succeeded
+     now=4134.6 ms id=16 req_length=270.8 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=4169.0 ms id=26 bucketIdx=0 admittedMs=4168.9 ms length=366.4 ms
+     now=4249.1 ms id=17 req_length=388.1 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=4329.3 ms id=27 bucketIdx=0 admittedMs=4329.3 ms length=308.3 ms
+     now=4363.7 ms id=18 req_length=734.3 ms latency=1498.0 ms status=failed (7): 
+     now=4459.9 ms id=21 req_length=409.0 ms latency=1250.7 ms status=succeeded
+Submit infer: now=4489.6 ms id=28 bucketIdx=0 admittedMs=4489.6 ms length=372.4 ms
+     now=4592.6 ms id=20 req_length=598.1 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=4650.0 ms id=29 bucketIdx=0 admittedMs=4650.0 ms length=384.8 ms
+     now=4769.9 ms id=23 req_length=308.6 ms latency=1159.7 ms status=succeeded
+Submit infer: now=4810.3 ms id=30 bucketIdx=0 admittedMs=4810.3 ms length=522.4 ms
+     now=4907.7 ms id=22 req_length=433.6 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=4970.7 ms id=31 bucketIdx=0 admittedMs=4970.7 ms length=265.1 ms
+     now=5005.1 ms id=25 req_length=233.5 ms latency=994.2 ms status=succeeded
+Submit infer: now=5131.0 ms id=32 bucketIdx=0 admittedMs=5131.0 ms length=290.2 ms
+Submit infer: now=5291.4 ms id=33 bucketIdx=0 admittedMs=5291.4 ms length=433.9 ms
+     now=5308.5 ms id=24 req_length=313.7 ms latency=1498.0 ms status=failed (7): 
+     now=5373.4 ms id=26 req_length=366.4 ms latency=1202.1 ms status=succeeded
+Submit infer: now=5451.7 ms id=34 bucketIdx=0 admittedMs=5451.7 ms length=389.9 ms
+Submit infer: now=5612.0 ms id=35 bucketIdx=0 admittedMs=5612.0 ms length=378.7 ms
+     now=5759.7 ms id=29 req_length=384.8 ms latency=1107.4 ms status=succeeded
+Submit infer: now=5812.5 ms id=36 bucketIdx=0 admittedMs=5812.5 ms length=245.8 ms
+     now=5829.6 ms id=27 req_length=308.3 ms latency=1498.0 ms status=failed (7): 
+     now=5990.0 ms id=28 req_length=372.4 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=6012.9 ms id=37 bucketIdx=0 admittedMs=6012.9 ms length=287.7 ms
+     now=6027.1 ms id=31 req_length=265.1 ms latency=1054.1 ms status=succeeded
+Submit infer: now=6213.3 ms id=38 bucketIdx=0 admittedMs=6213.3 ms length=456.1 ms
+     now=6310.9 ms id=30 req_length=522.4 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=6413.8 ms id=39 bucketIdx=0 admittedMs=6413.8 ms length=312.3 ms
+     now=6462.6 ms id=33 req_length=433.9 ms latency=1168.9 ms status=succeeded
+Submit infer: now=6574.1 ms id=40 bucketIdx=0 admittedMs=6574.1 ms length=407.9 ms
+     now=6631.3 ms id=32 req_length=290.2 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=6734.5 ms id=41 bucketIdx=0 admittedMs=6734.5 ms length=373.0 ms
+     now=6844.9 ms id=35 req_length=378.7 ms latency=1230.5 ms status=succeeded
+Submit infer: now=6894.8 ms id=42 bucketIdx=0 admittedMs=6894.8 ms length=295.3 ms
+     now=6952.0 ms id=34 req_length=389.9 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=7055.1 ms id=43 bucketIdx=0 admittedMs=7055.1 ms length=379.1 ms
+     now=7134.0 ms id=37 req_length=287.7 ms latency=1118.8 ms status=succeeded
+Submit infer: now=7215.5 ms id=44 bucketIdx=0 admittedMs=7215.5 ms length=379.5 ms
+     now=7312.8 ms id=36 req_length=245.8 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=7375.8 ms id=45 bucketIdx=0 admittedMs=7375.8 ms length=602.7 ms
+Submit infer: now=7536.2 ms id=46 bucketIdx=0 admittedMs=7536.2 ms length=274.2 ms
+     now=7591.7 ms id=38 req_length=456.1 ms latency=1376.0 ms status=succeeded
+Submit infer: now=7696.5 ms id=47 bucketIdx=0 admittedMs=7696.5 ms length=361.7 ms
+Submit infer: now=7856.9 ms id=48 bucketIdx=0 admittedMs=7856.9 ms length=411.6 ms
+     now=7914.4 ms id=39 req_length=312.3 ms latency=1498.0 ms status=failed (7): 
+     now=8001.1 ms id=40 req_length=407.9 ms latency=1424.6 ms status=succeeded
+Submit infer: now=8017.2 ms id=49 bucketIdx=0 admittedMs=8017.2 ms length=376.7 ms
+Submit infer: now=8177.6 ms id=50 bucketIdx=0 admittedMs=8177.6 ms length=398.7 ms
+     now=8234.8 ms id=41 req_length=373.0 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=8337.9 ms id=51 bucketIdx=0 admittedMs=8337.9 ms length=306.1 ms
+     now=8381.7 ms id=43 req_length=379.1 ms latency=1324.3 ms status=succeeded
+     now=8395.2 ms id=42 req_length=295.3 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=8498.2 ms id=52 bucketIdx=0 admittedMs=8498.2 ms length=352.4 ms
+Submit infer: now=8658.6 ms id=53 bucketIdx=0 admittedMs=8658.6 ms length=558.6 ms
+     now=8715.9 ms id=44 req_length=379.5 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=8818.9 ms id=54 bucketIdx=0 admittedMs=8818.9 ms length=209.7 ms
+Submit infer: now=8952.6 ms id=55 bucketIdx=0 admittedMs=8952.6 ms length=486.1 ms
+     now=8986.0 ms id=45 req_length=602.7 ms latency=1607.7 ms status=succeeded
+     now=9036.6 ms id=46 req_length=274.2 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=9086.2 ms id=56 bucketIdx=0 admittedMs=9086.2 ms length=393.2 ms
+     now=9196.9 ms id=47 req_length=361.7 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=9219.8 ms id=57 bucketIdx=0 admittedMs=9219.8 ms length=375.2 ms
+Submit infer: now=9353.4 ms id=58 bucketIdx=0 admittedMs=9353.4 ms length=307.0 ms
+     now=9397.7 ms id=48 req_length=411.6 ms latency=1538.5 ms status=succeeded
+Submit infer: now=9487.0 ms id=59 bucketIdx=0 admittedMs=9487.0 ms length=482.4 ms
+     now=9517.5 ms id=49 req_length=376.7 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=9620.7 ms id=60 bucketIdx=0 admittedMs=9620.7 ms length=375.7 ms
+     now=9677.9 ms id=50 req_length=398.7 ms latency=1498.0 ms status=failed (7): 
+     now=9751.6 ms id=52 req_length=352.4 ms latency=1250.7 ms status=succeeded
+Submit infer: now=9781.0 ms id=61 bucketIdx=0 admittedMs=9781.0 ms length=361.2 ms
+     now=9838.2 ms id=51 req_length=306.1 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=9941.3 ms id=62 bucketIdx=0 admittedMs=9941.3 ms length=325.7 ms
+Submit infer: now=10101.7 ms id=63 bucketIdx=0 admittedMs=10101.7 ms length=409.8 ms
+     now=10159.0 ms id=53 req_length=558.6 ms latency=1498.0 ms status=failed (7): 
+     now=10239.2 ms id=55 req_length=486.1 ms latency=1284.4 ms status=succeeded
+Submit infer: now=10262.0 ms id=64 bucketIdx=0 admittedMs=10262.0 ms length=262.9 ms
+     now=10319.3 ms id=54 req_length=209.7 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=10422.4 ms id=65 bucketIdx=0 admittedMs=10422.4 ms length=524.3 ms
+     now=10547.9 ms id=58 req_length=307.0 ms latency=1192.1 ms status=succeeded
+Submit infer: now=10582.7 ms id=66 bucketIdx=0 admittedMs=10582.7 ms length=362.3 ms
+     now=10586.8 ms id=56 req_length=393.2 ms latency=1498.1 ms status=failed (7): 
+     now=10720.1 ms id=57 req_length=375.2 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=10743.1 ms id=67 bucketIdx=0 admittedMs=10743.1 ms length=250.7 ms
+Submit infer: now=10903.4 ms id=68 bucketIdx=0 admittedMs=10903.4 ms length=276.9 ms
+     now=10910.6 ms id=61 req_length=361.2 ms latency=1127.2 ms status=succeeded
+     now=10987.3 ms id=59 req_length=482.4 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=11063.8 ms id=69 bucketIdx=0 admittedMs=11063.8 ms length=424.8 ms
+     now=11121.1 ms id=60 req_length=375.7 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=11224.1 ms id=70 bucketIdx=0 admittedMs=11224.1 ms length=233.3 ms
+     now=11321.9 ms id=63 req_length=409.8 ms latency=1217.9 ms status=succeeded
+Submit infer: now=11424.5 ms id=71 bucketIdx=0 admittedMs=11424.5 ms length=395.9 ms
+     now=11441.6 ms id=62 req_length=325.7 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=11625.0 ms id=72 bucketIdx=0 admittedMs=11625.0 ms length=211.3 ms
+     now=11762.4 ms id=64 req_length=262.9 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=11825.4 ms id=73 bucketIdx=0 admittedMs=11825.4 ms length=218.3 ms
+     now=11847.6 ms id=65 req_length=524.3 ms latency=1422.9 ms status=succeeded
+Submit infer: now=12025.8 ms id=74 bucketIdx=0 admittedMs=12025.8 ms length=679.9 ms
+     now=12083.0 ms id=66 req_length=362.3 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=12159.4 ms id=75 bucketIdx=0 admittedMs=12159.4 ms length=462.8 ms
+     now=12243.4 ms id=67 req_length=250.7 ms latency=1498.0 ms status=failed (7): 
+     now=12274.0 ms id=69 req_length=424.8 ms latency=1207.8 ms status=succeeded
+Submit infer: now=12293.1 ms id=76 bucketIdx=0 admittedMs=12293.1 ms length=379.5 ms
+     now=12403.8 ms id=68 req_length=276.9 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=12426.7 ms id=77 bucketIdx=0 admittedMs=12426.7 ms length=1034.9 ms
+Submit infer: now=12560.3 ms id=78 bucketIdx=0 admittedMs=12560.3 ms length=306.1 ms
+     now=12671.4 ms id=71 req_length=395.9 ms latency=1244.5 ms status=succeeded
+Submit infer: now=12693.9 ms id=79 bucketIdx=0 admittedMs=12693.9 ms length=543.8 ms
+     now=12724.4 ms id=70 req_length=233.3 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=12827.5 ms id=80 bucketIdx=0 admittedMs=12827.5 ms length=306.4 ms
+     now=12891.3 ms id=73 req_length=218.3 ms latency=1063.4 ms status=succeeded
+Submit infer: now=13028.0 ms id=81 bucketIdx=0 admittedMs=13028.0 ms length=387.2 ms
+     now=13125.3 ms id=72 req_length=211.3 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=13228.4 ms id=82 bucketIdx=0 admittedMs=13228.4 ms length=313.2 ms
+Submit infer: now=13428.8 ms id=83 bucketIdx=0 admittedMs=13428.8 ms length=339.6 ms
+     now=13572.7 ms id=74 req_length=679.9 ms latency=1544.5 ms status=succeeded
+Submit infer: now=13629.3 ms id=84 bucketIdx=0 admittedMs=13629.3 ms length=671.4 ms
+     now=13659.8 ms id=75 req_length=462.8 ms latency=1498.0 ms status=failed (7): 
+     now=13793.4 ms id=76 req_length=379.5 ms latency=1498.0 ms status=failed (7): 
+     now=13878.8 ms id=78 req_length=306.1 ms latency=1316.2 ms status=succeeded
+Submit infer: now=13896.5 ms id=85 bucketIdx=0 admittedMs=13896.5 ms length=401.9 ms
+     now=13927.0 ms id=77 req_length=1034.9 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=14163.7 ms id=86 bucketIdx=0 admittedMs=14163.7 ms length=262.3 ms
+     now=14193.5 ms id=82 req_length=313.2 ms latency=962.7 ms status=succeeded
+     now=14194.2 ms id=79 req_length=543.8 ms latency=1498.0 ms status=failed (7): 
+     now=14328.0 ms id=80 req_length=306.4 ms latency=1498.1 ms status=failed (7): 
+Submit infer: now=14431.0 ms id=87 bucketIdx=0 admittedMs=14431.0 ms length=193.0 ms
+     now=14528.3 ms id=81 req_length=387.2 ms latency=1498.0 ms status=failed (7): 
+     now=14534.7 ms id=83 req_length=339.6 ms latency=1103.6 ms status=succeeded
+Submit infer: now=14631.4 ms id=88 bucketIdx=0 admittedMs=14631.4 ms length=423.3 ms
+Submit infer: now=14831.8 ms id=89 bucketIdx=0 admittedMs=14831.8 ms length=236.8 ms
+     now=14938.2 ms id=85 req_length=401.9 ms latency=1039.4 ms status=succeeded
+Submit infer: now=15032.3 ms id=90 bucketIdx=0 admittedMs=15032.3 ms length=228.1 ms
+     now=15129.6 ms id=84 req_length=671.4 ms latency=1498.0 ms status=failed (7): 
+     now=15202.0 ms id=86 req_length=262.3 ms latency=1035.8 ms status=succeeded
+Submit infer: now=15232.7 ms id=91 bucketIdx=0 admittedMs=15232.7 ms length=434.2 ms
+     now=15396.6 ms id=87 req_length=193.0 ms latency=963.3 ms status=succeeded
+Submit infer: now=15433.1 ms id=92 bucketIdx=0 admittedMs=15433.1 ms length=411.4 ms
+Submit infer: now=15633.6 ms id=93 bucketIdx=0 admittedMs=15633.6 ms length=329.9 ms
+     now=15821.3 ms id=88 req_length=423.3 ms latency=1187.6 ms status=succeeded
+Submit infer: now=15834.0 ms id=94 bucketIdx=0 admittedMs=15834.0 ms length=318.2 ms
+Submit infer: now=16034.4 ms id=95 bucketIdx=0 admittedMs=16034.4 ms length=215.8 ms
+     now=16051.0 ms id=90 req_length=228.1 ms latency=1016.4 ms status=succeeded
+Submit infer: now=16301.7 ms id=96 bucketIdx=0 admittedMs=16301.7 ms length=425.3 ms
+     now=16332.2 ms id=89 req_length=236.8 ms latency=1498.0 ms status=failed (7): 
+     now=16486.6 ms id=91 req_length=434.2 ms latency=1251.6 ms status=succeeded
+Submit infer: now=16568.9 ms id=97 bucketIdx=0 admittedMs=16568.9 ms length=313.2 ms
+     now=16806.3 ms id=94 req_length=318.2 ms latency=970.1 ms status=succeeded
+Submit infer: now=16836.1 ms id=98 bucketIdx=0 admittedMs=16836.1 ms length=323.8 ms
+     now=16933.5 ms id=92 req_length=411.4 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=16996.5 ms id=99 bucketIdx=0 admittedMs=16996.5 ms length=308.3 ms
+     now=17023.7 ms id=95 req_length=215.8 ms latency=986.9 ms status=succeeded
+     now=17133.8 ms id=93 req_length=329.9 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=17156.8 ms id=100 bucketIdx=0 admittedMs=17156.8 ms length=312.3 ms
+Submit infer: now=17317.2 ms id=101 bucketIdx=0 admittedMs=17317.2 ms length=708.7 ms
+     now=17450.5 ms id=96 req_length=425.3 ms latency=1146.3 ms status=succeeded
+Submit infer: now=17477.5 ms id=102 bucketIdx=0 admittedMs=17477.5 ms length=221.6 ms
+Submit infer: now=17637.9 ms id=103 bucketIdx=0 admittedMs=17637.9 ms length=312.3 ms
+     now=17763.8 ms id=97 req_length=313.2 ms latency=1192.5 ms status=succeeded
+Submit infer: now=17798.2 ms id=104 bucketIdx=0 admittedMs=17798.2 ms length=365.7 ms
+Submit infer: now=17958.6 ms id=105 bucketIdx=0 admittedMs=17958.6 ms length=289.1 ms
+     now=18089.2 ms id=98 req_length=323.8 ms latency=1250.7 ms status=succeeded
+Submit infer: now=18118.9 ms id=106 bucketIdx=0 admittedMs=18118.9 ms length=452.3 ms
+Submit infer: now=18279.2 ms id=107 bucketIdx=0 admittedMs=18279.2 ms length=546.5 ms
+     now=18402.9 ms id=100 req_length=312.3 ms latency=1243.8 ms status=succeeded
+Submit infer: now=18439.6 ms id=108 bucketIdx=0 admittedMs=18439.6 ms length=398.7 ms
+     now=18496.8 ms id=99 req_length=308.3 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=18599.9 ms id=109 bucketIdx=0 admittedMs=18599.9 ms length=428.0 ms
+     now=18626.8 ms id=102 req_length=221.6 ms latency=1146.9 ms status=succeeded
+Submit infer: now=18760.3 ms id=110 bucketIdx=0 admittedMs=18760.3 ms length=363.6 ms
+     now=18817.5 ms id=101 req_length=708.7 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=18920.6 ms id=111 bucketIdx=0 admittedMs=18920.6 ms length=352.0 ms
+     now=18940.6 ms id=103 req_length=312.3 ms latency=1300.5 ms status=succeeded
+Submit infer: now=19081.0 ms id=112 bucketIdx=0 admittedMs=19081.0 ms length=393.3 ms
+     now=19231.2 ms id=105 req_length=289.1 ms latency=1270.3 ms status=succeeded
+Submit infer: now=19241.3 ms id=113 bucketIdx=0 admittedMs=19241.3 ms length=278.2 ms
+     now=19298.6 ms id=104 req_length=365.7 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=19401.7 ms id=114 bucketIdx=0 admittedMs=19401.7 ms length=354.1 ms
+Submit infer: now=19562.0 ms id=115 bucketIdx=0 admittedMs=19562.0 ms length=379.6 ms
+     now=19619.3 ms id=106 req_length=452.3 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=19722.3 ms id=116 bucketIdx=0 admittedMs=19722.3 ms length=291.5 ms
+     now=19779.1 ms id=107 req_length=546.5 ms latency=1497.5 ms status=succeeded
+Submit infer: now=19882.7 ms id=117 bucketIdx=0 admittedMs=19882.7 ms length=433.3 ms
+     now=19939.9 ms id=108 req_length=398.7 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=20043.0 ms id=118 bucketIdx=0 admittedMs=20043.0 ms length=503.0 ms
+Submit infer: now=20157.6 ms id=119 bucketIdx=0 admittedMs=20157.6 ms length=326.1 ms
+     now=20207.3 ms id=109 req_length=428.0 ms latency=1605.1 ms status=succeeded
+     now=20260.7 ms id=110 req_length=363.6 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=20272.1 ms id=120 bucketIdx=0 admittedMs=20272.1 ms length=312.8 ms
+Submit infer: now=20386.6 ms id=121 bucketIdx=0 admittedMs=20386.6 ms length=327.8 ms
+     now=20421.0 ms id=111 req_length=352.0 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=20501.2 ms id=122 bucketIdx=0 admittedMs=20501.2 ms length=335.5 ms
+     now=20561.5 ms id=114 req_length=354.1 ms latency=1157.6 ms status=succeeded
+     now=20581.3 ms id=112 req_length=393.3 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=20615.7 ms id=123 bucketIdx=0 admittedMs=20615.7 ms length=435.5 ms
+Submit infer: now=20730.2 ms id=124 bucketIdx=0 admittedMs=20730.2 ms length=301.2 ms
+     now=20741.6 ms id=113 req_length=278.2 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=20844.8 ms id=125 bucketIdx=0 admittedMs=20844.7 ms length=654.0 ms
+     now=20854.7 ms id=116 req_length=291.5 ms latency=1130.0 ms status=succeeded
+Submit infer: now=21005.1 ms id=126 bucketIdx=0 admittedMs=21005.1 ms length=423.2 ms
+     now=21062.4 ms id=115 req_length=379.6 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=21165.4 ms id=127 bucketIdx=0 admittedMs=21165.4 ms length=278.8 ms
+Submit infer: now=21325.8 ms id=128 bucketIdx=0 admittedMs=21325.8 ms length=464.0 ms
+     now=21359.2 ms id=118 req_length=503.0 ms latency=1313.8 ms status=succeeded
+     now=21383.0 ms id=117 req_length=433.3 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=21486.1 ms id=129 bucketIdx=0 admittedMs=21486.1 ms length=403.5 ms
+Submit infer: now=21646.5 ms id=130 bucketIdx=0 admittedMs=21646.5 ms length=272.9 ms
+     now=21658.0 ms id=119 req_length=326.1 ms latency=1498.0 ms status=failed (7): 
+     now=21696.2 ms id=122 req_length=335.5 ms latency=1192.6 ms status=succeeded
+     now=21772.5 ms id=120 req_length=312.8 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=21780.1 ms id=131 bucketIdx=0 admittedMs=21780.1 ms length=363.5 ms
+     now=21886.9 ms id=121 req_length=327.8 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=21913.7 ms id=132 bucketIdx=0 admittedMs=21913.7 ms length=283.4 ms
+Submit infer: now=22047.3 ms id=133 bucketIdx=0 admittedMs=22047.3 ms length=332.4 ms
+     now=22116.0 ms id=123 req_length=435.5 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=22181.0 ms id=134 bucketIdx=0 admittedMs=22181.0 ms length=419.7 ms
+     now=22230.5 ms id=124 req_length=301.2 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=22314.6 ms id=135 bucketIdx=0 admittedMs=22314.6 ms length=252.6 ms
+     now=22351.7 ms id=125 req_length=654.0 ms latency=1504.6 ms status=succeeded
+Submit infer: now=22448.2 ms id=136 bucketIdx=0 admittedMs=22448.2 ms length=361.0 ms
+     now=22505.5 ms id=126 req_length=423.2 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=22608.5 ms id=137 bucketIdx=0 admittedMs=22608.5 ms length=520.3 ms
+     now=22665.8 ms id=127 req_length=278.8 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=22768.9 ms id=138 bucketIdx=0 admittedMs=22768.9 ms length=544.0 ms
+     now=22815.8 ms id=128 req_length=464.0 ms latency=1487.6 ms status=succeeded
+Submit infer: now=22929.2 ms id=139 bucketIdx=0 admittedMs=22929.2 ms length=435.5 ms
+     now=22986.5 ms id=129 req_length=403.5 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=23089.6 ms id=140 bucketIdx=0 admittedMs=23089.6 ms length=433.4 ms
+     now=23146.8 ms id=130 req_length=272.9 ms latency=1498.0 ms status=failed (7): 
+     now=23150.5 ms id=133 req_length=332.4 ms latency=1100.7 ms status=succeeded
+Submit infer: now=23249.9 ms id=141 bucketIdx=0 admittedMs=23249.9 ms length=416.7 ms
+     now=23280.5 ms id=131 req_length=363.5 ms latency=1498.0 ms status=failed (7): 
+     now=23404.6 ms id=135 req_length=252.6 ms latency=1087.7 ms status=succeeded
+     now=23414.0 ms id=132 req_length=283.4 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=23450.3 ms id=142 bucketIdx=0 admittedMs=23450.3 ms length=296.0 ms
+Submit infer: now=23650.8 ms id=143 bucketIdx=0 admittedMs=23650.8 ms length=217.0 ms
+     now=23681.3 ms id=134 req_length=419.7 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=23851.2 ms id=144 bucketIdx=0 admittedMs=23851.2 ms length=438.1 ms
+     now=23926.5 ms id=137 req_length=520.3 ms latency=1315.7 ms status=succeeded
+     now=23948.5 ms id=136 req_length=361.0 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=24051.6 ms id=145 bucketIdx=0 admittedMs=24051.6 ms length=362.5 ms
+     now=24269.3 ms id=138 req_length=544.0 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=24318.9 ms id=146 bucketIdx=0 admittedMs=24318.9 ms length=558.5 ms
+     now=24361.5 ms id=140 req_length=433.4 ms latency=1269.6 ms status=succeeded
+     now=24429.6 ms id=139 req_length=435.5 ms latency=1498.0 ms status=failed (7): 
+     now=24580.1 ms id=143 req_length=217.0 ms latency=926.9 ms status=succeeded
+Submit infer: now=24586.1 ms id=147 bucketIdx=0 admittedMs=24586.1 ms length=282.3 ms
+     now=24750.3 ms id=141 req_length=416.7 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=24853.4 ms id=148 bucketIdx=0 admittedMs=24853.4 ms length=510.5 ms
+     now=24950.9 ms id=142 req_length=296.0 ms latency=1498.1 ms status=failed (7): 
+     now=25019.7 ms id=144 req_length=438.1 ms latency=1166.2 ms status=succeeded
+Submit infer: now=25120.6 ms id=149 bucketIdx=0 admittedMs=25120.6 ms length=497.7 ms
+Submit infer: now=25387.8 ms id=150 bucketIdx=0 admittedMs=25387.8 ms length=350.5 ms
+     now=25552.0 ms id=145 req_length=362.5 ms latency=1498.0 ms status=failed (7): 
+     now=25579.8 ms id=146 req_length=558.5 ms latency=1258.5 ms status=succeeded
+Submit infer: now=25655.1 ms id=151 bucketIdx=0 admittedMs=25655.1 ms length=344.4 ms
+Submit infer: now=25855.5 ms id=152 bucketIdx=0 admittedMs=25855.5 ms length=435.9 ms
+Submit infer: now=26055.9 ms id=153 bucketIdx=0 admittedMs=26055.9 ms length=354.0 ms
+     now=26086.4 ms id=147 req_length=282.3 ms latency=1498.0 ms status=failed (7): 
+     now=26091.8 ms id=148 req_length=510.5 ms latency=1235.9 ms status=succeeded
+Submit infer: now=26256.4 ms id=154 bucketIdx=0 admittedMs=26256.4 ms length=216.8 ms
+     now=26444.2 ms id=150 req_length=350.5 ms latency=1054.0 ms status=succeeded
+Submit infer: now=26456.8 ms id=155 bucketIdx=0 admittedMs=26456.8 ms length=396.4 ms
+     now=26620.9 ms id=149 req_length=497.7 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=26724.0 ms id=156 bucketIdx=0 admittedMs=26724.0 ms length=387.7 ms
+     now=26790.1 ms id=151 req_length=344.4 ms latency=1132.7 ms status=succeeded
+Submit infer: now=26991.3 ms id=157 bucketIdx=0 admittedMs=26991.3 ms length=307.3 ms
+     now=27227.6 ms id=152 req_length=435.9 ms latency=1369.8 ms status=succeeded
+Submit infer: now=27258.5 ms id=158 bucketIdx=0 admittedMs=27258.5 ms length=301.0 ms
+Submit infer: now=27392.1 ms id=159 bucketIdx=0 admittedMs=27392.1 ms length=522.8 ms
+Submit infer: now=27525.8 ms id=160 bucketIdx=0 admittedMs=27525.8 ms length=441.6 ms
+     now=27556.2 ms id=153 req_length=354.0 ms latency=1498.0 ms status=failed (7): 
+     now=27625.6 ms id=155 req_length=396.4 ms latency=1166.5 ms status=succeeded
+Submit infer: now=27659.4 ms id=161 bucketIdx=0 admittedMs=27659.4 ms length=337.3 ms
+     now=27756.8 ms id=154 req_length=216.8 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=27793.0 ms id=162 bucketIdx=0 admittedMs=27793.0 ms length=358.8 ms
+Submit infer: now=27926.6 ms id=163 bucketIdx=0 admittedMs=27926.6 ms length=479.2 ms
+     now=28014.9 ms id=156 req_length=387.7 ms latency=1288.5 ms status=succeeded
+Submit infer: now=28060.2 ms id=164 bucketIdx=0 admittedMs=28060.2 ms length=426.8 ms
+Submit infer: now=28260.7 ms id=165 bucketIdx=0 admittedMs=28260.7 ms length=302.7 ms
+     now=28317.4 ms id=158 req_length=301.0 ms latency=1056.6 ms status=succeeded
+Submit infer: now=28461.1 ms id=166 bucketIdx=0 admittedMs=28461.1 ms length=310.6 ms
+     now=28491.7 ms id=157 req_length=307.3 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=28661.5 ms id=167 bucketIdx=0 admittedMs=28661.5 ms length=605.4 ms
+     now=28841.8 ms id=159 req_length=522.8 ms latency=1446.9 ms status=succeeded
+Submit infer: now=28862.0 ms id=168 bucketIdx=0 admittedMs=28862.0 ms length=586.9 ms
+     now=29026.1 ms id=160 req_length=441.6 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=29062.4 ms id=169 bucketIdx=0 admittedMs=29062.4 ms length=392.8 ms
+     now=29159.8 ms id=161 req_length=337.3 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=29262.8 ms id=170 bucketIdx=0 admittedMs=29262.8 ms length=386.5 ms
+     now=29293.4 ms id=162 req_length=358.8 ms latency=1498.0 ms status=failed (7): 
+     now=29323.3 ms id=163 req_length=479.2 ms latency=1394.4 ms status=succeeded
+Submit infer: now=29463.3 ms id=171 bucketIdx=0 admittedMs=29463.3 ms length=413.9 ms
+     now=29560.6 ms id=164 req_length=426.8 ms latency=1498.0 ms status=failed (7): 
+     now=29635.4 ms id=166 req_length=310.6 ms latency=1172.0 ms status=succeeded
+Submit infer: now=29663.7 ms id=172 bucketIdx=0 admittedMs=29663.7 ms length=274.3 ms
+     now=29761.0 ms id=165 req_length=302.7 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=29864.1 ms id=173 bucketIdx=0 admittedMs=29864.1 ms length=432.6 ms
+Submit infer: now=30064.5 ms id=174 bucketIdx=0 admittedMs=30064.5 ms length=276.2 ms
+     now=30242.3 ms id=167 req_length=605.4 ms latency=1578.5 ms status=succeeded
+Submit infer: now=30265.0 ms id=175 bucketIdx=0 admittedMs=30265.0 ms length=346.1 ms
+     now=30362.3 ms id=168 req_length=586.9 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=30465.4 ms id=176 bucketIdx=0 admittedMs=30465.4 ms length=502.9 ms
+     now=30562.8 ms id=169 req_length=392.8 ms latency=1498.0 ms status=failed (7): 
+     now=30628.8 ms id=170 req_length=386.5 ms latency=1363.6 ms status=succeeded
+Submit infer: now=30665.8 ms id=177 bucketIdx=0 admittedMs=30665.8 ms length=370.7 ms
+Submit infer: now=30866.3 ms id=178 bucketIdx=0 admittedMs=30866.3 ms length=363.3 ms
+     now=30963.7 ms id=171 req_length=413.9 ms latency=1498.0 ms status=failed (7): 
+     now=31063.6 ms id=173 req_length=432.6 ms latency=1197.1 ms status=succeeded
+Submit infer: now=31066.7 ms id=179 bucketIdx=0 admittedMs=31066.7 ms length=297.2 ms
+     now=31164.1 ms id=172 req_length=274.3 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=31267.1 ms id=180 bucketIdx=0 admittedMs=31267.1 ms length=251.0 ms
+Submit infer: now=31320.6 ms id=181 bucketIdx=0 admittedMs=31320.6 ms length=573.9 ms
+Submit infer: now=31374.0 ms id=182 bucketIdx=0 admittedMs=31374.0 ms length=645.4 ms
+     now=31411.3 ms id=175 req_length=346.1 ms latency=1144.0 ms status=succeeded
+Submit infer: now=31427.5 ms id=183 bucketIdx=0 admittedMs=31427.5 ms length=438.0 ms
+Submit infer: now=31480.9 ms id=184 bucketIdx=0 admittedMs=31480.9 ms length=276.8 ms
+Submit infer: now=31534.4 ms id=185 bucketIdx=0 admittedMs=31534.4 ms length=263.3 ms
+     now=31564.9 ms id=174 req_length=276.2 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=31587.8 ms id=186 bucketIdx=0 admittedMs=31587.8 ms length=403.7 ms
+Submit infer: now=31641.3 ms id=187 bucketIdx=0 admittedMs=31641.3 ms length=356.2 ms
+Submit infer: now=31694.7 ms id=188 bucketIdx=0 admittedMs=31694.7 ms length=383.7 ms
+Submit infer: now=31748.2 ms id=189 bucketIdx=0 admittedMs=31748.2 ms length=245.4 ms
+     now=31784.0 ms id=177 req_length=370.7 ms latency=1115.9 ms status=succeeded
+Submit infer: now=31801.6 ms id=190 bucketIdx=0 admittedMs=31801.6 ms length=310.9 ms
+Submit infer: now=31855.1 ms id=191 bucketIdx=0 admittedMs=31855.1 ms length=309.3 ms
+Submit infer: now=31908.5 ms id=192 bucketIdx=0 admittedMs=31908.5 ms length=342.6 ms
+Submit infer: now=31962.0 ms id=193 bucketIdx=0 admittedMs=31961.9 ms length=485.5 ms
+     now=31965.7 ms id=176 req_length=502.9 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=32015.4 ms id=194 bucketIdx=0 admittedMs=32015.4 ms length=305.9 ms
+Submit infer: now=32068.8 ms id=195 bucketIdx=0 admittedMs=32068.8 ms length=277.2 ms
+     now=32082.8 ms id=179 req_length=297.2 ms latency=1013.8 ms status=succeeded
+Submit infer: now=32229.2 ms id=196 bucketIdx=0 admittedMs=32229.2 ms length=580.3 ms
+     now=32335.3 ms id=180 req_length=251.0 ms latency=1065.9 ms status=succeeded
+     now=32366.5 ms id=178 req_length=363.3 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=32389.5 ms id=197 bucketIdx=0 admittedMs=32389.5 ms length=265.7 ms
+Submit infer: now=32549.9 ms id=198 bucketIdx=0 admittedMs=32549.9 ms length=647.7 ms
+     now=32614.7 ms id=184 req_length=276.8 ms latency=1131.5 ms status=succeeded
+Submit infer: now=32710.2 ms id=199 bucketIdx=0 admittedMs=32710.2 ms length=329.7 ms
+     now=32820.9 ms id=181 req_length=573.9 ms latency=1498.0 ms status=failed (7): 
+     now=32862.4 ms id=189 req_length=245.4 ms latency=1111.9 ms status=succeeded
+Submit infer: now=32870.6 ms id=200 bucketIdx=0 admittedMs=32870.6 ms length=209.3 ms
+     now=32874.4 ms id=182 req_length=645.4 ms latency=1498.0 ms status=failed (7): 
+     now=32927.8 ms id=183 req_length=438.0 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=33030.9 ms id=201 bucketIdx=0 admittedMs=33030.9 ms length=486.8 ms
+     now=33034.7 ms id=185 req_length=263.3 ms latency=1498.0 ms status=failed (7): 
+     now=33088.2 ms id=186 req_length=403.7 ms latency=1498.0 ms status=failed (7): 
+     now=33141.5 ms id=187 req_length=356.2 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=33191.3 ms id=202 bucketIdx=0 admittedMs=33191.3 ms length=331.3 ms
+     now=33195.0 ms id=188 req_length=383.7 ms latency=1498.0 ms status=failed (7): 
+     now=33302.2 ms id=190 req_length=310.9 ms latency=1498.0 ms status=failed (7): 
+     now=33349.4 ms id=193 req_length=485.5 ms latency=1385.1 ms status=succeeded
+Submit infer: now=33351.6 ms id=203 bucketIdx=0 admittedMs=33351.6 ms length=307.5 ms
+     now=33355.4 ms id=191 req_length=309.3 ms latency=1498.0 ms status=failed (7): 
+     now=33408.8 ms id=192 req_length=342.6 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=33511.9 ms id=204 bucketIdx=0 admittedMs=33511.9 ms length=309.8 ms
+     now=33515.8 ms id=194 req_length=305.9 ms latency=1498.0 ms status=failed (7): 
+     now=33569.2 ms id=195 req_length=277.2 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=33672.3 ms id=205 bucketIdx=0 admittedMs=33672.3 ms length=330.7 ms
+     now=33729.5 ms id=196 req_length=580.3 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=33872.7 ms id=206 bucketIdx=0 admittedMs=33872.7 ms length=437.0 ms
+     now=33890.0 ms id=197 req_length=265.7 ms latency=1498.0 ms status=failed (7): 
+     now=33998.7 ms id=198 req_length=647.7 ms latency=1446.6 ms status=succeeded
+Submit infer: now=34073.1 ms id=207 bucketIdx=0 admittedMs=34073.1 ms length=289.9 ms
+     now=34210.6 ms id=199 req_length=329.7 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=34273.6 ms id=208 bucketIdx=0 admittedMs=34273.6 ms length=464.1 ms
+     now=34330.1 ms id=202 req_length=331.3 ms latency=1136.2 ms status=succeeded
+     now=34370.9 ms id=200 req_length=209.3 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=34474.0 ms id=209 bucketIdx=0 admittedMs=34474.0 ms length=316.6 ms
+     now=34531.2 ms id=201 req_length=486.8 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=34588.5 ms id=210 bucketIdx=0 admittedMs=34588.5 ms length=386.6 ms
+     now=34641.4 ms id=204 req_length=309.8 ms latency=1127.1 ms status=succeeded
+Submit infer: now=34703.1 ms id=211 bucketIdx=0 admittedMs=34703.1 ms length=621.3 ms
+Submit infer: now=34817.6 ms id=212 bucketIdx=0 admittedMs=34817.6 ms length=476.4 ms
+     now=34852.1 ms id=203 req_length=307.5 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=34932.1 ms id=213 bucketIdx=0 admittedMs=34932.1 ms length=544.1 ms
+Submit infer: now=35046.7 ms id=214 bucketIdx=0 admittedMs=35046.7 ms length=705.1 ms
+     now=35080.7 ms id=206 req_length=437.0 ms latency=1205.6 ms status=succeeded
+Submit infer: now=35161.2 ms id=215 bucketIdx=0 admittedMs=35161.2 ms length=254.5 ms
+     now=35172.6 ms id=205 req_length=330.7 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=35275.7 ms id=216 bucketIdx=0 admittedMs=35275.7 ms length=388.0 ms
+Submit infer: now=35436.1 ms id=217 bucketIdx=0 admittedMs=35436.1 ms length=370.4 ms
+     now=35546.2 ms id=208 req_length=464.1 ms latency=1270.3 ms status=succeeded
+     now=35573.5 ms id=207 req_length=289.9 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=35596.4 ms id=218 bucketIdx=0 admittedMs=35596.4 ms length=335.1 ms
+Submit infer: now=35756.8 ms id=219 bucketIdx=0 admittedMs=35756.8 ms length=240.1 ms
+Submit infer: now=35917.1 ms id=220 bucketIdx=0 admittedMs=35917.1 ms length=336.3 ms
+     now=35974.5 ms id=209 req_length=316.6 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=36077.5 ms id=221 bucketIdx=0 admittedMs=36077.5 ms length=321.8 ms
+     now=36088.8 ms id=210 req_length=386.6 ms latency=1498.0 ms status=failed (7): 
+     now=36169.0 ms id=211 req_length=621.3 ms latency=1463.6 ms status=succeeded
+Submit infer: now=36237.8 ms id=222 bucketIdx=0 admittedMs=36237.8 ms length=456.7 ms
+     now=36317.9 ms id=212 req_length=476.4 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=36398.1 ms id=223 bucketIdx=0 admittedMs=36398.1 ms length=439.7 ms
+     now=36432.5 ms id=213 req_length=544.1 ms latency=1498.0 ms status=failed (7): 
+     now=36541.0 ms id=217 req_length=370.4 ms latency=1102.5 ms status=succeeded
+     now=36547.0 ms id=214 req_length=705.1 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=36558.5 ms id=224 bucketIdx=0 admittedMs=36558.5 ms length=487.6 ms
+     now=36661.5 ms id=215 req_length=254.5 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=36718.8 ms id=225 bucketIdx=0 admittedMs=36718.8 ms length=259.1 ms
+     now=36776.2 ms id=216 req_length=388.0 ms latency=1498.0 ms status=failed (7): 
+     now=36782.6 ms id=219 req_length=240.1 ms latency=1023.5 ms status=succeeded
+Submit infer: now=36879.2 ms id=226 bucketIdx=0 admittedMs=36879.2 ms length=356.5 ms
+Submit infer: now=37079.6 ms id=227 bucketIdx=0 admittedMs=37079.6 ms length=317.7 ms
+     now=37096.9 ms id=218 req_length=335.1 ms latency=1498.0 ms status=failed (7): 
+     now=37105.9 ms id=221 req_length=321.8 ms latency=1026.1 ms status=succeeded
+Submit infer: now=37280.0 ms id=228 bucketIdx=0 admittedMs=37280.0 ms length=298.6 ms
+     now=37417.4 ms id=220 req_length=336.3 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=37480.5 ms id=229 bucketIdx=0 admittedMs=37480.5 ms length=324.8 ms
+     now=37547.1 ms id=223 req_length=439.7 ms latency=1146.6 ms status=succeeded
+Submit infer: now=37680.9 ms id=230 bucketIdx=0 admittedMs=37680.9 ms length=314.4 ms
+     now=37738.2 ms id=222 req_length=456.7 ms latency=1498.0 ms status=failed (7): 
+     now=37808.4 ms id=225 req_length=259.1 ms latency=1087.3 ms status=succeeded
+Submit infer: now=37881.3 ms id=231 bucketIdx=0 admittedMs=37881.3 ms length=437.6 ms
+     now=38058.8 ms id=224 req_length=487.6 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=38081.8 ms id=232 bucketIdx=0 admittedMs=38081.8 ms length=552.9 ms
+     now=38129.5 ms id=227 req_length=317.7 ms latency=1047.6 ms status=succeeded
+Submit infer: now=38282.2 ms id=233 bucketIdx=0 admittedMs=38282.2 ms length=342.5 ms
+     now=38379.5 ms id=226 req_length=356.5 ms latency=1498.0 ms status=failed (7): 
+     now=38429.7 ms id=228 req_length=298.6 ms latency=1147.3 ms status=succeeded
+Submit infer: now=38482.6 ms id=234 bucketIdx=0 admittedMs=38482.6 ms length=249.8 ms
+Submit infer: now=38616.2 ms id=235 bucketIdx=0 admittedMs=38616.2 ms length=431.0 ms
+     now=38745.7 ms id=230 req_length=314.4 ms latency=1062.5 ms status=succeeded
+Submit infer: now=38749.9 ms id=236 bucketIdx=0 admittedMs=38749.9 ms length=285.0 ms
+Submit infer: now=38883.5 ms id=237 bucketIdx=0 admittedMs=38883.5 ms length=367.9 ms
+     now=38980.8 ms id=229 req_length=324.8 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=39017.1 ms id=238 bucketIdx=0 admittedMs=39017.1 ms length=235.4 ms
+Submit infer: now=39150.7 ms id=239 bucketIdx=0 admittedMs=39150.7 ms length=382.1 ms
+     now=39184.8 ms id=231 req_length=437.6 ms latency=1301.1 ms status=succeeded
+Submit infer: now=39284.3 ms id=240 bucketIdx=0 admittedMs=39284.3 ms length=434.0 ms
+     now=39436.1 ms id=234 req_length=249.8 ms latency=951.1 ms status=succeeded
+Submit infer: now=39484.8 ms id=241 bucketIdx=0 admittedMs=39484.8 ms length=548.2 ms
+     now=39582.2 ms id=232 req_length=552.9 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=39685.2 ms id=242 bucketIdx=0 admittedMs=39685.2 ms length=729.6 ms
+     now=39782.5 ms id=233 req_length=342.5 ms latency=1498.0 ms status=failed (7): 
+     now=39868.7 ms id=235 req_length=431.0 ms latency=1250.1 ms status=succeeded
+Submit infer: now=39885.6 ms id=243 bucketIdx=0 admittedMs=39885.6 ms length=516.7 ms
+Submit infer: now=40086.1 ms id=244 bucketIdx=0 admittedMs=40086.1 ms length=685.4 ms
+     now=40236.7 ms id=237 req_length=367.9 ms latency=1350.9 ms status=succeeded
+Submit infer: now=40246.4 ms id=245 bucketIdx=0 admittedMs=40246.4 ms length=419.2 ms
+     now=40250.3 ms id=236 req_length=285.0 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=40406.7 ms id=246 bucketIdx=0 admittedMs=40406.7 ms length=385.4 ms
+     now=40517.4 ms id=238 req_length=235.4 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=40567.1 ms id=247 bucketIdx=0 admittedMs=40567.1 ms length=524.0 ms
+     now=40651.1 ms id=239 req_length=382.1 ms latency=1498.0 ms status=failed (7): 
+     now=40673.0 ms id=240 req_length=434.0 ms latency=1386.3 ms status=succeeded
+Submit infer: now=40727.4 ms id=248 bucketIdx=0 admittedMs=40727.4 ms length=259.5 ms
+Submit infer: now=40887.8 ms id=249 bucketIdx=0 admittedMs=40887.8 ms length=412.9 ms
+     now=40985.1 ms id=241 req_length=548.2 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=41002.3 ms id=250 bucketIdx=0 admittedMs=41002.3 ms length=310.1 ms
+Submit infer: now=41116.8 ms id=251 bucketIdx=0 admittedMs=41116.8 ms length=377.6 ms
+Submit infer: now=41231.4 ms id=252 bucketIdx=0 admittedMs=41231.4 ms length=238.4 ms
+Submit infer: now=41345.9 ms id=253 bucketIdx=0 admittedMs=41345.9 ms length=416.0 ms
+     now=41386.0 ms id=243 req_length=516.7 ms latency=1498.0 ms status=failed (7): 
+     now=41402.7 ms id=242 req_length=729.6 ms latency=1715.1 ms status=succeeded
+Submit infer: now=41460.4 ms id=254 bucketIdx=0 admittedMs=41460.4 ms length=225.3 ms
+Submit infer: now=41575.0 ms id=255 bucketIdx=0 admittedMs=41575.0 ms length=492.4 ms
+Submit infer: now=41689.5 ms id=256 bucketIdx=0 admittedMs=41689.5 ms length=520.4 ms
+     now=41746.8 ms id=245 req_length=419.2 ms latency=1498.0 ms status=failed (4): 
+Submit infer: now=41889.9 ms id=257 bucketIdx=0 admittedMs=41889.9 ms length=333.0 ms
+     now=41907.2 ms id=246 req_length=385.4 ms latency=1498.0 ms status=failed (7): 
+     now=42067.4 ms id=247 req_length=524.0 ms latency=1498.0 ms status=failed (7): 
+     now=42088.1 ms id=244 req_length=685.4 ms latency=1999.8 ms status=succeeded
+Submit infer: now=42090.4 ms id=258 bucketIdx=0 admittedMs=42090.4 ms length=436.9 ms
+     now=42227.8 ms id=248 req_length=259.5 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=42290.8 ms id=259 bucketIdx=0 admittedMs=42290.8 ms length=515.6 ms
+     now=42388.1 ms id=249 req_length=412.9 ms latency=1498.0 ms status=failed (7): 
+     now=42465.8 ms id=251 req_length=377.6 ms latency=1346.7 ms status=succeeded
+Submit infer: now=42491.2 ms id=260 bucketIdx=0 admittedMs=42491.2 ms length=367.7 ms
+     now=42502.7 ms id=250 req_length=310.1 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=42651.6 ms id=261 bucketIdx=0 admittedMs=42651.6 ms length=267.5 ms
+     now=42731.8 ms id=252 req_length=238.4 ms latency=1498.0 ms status=failed (7): 
+     now=42802.2 ms id=257 req_length=333.0 ms latency=909.9 ms status=succeeded
+Submit infer: now=42811.9 ms id=262 bucketIdx=0 admittedMs=42811.9 ms length=606.0 ms
+     now=42846.2 ms id=253 req_length=416.0 ms latency=1498.0 ms status=failed (7): 
+     now=42960.8 ms id=254 req_length=225.3 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=42972.3 ms id=263 bucketIdx=0 admittedMs=42972.3 ms length=474.0 ms
+     now=43075.4 ms id=255 req_length=492.4 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=43132.6 ms id=264 bucketIdx=0 admittedMs=43132.6 ms length=543.3 ms
+     now=43189.9 ms id=256 req_length=520.4 ms latency=1498.0 ms status=failed (7): 
+     now=43240.6 ms id=258 req_length=436.9 ms latency=1147.9 ms status=succeeded
+Submit infer: now=43292.9 ms id=265 bucketIdx=0 admittedMs=43292.9 ms length=477.2 ms
+Submit infer: now=43560.2 ms id=266 bucketIdx=0 admittedMs=43560.2 ms length=423.5 ms
+     now=43609.8 ms id=260 req_length=367.7 ms latency=1116.3 ms status=succeeded
+     now=43791.1 ms id=259 req_length=515.6 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=43827.4 ms id=267 bucketIdx=0 admittedMs=43827.4 ms length=395.3 ms
+     now=44085.3 ms id=263 req_length=474.0 ms latency=1110.7 ms status=succeeded
+Submit infer: now=44094.7 ms id=268 bucketIdx=0 admittedMs=44094.7 ms length=241.9 ms
+     now=44152.1 ms id=261 req_length=267.5 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=44255.0 ms id=269 bucketIdx=0 admittedMs=44255.0 ms length=999.8 ms
+     now=44312.7 ms id=262 req_length=606.0 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=44415.4 ms id=270 bucketIdx=0 admittedMs=44415.4 ms length=323.0 ms
+     now=44510.3 ms id=266 req_length=423.5 ms latency=947.8 ms status=succeeded
+Submit infer: now=44575.7 ms id=271 bucketIdx=0 admittedMs=44575.7 ms length=198.6 ms
+     now=44633.1 ms id=264 req_length=543.3 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=44736.0 ms id=272 bucketIdx=0 admittedMs=44736.0 ms length=557.4 ms
+     now=44793.3 ms id=265 req_length=477.2 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=44896.4 ms id=273 bucketIdx=0 admittedMs=44896.4 ms length=318.8 ms
+     now=44907.1 ms id=267 req_length=395.3 ms latency=1077.3 ms status=succeeded
+Submit infer: now=45096.8 ms id=274 bucketIdx=0 admittedMs=45096.8 ms length=360.8 ms
+Submit infer: now=45297.2 ms id=275 bucketIdx=0 admittedMs=45297.2 ms length=354.5 ms
+Submit infer: now=45497.7 ms id=276 bucketIdx=0 admittedMs=45497.7 ms length=335.4 ms
+     now=45595.0 ms id=268 req_length=241.9 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=45698.1 ms id=277 bucketIdx=0 admittedMs=45698.1 ms length=311.8 ms
+Submit infer: now=45858.5 ms id=278 bucketIdx=0 admittedMs=45858.4 ms length=536.7 ms
+     now=45910.3 ms id=269 req_length=999.8 ms latency=1653.0 ms status=succeeded
+     now=45915.6 ms id=270 req_length=323.0 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=46018.8 ms id=279 bucketIdx=0 admittedMs=46018.8 ms length=325.2 ms
+     now=46076.0 ms id=271 req_length=198.6 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=46179.1 ms id=280 bucketIdx=0 admittedMs=46179.1 ms length=287.3 ms
+     now=46229.2 ms id=273 req_length=318.8 ms latency=1330.5 ms status=succeeded
+     now=46236.4 ms id=272 req_length=557.4 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=46339.5 ms id=281 bucketIdx=0 admittedMs=46339.5 ms length=216.2 ms
+Submit infer: now=46499.8 ms id=282 bucketIdx=0 admittedMs=46499.8 ms length=362.5 ms
+     now=46597.3 ms id=274 req_length=360.8 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=46660.2 ms id=283 bucketIdx=0 admittedMs=46660.2 ms length=632.7 ms
+     now=46767.4 ms id=278 req_length=536.7 ms latency=906.7 ms status=succeeded
+     now=46797.6 ms id=275 req_length=354.5 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=46820.5 ms id=284 bucketIdx=0 admittedMs=46820.5 ms length=312.3 ms
+Submit infer: now=46980.9 ms id=285 bucketIdx=0 admittedMs=46980.9 ms length=428.8 ms
+     now=46985.2 ms id=281 req_length=216.2 ms latency=643.4 ms status=succeeded
+     now=46997.9 ms id=276 req_length=335.4 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=47141.2 ms id=286 bucketIdx=0 admittedMs=47141.2 ms length=369.1 ms
+     now=47198.5 ms id=277 req_length=311.8 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=47301.5 ms id=287 bucketIdx=0 admittedMs=47301.5 ms length=578.4 ms
+     now=47349.2 ms id=282 req_length=362.5 ms latency=847.1 ms status=succeeded
+Submit infer: now=47502.0 ms id=288 bucketIdx=0 admittedMs=47502.0 ms length=354.2 ms
+     now=47519.2 ms id=279 req_length=325.2 ms latency=1498.0 ms status=failed (7): 
+     now=47663.0 ms id=284 req_length=312.3 ms latency=840.1 ms status=succeeded
+     now=47679.5 ms id=280 req_length=287.3 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=47702.4 ms id=289 bucketIdx=0 admittedMs=47702.4 ms length=241.5 ms
+Submit infer: now=47902.8 ms id=290 bucketIdx=0 admittedMs=47902.8 ms length=376.6 ms
+     now=48033.6 ms id=286 req_length=369.1 ms latency=890.1 ms status=succeeded
+Submit infer: now=48103.3 ms id=291 bucketIdx=0 admittedMs=48103.3 ms length=354.7 ms
+     now=48160.7 ms id=283 req_length=632.7 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=48263.6 ms id=292 bucketIdx=0 admittedMs=48263.6 ms length=502.5 ms
+     now=48389.3 ms id=288 req_length=354.2 ms latency=885.0 ms status=succeeded
+Submit infer: now=48424.0 ms id=293 bucketIdx=0 admittedMs=48424.0 ms length=354.0 ms
+     now=48481.2 ms id=285 req_length=428.8 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=48584.3 ms id=294 bucketIdx=0 admittedMs=48584.3 ms length=532.2 ms
+Submit infer: now=48744.6 ms id=295 bucketIdx=0 admittedMs=48744.6 ms length=449.3 ms
+     now=48767.4 ms id=290 req_length=376.6 ms latency=862.2 ms status=succeeded
+     now=48801.8 ms id=287 req_length=578.4 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=48905.0 ms id=296 bucketIdx=0 admittedMs=48905.0 ms length=727.4 ms
+Submit infer: now=49065.3 ms id=297 bucketIdx=0 admittedMs=49065.3 ms length=321.3 ms
+     now=49202.8 ms id=289 req_length=241.5 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=49225.7 ms id=298 bucketIdx=0 admittedMs=49225.7 ms length=336.4 ms
+     now=49271.4 ms id=292 req_length=502.5 ms latency=1005.4 ms status=succeeded
+Submit infer: now=49386.0 ms id=299 bucketIdx=0 admittedMs=49386.0 ms length=338.8 ms
+Submit infer: now=49546.4 ms id=300 bucketIdx=0 admittedMs=49546.4 ms length=547.4 ms
+     now=49603.7 ms id=291 req_length=354.7 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=49706.7 ms id=301 bucketIdx=0 admittedMs=49706.7 ms length=259.4 ms
+     now=49722.2 ms id=295 req_length=449.3 ms latency=975.3 ms status=succeeded
+Submit infer: now=49907.1 ms id=302 bucketIdx=0 admittedMs=49907.1 ms length=538.8 ms
+     now=49924.4 ms id=293 req_length=354.0 ms latency=1498.1 ms status=failed (7): 
+     now=50084.8 ms id=294 req_length=532.2 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=50107.6 ms id=303 bucketIdx=0 admittedMs=50107.6 ms length=550.0 ms
+Submit infer: now=50308.0 ms id=304 bucketIdx=0 admittedMs=50308.0 ms length=298.9 ms
+     now=50452.0 ms id=296 req_length=727.4 ms latency=1544.6 ms status=succeeded
+Submit infer: now=50508.4 ms id=305 bucketIdx=0 admittedMs=50508.4 ms length=279.3 ms
+     now=50565.7 ms id=297 req_length=321.3 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=50708.9 ms id=306 bucketIdx=0 admittedMs=50708.9 ms length=329.6 ms
+     now=50726.0 ms id=298 req_length=336.4 ms latency=1498.0 ms status=failed (7): 
+     now=50790.9 ms id=299 req_length=338.8 ms latency=1402.6 ms status=succeeded
+Submit infer: now=50909.3 ms id=307 bucketIdx=0 admittedMs=50909.3 ms length=336.0 ms
+     now=51046.7 ms id=300 req_length=547.4 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=51109.7 ms id=308 bucketIdx=0 admittedMs=51109.7 ms length=224.7 ms
+     now=51207.1 ms id=301 req_length=259.4 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=51310.2 ms id=309 bucketIdx=0 admittedMs=51310.2 ms length=755.1 ms
+     now=51342.3 ms id=303 req_length=550.0 ms latency=1232.4 ms status=succeeded
+     now=51407.5 ms id=302 req_length=538.8 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=51577.4 ms id=310 bucketIdx=0 admittedMs=51577.4 ms length=455.0 ms
+     now=51673.5 ms id=306 req_length=329.6 ms latency=962.3 ms status=succeeded
+     now=51808.3 ms id=304 req_length=298.9 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=51844.6 ms id=311 bucketIdx=0 admittedMs=51844.6 ms length=372.9 ms
+     now=52008.8 ms id=305 req_length=279.3 ms latency=1498.0 ms status=failed (7): 
+     now=52011.0 ms id=307 req_length=336.0 ms latency=1099.3 ms status=succeeded
+Submit infer: now=52111.9 ms id=312 bucketIdx=0 admittedMs=52111.9 ms length=306.5 ms
+Submit infer: now=52312.3 ms id=313 bucketIdx=0 admittedMs=52312.3 ms length=687.2 ms
+Submit infer: now=52512.7 ms id=314 bucketIdx=0 admittedMs=52512.7 ms length=822.4 ms
+     now=52610.0 ms id=308 req_length=224.7 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=52713.2 ms id=315 bucketIdx=0 admittedMs=52713.2 ms length=330.4 ms
+     now=52768.3 ms id=309 req_length=755.1 ms latency=1455.9 ms status=succeeded
+Submit infer: now=52913.6 ms id=316 bucketIdx=0 admittedMs=52913.6 ms length=430.8 ms
+Submit infer: now=53047.2 ms id=317 bucketIdx=0 admittedMs=53047.2 ms length=388.6 ms
+     now=53074.9 ms id=312 req_length=306.5 ms latency=960.6 ms status=succeeded
+     now=53077.7 ms id=310 req_length=455.0 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=53180.8 ms id=318 bucketIdx=0 admittedMs=53180.8 ms length=423.1 ms
+Submit infer: now=53314.5 ms id=319 bucketIdx=0 admittedMs=53314.5 ms length=447.0 ms
+     now=53344.9 ms id=311 req_length=372.9 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=53448.1 ms id=320 bucketIdx=0 admittedMs=53448.1 ms length=253.9 ms
+Submit infer: now=53581.7 ms id=321 bucketIdx=0 admittedMs=53581.7 ms length=417.1 ms
+Submit infer: now=53715.3 ms id=322 bucketIdx=0 admittedMs=53715.3 ms length=402.7 ms
+     now=53812.6 ms id=313 req_length=687.2 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=53875.7 ms id=323 bucketIdx=0 admittedMs=53875.7 ms length=166.9 ms
+     now=53898.8 ms id=314 req_length=822.4 ms latency=1383.8 ms status=succeeded
+Submit infer: now=54036.0 ms id=324 bucketIdx=0 admittedMs=54036.0 ms length=448.6 ms
+Submit infer: now=54196.4 ms id=325 bucketIdx=0 admittedMs=54196.3 ms length=261.3 ms
+     now=54213.5 ms id=315 req_length=330.4 ms latency=1498.0 ms status=failed (7): 
+     now=54322.0 ms id=318 req_length=423.1 ms latency=1138.8 ms status=succeeded
+Submit infer: now=54356.7 ms id=326 bucketIdx=0 admittedMs=54356.7 ms length=484.5 ms
+     now=54413.9 ms id=316 req_length=430.8 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=54517.0 ms id=327 bucketIdx=0 admittedMs=54517.0 ms length=270.9 ms
+     now=54547.6 ms id=317 req_length=388.6 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=54650.7 ms id=328 bucketIdx=0 admittedMs=54650.7 ms length=478.5 ms
+     now=54726.2 ms id=322 req_length=402.7 ms latency=1008.6 ms status=succeeded
+Submit infer: now=54784.3 ms id=329 bucketIdx=0 admittedMs=54784.3 ms length=501.0 ms
+     now=54814.8 ms id=319 req_length=447.0 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=54917.9 ms id=330 bucketIdx=0 admittedMs=54917.9 ms length=577.5 ms
+     now=54948.4 ms id=320 req_length=253.9 ms latency=1498.0 ms status=failed (7): 
+     now=54989.0 ms id=325 req_length=261.3 ms latency=790.3 ms status=succeeded
+Submit infer: now=55051.5 ms id=331 bucketIdx=0 admittedMs=55051.5 ms length=446.2 ms
+     now=55082.0 ms id=321 req_length=417.1 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=55185.1 ms id=332 bucketIdx=0 admittedMs=55185.1 ms length=307.5 ms
+Submit infer: now=55318.8 ms id=333 bucketIdx=0 admittedMs=55318.8 ms length=443.1 ms
+     now=55376.0 ms id=323 req_length=166.9 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=55452.4 ms id=334 bucketIdx=0 admittedMs=55452.4 ms length=297.7 ms
+     now=55475.0 ms id=326 req_length=484.5 ms latency=1115.8 ms status=succeeded
+     now=55536.3 ms id=324 req_length=448.6 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=55586.0 ms id=335 bucketIdx=0 admittedMs=55586.0 ms length=343.8 ms
+Submit infer: now=55719.6 ms id=336 bucketIdx=0 admittedMs=55719.6 ms length=259.0 ms
+Submit infer: now=55853.2 ms id=337 bucketIdx=0 admittedMs=55853.2 ms length=382.7 ms
+Submit infer: now=55986.9 ms id=338 bucketIdx=0 admittedMs=55986.9 ms length=277.4 ms
+     now=56017.4 ms id=327 req_length=270.9 ms latency=1498.0 ms status=failed (7): 
+     now=56054.5 ms id=330 req_length=577.5 ms latency=1134.2 ms status=succeeded
+Submit infer: now=56120.5 ms id=339 bucketIdx=0 admittedMs=56120.5 ms length=424.0 ms
+     now=56151.0 ms id=328 req_length=478.5 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=56235.0 ms id=340 bucketIdx=0 admittedMs=56235.0 ms length=436.0 ms
+     now=56284.7 ms id=329 req_length=501.0 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=56349.5 ms id=341 bucketIdx=0 admittedMs=56349.5 ms length=460.2 ms
+     now=56353.7 ms id=334 req_length=297.7 ms latency=899.0 ms status=succeeded
+Submit infer: now=56464.1 ms id=342 bucketIdx=0 admittedMs=56464.1 ms length=316.2 ms
+     now=56551.8 ms id=331 req_length=446.2 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=56578.6 ms id=343 bucketIdx=0 admittedMs=56578.6 ms length=379.7 ms
+     now=56614.2 ms id=336 req_length=259.0 ms latency=892.3 ms status=succeeded
+     now=56685.5 ms id=332 req_length=307.5 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=56693.1 ms id=344 bucketIdx=0 admittedMs=56693.1 ms length=640.6 ms
+Submit infer: now=56807.7 ms id=345 bucketIdx=0 admittedMs=56807.7 ms length=384.9 ms
+     now=56819.2 ms id=333 req_length=443.1 ms latency=1498.0 ms status=failed (7): 
+     now=56893.9 ms id=338 req_length=277.4 ms latency=904.7 ms status=succeeded
+Submit infer: now=56922.2 ms id=346 bucketIdx=0 admittedMs=56922.2 ms length=281.3 ms
+     now=57086.3 ms id=335 req_length=343.8 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=57122.6 ms id=347 bucketIdx=0 admittedMs=57122.6 ms length=431.8 ms
+Submit infer: now=57323.1 ms id=348 bucketIdx=0 admittedMs=57323.1 ms length=336.1 ms
+     now=57331.4 ms id=340 req_length=436.0 ms latency=1094.1 ms status=succeeded
+     now=57353.5 ms id=337 req_length=382.7 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=57523.5 ms id=349 bucketIdx=0 admittedMs=57523.5 ms length=426.7 ms
+     now=57620.8 ms id=339 req_length=424.0 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=57723.9 ms id=350 bucketIdx=0 admittedMs=57723.9 ms length=353.5 ms
+     now=57850.0 ms id=341 req_length=460.2 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=57884.3 ms id=351 bucketIdx=0 admittedMs=57884.3 ms length=209.7 ms
+     now=57964.4 ms id=342 req_length=316.2 ms latency=1498.0 ms status=failed (7): 
+     now=57973.6 ms id=344 req_length=640.6 ms latency=1278.1 ms status=succeeded
+Submit infer: now=58044.6 ms id=352 bucketIdx=0 admittedMs=58044.6 ms length=263.2 ms
+     now=58079.0 ms id=343 req_length=379.7 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=58205.0 ms id=353 bucketIdx=0 admittedMs=58205.0 ms length=340.3 ms
+     now=58308.2 ms id=345 req_length=384.9 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=58365.3 ms id=354 bucketIdx=0 admittedMs=58365.3 ms length=413.5 ms
+     now=58406.8 ms id=347 req_length=431.8 ms latency=1281.7 ms status=succeeded
+     now=58422.6 ms id=346 req_length=281.3 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=58525.6 ms id=355 bucketIdx=0 admittedMs=58525.6 ms length=289.8 ms
+Submit infer: now=58726.1 ms id=356 bucketIdx=0 admittedMs=58726.1 ms length=504.7 ms
+     now=58761.8 ms id=350 req_length=353.5 ms latency=1035.3 ms status=succeeded
+     now=58823.4 ms id=348 req_length=336.1 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=58926.5 ms id=357 bucketIdx=0 admittedMs=58926.5 ms length=204.7 ms
+     now=59023.8 ms id=349 req_length=426.7 ms latency=1498.0 ms status=failed (7): 
+     now=59026.5 ms id=352 req_length=263.2 ms latency=979.6 ms status=succeeded
+Submit infer: now=59126.9 ms id=358 bucketIdx=0 admittedMs=59126.9 ms length=270.3 ms
+Submit infer: now=59327.4 ms id=359 bucketIdx=0 admittedMs=59327.4 ms length=194.3 ms
+     now=59368.2 ms id=353 req_length=340.3 ms latency=1160.9 ms status=succeeded
+     now=59384.7 ms id=351 req_length=209.7 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=59461.0 ms id=360 bucketIdx=0 admittedMs=59461.0 ms length=284.2 ms
+Submit infer: now=59594.6 ms id=361 bucketIdx=0 admittedMs=59594.6 ms length=377.2 ms
+     now=59659.5 ms id=355 req_length=289.8 ms latency=1131.3 ms status=succeeded
+Submit infer: now=59728.2 ms id=362 bucketIdx=0 admittedMs=59728.2 ms length=441.6 ms
+Submit infer: now=59861.8 ms id=363 bucketIdx=0 admittedMs=59861.8 ms length=273.3 ms
+     now=59865.6 ms id=354 req_length=413.5 ms latency=1498.0 ms status=failed (7): 
+     now=59865.7 ms id=357 req_length=204.7 ms latency=936.9 ms status=succeeded
+Submit infer: now=59995.5 ms id=364 bucketIdx=0 admittedMs=59995.5 ms length=287.1 ms
+Submit infer: now=60129.1 ms id=365 bucketIdx=0 admittedMs=60129.1 ms length=379.1 ms
+     now=60137.6 ms id=358 req_length=270.3 ms latency=1008.3 ms status=succeeded
+Submit infer: now=60209.3 ms id=366 bucketIdx=0 admittedMs=60209.3 ms length=511.4 ms
+     now=60226.5 ms id=356 req_length=504.7 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=60289.4 ms id=367 bucketIdx=0 admittedMs=60289.4 ms length=401.7 ms
+     now=60333.3 ms id=359 req_length=194.3 ms latency=1003.6 ms status=succeeded
+Submit infer: now=60369.6 ms id=368 bucketIdx=0 admittedMs=60369.6 ms length=260.1 ms
+Submit infer: now=60449.8 ms id=369 bucketIdx=0 admittedMs=60449.8 ms length=684.8 ms
+Submit infer: now=60529.9 ms id=370 bucketIdx=0 admittedMs=60529.9 ms length=411.1 ms
+Submit infer: now=60610.1 ms id=371 bucketIdx=0 admittedMs=60610.1 ms length=588.4 ms
+     now=60619.0 ms id=360 req_length=284.2 ms latency=1155.7 ms status=succeeded
+Submit infer: now=60690.3 ms id=372 bucketIdx=0 admittedMs=60690.3 ms length=263.4 ms
+Submit infer: now=60770.5 ms id=373 bucketIdx=0 admittedMs=60770.5 ms length=617.2 ms
+Submit infer: now=60850.6 ms id=374 bucketIdx=0 admittedMs=60850.6 ms length=356.6 ms
+     now=60893.8 ms id=363 req_length=273.3 ms latency=1029.6 ms status=succeeded
+Submit infer: now=60930.8 ms id=375 bucketIdx=0 admittedMs=60930.8 ms length=261.9 ms
+Submit infer: now=61091.2 ms id=376 bucketIdx=0 admittedMs=61091.2 ms length=424.1 ms
+     now=61095.0 ms id=361 req_length=377.2 ms latency=1498.0 ms status=failed (7): 
+     now=61182.5 ms id=364 req_length=287.1 ms latency=1184.6 ms status=succeeded
+     now=61228.6 ms id=362 req_length=441.6 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=61251.5 ms id=377 bucketIdx=0 admittedMs=61251.5 ms length=510.1 ms
+Submit infer: now=61411.8 ms id=378 bucketIdx=0 admittedMs=61411.8 ms length=510.9 ms
+     now=61563.1 ms id=365 req_length=379.1 ms latency=1431.7 ms status=succeeded
+Submit infer: now=61572.2 ms id=379 bucketIdx=0 admittedMs=61572.2 ms length=371.5 ms
+     now=61709.6 ms id=366 req_length=511.4 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=61732.5 ms id=380 bucketIdx=0 admittedMs=61732.5 ms length=361.5 ms
+     now=61789.9 ms id=367 req_length=401.7 ms latency=1498.0 ms status=failed (7): 
+     now=61870.0 ms id=368 req_length=260.1 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=61933.0 ms id=381 bucketIdx=0 admittedMs=61933.0 ms length=304.1 ms
+     now=62030.2 ms id=370 req_length=411.1 ms latency=1498.0 ms status=failed (7): 
+     now=62110.5 ms id=371 req_length=588.4 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=62133.4 ms id=382 bucketIdx=0 admittedMs=62133.4 ms length=277.0 ms
+     now=62190.7 ms id=372 req_length=263.4 ms latency=1498.0 ms status=failed (7): 
+     now=62249.4 ms id=369 req_length=684.8 ms latency=1797.4 ms status=succeeded
+     now=62270.8 ms id=373 req_length=617.2 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=62333.8 ms id=383 bucketIdx=0 admittedMs=62333.8 ms length=502.2 ms
+     now=62431.2 ms id=375 req_length=261.9 ms latency=1498.0 ms status=failed (4): 
+Submit infer: now=62534.3 ms id=384 bucketIdx=0 admittedMs=62534.2 ms length=474.8 ms
+     now=62591.5 ms id=376 req_length=424.1 ms latency=1498.0 ms status=failed (4): 
+     now=62606.1 ms id=374 req_length=356.6 ms latency=1753.0 ms status=succeeded
+Submit infer: now=62734.7 ms id=385 bucketIdx=0 admittedMs=62734.7 ms length=569.9 ms
+     now=62751.8 ms id=377 req_length=510.1 ms latency=1498.0 ms status=failed (7): 
+     now=62911.7 ms id=381 req_length=304.1 ms latency=976.5 ms status=succeeded
+     now=62912.2 ms id=378 req_length=510.9 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=62935.1 ms id=386 bucketIdx=0 admittedMs=62935.1 ms length=294.9 ms
+     now=63072.6 ms id=379 req_length=371.5 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=63135.5 ms id=387 bucketIdx=0 admittedMs=63135.5 ms length=386.7 ms
+     now=63190.7 ms id=382 req_length=277.0 ms latency=1054.9 ms status=succeeded
+     now=63232.9 ms id=380 req_length=361.5 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=63336.0 ms id=388 bucketIdx=0 admittedMs=63336.0 ms length=294.4 ms
+Submit infer: now=63496.3 ms id=389 bucketIdx=0 admittedMs=63496.3 ms length=348.9 ms
+Submit infer: now=63656.7 ms id=390 bucketIdx=0 admittedMs=63656.7 ms length=398.7 ms
+     now=63666.9 ms id=384 req_length=474.8 ms latency=1130.3 ms status=succeeded
+Submit infer: now=63817.0 ms id=391 bucketIdx=0 admittedMs=63817.0 ms length=395.7 ms
+     now=63834.2 ms id=383 req_length=502.2 ms latency=1498.0 ms status=failed (7): 
+     now=63963.3 ms id=386 req_length=294.9 ms latency=1025.7 ms status=succeeded
+Submit infer: now=63977.3 ms id=392 bucketIdx=0 admittedMs=63977.3 ms length=267.3 ms
+Submit infer: now=64137.7 ms id=393 bucketIdx=0 admittedMs=64137.7 ms length=373.5 ms
+     now=64235.0 ms id=385 req_length=569.9 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=64252.2 ms id=394 bucketIdx=0 admittedMs=64252.2 ms length=348.7 ms
+     now=64351.6 ms id=387 req_length=386.7 ms latency=1213.6 ms status=succeeded
+Submit infer: now=64366.8 ms id=395 bucketIdx=0 admittedMs=64366.8 ms length=337.1 ms
+Submit infer: now=64481.3 ms id=396 bucketIdx=0 admittedMs=64481.3 ms length=437.2 ms
+Submit infer: now=64595.8 ms id=397 bucketIdx=0 admittedMs=64595.8 ms length=285.7 ms
+Submit infer: now=64710.4 ms id=398 bucketIdx=0 admittedMs=64710.3 ms length=315.7 ms
+     now=64751.8 ms id=390 req_length=398.7 ms latency=1092.9 ms status=succeeded
+Submit infer: now=64824.9 ms id=399 bucketIdx=0 admittedMs=64824.9 ms length=430.6 ms
+     now=64836.4 ms id=388 req_length=294.4 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=64939.4 ms id=400 bucketIdx=0 admittedMs=64939.4 ms length=244.8 ms
+     now=64996.7 ms id=389 req_length=348.9 ms latency=1498.0 ms status=failed (7): 
+     now=65021.4 ms id=392 req_length=267.3 ms latency=1041.8 ms status=succeeded
+Submit infer: now=65099.8 ms id=401 bucketIdx=0 admittedMs=65099.8 ms length=433.2 ms
+Submit infer: now=65260.1 ms id=402 bucketIdx=0 admittedMs=65260.1 ms length=280.8 ms
+     now=65317.3 ms id=391 req_length=395.7 ms latency=1498.0 ms status=failed (7): 
+     now=65371.7 ms id=394 req_length=348.7 ms latency=1117.0 ms status=succeeded
+Submit infer: now=65420.4 ms id=403 bucketIdx=0 admittedMs=65420.4 ms length=425.9 ms
+Submit infer: now=65580.8 ms id=404 bucketIdx=0 admittedMs=65580.8 ms length=322.1 ms
+     now=65638.0 ms id=393 req_length=373.5 ms latency=1498.0 ms status=failed (7): 
+     now=65658.9 ms id=397 req_length=285.7 ms latency=1060.8 ms status=succeeded
+Submit infer: now=65741.1 ms id=405 bucketIdx=0 admittedMs=65741.1 ms length=377.4 ms
+     now=65867.1 ms id=395 req_length=337.1 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=65941.6 ms id=406 bucketIdx=0 admittedMs=65941.6 ms length=422.5 ms
+     now=65976.1 ms id=398 req_length=315.7 ms latency=1263.4 ms status=succeeded
+     now=65981.6 ms id=396 req_length=437.2 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=66142.0 ms id=407 bucketIdx=0 admittedMs=66142.0 ms length=521.4 ms
+     now=66325.2 ms id=399 req_length=430.6 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=66342.4 ms id=408 bucketIdx=0 admittedMs=66342.4 ms length=284.5 ms
+     now=66410.8 ms id=401 req_length=433.2 ms latency=1308.7 ms status=succeeded
+     now=66439.7 ms id=400 req_length=244.8 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=66542.9 ms id=409 bucketIdx=0 admittedMs=66542.9 ms length=304.9 ms
+Submit infer: now=66703.2 ms id=410 bucketIdx=0 admittedMs=66703.2 ms length=420.8 ms
+     now=66760.4 ms id=402 req_length=280.8 ms latency=1498.0 ms status=failed (7): 
+     now=66838.2 ms id=403 req_length=425.9 ms latency=1415.5 ms status=succeeded
+Submit infer: now=66863.5 ms id=411 bucketIdx=0 admittedMs=66863.5 ms length=367.9 ms
+Submit infer: now=67023.9 ms id=412 bucketIdx=0 admittedMs=67023.9 ms length=365.8 ms
+     now=67081.1 ms id=404 req_length=322.1 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=67184.2 ms id=413 bucketIdx=0 admittedMs=67184.2 ms length=557.5 ms
+     now=67241.7 ms id=405 req_length=377.4 ms latency=1498.0 ms status=failed (7): 
+     now=67262.3 ms id=406 req_length=422.5 ms latency=1318.3 ms status=succeeded
+Submit infer: now=67344.6 ms id=414 bucketIdx=0 admittedMs=67344.6 ms length=327.1 ms
+Submit infer: now=67478.2 ms id=415 bucketIdx=0 admittedMs=67478.2 ms length=231.2 ms
+     now=67548.3 ms id=408 req_length=284.5 ms latency=1203.5 ms status=succeeded
+Submit infer: now=67611.8 ms id=416 bucketIdx=0 admittedMs=67611.8 ms length=352.5 ms
+     now=67642.3 ms id=407 req_length=521.4 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=67745.4 ms id=417 bucketIdx=0 admittedMs=67745.4 ms length=280.8 ms
+     now=67854.7 ms id=409 req_length=304.9 ms latency=1309.4 ms status=succeeded
+Submit infer: now=67879.1 ms id=418 bucketIdx=0 admittedMs=67879.1 ms length=288.7 ms
+Submit infer: now=68012.7 ms id=419 bucketIdx=0 admittedMs=68012.7 ms length=658.7 ms
+Submit infer: now=68146.3 ms id=420 bucketIdx=0 admittedMs=68146.3 ms length=337.1 ms
+     now=68203.5 ms id=410 req_length=420.8 ms latency=1498.0 ms status=failed (7): 
+     now=68224.1 ms id=411 req_length=367.9 ms latency=1358.2 ms status=succeeded
+Submit infer: now=68306.6 ms id=421 bucketIdx=0 admittedMs=68306.6 ms length=398.1 ms
+Submit infer: now=68467.0 ms id=422 bucketIdx=0 admittedMs=68467.0 ms length=266.0 ms
+     now=68524.2 ms id=412 req_length=365.8 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=68627.3 ms id=423 bucketIdx=0 admittedMs=68627.3 ms length=503.2 ms
+     now=68783.1 ms id=413 req_length=557.5 ms latency=1596.6 ms status=succeeded
+Submit infer: now=68787.7 ms id=424 bucketIdx=0 admittedMs=68787.7 ms length=398.1 ms
+     now=68844.9 ms id=414 req_length=327.1 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=68948.0 ms id=425 bucketIdx=0 admittedMs=68948.0 ms length=339.8 ms
+     now=68978.5 ms id=415 req_length=231.2 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=69062.6 ms id=426 bucketIdx=0 admittedMs=69062.5 ms length=316.7 ms
+     now=69135.7 ms id=416 req_length=352.5 ms latency=1521.5 ms status=succeeded
+Submit infer: now=69177.1 ms id=427 bucketIdx=0 admittedMs=69177.1 ms length=362.8 ms
+     now=69245.8 ms id=417 req_length=280.8 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=69291.6 ms id=428 bucketIdx=0 admittedMs=69291.6 ms length=545.8 ms
+     now=69379.4 ms id=418 req_length=288.7 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=69406.1 ms id=429 bucketIdx=0 admittedMs=69406.1 ms length=417.2 ms
+     now=69513.0 ms id=419 req_length=658.7 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=69520.7 ms id=430 bucketIdx=0 admittedMs=69520.7 ms length=420.8 ms
+     now=69535.3 ms id=421 req_length=398.1 ms latency=1226.3 ms status=succeeded
+Submit infer: now=69635.2 ms id=431 bucketIdx=0 admittedMs=69635.2 ms length=318.2 ms
+     now=69646.6 ms id=420 req_length=337.1 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=69749.7 ms id=432 bucketIdx=0 admittedMs=69749.7 ms length=266.2 ms
+Submit infer: now=69950.2 ms id=433 bucketIdx=0 admittedMs=69950.2 ms length=281.2 ms
+     now=69967.3 ms id=422 req_length=266.0 ms latency=1498.0 ms status=failed (7): 
+     now=70039.9 ms id=423 req_length=503.2 ms latency=1410.3 ms status=succeeded
+Submit infer: now=70150.6 ms id=434 bucketIdx=0 admittedMs=70150.6 ms length=282.7 ms
+     now=70288.0 ms id=424 req_length=398.1 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=70351.0 ms id=435 bucketIdx=0 admittedMs=70351.0 ms length=400.6 ms
+     now=70404.3 ms id=427 req_length=362.8 ms latency=1224.9 ms status=succeeded
+     now=70448.4 ms id=425 req_length=339.8 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=70551.5 ms id=436 bucketIdx=0 admittedMs=70551.5 ms length=412.6 ms
+     now=70562.9 ms id=426 req_length=316.7 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=70711.8 ms id=437 bucketIdx=0 admittedMs=70711.8 ms length=315.4 ms
+     now=70792.0 ms id=428 req_length=545.8 ms latency=1498.0 ms status=failed (7): 
+     now=70829.3 ms id=430 req_length=420.8 ms latency=1306.4 ms status=succeeded
+Submit infer: now=70872.2 ms id=438 bucketIdx=0 admittedMs=70872.1 ms length=304.5 ms
+     now=70906.5 ms id=429 req_length=417.2 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=71032.5 ms id=439 bucketIdx=0 admittedMs=71032.5 ms length=235.8 ms
+     now=71112.1 ms id=433 req_length=281.2 ms latency=1159.6 ms status=succeeded
+     now=71135.6 ms id=431 req_length=318.2 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=71192.8 ms id=440 bucketIdx=0 admittedMs=71192.8 ms length=304.3 ms
+     now=71250.1 ms id=432 req_length=266.2 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=71353.2 ms id=441 bucketIdx=0 admittedMs=71353.2 ms length=562.7 ms
+Submit infer: now=71513.5 ms id=442 bucketIdx=0 admittedMs=71513.5 ms length=676.3 ms
+     now=71514.2 ms id=435 req_length=400.6 ms latency=1160.8 ms status=succeeded
+     now=71651.2 ms id=434 req_length=282.7 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=71673.9 ms id=443 bucketIdx=0 admittedMs=71673.9 ms length=513.9 ms
+     now=71831.0 ms id=437 req_length=315.4 ms latency=1116.9 ms status=succeeded
+Submit infer: now=71834.2 ms id=444 bucketIdx=0 admittedMs=71834.2 ms length=339.6 ms
+Submit infer: now=71994.6 ms id=445 bucketIdx=0 admittedMs=71994.6 ms length=356.5 ms
+     now=72051.8 ms id=436 req_length=412.6 ms latency=1498.0 ms status=failed (7): 
+     now=72068.4 ms id=439 req_length=235.8 ms latency=1033.5 ms status=succeeded
+Submit infer: now=72154.9 ms id=446 bucketIdx=0 admittedMs=72154.9 ms length=416.4 ms
+Submit infer: now=72288.5 ms id=447 bucketIdx=0 admittedMs=72288.5 ms length=332.2 ms
+     now=72372.5 ms id=438 req_length=304.5 ms latency=1498.0 ms status=failed (7): 
+     now=72374.2 ms id=440 req_length=304.3 ms latency=1179.1 ms status=succeeded
+Submit infer: now=72422.1 ms id=448 bucketIdx=0 admittedMs=72422.1 ms length=359.5 ms
+Submit infer: now=72555.8 ms id=449 bucketIdx=0 admittedMs=72555.8 ms length=443.0 ms
+Submit infer: now=72689.4 ms id=450 bucketIdx=0 admittedMs=72689.4 ms length=219.2 ms
+Submit infer: now=72823.0 ms id=451 bucketIdx=0 admittedMs=72823.0 ms length=345.7 ms
+     now=72853.5 ms id=441 req_length=562.7 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=72956.6 ms id=452 bucketIdx=0 admittedMs=72956.6 ms length=522.8 ms
+     now=73052.0 ms id=442 req_length=676.3 ms latency=1536.2 ms status=succeeded
+Submit infer: now=73071.2 ms id=453 bucketIdx=0 admittedMs=73071.2 ms length=333.4 ms
+     now=73174.2 ms id=443 req_length=513.9 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=73185.7 ms id=454 bucketIdx=0 admittedMs=73185.7 ms length=329.2 ms
+Submit infer: now=73300.2 ms id=455 bucketIdx=0 admittedMs=73300.2 ms length=379.7 ms
+     now=73334.5 ms id=444 req_length=339.6 ms latency=1498.0 ms status=failed (7): 
+     now=73408.5 ms id=445 req_length=356.5 ms latency=1411.7 ms status=succeeded
+Submit infer: now=73414.8 ms id=456 bucketIdx=0 admittedMs=73414.7 ms length=425.1 ms
+Submit infer: now=73529.3 ms id=457 bucketIdx=0 admittedMs=73529.3 ms length=391.1 ms
+     now=73629.3 ms id=450 req_length=219.2 ms latency=937.6 ms status=succeeded
+Submit infer: now=73643.8 ms id=458 bucketIdx=0 admittedMs=73643.8 ms length=372.7 ms
+     now=73655.3 ms id=446 req_length=416.4 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=73758.3 ms id=459 bucketIdx=0 admittedMs=73758.3 ms length=262.5 ms
+     now=73788.9 ms id=447 req_length=332.2 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=73918.7 ms id=460 bucketIdx=0 admittedMs=73918.7 ms length=543.8 ms
+     now=73922.4 ms id=448 req_length=359.5 ms latency=1498.0 ms status=failed (7): 
+     now=73976.5 ms id=451 req_length=345.7 ms latency=1151.2 ms status=succeeded
+     now=74056.1 ms id=449 req_length=443.0 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=74079.0 ms id=461 bucketIdx=0 admittedMs=74079.0 ms length=328.7 ms
+Submit infer: now=74239.4 ms id=462 bucketIdx=0 admittedMs=74239.4 ms length=321.9 ms
+     now=74307.2 ms id=454 req_length=329.2 ms latency=1119.1 ms status=succeeded
+Submit infer: now=74399.7 ms id=463 bucketIdx=0 admittedMs=74399.7 ms length=427.4 ms
+     now=74457.0 ms id=452 req_length=522.8 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=74560.1 ms id=464 bucketIdx=0 admittedMs=74560.1 ms length=661.7 ms
+     now=74571.4 ms id=453 req_length=333.4 ms latency=1498.0 ms status=failed (7): 
+     now=74699.8 ms id=457 req_length=391.1 ms latency=1168.2 ms status=succeeded
+Submit infer: now=74720.4 ms id=465 bucketIdx=0 admittedMs=74720.4 ms length=290.9 ms
+     now=74800.7 ms id=455 req_length=379.7 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=74880.8 ms id=466 bucketIdx=0 admittedMs=74880.8 ms length=484.2 ms
+     now=74915.1 ms id=456 req_length=425.1 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=75041.1 ms id=467 bucketIdx=0 admittedMs=75041.1 ms length=354.7 ms
+     now=75144.1 ms id=458 req_length=372.7 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=75201.4 ms id=468 bucketIdx=0 admittedMs=75201.4 ms length=281.3 ms
+     now=75245.1 ms id=460 req_length=543.8 ms latency=1324.1 ms status=succeeded
+     now=75258.7 ms id=459 req_length=262.5 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=75361.8 ms id=469 bucketIdx=0 admittedMs=75361.8 ms length=360.2 ms
+Submit infer: now=75476.3 ms id=470 bucketIdx=0 admittedMs=75476.3 ms length=445.7 ms
+     now=75579.7 ms id=461 req_length=328.7 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=75590.9 ms id=471 bucketIdx=0 admittedMs=75590.8 ms length=414.2 ms
+Submit infer: now=75705.4 ms id=472 bucketIdx=0 admittedMs=75705.4 ms length=378.0 ms
+     now=75739.7 ms id=462 req_length=321.9 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=75819.9 ms id=473 bucketIdx=0 admittedMs=75819.9 ms length=390.7 ms
+     now=75900.1 ms id=463 req_length=427.4 ms latency=1498.0 ms status=failed (7): 
+     now=75908.2 ms id=464 req_length=661.7 ms latency=1345.9 ms status=succeeded
+Submit infer: now=75934.4 ms id=474 bucketIdx=0 admittedMs=75934.4 ms length=316.8 ms
+Submit infer: now=76049.0 ms id=475 bucketIdx=0 admittedMs=76049.0 ms length=381.0 ms
+Submit infer: now=76163.5 ms id=476 bucketIdx=0 admittedMs=76163.5 ms length=425.6 ms
+     now=76189.6 ms id=468 req_length=281.3 ms latency=985.8 ms status=succeeded
+     now=76220.7 ms id=465 req_length=290.9 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=76297.1 ms id=477 bucketIdx=0 admittedMs=76297.1 ms length=324.9 ms
+     now=76381.2 ms id=466 req_length=484.2 ms latency=1498.1 ms status=failed (7): 
+Submit infer: now=76430.8 ms id=478 bucketIdx=0 admittedMs=76430.7 ms length=368.6 ms
+     now=76541.6 ms id=467 req_length=354.7 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=76564.4 ms id=479 bucketIdx=0 admittedMs=76564.4 ms length=161.2 ms
+     now=76636.8 ms id=470 req_length=445.7 ms latency=1158.0 ms status=succeeded
+Submit infer: now=76698.0 ms id=480 bucketIdx=0 admittedMs=76698.0 ms length=269.1 ms
+Submit infer: now=76831.6 ms id=481 bucketIdx=0 admittedMs=76831.6 ms length=505.3 ms
+     now=76862.1 ms id=469 req_length=360.2 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=76965.2 ms id=482 bucketIdx=0 admittedMs=76965.2 ms length=231.8 ms
+     now=77029.0 ms id=473 req_length=390.7 ms latency=1206.8 ms status=succeeded
+     now=77091.2 ms id=471 req_length=414.2 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=77165.7 ms id=483 bucketIdx=0 admittedMs=77165.7 ms length=610.1 ms
+     now=77205.7 ms id=472 req_length=378.0 ms latency=1498.0 ms status=failed (7): 
+     now=77355.4 ms id=477 req_length=324.9 ms latency=1056.0 ms status=succeeded
+Submit infer: now=77366.1 ms id=484 bucketIdx=0 admittedMs=77366.1 ms length=261.6 ms
+     now=77434.9 ms id=474 req_length=316.8 ms latency=1498.0 ms status=failed (7): 
+     now=77518.2 ms id=479 req_length=161.2 ms latency=951.3 ms status=succeeded
+     now=77549.4 ms id=475 req_length=381.0 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=77566.5 ms id=485 bucketIdx=0 admittedMs=77566.5 ms length=369.6 ms
+     now=77663.9 ms id=476 req_length=425.6 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=77767.0 ms id=486 bucketIdx=0 admittedMs=77766.9 ms length=581.1 ms
+     now=77788.8 ms id=480 req_length=269.1 ms latency=1088.4 ms status=succeeded
+     now=77931.1 ms id=478 req_length=368.6 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=77967.4 ms id=487 bucketIdx=0 admittedMs=77967.4 ms length=441.2 ms
+     now=78022.2 ms id=482 req_length=231.8 ms latency=1054.6 ms status=succeeded
+Submit infer: now=78167.8 ms id=488 bucketIdx=0 admittedMs=78167.8 ms length=166.5 ms
+     now=78285.3 ms id=484 req_length=261.6 ms latency=916.8 ms status=succeeded
+     now=78332.0 ms id=481 req_length=505.3 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=78368.2 ms id=489 bucketIdx=0 admittedMs=78368.2 ms length=375.6 ms
+Submit infer: now=78568.7 ms id=490 bucketIdx=0 admittedMs=78568.7 ms length=362.1 ms
+     now=78656.8 ms id=485 req_length=369.6 ms latency=1087.9 ms status=succeeded
+     now=78666.1 ms id=483 req_length=610.1 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=78702.3 ms id=491 bucketIdx=0 admittedMs=78702.3 ms length=367.0 ms
+Submit infer: now=78835.9 ms id=492 bucketIdx=0 admittedMs=78835.9 ms length=309.4 ms
+Submit infer: now=78969.5 ms id=493 bucketIdx=0 admittedMs=78969.5 ms length=254.8 ms
+     now=79099.5 ms id=487 req_length=441.2 ms latency=1129.7 ms status=succeeded
+Submit infer: now=79103.2 ms id=494 bucketIdx=0 admittedMs=79103.2 ms length=469.8 ms
+Submit infer: now=79236.8 ms id=495 bucketIdx=0 admittedMs=79236.8 ms length=406.7 ms
+     now=79267.2 ms id=486 req_length=581.1 ms latency=1498.0 ms status=failed (7): 
+     now=79267.5 ms id=488 req_length=166.5 ms latency=1097.4 ms status=succeeded
+Submit infer: now=79370.4 ms id=496 bucketIdx=0 admittedMs=79370.4 ms length=471.6 ms
+Submit infer: now=79530.7 ms id=497 bucketIdx=0 admittedMs=79530.7 ms length=385.9 ms
+     now=79644.6 ms id=489 req_length=375.6 ms latency=1273.9 ms status=succeeded
+Submit infer: now=79691.1 ms id=498 bucketIdx=0 admittedMs=79691.1 ms length=609.6 ms
+Submit infer: now=79851.4 ms id=499 bucketIdx=0 admittedMs=79851.4 ms length=359.3 ms
+Submit infer: now=80011.8 ms id=500 bucketIdx=0 admittedMs=80011.8 ms length=315.6 ms
+     now=80013.1 ms id=491 req_length=367.0 ms latency=1308.5 ms status=succeeded
+     now=80069.1 ms id=490 req_length=362.1 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=80172.1 ms id=501 bucketIdx=0 admittedMs=80172.1 ms length=467.2 ms
+     now=80269.6 ms id=493 req_length=254.8 ms latency=1297.8 ms status=succeeded
+Submit infer: now=80286.6 ms id=502 bucketIdx=0 admittedMs=80286.6 ms length=269.9 ms
+     now=80336.2 ms id=492 req_length=309.4 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=80401.2 ms id=503 bucketIdx=0 admittedMs=80401.2 ms length=589.4 ms
+Submit infer: now=80515.7 ms id=504 bucketIdx=0 admittedMs=80515.7 ms length=611.4 ms
+     now=80603.6 ms id=494 req_length=469.8 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=80630.2 ms id=505 bucketIdx=0 admittedMs=80630.2 ms length=435.0 ms
+     now=80679.3 ms id=495 req_length=406.7 ms latency=1440.2 ms status=succeeded
+Submit infer: now=80744.8 ms id=506 bucketIdx=0 admittedMs=80744.8 ms length=314.1 ms
+Submit infer: now=80859.3 ms id=507 bucketIdx=0 admittedMs=80859.3 ms length=311.8 ms
+     now=80870.7 ms id=496 req_length=471.6 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=80973.8 ms id=508 bucketIdx=0 admittedMs=80973.8 ms length=549.8 ms
+     now=81031.0 ms id=497 req_length=385.9 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=81107.5 ms id=509 bucketIdx=0 admittedMs=81107.5 ms length=352.0 ms
+Submit infer: now=81241.1 ms id=510 bucketIdx=0 admittedMs=81241.1 ms length=354.0 ms
+     now=81290.4 ms id=498 req_length=609.6 ms latency=1596.9 ms status=succeeded
+     now=81351.9 ms id=499 req_length=359.3 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=81374.7 ms id=511 bucketIdx=0 admittedMs=81374.7 ms length=284.7 ms
+Submit infer: now=81508.3 ms id=512 bucketIdx=0 admittedMs=81508.3 ms length=344.3 ms
+     now=81512.2 ms id=500 req_length=315.6 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=81641.9 ms id=513 bucketIdx=0 admittedMs=81641.9 ms length=413.6 ms
+     now=81757.8 ms id=501 req_length=467.2 ms latency=1583.2 ms status=succeeded
+Submit infer: now=81775.6 ms id=514 bucketIdx=0 admittedMs=81775.6 ms length=201.7 ms
+     now=81787.0 ms id=502 req_length=269.9 ms latency=1498.0 ms status=failed (7): 
+     now=81901.5 ms id=503 req_length=589.4 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=81909.2 ms id=515 bucketIdx=0 admittedMs=81909.2 ms length=337.4 ms
+     now=82016.1 ms id=504 req_length=611.4 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=82042.8 ms id=516 bucketIdx=0 admittedMs=82042.8 ms length=305.0 ms
+     now=82069.5 ms id=507 req_length=311.8 ms latency=1207.9 ms status=succeeded
+     now=82130.5 ms id=505 req_length=435.0 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=82176.4 ms id=517 bucketIdx=0 admittedMs=82176.4 ms length=409.0 ms
+     now=82245.1 ms id=506 req_length=314.1 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=82310.0 ms id=518 bucketIdx=0 admittedMs=82310.0 ms length=325.2 ms
+     now=82425.2 ms id=510 req_length=354.0 ms latency=1181.7 ms status=succeeded
+Submit infer: now=82443.7 ms id=519 bucketIdx=0 admittedMs=82443.7 ms length=411.6 ms
+     now=82474.1 ms id=508 req_length=549.8 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=82577.3 ms id=520 bucketIdx=0 admittedMs=82577.3 ms length=292.5 ms
+     now=82607.8 ms id=509 req_length=352.0 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=82777.7 ms id=521 bucketIdx=0 admittedMs=82777.7 ms length=301.0 ms
+     now=82840.4 ms id=513 req_length=413.6 ms latency=1196.1 ms status=succeeded
+     now=82875.2 ms id=511 req_length=284.7 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=82978.1 ms id=522 bucketIdx=0 admittedMs=82978.1 ms length=322.6 ms
+     now=83008.7 ms id=512 req_length=344.3 ms latency=1498.0 ms status=failed (7): 
+     now=83147.0 ms id=516 req_length=305.0 ms latency=1101.9 ms status=succeeded
+Submit infer: now=83178.6 ms id=523 bucketIdx=0 admittedMs=83178.6 ms length=599.2 ms
+     now=83275.9 ms id=514 req_length=201.7 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=83379.0 ms id=524 bucketIdx=0 admittedMs=83379.0 ms length=293.5 ms
+     now=83409.5 ms id=515 req_length=337.4 ms latency=1498.0 ms status=failed (7): 
+     now=83473.7 ms id=518 req_length=325.2 ms latency=1161.3 ms status=succeeded
+Submit infer: now=83512.6 ms id=525 bucketIdx=0 admittedMs=83512.6 ms length=538.6 ms
+Submit infer: now=83646.2 ms id=526 bucketIdx=0 admittedMs=83646.2 ms length=412.3 ms
+     now=83676.7 ms id=517 req_length=409.0 ms latency=1498.0 ms status=failed (7): 
+     now=83767.7 ms id=520 req_length=292.5 ms latency=1188.1 ms status=succeeded
+Submit infer: now=83779.9 ms id=527 bucketIdx=0 admittedMs=83779.9 ms length=306.1 ms
+Submit infer: now=83913.5 ms id=528 bucketIdx=0 admittedMs=83913.5 ms length=285.7 ms
+     now=83944.0 ms id=519 req_length=411.6 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=84047.1 ms id=529 bucketIdx=0 admittedMs=84047.1 ms length=342.0 ms
+     now=84091.8 ms id=522 req_length=322.6 ms latency=1111.3 ms status=succeeded
+Submit infer: now=84180.7 ms id=530 bucketIdx=0 admittedMs=84180.7 ms length=321.8 ms
+     now=84278.0 ms id=521 req_length=301.0 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=84280.9 ms id=531 bucketIdx=0 admittedMs=84280.9 ms length=390.9 ms
+Submit infer: now=84381.2 ms id=532 bucketIdx=0 admittedMs=84381.1 ms length=318.3 ms
+     now=84386.8 ms id=524 req_length=293.5 ms latency=1005.4 ms status=succeeded
+Submit infer: now=84481.4 ms id=533 bucketIdx=0 admittedMs=84481.4 ms length=356.5 ms
+Submit infer: now=84581.6 ms id=534 bucketIdx=0 admittedMs=84581.6 ms length=280.9 ms
+     now=84678.9 ms id=523 req_length=599.2 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=84681.8 ms id=535 bucketIdx=0 admittedMs=84681.8 ms length=611.7 ms
+Submit infer: now=84782.0 ms id=536 bucketIdx=0 admittedMs=84782.0 ms length=362.8 ms
+Submit infer: now=84882.2 ms id=537 bucketIdx=0 admittedMs=84882.2 ms length=224.9 ms
+     now=84926.8 ms id=525 req_length=538.6 ms latency=1411.8 ms status=succeeded
+Submit infer: now=84982.4 ms id=538 bucketIdx=0 admittedMs=84982.4 ms length=446.7 ms
+Submit infer: now=85116.1 ms id=539 bucketIdx=0 admittedMs=85116.1 ms length=366.1 ms
+     now=85146.6 ms id=526 req_length=412.3 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=85249.7 ms id=540 bucketIdx=0 admittedMs=85249.7 ms length=334.8 ms
+     now=85270.4 ms id=529 req_length=342.0 ms latency=1220.8 ms status=succeeded
+     now=85280.3 ms id=527 req_length=306.1 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=85383.3 ms id=541 bucketIdx=0 admittedMs=85383.3 ms length=346.1 ms
+     now=85413.8 ms id=528 req_length=285.7 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=85516.9 ms id=542 bucketIdx=0 admittedMs=85516.9 ms length=544.8 ms
+     now=85590.2 ms id=532 req_length=318.3 ms latency=1206.7 ms status=succeeded
+Submit infer: now=85650.5 ms id=543 bucketIdx=0 admittedMs=85650.5 ms length=319.0 ms
+     now=85681.0 ms id=530 req_length=321.8 ms latency=1498.0 ms status=failed (7): 
+     now=85781.3 ms id=531 req_length=390.9 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=85784.2 ms id=544 bucketIdx=0 admittedMs=85784.2 ms length=166.9 ms
+Submit infer: now=85898.7 ms id=545 bucketIdx=0 admittedMs=85898.7 ms length=458.8 ms
+     now=85981.8 ms id=533 req_length=356.5 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=86013.2 ms id=546 bucketIdx=0 admittedMs=86013.2 ms length=382.2 ms
+     now=86081.9 ms id=534 req_length=280.9 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=86127.8 ms id=547 bucketIdx=0 admittedMs=86127.8 ms length=620.2 ms
+     now=86203.4 ms id=535 req_length=611.7 ms latency=1519.2 ms status=succeeded
+Submit infer: now=86242.3 ms id=548 bucketIdx=0 admittedMs=86242.3 ms length=362.2 ms
+     now=86282.3 ms id=536 req_length=362.8 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=86356.8 ms id=549 bucketIdx=0 admittedMs=86356.8 ms length=504.4 ms
+     now=86382.5 ms id=537 req_length=224.9 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=86471.4 ms id=550 bucketIdx=0 admittedMs=86471.4 ms length=533.2 ms
+     now=86482.9 ms id=538 req_length=446.7 ms latency=1498.0 ms status=failed (7): 
+     now=86538.3 ms id=540 req_length=334.8 ms latency=1286.3 ms status=succeeded
+Submit infer: now=86585.9 ms id=551 bucketIdx=0 admittedMs=86585.9 ms length=427.6 ms
+     now=86616.4 ms id=539 req_length=366.1 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=86746.2 ms id=552 bucketIdx=0 admittedMs=86746.2 ms length=269.9 ms
+     now=86858.8 ms id=543 req_length=319.0 ms latency=1205.8 ms status=succeeded
+     now=86883.7 ms id=541 req_length=346.1 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=86906.6 ms id=553 bucketIdx=0 admittedMs=86906.6 ms length=293.5 ms
+     now=87017.2 ms id=542 req_length=544.8 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=87066.9 ms id=554 bucketIdx=0 admittedMs=87066.9 ms length=316.1 ms
+Submit infer: now=87227.3 ms id=555 bucketIdx=0 admittedMs=87227.3 ms length=381.4 ms
+     now=87242.5 ms id=546 req_length=382.2 ms latency=1226.9 ms status=succeeded
+     now=87284.5 ms id=544 req_length=166.9 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=87387.6 ms id=556 bucketIdx=0 admittedMs=87387.6 ms length=374.0 ms
+     now=87399.0 ms id=545 req_length=458.8 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=87502.1 ms id=557 bucketIdx=0 admittedMs=87502.1 ms length=358.8 ms
+Submit infer: now=87616.7 ms id=558 bucketIdx=0 admittedMs=87616.7 ms length=233.6 ms
+     now=87628.1 ms id=547 req_length=620.2 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=87731.2 ms id=559 bucketIdx=0 admittedMs=87731.2 ms length=301.0 ms
+     now=87742.6 ms id=548 req_length=362.2 ms latency=1498.0 ms status=failed (7): 
+     now=87748.4 ms id=549 req_length=504.4 ms latency=1388.9 ms status=succeeded
+Submit infer: now=87845.7 ms id=560 bucketIdx=0 admittedMs=87845.7 ms length=493.9 ms
+Submit infer: now=87960.3 ms id=561 bucketIdx=0 admittedMs=87960.3 ms length=357.3 ms
+     now=87971.7 ms id=550 req_length=533.2 ms latency=1498.0 ms status=failed (7): 
+     now=88043.5 ms id=553 req_length=293.5 ms latency=1134.5 ms status=succeeded
+Submit infer: now=88074.8 ms id=562 bucketIdx=0 admittedMs=88074.8 ms length=483.5 ms
+     now=88086.4 ms id=551 req_length=427.6 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=88189.3 ms id=563 bucketIdx=0 admittedMs=88189.3 ms length=464.5 ms
+     now=88246.9 ms id=552 req_length=269.9 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=88322.9 ms id=564 bucketIdx=0 admittedMs=88322.9 ms length=352.0 ms
+     now=88426.3 ms id=555 req_length=381.4 ms latency=1196.8 ms status=succeeded
+Submit infer: now=88456.6 ms id=565 bucketIdx=0 admittedMs=88456.6 ms length=249.4 ms
+     now=88567.4 ms id=554 req_length=316.1 ms latency=1498.1 ms status=failed (7): 
+Submit infer: now=88590.2 ms id=566 bucketIdx=0 admittedMs=88590.2 ms length=319.1 ms
+     now=88661.5 ms id=558 req_length=233.6 ms latency=1042.5 ms status=succeeded
+Submit infer: now=88723.8 ms id=567 bucketIdx=0 admittedMs=88723.8 ms length=509.9 ms
+Submit infer: now=88857.4 ms id=568 bucketIdx=0 admittedMs=88857.4 ms length=284.1 ms
+     now=88888.0 ms id=556 req_length=374.0 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=88991.0 ms id=569 bucketIdx=0 admittedMs=88991.0 ms length=458.9 ms
+     now=89002.4 ms id=557 req_length=358.8 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=89151.4 ms id=570 bucketIdx=0 admittedMs=89151.4 ms length=279.7 ms
+     now=89156.9 ms id=560 req_length=493.9 ms latency=1308.8 ms status=succeeded
+     now=89231.5 ms id=559 req_length=301.0 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=89311.7 ms id=571 bucketIdx=0 admittedMs=89311.7 ms length=437.5 ms
+     now=89460.6 ms id=561 req_length=357.3 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=89472.1 ms id=572 bucketIdx=0 admittedMs=89472.1 ms length=442.2 ms
+     now=89510.4 ms id=564 req_length=352.0 ms latency=1185.0 ms status=succeeded
+     now=89575.2 ms id=562 req_length=483.5 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=89632.4 ms id=573 bucketIdx=0 admittedMs=89632.4 ms length=466.1 ms
+     now=89689.7 ms id=563 req_length=464.5 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=89792.8 ms id=574 bucketIdx=0 admittedMs=89792.8 ms length=309.0 ms
+     now=89957.0 ms id=565 req_length=249.4 ms latency=1498.0 ms status=failed (7): 
+     now=90021.7 ms id=567 req_length=509.9 ms latency=1295.3 ms status=succeeded
+Submit infer: now=90060.0 ms id=575 bucketIdx=0 admittedMs=90060.0 ms length=513.2 ms
+     now=90090.5 ms id=566 req_length=319.1 ms latency=1498.0 ms status=failed (7): 
+     now=90302.9 ms id=570 req_length=279.7 ms latency=1149.2 ms status=succeeded
+Submit infer: now=90327.2 ms id=576 bucketIdx=0 admittedMs=90327.2 ms length=260.7 ms
+     now=90357.7 ms id=568 req_length=284.1 ms latency=1498.0 ms status=failed (7): 
+     now=90491.4 ms id=569 req_length=458.9 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=90594.5 ms id=577 bucketIdx=0 admittedMs=90594.5 ms length=372.6 ms
+     now=90746.6 ms id=572 req_length=442.2 ms latency=1272.0 ms status=succeeded
+Submit infer: now=90794.9 ms id=578 bucketIdx=0 admittedMs=90794.9 ms length=742.7 ms
+     now=90812.1 ms id=571 req_length=437.5 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=90995.4 ms id=579 bucketIdx=0 admittedMs=90995.3 ms length=926.8 ms
+     now=91057.1 ms id=574 req_length=309.0 ms latency=1262.0 ms status=succeeded
+     now=91132.7 ms id=573 req_length=466.1 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=91195.8 ms id=580 bucketIdx=0 admittedMs=91195.8 ms length=539.8 ms
+     now=91319.2 ms id=576 req_length=260.7 ms latency=989.6 ms status=succeeded
+Submit infer: now=91396.2 ms id=581 bucketIdx=0 admittedMs=91396.2 ms length=190.4 ms
+     now=91560.3 ms id=575 req_length=513.2 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=91596.6 ms id=582 bucketIdx=0 admittedMs=91596.6 ms length=525.8 ms
+     now=91693.4 ms id=577 req_length=372.6 ms latency=1096.5 ms status=succeeded
+Submit infer: now=91797.1 ms id=583 bucketIdx=0 admittedMs=91797.1 ms length=394.3 ms
+Submit infer: now=91997.5 ms id=584 bucketIdx=0 admittedMs=91997.5 ms length=335.0 ms
+Submit infer: now=92197.9 ms id=585 bucketIdx=0 admittedMs=92197.9 ms length=418.2 ms
+Submit infer: now=92398.4 ms id=586 bucketIdx=0 admittedMs=92398.4 ms length=307.6 ms
+     now=92438.3 ms id=578 req_length=742.7 ms latency=1641.0 ms status=succeeded
+     now=92495.7 ms id=579 req_length=926.8 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=92598.8 ms id=587 bucketIdx=0 admittedMs=92598.8 ms length=350.5 ms
+     now=92628.9 ms id=581 req_length=190.4 ms latency=1230.3 ms status=succeeded
+     now=92696.1 ms id=580 req_length=539.8 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=92799.2 ms id=588 bucketIdx=0 admittedMs=92799.2 ms length=318.2 ms
+     now=92965.4 ms id=584 req_length=335.0 ms latency=965.5 ms status=succeeded
+Submit infer: now=92999.7 ms id=589 bucketIdx=0 admittedMs=92999.7 ms length=461.8 ms
+     now=93097.1 ms id=582 req_length=525.8 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=93266.9 ms id=590 bucketIdx=0 admittedMs=93266.9 ms length=395.5 ms
+     now=93297.5 ms id=583 req_length=394.3 ms latency=1498.0 ms status=failed (7): 
+     now=93385.1 ms id=585 req_length=418.2 ms latency=1184.8 ms status=succeeded
+Submit infer: now=93534.1 ms id=591 bucketIdx=0 admittedMs=93534.1 ms length=254.1 ms
+     now=93705.4 ms id=588 req_length=318.2 ms latency=903.8 ms status=succeeded
+Submit infer: now=93801.4 ms id=592 bucketIdx=0 admittedMs=93801.4 ms length=398.1 ms
+     now=93898.7 ms id=586 req_length=307.6 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=94001.8 ms id=593 bucketIdx=0 admittedMs=94001.8 ms length=136.6 ms
+     now=94099.1 ms id=587 req_length=350.5 ms latency=1498.0 ms status=failed (7): 
+     now=94168.7 ms id=589 req_length=461.8 ms latency=1166.7 ms status=succeeded
+Submit infer: now=94202.2 ms id=594 bucketIdx=0 admittedMs=94202.2 ms length=483.4 ms
+Submit infer: now=94402.7 ms id=595 bucketIdx=0 admittedMs=94402.7 ms length=623.9 ms
+     now=94424.3 ms id=591 req_length=254.1 ms latency=887.9 ms status=succeeded
+Submit infer: now=94603.1 ms id=596 bucketIdx=0 admittedMs=94603.1 ms length=173.0 ms
+Submit infer: now=94763.4 ms id=597 bucketIdx=0 admittedMs=94763.4 ms length=557.8 ms
+     now=94767.2 ms id=590 req_length=395.5 ms latency=1498.0 ms status=failed (7): 
+     now=94823.9 ms id=592 req_length=398.1 ms latency=1020.3 ms status=succeeded
+Submit infer: now=94923.8 ms id=598 bucketIdx=0 admittedMs=94923.8 ms length=314.4 ms
+Submit infer: now=95084.1 ms id=599 bucketIdx=0 admittedMs=95084.1 ms length=327.2 ms
+Submit infer: now=95244.5 ms id=600 bucketIdx=0 admittedMs=95244.5 ms length=332.3 ms
+     now=95309.6 ms id=594 req_length=483.4 ms latency=1105.0 ms status=succeeded
+Submit infer: now=95404.8 ms id=601 bucketIdx=0 admittedMs=95404.8 ms length=403.0 ms
+     now=95485.1 ms id=596 req_length=173.0 ms latency=879.6 ms status=succeeded
+     now=95502.2 ms id=593 req_length=136.6 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=95538.4 ms id=602 bucketIdx=0 admittedMs=95538.4 ms length=248.7 ms
+Submit infer: now=95672.1 ms id=603 bucketIdx=0 admittedMs=95672.1 ms length=514.1 ms
+Submit infer: now=95805.7 ms id=604 bucketIdx=0 admittedMs=95805.7 ms length=334.1 ms
+     now=95903.2 ms id=595 req_length=623.9 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=95939.3 ms id=605 bucketIdx=0 admittedMs=95939.3 ms length=450.2 ms
+     now=96044.3 ms id=597 req_length=557.8 ms latency=1278.6 ms status=succeeded
+Submit infer: now=96072.9 ms id=606 bucketIdx=0 admittedMs=96072.9 ms length=333.1 ms
+Submit infer: now=96206.5 ms id=607 bucketIdx=0 admittedMs=96206.5 ms length=378.8 ms
+Submit infer: now=96366.9 ms id=608 bucketIdx=0 admittedMs=96366.9 ms length=375.5 ms
+     now=96378.1 ms id=600 req_length=332.3 ms latency=1131.3 ms status=succeeded
+     now=96424.1 ms id=598 req_length=314.4 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=96527.2 ms id=609 bucketIdx=0 admittedMs=96527.2 ms length=751.7 ms
+     now=96584.4 ms id=599 req_length=327.2 ms latency=1498.0 ms status=failed (7): 
+     now=96629.1 ms id=602 req_length=248.7 ms latency=1088.3 ms status=succeeded
+Submit infer: now=96687.6 ms id=610 bucketIdx=0 admittedMs=96687.6 ms length=281.8 ms
+Submit infer: now=96847.9 ms id=611 bucketIdx=0 admittedMs=96847.9 ms length=401.3 ms
+     now=96905.1 ms id=601 req_length=403.0 ms latency=1498.0 ms status=failed (7): 
+     now=96966.5 ms id=604 req_length=334.1 ms latency=1158.3 ms status=succeeded
+Submit infer: now=97008.3 ms id=612 bucketIdx=0 admittedMs=97008.3 ms length=243.8 ms
+     now=97172.4 ms id=603 req_length=514.1 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=97208.7 ms id=613 bucketIdx=0 admittedMs=97208.7 ms length=256.2 ms
+     now=97301.1 ms id=606 req_length=333.1 ms latency=1225.9 ms status=succeeded
+Submit infer: now=97409.1 ms id=614 bucketIdx=0 admittedMs=97409.1 ms length=308.0 ms
+     now=97439.6 ms id=605 req_length=450.2 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=97609.5 ms id=615 bucketIdx=0 admittedMs=97609.5 ms length=362.0 ms
+     now=97678.0 ms id=608 req_length=375.5 ms latency=1308.8 ms status=succeeded
+     now=97706.9 ms id=607 req_length=378.8 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=97810.0 ms id=616 bucketIdx=0 admittedMs=97810.0 ms length=475.1 ms
+Submit infer: now=97943.6 ms id=617 bucketIdx=0 admittedMs=97943.6 ms length=336.6 ms
+     now=98027.6 ms id=609 req_length=751.7 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=98077.2 ms id=618 bucketIdx=0 admittedMs=98077.2 ms length=193.0 ms
+     now=98080.9 ms id=611 req_length=401.3 ms latency=1230.6 ms status=succeeded
+     now=98187.9 ms id=610 req_length=281.8 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=98210.8 ms id=619 bucketIdx=0 admittedMs=98210.8 ms length=386.2 ms
+     now=98338.6 ms id=613 req_length=256.2 ms latency=1127.5 ms status=succeeded
+Submit infer: now=98344.5 ms id=620 bucketIdx=0 admittedMs=98344.5 ms length=349.1 ms
+Submit infer: now=98478.1 ms id=621 bucketIdx=0 admittedMs=98478.1 ms length=278.5 ms
+     now=98508.6 ms id=612 req_length=243.8 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=98611.7 ms id=622 bucketIdx=0 admittedMs=98611.7 ms length=435.2 ms
+     now=98648.1 ms id=614 req_length=308.0 ms latency=1236.7 ms status=succeeded
+Submit infer: now=98878.9 ms id=623 bucketIdx=0 admittedMs=98878.9 ms length=370.6 ms
+     now=99109.9 ms id=615 req_length=362.0 ms latency=1498.0 ms status=failed (7): 
+     now=99124.8 ms id=616 req_length=475.1 ms latency=1312.5 ms status=succeeded
+Submit infer: now=99146.2 ms id=624 bucketIdx=0 admittedMs=99146.2 ms length=388.9 ms
+Submit infer: now=99413.4 ms id=625 bucketIdx=0 admittedMs=99413.4 ms length=407.5 ms
+     now=99444.0 ms id=617 req_length=336.6 ms latency=1498.0 ms status=failed (7): 
+     now=99512.4 ms id=619 req_length=386.2 ms latency=1299.1 ms status=succeeded
+     now=99577.7 ms id=618 req_length=193.0 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=99613.9 ms id=626 bucketIdx=0 admittedMs=99613.9 ms length=743.0 ms
+Submit infer: now=99814.3 ms id=627 bucketIdx=0 admittedMs=99814.3 ms length=328.8 ms
+     now=99844.7 ms id=620 req_length=349.1 ms latency=1498.0 ms status=failed (7): 
+     now=99949.1 ms id=622 req_length=435.2 ms latency=1334.7 ms status=succeeded
+     now=99978.4 ms id=621 req_length=278.5 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=100014.7 ms id=628 bucketIdx=0 admittedMs=100014.7 ms length=292.1 ms
+Submit infer: now=100215.1 ms id=629 bucketIdx=0 admittedMs=100215.1 ms length=221.8 ms
+     now=100339.5 ms id=624 req_length=388.9 ms latency=1191.1 ms status=succeeded
+Submit infer: now=100375.5 ms id=630 bucketIdx=0 admittedMs=100375.5 ms length=246.2 ms
+     now=100379.5 ms id=623 req_length=370.6 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=100535.8 ms id=631 bucketIdx=0 admittedMs=100535.8 ms length=464.8 ms
+Submit infer: now=100696.2 ms id=632 bucketIdx=0 admittedMs=100696.2 ms length=325.6 ms
+     now=100748.6 ms id=625 req_length=407.5 ms latency=1332.6 ms status=succeeded
+Submit infer: now=100856.5 ms id=633 bucketIdx=0 admittedMs=100856.5 ms length=319.1 ms
+Submit infer: now=101016.9 ms id=634 bucketIdx=0 admittedMs=101016.9 ms length=415.5 ms
+     now=101078.9 ms id=627 req_length=328.8 ms latency=1262.2 ms status=succeeded
+     now=101114.2 ms id=626 req_length=743.0 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=101177.2 ms id=635 bucketIdx=0 admittedMs=101177.2 ms length=286.9 ms
+     now=101302.2 ms id=629 req_length=221.8 ms latency=1084.6 ms status=succeeded
+Submit infer: now=101337.6 ms id=636 bucketIdx=0 admittedMs=101337.6 ms length=445.6 ms
+Submit infer: now=101497.9 ms id=637 bucketIdx=0 admittedMs=101497.9 ms length=330.4 ms
+     now=101515.0 ms id=628 req_length=292.1 ms latency=1498.0 ms status=failed (7): 
+     now=101549.9 ms id=630 req_length=246.2 ms latency=1172.1 ms status=succeeded
+Submit infer: now=101658.2 ms id=638 bucketIdx=0 admittedMs=101658.2 ms length=479.7 ms
+Submit infer: now=101818.6 ms id=639 bucketIdx=0 admittedMs=101818.6 ms length=475.6 ms
+Submit infer: now=101978.9 ms id=640 bucketIdx=0 admittedMs=101978.9 ms length=487.7 ms
+     now=102016.2 ms id=631 req_length=464.8 ms latency=1478.1 ms status=succeeded
+Submit infer: now=102139.3 ms id=641 bucketIdx=0 admittedMs=102139.3 ms length=524.1 ms
+     now=102196.5 ms id=632 req_length=325.6 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=102299.6 ms id=642 bucketIdx=0 admittedMs=102299.6 ms length=323.8 ms
+     now=102356.9 ms id=633 req_length=319.1 ms latency=1498.0 ms status=failed (7): 
+     now=102431.8 ms id=634 req_length=415.5 ms latency=1412.6 ms status=succeeded
+Submit infer: now=102460.0 ms id=643 bucketIdx=0 admittedMs=102460.0 ms length=836.8 ms
+Submit infer: now=102620.3 ms id=644 bucketIdx=0 admittedMs=102620.3 ms length=408.5 ms
+     now=102677.6 ms id=635 req_length=286.9 ms latency=1498.0 ms status=failed (7): 
+     now=102763.7 ms id=637 req_length=330.4 ms latency=1263.6 ms status=succeeded
+     now=102837.9 ms id=636 req_length=445.6 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=102887.5 ms id=645 bucketIdx=0 admittedMs=102887.5 ms length=414.0 ms
+Submit infer: now=103154.8 ms id=646 bucketIdx=0 admittedMs=103154.8 ms length=334.0 ms
+     now=103158.6 ms id=638 req_length=479.7 ms latency=1498.0 ms status=failed (7): 
+     now=103240.9 ms id=639 req_length=475.6 ms latency=1419.9 ms status=succeeded
+Submit infer: now=103422.0 ms id=647 bucketIdx=0 admittedMs=103422.0 ms length=230.3 ms
+     now=103479.3 ms id=640 req_length=487.7 ms latency=1498.0 ms status=failed (7): 
+     now=103564.7 ms id=642 req_length=323.8 ms latency=1262.7 ms status=succeeded
+Submit infer: now=103622.5 ms id=648 bucketIdx=0 admittedMs=103622.5 ms length=393.0 ms
+     now=103639.6 ms id=641 req_length=524.1 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=103822.9 ms id=649 bucketIdx=0 admittedMs=103822.9 ms length=462.4 ms
+     now=103960.4 ms id=643 req_length=836.8 ms latency=1498.0 ms status=failed (7): 
+     now=103974.7 ms id=644 req_length=408.5 ms latency=1352.1 ms status=succeeded
+Submit infer: now=104023.3 ms id=650 bucketIdx=0 admittedMs=104023.3 ms length=511.0 ms
+Submit infer: now=104223.7 ms id=651 bucketIdx=0 admittedMs=104223.7 ms length=277.4 ms
+     now=104310.2 ms id=646 req_length=334.0 ms latency=1153.0 ms status=succeeded
+Submit infer: now=104357.4 ms id=652 bucketIdx=0 admittedMs=104357.4 ms length=379.0 ms
+     now=104387.8 ms id=645 req_length=414.0 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=104491.0 ms id=653 bucketIdx=0 admittedMs=104491.0 ms length=328.4 ms
+     now=104542.8 ms id=647 req_length=230.3 ms latency=1118.5 ms status=succeeded
+Submit infer: now=104624.6 ms id=654 bucketIdx=0 admittedMs=104624.6 ms length=431.5 ms
+Submit infer: now=104758.2 ms id=655 bucketIdx=0 admittedMs=104758.2 ms length=400.5 ms
+Submit infer: now=104891.8 ms id=656 bucketIdx=0 admittedMs=104891.8 ms length=222.8 ms
+     now=104938.2 ms id=648 req_length=393.0 ms latency=1313.4 ms status=succeeded
+Submit infer: now=105025.5 ms id=657 bucketIdx=0 admittedMs=105025.5 ms length=330.7 ms
+Submit infer: now=105292.7 ms id=658 bucketIdx=0 admittedMs=105292.7 ms length=617.2 ms
+     now=105323.2 ms id=649 req_length=462.4 ms latency=1498.0 ms status=failed (7): 
+     now=105450.7 ms id=650 req_length=511.0 ms latency=1425.0 ms status=succeeded
+Submit infer: now=105560.0 ms id=659 bucketIdx=0 admittedMs=105559.9 ms length=447.4 ms
+     now=105724.1 ms id=651 req_length=277.4 ms latency=1498.0 ms status=failed (7): 
+     now=105779.1 ms id=653 req_length=328.4 ms latency=1285.6 ms status=succeeded
+Submit infer: now=105827.2 ms id=660 bucketIdx=0 admittedMs=105827.2 ms length=541.5 ms
+     now=105857.7 ms id=652 req_length=379.0 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=105960.8 ms id=661 bucketIdx=0 admittedMs=105960.8 ms length=353.9 ms
+     now=106003.5 ms id=656 req_length=222.8 ms latency=1109.3 ms status=succeeded
+Submit infer: now=106094.4 ms id=662 bucketIdx=0 admittedMs=106094.4 ms length=365.1 ms
+     now=106125.1 ms id=654 req_length=431.5 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=106228.1 ms id=663 bucketIdx=0 admittedMs=106228.0 ms length=463.3 ms
+     now=106259.0 ms id=655 req_length=400.5 ms latency=1498.0 ms status=failed (7): 
+     now=106335.6 ms id=657 req_length=330.7 ms latency=1307.8 ms status=succeeded
+Submit infer: now=106361.7 ms id=664 bucketIdx=0 admittedMs=106361.7 ms length=326.1 ms
+Submit infer: now=106495.3 ms id=665 bucketIdx=0 admittedMs=106495.3 ms length=371.1 ms
+Submit infer: now=106628.9 ms id=666 bucketIdx=0 admittedMs=106628.9 ms length=296.0 ms
+     now=106784.5 ms id=659 req_length=447.4 ms latency=1222.2 ms status=succeeded
+     now=106793.0 ms id=658 req_length=617.2 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=106829.3 ms id=667 bucketIdx=0 admittedMs=106829.3 ms length=494.6 ms
+Submit infer: now=107029.8 ms id=668 bucketIdx=0 admittedMs=107029.8 ms length=374.9 ms
+Submit infer: now=107230.2 ms id=669 bucketIdx=0 admittedMs=107230.2 ms length=335.1 ms
+     now=107327.4 ms id=660 req_length=541.5 ms latency=1497.9 ms status=succeeded
+Submit infer: now=107430.6 ms id=670 bucketIdx=0 admittedMs=107430.6 ms length=333.9 ms
+     now=107461.1 ms id=661 req_length=353.9 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=107545.2 ms id=671 bucketIdx=0 admittedMs=107545.2 ms length=493.9 ms
+     now=107594.8 ms id=662 req_length=365.1 ms latency=1498.0 ms status=failed (7): 
+     now=107653.6 ms id=664 req_length=326.1 ms latency=1289.6 ms status=succeeded
+Submit infer: now=107659.7 ms id=672 bucketIdx=0 admittedMs=107659.7 ms length=509.5 ms
+     now=107728.4 ms id=663 req_length=463.3 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=107774.2 ms id=673 bucketIdx=0 admittedMs=107774.2 ms length=317.8 ms
+Submit infer: now=107888.8 ms id=674 bucketIdx=0 admittedMs=107888.8 ms length=478.5 ms
+     now=107995.7 ms id=665 req_length=371.1 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=108003.3 ms id=675 bucketIdx=0 admittedMs=108003.3 ms length=232.6 ms
+Submit infer: now=108117.8 ms id=676 bucketIdx=0 admittedMs=108117.8 ms length=259.0 ms
+     now=108129.3 ms id=666 req_length=296.0 ms latency=1498.0 ms status=failed (7): 
+     now=108149.6 ms id=667 req_length=494.6 ms latency=1318.0 ms status=succeeded
+Submit infer: now=108232.4 ms id=677 bucketIdx=0 admittedMs=108232.4 ms length=601.0 ms
+Submit infer: now=108392.7 ms id=678 bucketIdx=0 admittedMs=108392.7 ms length=405.0 ms
+     now=108486.3 ms id=669 req_length=335.1 ms latency=1253.8 ms status=succeeded
+     now=108530.1 ms id=668 req_length=374.9 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=108553.0 ms id=679 bucketIdx=0 admittedMs=108553.0 ms length=286.1 ms
+Submit infer: now=108713.4 ms id=680 bucketIdx=0 admittedMs=108713.4 ms length=367.2 ms
+Submit infer: now=108873.7 ms id=681 bucketIdx=0 admittedMs=108873.7 ms length=720.5 ms
+     now=108931.0 ms id=670 req_length=333.9 ms latency=1498.0 ms status=failed (7): 
+     now=108981.8 ms id=671 req_length=493.9 ms latency=1434.3 ms status=succeeded
+Submit infer: now=109034.1 ms id=682 bucketIdx=0 admittedMs=109034.1 ms length=334.5 ms
+     now=109160.0 ms id=672 req_length=509.5 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=109167.7 ms id=683 bucketIdx=0 admittedMs=109167.7 ms length=330.5 ms
+     now=109242.3 ms id=676 req_length=259.0 ms latency=1122.2 ms status=succeeded
+     now=109274.6 ms id=673 req_length=317.8 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=109301.3 ms id=684 bucketIdx=0 admittedMs=109301.3 ms length=408.0 ms
+     now=109389.0 ms id=674 req_length=478.5 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=109434.9 ms id=685 bucketIdx=0 admittedMs=109434.9 ms length=404.9 ms
+     now=109503.6 ms id=675 req_length=232.6 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=109568.6 ms id=686 bucketIdx=0 admittedMs=109568.6 ms length=306.2 ms
+     now=109648.8 ms id=678 req_length=405.0 ms latency=1253.7 ms status=succeeded
+Submit infer: now=109702.2 ms id=687 bucketIdx=0 admittedMs=109702.2 ms length=310.5 ms
+     now=109732.6 ms id=677 req_length=601.0 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=109835.8 ms id=688 bucketIdx=0 admittedMs=109835.8 ms length=526.8 ms
+     now=110017.5 ms id=680 req_length=367.2 ms latency=1301.7 ms status=succeeded
+     now=110053.4 ms id=679 req_length=286.1 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=110103.0 ms id=689 bucketIdx=0 admittedMs=110103.0 ms length=272.1 ms
+     now=110349.5 ms id=683 req_length=330.5 ms latency=1179.5 ms status=succeeded
+Submit infer: now=110370.3 ms id=690 bucketIdx=0 admittedMs=110370.3 ms length=288.0 ms
+     now=110374.0 ms id=681 req_length=720.5 ms latency=1498.0 ms status=failed (7): 
+     now=110534.3 ms id=682 req_length=334.5 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=110637.5 ms id=691 bucketIdx=0 admittedMs=110637.5 ms length=282.3 ms
+     now=110755.9 ms id=685 req_length=404.9 ms latency=1318.6 ms status=succeeded
+Submit infer: now=110771.1 ms id=692 bucketIdx=0 admittedMs=110771.1 ms length=280.1 ms
+     now=110801.7 ms id=684 req_length=408.0 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=110904.8 ms id=693 bucketIdx=0 admittedMs=110904.8 ms length=395.2 ms
+Submit infer: now=111038.4 ms id=694 bucketIdx=0 admittedMs=111038.4 ms length=469.6 ms
+     now=111068.9 ms id=686 req_length=306.2 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=111172.0 ms id=695 bucketIdx=0 admittedMs=111172.0 ms length=362.5 ms
+     now=111202.5 ms id=687 req_length=310.5 ms latency=1498.0 ms status=failed (7): 
+     now=111284.2 ms id=688 req_length=526.8 ms latency=1446.0 ms status=succeeded
+Submit infer: now=111305.6 ms id=696 bucketIdx=0 admittedMs=111305.6 ms length=396.8 ms
+Submit infer: now=111439.2 ms id=697 bucketIdx=0 admittedMs=111439.2 ms length=244.7 ms
+Submit infer: now=111553.8 ms id=698 bucketIdx=0 admittedMs=111553.8 ms length=308.9 ms
+     now=111573.2 ms id=690 req_length=288.0 ms latency=1200.5 ms status=succeeded
+     now=111603.4 ms id=689 req_length=272.1 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=111668.3 ms id=699 bucketIdx=0 admittedMs=111668.3 ms length=391.8 ms
+Submit infer: now=111782.8 ms id=700 bucketIdx=0 admittedMs=111782.8 ms length=235.3 ms
+     now=111857.1 ms id=691 req_length=282.3 ms latency=1217.1 ms status=succeeded
+Submit infer: now=111897.4 ms id=701 bucketIdx=0 admittedMs=111897.4 ms length=278.7 ms
+Submit infer: now=112011.9 ms id=702 bucketIdx=0 admittedMs=112011.9 ms length=329.2 ms
+Submit infer: now=112126.4 ms id=703 bucketIdx=0 admittedMs=112126.4 ms length=667.4 ms
+Submit infer: now=112241.0 ms id=704 bucketIdx=0 admittedMs=112241.0 ms length=338.1 ms
+     now=112253.7 ms id=693 req_length=395.2 ms latency=1346.5 ms status=succeeded
+     now=112271.4 ms id=692 req_length=280.1 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=112401.3 ms id=705 bucketIdx=0 admittedMs=112401.3 ms length=399.0 ms
+     now=112539.0 ms id=694 req_length=469.6 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=112561.6 ms id=706 bucketIdx=0 admittedMs=112561.6 ms length=480.3 ms
+     now=112652.0 ms id=696 req_length=396.8 ms latency=1344.0 ms status=succeeded
+     now=112672.3 ms id=695 req_length=362.5 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=112722.0 ms id=707 bucketIdx=0 admittedMs=112722.0 ms length=488.4 ms
+Submit infer: now=112882.3 ms id=708 bucketIdx=0 admittedMs=112882.3 ms length=643.9 ms
+     now=112888.8 ms id=700 req_length=235.3 ms latency=1103.7 ms status=succeeded
+     now=112939.6 ms id=697 req_length=244.7 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=113042.7 ms id=709 bucketIdx=0 admittedMs=113042.7 ms length=467.5 ms
+     now=113054.1 ms id=698 req_length=308.9 ms latency=1498.0 ms status=failed (7): 
+     now=113168.8 ms id=699 req_length=391.8 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=113203.0 ms id=710 bucketIdx=0 admittedMs=113203.0 ms length=619.4 ms
+     now=113219.5 ms id=702 req_length=329.2 ms latency=1205.3 ms status=succeeded
+Submit infer: now=113363.4 ms id=711 bucketIdx=0 admittedMs=113363.4 ms length=325.4 ms
+     now=113397.6 ms id=701 req_length=278.7 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=113523.7 ms id=712 bucketIdx=0 admittedMs=113523.7 ms length=278.5 ms
+     now=113559.2 ms id=704 req_length=338.1 ms latency=1315.9 ms status=succeeded
+     now=113626.7 ms id=703 req_length=667.4 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=113684.1 ms id=713 bucketIdx=0 admittedMs=113684.1 ms length=375.2 ms
+Submit infer: now=113844.4 ms id=714 bucketIdx=0 admittedMs=113844.4 ms length=356.3 ms
+     now=113901.6 ms id=705 req_length=399.0 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=114044.8 ms id=715 bucketIdx=0 admittedMs=114044.8 ms length=397.2 ms
+     now=114049.1 ms id=707 req_length=488.4 ms latency=1324.8 ms status=succeeded
+     now=114062.0 ms id=706 req_length=480.3 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=114245.3 ms id=716 bucketIdx=0 admittedMs=114245.3 ms length=281.0 ms
+     now=114382.7 ms id=708 req_length=643.9 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=114445.7 ms id=717 bucketIdx=0 admittedMs=114445.7 ms length=377.3 ms
+     now=114543.1 ms id=709 req_length=467.5 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=114646.1 ms id=718 bucketIdx=0 admittedMs=114646.1 ms length=457.5 ms
+     now=114670.0 ms id=710 req_length=619.4 ms latency=1464.7 ms status=succeeded
+Submit infer: now=114779.7 ms id=719 bucketIdx=0 admittedMs=114779.7 ms length=207.1 ms
+     now=114863.7 ms id=711 req_length=325.4 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=114913.4 ms id=720 bucketIdx=0 admittedMs=114913.4 ms length=209.0 ms
+     now=115024.1 ms id=712 req_length=278.5 ms latency=1498.0 ms status=failed (7): 
+     now=115045.3 ms id=713 req_length=375.2 ms latency=1358.9 ms status=succeeded
+Submit infer: now=115047.0 ms id=721 bucketIdx=0 admittedMs=115047.0 ms length=193.9 ms
+Submit infer: now=115180.6 ms id=722 bucketIdx=0 admittedMs=115180.6 ms length=273.7 ms
+Submit infer: now=115314.2 ms id=723 bucketIdx=0 admittedMs=115314.2 ms length=484.2 ms
+     now=115327.9 ms id=716 req_length=281.0 ms latency=1080.3 ms status=succeeded
+     now=115344.9 ms id=714 req_length=356.3 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=115447.8 ms id=724 bucketIdx=0 admittedMs=115447.8 ms length=273.3 ms
+     now=115545.2 ms id=715 req_length=397.2 ms latency=1498.0 ms status=failed (7): 
+     now=115706.6 ms id=717 req_length=377.3 ms latency=1258.5 ms status=succeeded
+Submit infer: now=115715.1 ms id=725 bucketIdx=0 admittedMs=115715.1 ms length=125.6 ms
+     now=115917.1 ms id=720 req_length=209.0 ms latency=1001.5 ms status=succeeded
+Submit infer: now=115982.3 ms id=726 bucketIdx=0 admittedMs=115982.3 ms length=507.5 ms
+     now=116112.5 ms id=721 req_length=193.9 ms latency=1063.0 ms status=succeeded
+     now=116146.4 ms id=718 req_length=457.5 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=116249.6 ms id=727 bucketIdx=0 admittedMs=116249.6 ms length=232.3 ms
+     now=116280.1 ms id=719 req_length=207.1 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=116516.8 ms id=728 bucketIdx=0 admittedMs=116516.8 ms length=356.6 ms
+     now=116598.2 ms id=723 req_length=484.2 ms latency=1281.6 ms status=succeeded
+     now=116680.9 ms id=722 req_length=273.7 ms latency=1498.0 ms status=failed (7): 
+     now=116725.3 ms id=725 req_length=125.6 ms latency=1007.9 ms status=succeeded
+Submit infer: now=116784.0 ms id=729 bucketIdx=0 admittedMs=116784.0 ms length=319.5 ms
+     now=116948.1 ms id=724 req_length=273.3 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=117051.3 ms id=730 bucketIdx=0 admittedMs=117051.3 ms length=219.2 ms
+Submit infer: now=117184.9 ms id=731 bucketIdx=0 admittedMs=117184.9 ms length=584.9 ms
+     now=117235.1 ms id=726 req_length=507.5 ms latency=1250.3 ms status=succeeded
+Submit infer: now=117318.5 ms id=732 bucketIdx=0 admittedMs=117318.5 ms length=410.9 ms
+Submit infer: now=117452.1 ms id=733 bucketIdx=0 admittedMs=117452.1 ms length=289.4 ms
+Submit infer: now=117585.8 ms id=734 bucketIdx=0 admittedMs=117585.8 ms length=337.5 ms
+     now=117593.2 ms id=728 req_length=356.6 ms latency=1074.0 ms status=succeeded
+Submit infer: now=117719.4 ms id=735 bucketIdx=0 admittedMs=117719.4 ms length=328.7 ms
+     now=117750.0 ms id=727 req_length=232.3 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=117853.0 ms id=736 bucketIdx=0 admittedMs=117853.0 ms length=437.1 ms
+     now=117915.2 ms id=729 req_length=319.5 ms latency=1128.8 ms status=succeeded
+Submit infer: now=118120.2 ms id=737 bucketIdx=0 admittedMs=118120.2 ms length=299.6 ms
+     now=118135.9 ms id=730 req_length=219.2 ms latency=1082.1 ms status=succeeded
+Submit infer: now=118387.5 ms id=738 bucketIdx=0 admittedMs=118387.5 ms length=328.0 ms
+Submit infer: now=118654.7 ms id=739 bucketIdx=0 admittedMs=118654.7 ms length=455.3 ms
+     now=118722.2 ms id=731 req_length=584.9 ms latency=1535.0 ms status=succeeded
+     now=118819.0 ms id=732 req_length=410.9 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=118922.0 ms id=740 bucketIdx=0 admittedMs=118922.0 ms length=296.3 ms
+     now=118952.5 ms id=733 req_length=289.4 ms latency=1498.0 ms status=failed (7): 
+     now=119051.0 ms id=735 req_length=328.7 ms latency=1329.3 ms status=succeeded
+     now=119086.2 ms id=734 req_length=337.5 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=119189.2 ms id=741 bucketIdx=0 admittedMs=119189.2 ms length=664.5 ms
+     now=119353.3 ms id=736 req_length=437.1 ms latency=1498.0 ms status=failed (7): 
+     now=119380.6 ms id=738 req_length=328.0 ms latency=990.7 ms status=succeeded
+Submit infer: now=119456.5 ms id=742 bucketIdx=0 admittedMs=119456.4 ms length=545.2 ms
+     now=119620.6 ms id=737 req_length=299.6 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=119656.9 ms id=743 bucketIdx=0 admittedMs=119656.9 ms length=277.5 ms
+     now=119837.4 ms id=739 req_length=455.3 ms latency=1180.3 ms status=succeeded
+Submit infer: now=119857.3 ms id=744 bucketIdx=0 admittedMs=119857.3 ms length=406.2 ms
+Submit infer: now=120057.7 ms id=745 bucketIdx=0 admittedMs=120057.7 ms length=367.0 ms
+     now=120135.2 ms id=740 req_length=296.3 ms latency=1210.9 ms status=succeeded
+Submit infer: now=120258.2 ms id=746 bucketIdx=0 admittedMs=120258.2 ms length=343.7 ms
+Submit infer: now=120458.6 ms id=747 bucketIdx=0 admittedMs=120458.6 ms length=253.8 ms
+Submit infer: now=120659.0 ms id=748 bucketIdx=0 admittedMs=120659.0 ms length=311.6 ms
+     now=120681.8 ms id=742 req_length=545.2 ms latency=1223.0 ms status=succeeded
+     now=120689.5 ms id=741 req_length=664.5 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=120859.5 ms id=749 bucketIdx=0 admittedMs=120859.5 ms length=421.2 ms
+Submit infer: now=121059.9 ms id=750 bucketIdx=0 admittedMs=121059.9 ms length=386.7 ms
+     now=121089.6 ms id=744 req_length=406.2 ms latency=1229.9 ms status=succeeded
+     now=121157.2 ms id=743 req_length=277.5 ms latency=1498.0 ms status=failed (7): 
+     now=121434.7 ms id=746 req_length=343.7 ms latency=1174.3 ms status=succeeded
+Submit infer: now=121460.8 ms id=751 bucketIdx=0 admittedMs=121460.8 ms length=282.7 ms
+     now=121558.0 ms id=745 req_length=367.0 ms latency=1498.0 ms status=failed (7): 
+     now=121747.8 ms id=748 req_length=311.6 ms latency=1086.3 ms status=succeeded
+Submit infer: now=121861.6 ms id=752 bucketIdx=0 admittedMs=121861.6 ms length=616.8 ms
+     now=121959.0 ms id=747 req_length=253.8 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=122062.0 ms id=753 bucketIdx=0 admittedMs=122062.0 ms length=365.0 ms
+     now=122170.4 ms id=749 req_length=421.2 ms latency=1308.7 ms status=succeeded
+Submit infer: now=122262.5 ms id=754 bucketIdx=0 admittedMs=122262.5 ms length=498.4 ms
+     now=122456.4 ms id=751 req_length=282.7 ms latency=993.3 ms status=succeeded
+Submit infer: now=122462.9 ms id=755 bucketIdx=0 admittedMs=122462.9 ms length=561.1 ms
+     now=122560.3 ms id=750 req_length=386.7 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=122663.3 ms id=756 bucketIdx=0 admittedMs=122663.3 ms length=527.3 ms
+Submit infer: now=123064.2 ms id=757 bucketIdx=0 admittedMs=123064.2 ms length=357.1 ms
+     now=123074.6 ms id=752 req_length=616.8 ms latency=1210.7 ms status=succeeded
+     now=123439.7 ms id=753 req_length=365.0 ms latency=1375.4 ms status=succeeded
+Submit infer: now=123465.1 ms id=758 bucketIdx=0 admittedMs=123465.1 ms length=294.8 ms
+Submit infer: now=123665.5 ms id=759 bucketIdx=0 admittedMs=123665.5 ms length=276.6 ms
+     now=123762.8 ms id=754 req_length=498.4 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=123865.9 ms id=760 bucketIdx=0 admittedMs=123865.9 ms length=365.0 ms
+     now=123963.3 ms id=755 req_length=561.1 ms latency=1498.0 ms status=failed (7): 
+     now=123968.5 ms id=756 req_length=527.3 ms latency=1302.9 ms status=succeeded
+Submit infer: now=124066.3 ms id=761 bucketIdx=0 admittedMs=124066.3 ms length=252.7 ms
+     now=124264.9 ms id=758 req_length=294.8 ms latency=797.5 ms status=succeeded
+Submit infer: now=124266.8 ms id=762 bucketIdx=0 admittedMs=124266.8 ms length=491.8 ms
+Submit infer: now=124534.0 ms id=763 bucketIdx=0 admittedMs=124534.0 ms length=385.3 ms
+     now=124543.5 ms id=759 req_length=276.6 ms latency=875.7 ms status=succeeded
+     now=124564.5 ms id=757 req_length=357.1 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=124801.3 ms id=764 bucketIdx=0 admittedMs=124801.3 ms length=363.3 ms
+     now=124910.1 ms id=760 req_length=365.0 ms latency=1041.9 ms status=succeeded
+Submit infer: now=125068.5 ms id=765 bucketIdx=0 admittedMs=125068.5 ms length=289.7 ms
+     now=125164.3 ms id=761 req_length=252.7 ms latency=1095.5 ms status=succeeded
+Submit infer: now=125335.7 ms id=766 bucketIdx=0 admittedMs=125335.7 ms length=416.8 ms
+     now=125551.1 ms id=763 req_length=385.3 ms latency=1014.8 ms status=succeeded
+Submit infer: now=125603.0 ms id=767 bucketIdx=0 admittedMs=125603.0 ms length=272.9 ms
+     now=125767.1 ms id=762 req_length=491.8 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=125870.2 ms id=768 bucketIdx=0 admittedMs=125870.2 ms length=614.4 ms
+     now=125916.8 ms id=764 req_length=363.3 ms latency=1113.1 ms status=succeeded
+Submit infer: now=126137.5 ms id=769 bucketIdx=0 admittedMs=126137.5 ms length=513.9 ms
+     now=126208.0 ms id=765 req_length=289.7 ms latency=1137.2 ms status=succeeded
+Submit infer: now=126404.7 ms id=770 bucketIdx=0 admittedMs=126404.7 ms length=209.2 ms
+     now=126627.0 ms id=766 req_length=416.8 ms latency=1288.9 ms status=succeeded
+Submit infer: now=126671.9 ms id=771 bucketIdx=0 admittedMs=126671.9 ms length=558.8 ms
+Submit infer: now=126805.6 ms id=772 bucketIdx=0 admittedMs=126805.6 ms length=556.0 ms
+Submit infer: now=126939.2 ms id=773 bucketIdx=0 admittedMs=126939.2 ms length=278.1 ms
+Submit infer: now=127072.8 ms id=774 bucketIdx=0 admittedMs=127072.8 ms length=412.8 ms
+     now=127103.4 ms id=767 req_length=272.9 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=127206.4 ms id=775 bucketIdx=0 admittedMs=127206.4 ms length=543.7 ms
+     now=127242.9 ms id=768 req_length=614.4 ms latency=1370.3 ms status=succeeded
+Submit infer: now=127340.0 ms id=776 bucketIdx=0 admittedMs=127340.0 ms length=271.9 ms
+     now=127452.1 ms id=770 req_length=209.2 ms latency=1045.0 ms status=succeeded
+Submit infer: now=127473.7 ms id=777 bucketIdx=0 admittedMs=127473.7 ms length=517.8 ms
+     now=127638.0 ms id=769 req_length=513.9 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=127874.5 ms id=778 bucketIdx=0 admittedMs=127874.5 ms length=342.8 ms
+     now=128012.5 ms id=771 req_length=558.8 ms latency=1338.1 ms status=succeeded
+Submit infer: now=128275.4 ms id=779 bucketIdx=0 admittedMs=128275.4 ms length=376.5 ms
+     now=128305.9 ms id=772 req_length=556.0 ms latency=1498.0 ms status=failed (7): 
+     now=128439.6 ms id=773 req_length=278.1 ms latency=1498.0 ms status=failed (7): 
+     now=128557.7 ms id=775 req_length=543.7 ms latency=1349.0 ms status=succeeded
+     now=128573.1 ms id=774 req_length=412.8 ms latency=1498.0 ms status=failed (7): 
+     now=128840.4 ms id=776 req_length=271.9 ms latency=1498.0 ms status=failed (7): 
+     now=128902.1 ms id=778 req_length=342.8 ms latency=1025.0 ms status=succeeded
+     now=128974.0 ms id=777 req_length=517.8 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=129077.1 ms id=780 bucketIdx=0 admittedMs=129077.1 ms length=479.3 ms
+     now=129280.1 ms id=779 req_length=376.5 ms latency=1002.3 ms status=succeeded
+Submit infer: now=129344.3 ms id=781 bucketIdx=0 admittedMs=129344.3 ms length=350.2 ms
+Submit infer: now=129611.6 ms id=782 bucketIdx=0 admittedMs=129611.6 ms length=445.3 ms
+     now=129761.5 ms id=780 req_length=479.3 ms latency=682.1 ms status=succeeded
+Submit infer: now=129878.8 ms id=783 bucketIdx=0 admittedMs=129878.8 ms length=350.9 ms
+     now=130113.1 ms id=781 req_length=350.2 ms latency=766.5 ms status=succeeded
+     now=130559.9 ms id=782 req_length=445.3 ms latency=945.9 ms status=succeeded
+Submit infer: now=130680.5 ms id=784 bucketIdx=0 admittedMs=130680.5 ms length=478.5 ms
+     now=130912.2 ms id=783 req_length=350.9 ms latency=1031.0 ms status=succeeded
+     now=131392.2 ms id=784 req_length=478.5 ms latency=709.3 ms status=succeeded
+Submit infer: now=131482.3 ms id=785 bucketIdx=0 admittedMs=131482.3 ms length=517.4 ms
+     now=132003.6 ms id=785 req_length=517.4 ms latency=519.0 ms status=succeeded
+Submit infer: now=132284.0 ms id=786 bucketIdx=0 admittedMs=132284.0 ms length=419.6 ms
+Submit infer: now=132551.2 ms id=787 bucketIdx=0 admittedMs=132551.2 ms length=448.7 ms
+     now=132708.1 ms id=786 req_length=419.6 ms latency=421.7 ms status=succeeded
+Submit infer: now=132818.5 ms id=788 bucketIdx=0 admittedMs=132818.5 ms length=317.8 ms
+Submit infer: now=133085.7 ms id=789 bucketIdx=0 admittedMs=133085.7 ms length=362.9 ms
+     now=133158.6 ms id=787 req_length=448.7 ms latency=605.0 ms status=succeeded
+     now=133477.9 ms id=788 req_length=317.8 ms latency=657.0 ms status=succeeded
+Submit infer: now=133486.6 ms id=790 bucketIdx=0 admittedMs=133486.6 ms length=406.1 ms
+     now=133842.3 ms id=789 req_length=362.9 ms latency=754.2 ms status=succeeded
+Submit infer: now=133887.4 ms id=791 bucketIdx=0 admittedMs=133887.4 ms length=300.2 ms
+     now=134249.9 ms id=790 req_length=406.1 ms latency=761.0 ms status=succeeded
+     now=134551.6 ms id=791 req_length=300.2 ms latency=661.8 ms status=succeeded
+Submit infer: now=134689.2 ms id=792 bucketIdx=0 admittedMs=134689.2 ms length=249.2 ms
+Submit infer: now=134889.6 ms id=793 bucketIdx=0 admittedMs=134889.6 ms length=501.4 ms
+     now=134942.3 ms id=792 req_length=249.2 ms latency=250.8 ms status=succeeded
+Submit infer: now=135090.0 ms id=794 bucketIdx=0 admittedMs=135090.0 ms length=462.0 ms
+Submit infer: now=135290.4 ms id=795 bucketIdx=0 admittedMs=135290.4 ms length=418.6 ms
+     now=135445.1 ms id=793 req_length=501.4 ms latency=553.2 ms status=succeeded
+Submit infer: now=135490.9 ms id=796 bucketIdx=0 admittedMs=135490.9 ms length=308.1 ms
+Submit infer: now=135891.7 ms id=797 bucketIdx=0 admittedMs=135891.7 ms length=418.6 ms
+     now=135909.3 ms id=794 req_length=462.0 ms latency=816.9 ms status=succeeded
+Submit infer: now=136292.6 ms id=798 bucketIdx=0 admittedMs=136292.6 ms length=293.2 ms
+     now=136329.4 ms id=795 req_length=418.6 ms latency=1036.6 ms status=succeeded
+     now=136639.0 ms id=796 req_length=308.1 ms latency=1145.8 ms status=succeeded
+     now=137060.7 ms id=797 req_length=418.6 ms latency=1166.7 ms status=succeeded
+Submit infer: now=137094.3 ms id=799 bucketIdx=0 admittedMs=137094.3 ms length=263.5 ms
+     now=137355.4 ms id=798 req_length=293.2 ms latency=1060.4 ms status=succeeded
+     now=137620.4 ms id=799 req_length=263.5 ms latency=523.8 ms status=succeeded
+Submit infer: now=137896.0 ms id=800 bucketIdx=0 admittedMs=137896.0 ms length=475.5 ms
+     now=138375.5 ms id=800 req_length=475.5 ms latency=477.0 ms status=succeeded
+Submit infer: now=138697.8 ms id=801 bucketIdx=0 admittedMs=138697.8 ms length=310.0 ms
+     now=139011.6 ms id=801 req_length=310.0 ms latency=311.6 ms status=succeeded
+Submit infer: now=139499.5 ms id=802 bucketIdx=0 admittedMs=139499.5 ms length=476.4 ms
+     now=139979.8 ms id=802 req_length=476.4 ms latency=478.0 ms status=succeeded
+Submit infer: now=140301.2 ms id=803 bucketIdx=0 admittedMs=140301.2 ms length=256.2 ms
+     now=140561.4 ms id=803 req_length=256.2 ms latency=257.8 ms status=succeeded
+Submit infer: now=140702.1 ms id=804 bucketIdx=0 admittedMs=140702.1 ms length=367.7 ms
+     now=141073.5 ms id=804 req_length=367.7 ms latency=369.1 ms status=succeeded
+Submit infer: now=141102.9 ms id=805 bucketIdx=0 admittedMs=141102.9 ms length=359.4 ms
+     now=141466.3 ms id=805 req_length=359.4 ms latency=360.9 ms status=succeeded
+Submit infer: now=141904.6 ms id=806 bucketIdx=0 admittedMs=141904.6 ms length=344.4 ms
+     now=142252.8 ms id=806 req_length=344.4 ms latency=345.8 ms status=succeeded
+Submit infer: now=142305.5 ms id=807 bucketIdx=0 admittedMs=142305.5 ms length=577.8 ms
+Submit infer: now=142706.4 ms id=808 bucketIdx=0 admittedMs=142706.4 ms length=389.1 ms
+     now=142887.3 ms id=807 req_length=577.8 ms latency=579.3 ms status=succeeded
+     now=143276.4 ms id=808 req_length=389.1 ms latency=567.6 ms status=succeeded
+Submit infer: now=143508.1 ms id=809 bucketIdx=0 admittedMs=143508.1 ms length=474.8 ms
+     now=143986.8 ms id=809 req_length=474.8 ms latency=476.3 ms status=succeeded
+Submit infer: now=144309.8 ms id=810 bucketIdx=0 admittedMs=144309.8 ms length=593.4 ms
+Submit infer: now=144510.2 ms id=811 bucketIdx=0 admittedMs=144510.2 ms length=459.1 ms
+Submit infer: now=144710.7 ms id=812 bucketIdx=0 admittedMs=144710.7 ms length=365.7 ms
+     now=144907.0 ms id=810 req_length=593.4 ms latency=594.9 ms status=succeeded
+Submit infer: now=144911.1 ms id=813 bucketIdx=0 admittedMs=144911.1 ms length=364.2 ms
+Submit infer: now=145111.5 ms id=814 bucketIdx=0 admittedMs=145111.5 ms length=225.8 ms
+     now=145366.1 ms id=811 req_length=459.1 ms latency=853.5 ms status=succeeded
+     now=145733.3 ms id=812 req_length=365.7 ms latency=1019.9 ms status=succeeded
+Submit infer: now=145913.2 ms id=815 bucketIdx=0 admittedMs=145913.2 ms length=251.5 ms
+     now=146099.0 ms id=813 req_length=364.2 ms latency=1185.5 ms status=succeeded
+     now=146352.0 ms id=815 req_length=251.5 ms latency=436.4 ms status=succeeded
+     now=146611.8 ms id=814 req_length=225.8 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=146715.0 ms id=816 bucketIdx=0 admittedMs=146715.0 ms length=646.4 ms
+     now=147365.2 ms id=816 req_length=646.4 ms latency=647.9 ms status=succeeded
+Submit infer: now=147516.7 ms id=817 bucketIdx=0 admittedMs=147516.7 ms length=386.4 ms
+     now=147906.8 ms id=817 req_length=386.4 ms latency=387.9 ms status=succeeded
+Submit infer: now=148318.4 ms id=818 bucketIdx=0 admittedMs=148318.4 ms length=794.9 ms
+     now=149117.1 ms id=818 req_length=794.9 ms latency=796.3 ms status=succeeded
+Submit infer: now=149120.1 ms id=819 bucketIdx=0 admittedMs=149120.1 ms length=333.2 ms
+     now=149457.2 ms id=819 req_length=333.2 ms latency=334.7 ms status=succeeded
+Submit infer: now=149921.9 ms id=820 bucketIdx=0 admittedMs=149921.9 ms length=572.3 ms
+     now=150497.9 ms id=820 req_length=572.3 ms latency=573.8 ms status=succeeded
+Submit infer: now=150723.6 ms id=821 bucketIdx=0 admittedMs=150723.6 ms length=284.5 ms
+     now=151012.1 ms id=821 req_length=284.5 ms latency=286.0 ms status=succeeded
+Submit infer: now=151525.3 ms id=822 bucketIdx=0 admittedMs=151525.3 ms length=480.8 ms
+     now=152009.9 ms id=822 req_length=480.8 ms latency=482.3 ms status=succeeded
+Submit infer: now=152327.0 ms id=823 bucketIdx=0 admittedMs=152327.0 ms length=378.2 ms
+     now=152709.1 ms id=823 req_length=378.2 ms latency=379.8 ms status=succeeded
+Submit infer: now=153128.7 ms id=824 bucketIdx=0 admittedMs=153128.7 ms length=231.1 ms
+     now=153363.8 ms id=824 req_length=231.1 ms latency=232.6 ms status=succeeded
+Submit infer: now=153930.5 ms id=825 bucketIdx=0 admittedMs=153930.5 ms length=487.4 ms
+     now=154421.7 ms id=825 req_length=487.4 ms latency=488.9 ms status=succeeded
+Submit infer: now=154732.2 ms id=826 bucketIdx=0 admittedMs=154732.2 ms length=331.1 ms
+     now=155067.2 ms id=826 req_length=331.1 ms latency=332.7 ms status=succeeded
+Submit infer: now=155533.9 ms id=827 bucketIdx=0 admittedMs=155533.9 ms length=319.6 ms
+     now=155857.5 ms id=827 req_length=319.6 ms latency=321.1 ms status=succeeded
+Submit infer: now=156335.6 ms id=828 bucketIdx=0 admittedMs=156335.6 ms length=395.6 ms
+     now=156735.0 ms id=828 req_length=395.6 ms latency=397.0 ms status=succeeded
+Submit infer: now=156736.5 ms id=829 bucketIdx=0 admittedMs=156736.5 ms length=386.7 ms
+     now=157127.2 ms id=829 req_length=386.7 ms latency=388.2 ms status=succeeded
+Submit infer: now=157137.3 ms id=830 bucketIdx=0 admittedMs=157137.3 ms length=382.8 ms
+     now=157524.2 ms id=830 req_length=382.8 ms latency=384.4 ms status=succeeded
+Submit infer: now=157939.1 ms id=831 bucketIdx=0 admittedMs=157939.1 ms length=307.1 ms
+     now=158250.1 ms id=831 req_length=307.1 ms latency=308.6 ms status=succeeded
+Submit infer: now=158740.8 ms id=832 bucketIdx=0 admittedMs=158740.8 ms length=310.9 ms
+     now=159056.4 ms id=832 req_length=310.9 ms latency=313.2 ms status=succeeded
+Submit infer: now=159542.5 ms id=833 bucketIdx=0 admittedMs=159542.5 ms length=563.5 ms
+     now=160109.8 ms id=833 req_length=563.5 ms latency=565.0 ms status=succeeded
+Submit infer: now=160344.2 ms id=834 bucketIdx=0 admittedMs=160344.2 ms length=433.5 ms
+     now=160781.7 ms id=834 req_length=433.5 ms latency=435.0 ms status=succeeded
+Submit infer: now=161145.9 ms id=835 bucketIdx=0 admittedMs=161145.9 ms length=359.2 ms
+     now=161509.3 ms id=835 req_length=359.2 ms latency=360.7 ms status=succeeded
+Submit infer: now=161947.7 ms id=836 bucketIdx=0 admittedMs=161947.7 ms length=376.5 ms
+     now=162328.1 ms id=836 req_length=376.5 ms latency=378.0 ms status=succeeded
+Submit infer: now=162749.4 ms id=837 bucketIdx=0 admittedMs=162749.4 ms length=489.4 ms
+     now=163242.8 ms id=837 req_length=489.4 ms latency=491.0 ms status=succeeded
+Submit infer: now=163551.1 ms id=838 bucketIdx=0 admittedMs=163551.1 ms length=512.4 ms
+Submit infer: now=163952.0 ms id=839 bucketIdx=0 admittedMs=163952.0 ms length=302.9 ms
+     now=164067.4 ms id=838 req_length=512.4 ms latency=513.9 ms status=succeeded
+Submit infer: now=164352.8 ms id=840 bucketIdx=0 admittedMs=164352.8 ms length=452.7 ms
+     now=164371.8 ms id=839 req_length=302.9 ms latency=417.5 ms status=succeeded
+Submit infer: now=164553.3 ms id=841 bucketIdx=0 admittedMs=164553.3 ms length=358.4 ms
+Submit infer: now=164753.7 ms id=842 bucketIdx=0 admittedMs=164753.7 ms length=376.8 ms
+     now=164826.0 ms id=840 req_length=452.7 ms latency=470.8 ms status=succeeded
+Submit infer: now=164954.1 ms id=843 bucketIdx=0 admittedMs=164954.1 ms length=293.0 ms
+Submit infer: now=165154.6 ms id=844 bucketIdx=0 admittedMs=165154.6 ms length=160.3 ms
+     now=165185.8 ms id=841 req_length=358.4 ms latency=630.2 ms status=succeeded
+     now=165564.1 ms id=842 req_length=376.8 ms latency=808.0 ms status=succeeded
+     now=165859.2 ms id=843 req_length=293.0 ms latency=902.8 ms status=succeeded
+Submit infer: now=165956.3 ms id=845 bucketIdx=0 admittedMs=165956.3 ms length=519.5 ms
+     now=166021.7 ms id=844 req_length=160.3 ms latency=864.9 ms status=succeeded
+     now=166542.8 ms id=845 req_length=519.5 ms latency=584.2 ms status=succeeded
+Submit infer: now=166758.0 ms id=846 bucketIdx=0 admittedMs=166758.0 ms length=363.9 ms
+     now=167125.8 ms id=846 req_length=363.9 ms latency=365.5 ms status=succeeded
+Submit infer: now=167559.7 ms id=847 bucketIdx=0 admittedMs=167559.7 ms length=472.3 ms
+     now=168035.8 ms id=847 req_length=472.3 ms latency=473.8 ms status=succeeded
+Submit infer: now=168361.4 ms id=848 bucketIdx=0 admittedMs=168361.4 ms length=332.4 ms
+     now=168697.7 ms id=848 req_length=332.4 ms latency=333.9 ms status=succeeded
+Submit infer: now=169163.2 ms id=849 bucketIdx=0 admittedMs=169163.2 ms length=211.8 ms
+     now=169378.8 ms id=849 req_length=211.8 ms latency=213.3 ms status=succeeded
+Submit infer: now=169964.9 ms id=850 bucketIdx=0 admittedMs=169964.9 ms length=378.9 ms
+     now=170347.7 ms id=850 req_length=378.9 ms latency=380.4 ms status=succeeded
+Submit infer: now=170766.6 ms id=851 bucketIdx=0 admittedMs=170766.6 ms length=390.0 ms
+     now=171160.6 ms id=851 req_length=390.0 ms latency=391.5 ms status=succeeded
+Submit infer: now=171568.3 ms id=852 bucketIdx=0 admittedMs=171568.3 ms length=305.1 ms
+     now=171877.2 ms id=852 req_length=305.1 ms latency=306.6 ms status=succeeded
+Submit infer: now=172370.0 ms id=853 bucketIdx=0 admittedMs=172370.0 ms length=439.7 ms
+     now=172813.9 ms id=853 req_length=439.7 ms latency=441.3 ms status=succeeded
+Submit infer: now=173171.8 ms id=854 bucketIdx=0 admittedMs=173171.8 ms length=217.7 ms
+     now=173393.3 ms id=854 req_length=217.7 ms latency=219.2 ms status=succeeded
+Submit infer: now=173973.5 ms id=855 bucketIdx=0 admittedMs=173973.5 ms length=285.6 ms
+     now=174263.1 ms id=855 req_length=285.6 ms latency=287.1 ms status=succeeded
+Submit infer: now=174775.2 ms id=856 bucketIdx=0 admittedMs=174775.2 ms length=336.1 ms
+     now=175115.3 ms id=856 req_length=336.1 ms latency=337.7 ms status=succeeded
+Submit infer: now=175576.9 ms id=857 bucketIdx=0 admittedMs=175576.9 ms length=529.2 ms
+     now=176110.1 ms id=857 req_length=529.2 ms latency=530.8 ms status=succeeded
+Submit infer: now=176378.7 ms id=858 bucketIdx=0 admittedMs=176378.6 ms length=314.1 ms
+     now=176696.7 ms id=858 req_length=314.1 ms latency=315.7 ms status=succeeded
+Submit infer: now=177180.4 ms id=859 bucketIdx=0 admittedMs=177180.4 ms length=450.4 ms
+     now=177634.8 ms id=859 req_length=450.4 ms latency=452.0 ms status=succeeded
+Submit infer: now=177982.1 ms id=860 bucketIdx=0 admittedMs=177982.1 ms length=433.1 ms
+     now=178419.0 ms id=860 req_length=433.1 ms latency=434.6 ms status=succeeded
+Submit infer: now=178783.8 ms id=861 bucketIdx=0 admittedMs=178783.8 ms length=285.5 ms
+     now=179073.2 ms id=861 req_length=285.5 ms latency=287.0 ms status=succeeded
+Submit infer: now=179585.5 ms id=862 bucketIdx=0 admittedMs=179585.5 ms length=263.3 ms
+     now=179852.9 ms id=862 req_length=263.3 ms latency=264.8 ms status=succeeded
+Submit infer: now=180387.3 ms id=863 bucketIdx=0 admittedMs=180387.3 ms length=220.3 ms
+     now=180611.4 ms id=863 req_length=220.3 ms latency=221.8 ms status=succeeded
+Submit infer: now=181189.0 ms id=864 bucketIdx=0 admittedMs=181189.0 ms length=546.2 ms
+     now=181739.0 ms id=864 req_length=546.2 ms latency=547.6 ms status=succeeded
+Submit infer: now=181990.7 ms id=865 bucketIdx=0 admittedMs=181990.7 ms length=430.7 ms
+     now=182425.3 ms id=865 req_length=430.7 ms latency=432.2 ms status=succeeded
+Submit infer: now=182792.4 ms id=866 bucketIdx=0 admittedMs=182792.4 ms length=357.6 ms
+     now=183153.9 ms id=866 req_length=357.6 ms latency=359.1 ms status=succeeded
+Submit infer: now=183594.1 ms id=867 bucketIdx=0 admittedMs=183594.1 ms length=355.1 ms
+     now=183953.2 ms id=867 req_length=355.1 ms latency=356.6 ms status=succeeded
+Submit infer: now=184395.9 ms id=868 bucketIdx=0 admittedMs=184395.9 ms length=275.2 ms
+     now=184674.9 ms id=868 req_length=275.2 ms latency=276.7 ms status=succeeded
+Submit infer: now=184796.7 ms id=869 bucketIdx=0 admittedMs=184796.7 ms length=215.7 ms
+     now=185016.3 ms id=869 req_length=215.7 ms latency=217.2 ms status=succeeded
+Submit infer: now=185197.6 ms id=870 bucketIdx=0 admittedMs=185197.6 ms length=344.0 ms
+     now=185545.6 ms id=870 req_length=344.0 ms latency=345.7 ms status=succeeded
+Submit infer: now=185598.4 ms id=871 bucketIdx=0 admittedMs=185598.4 ms length=295.0 ms
+     now=185897.2 ms id=871 req_length=295.0 ms latency=296.4 ms status=succeeded
+Submit infer: now=185999.3 ms id=872 bucketIdx=0 admittedMs=185999.3 ms length=125.4 ms
+     now=186128.6 ms id=872 req_length=125.4 ms latency=126.9 ms status=succeeded
+Submit infer: now=186801.0 ms id=873 bucketIdx=0 admittedMs=186801.0 ms length=300.2 ms
+     now=187105.1 ms id=873 req_length=300.2 ms latency=301.7 ms status=succeeded
+Submit infer: now=187602.7 ms id=874 bucketIdx=0 admittedMs=187602.7 ms length=644.1 ms
+     now=188250.8 ms id=874 req_length=644.1 ms latency=645.6 ms status=succeeded
+Submit infer: now=188404.5 ms id=875 bucketIdx=0 admittedMs=188404.5 ms length=252.5 ms
+     now=188661.0 ms id=875 req_length=252.5 ms latency=254.1 ms status=succeeded
+Submit infer: now=189206.2 ms id=876 bucketIdx=0 admittedMs=189206.2 ms length=333.5 ms
+     now=189543.6 ms id=876 req_length=333.5 ms latency=335.0 ms status=succeeded
+Submit infer: now=190007.9 ms id=877 bucketIdx=0 admittedMs=190007.9 ms length=412.7 ms
+     now=190424.5 ms id=877 req_length=412.7 ms latency=414.2 ms status=succeeded
+Submit infer: now=190809.6 ms id=878 bucketIdx=0 admittedMs=190809.6 ms length=262.4 ms
+     now=191075.9 ms id=878 req_length=262.4 ms latency=263.9 ms status=succeeded
+Submit infer: now=191611.4 ms id=879 bucketIdx=0 admittedMs=191611.4 ms length=343.7 ms
+     now=191959.0 ms id=879 req_length=343.7 ms latency=345.3 ms status=succeeded
+Submit infer: now=192012.2 ms id=880 bucketIdx=0 admittedMs=192012.2 ms length=585.8 ms
+Submit infer: now=192413.1 ms id=881 bucketIdx=0 admittedMs=192413.1 ms length=368.9 ms
+     now=192601.8 ms id=880 req_length=585.8 ms latency=587.2 ms status=succeeded
+     now=192973.1 ms id=881 req_length=368.9 ms latency=557.6 ms status=succeeded
+Submit infer: now=193214.8 ms id=882 bucketIdx=0 admittedMs=193214.8 ms length=417.2 ms
+     now=193635.9 ms id=882 req_length=417.2 ms latency=418.7 ms status=succeeded
+Submit infer: now=194016.5 ms id=883 bucketIdx=0 admittedMs=194016.5 ms length=341.3 ms
+     now=194361.6 ms id=883 req_length=341.3 ms latency=342.8 ms status=succeeded
+Submit infer: now=194818.2 ms id=884 bucketIdx=0 admittedMs=194818.2 ms length=415.9 ms
+     now=195238.0 ms id=884 req_length=415.9 ms latency=417.4 ms status=succeeded
+Submit infer: now=195620.0 ms id=885 bucketIdx=0 admittedMs=195620.0 ms length=298.4 ms
+     now=195922.2 ms id=885 req_length=298.4 ms latency=299.9 ms status=succeeded
+Submit infer: now=196421.7 ms id=886 bucketIdx=0 admittedMs=196421.7 ms length=456.1 ms
+     now=196881.7 ms id=886 req_length=456.1 ms latency=457.6 ms status=succeeded
+Submit infer: now=197223.4 ms id=887 bucketIdx=0 admittedMs=197223.4 ms length=320.1 ms
+     now=197547.5 ms id=887 req_length=320.1 ms latency=321.7 ms status=succeeded
+Submit infer: now=198025.1 ms id=888 bucketIdx=0 admittedMs=198025.1 ms length=234.3 ms
+     now=198263.2 ms id=888 req_length=234.3 ms latency=235.8 ms status=succeeded
+Submit infer: now=198826.8 ms id=889 bucketIdx=0 admittedMs=198826.8 ms length=334.9 ms
+     now=199165.7 ms id=889 req_length=334.9 ms latency=336.3 ms status=succeeded
+Submit infer: now=199628.6 ms id=890 bucketIdx=0 admittedMs=199628.6 ms length=382.4 ms
+     now=200014.8 ms id=890 req_length=382.4 ms latency=383.9 ms status=succeeded
+Submit infer: now=200430.3 ms id=891 bucketIdx=0 admittedMs=200430.3 ms length=321.7 ms
+     now=200755.9 ms id=891 req_length=321.7 ms latency=323.2 ms status=succeeded
+Submit infer: now=201232.0 ms id=892 bucketIdx=0 admittedMs=201232.0 ms length=277.0 ms
+     now=201512.9 ms id=892 req_length=277.0 ms latency=278.6 ms status=succeeded
+Submit infer: now=202033.7 ms id=893 bucketIdx=0 admittedMs=202033.7 ms length=378.3 ms
+     now=202416.0 ms id=893 req_length=378.3 ms latency=379.8 ms status=succeeded
+Submit infer: now=202835.4 ms id=894 bucketIdx=0 admittedMs=202835.4 ms length=252.5 ms
+     now=203091.9 ms id=894 req_length=252.5 ms latency=254.0 ms status=succeeded
+Submit infer: now=203637.2 ms id=895 bucketIdx=0 admittedMs=203637.2 ms length=428.1 ms
+     now=204069.0 ms id=895 req_length=428.1 ms latency=429.6 ms status=succeeded
+Submit infer: now=204438.9 ms id=896 bucketIdx=0 admittedMs=204438.9 ms length=267.4 ms
+     now=204710.2 ms id=896 req_length=267.4 ms latency=268.9 ms status=succeeded
+Submit infer: now=205240.6 ms id=897 bucketIdx=0 admittedMs=205240.6 ms length=528.5 ms
+     now=205773.0 ms id=897 req_length=528.5 ms latency=530.0 ms status=succeeded
+Submit infer: now=206042.3 ms id=898 bucketIdx=0 admittedMs=206042.3 ms length=319.1 ms
+     now=206365.3 ms id=898 req_length=319.1 ms latency=320.6 ms status=succeeded
+Submit infer: now=206844.1 ms id=899 bucketIdx=0 admittedMs=206844.1 ms length=288.9 ms
+     now=207136.7 ms id=899 req_length=288.9 ms latency=290.4 ms status=succeeded
+Submit infer: now=207645.8 ms id=900 bucketIdx=0 admittedMs=207645.8 ms length=413.1 ms
+     now=208062.8 ms id=900 req_length=413.1 ms latency=414.6 ms status=succeeded
+Submit infer: now=208447.5 ms id=901 bucketIdx=0 admittedMs=208447.5 ms length=258.3 ms
+     now=208709.8 ms id=901 req_length=258.3 ms latency=260.0 ms status=succeeded
+Submit infer: now=209249.2 ms id=902 bucketIdx=0 admittedMs=209249.2 ms length=381.7 ms
+     now=209634.9 ms id=902 req_length=381.7 ms latency=383.2 ms status=succeeded
+Submit infer: now=210050.9 ms id=903 bucketIdx=0 admittedMs=210050.9 ms length=484.7 ms
+     now=210539.5 ms id=903 req_length=484.7 ms latency=486.2 ms status=succeeded
+Submit infer: now=210852.7 ms id=904 bucketIdx=0 admittedMs=210852.7 ms length=480.9 ms
+     now=211337.4 ms id=904 req_length=480.9 ms latency=482.4 ms status=succeeded
+Submit infer: now=211654.4 ms id=905 bucketIdx=0 admittedMs=211654.4 ms length=594.1 ms
+     now=212252.3 ms id=905 req_length=594.1 ms latency=595.5 ms status=succeeded
+Submit infer: now=212456.1 ms id=906 bucketIdx=0 admittedMs=212456.1 ms length=340.7 ms
+     now=212800.8 ms id=906 req_length=340.7 ms latency=342.3 ms status=succeeded
+Submit infer: now=213257.8 ms id=907 bucketIdx=0 admittedMs=213257.8 ms length=632.0 ms
+     now=213893.6 ms id=907 req_length=632.0 ms latency=633.5 ms status=succeeded
+Submit infer: now=214059.5 ms id=908 bucketIdx=0 admittedMs=214059.5 ms length=268.6 ms
+     now=214332.1 ms id=908 req_length=268.6 ms latency=270.2 ms status=succeeded
+Submit infer: now=214861.3 ms id=909 bucketIdx=0 admittedMs=214861.3 ms length=260.7 ms
+     now=215125.9 ms id=909 req_length=260.7 ms latency=262.3 ms status=succeeded
+Submit infer: now=215663.0 ms id=910 bucketIdx=0 admittedMs=215663.0 ms length=529.1 ms
+     now=216196.0 ms id=910 req_length=529.1 ms latency=530.6 ms status=succeeded
+Submit infer: now=216464.7 ms id=911 bucketIdx=0 admittedMs=216464.7 ms length=525.4 ms
+Submit infer: now=216865.6 ms id=912 bucketIdx=0 admittedMs=216865.6 ms length=165.3 ms
+     now=216994.0 ms id=911 req_length=525.4 ms latency=526.9 ms status=succeeded
+     now=217160.8 ms id=912 req_length=165.3 ms latency=292.9 ms status=succeeded
+Submit infer: now=217266.4 ms id=913 bucketIdx=0 admittedMs=217266.4 ms length=313.8 ms
+     now=217584.1 ms id=913 req_length=313.8 ms latency=315.3 ms status=succeeded
+Submit infer: now=218068.1 ms id=914 bucketIdx=0 admittedMs=218068.1 ms length=569.8 ms
+     now=218641.9 ms id=914 req_length=569.8 ms latency=571.3 ms status=succeeded
+Submit infer: now=218869.9 ms id=915 bucketIdx=0 admittedMs=218869.9 ms length=433.8 ms
+     now=219307.6 ms id=915 req_length=433.8 ms latency=435.4 ms status=succeeded
+Submit infer: now=219671.6 ms id=916 bucketIdx=0 admittedMs=219671.6 ms length=383.1 ms
+     now=220058.6 ms id=916 req_length=383.1 ms latency=384.6 ms status=succeeded
+Submit infer: now=220473.3 ms id=917 bucketIdx=0 admittedMs=220473.3 ms length=336.6 ms
+     now=220813.8 ms id=917 req_length=336.6 ms latency=338.2 ms status=succeeded
+Submit infer: now=221275.0 ms id=918 bucketIdx=0 admittedMs=221275.0 ms length=466.7 ms
+     now=221746.5 ms id=918 req_length=466.7 ms latency=469.1 ms status=succeeded
+Submit infer: now=222076.8 ms id=919 bucketIdx=0 admittedMs=222076.8 ms length=485.2 ms
+     now=222565.7 ms id=919 req_length=485.2 ms latency=486.7 ms status=succeeded
+Submit infer: now=222878.5 ms id=920 bucketIdx=0 admittedMs=222878.5 ms length=374.6 ms
+     now=223257.0 ms id=920 req_length=374.6 ms latency=376.1 ms status=succeeded
+Submit infer: now=223680.2 ms id=921 bucketIdx=0 admittedMs=223680.2 ms length=359.3 ms
+     now=224043.4 ms id=921 req_length=359.3 ms latency=360.8 ms status=succeeded
+Submit infer: now=224481.9 ms id=922 bucketIdx=0 admittedMs=224481.9 ms length=979.8 ms
+Submit infer: now=225283.6 ms id=923 bucketIdx=0 admittedMs=225283.6 ms length=314.7 ms
+     now=225465.7 ms id=922 req_length=979.8 ms latency=981.3 ms status=succeeded
+     now=225780.5 ms id=923 req_length=314.7 ms latency=494.5 ms status=succeeded
+Submit infer: now=226085.4 ms id=924 bucketIdx=0 admittedMs=226085.4 ms length=299.5 ms
+     now=226388.8 ms id=924 req_length=299.5 ms latency=301.1 ms status=succeeded
+Submit infer: now=226887.1 ms id=925 bucketIdx=0 admittedMs=226887.1 ms length=521.8 ms
+     now=227412.7 ms id=925 req_length=521.8 ms latency=523.3 ms status=succeeded
+Submit infer: now=227688.8 ms id=926 bucketIdx=0 admittedMs=227688.8 ms length=297.7 ms
+     now=227990.4 ms id=926 req_length=297.7 ms latency=299.3 ms status=succeeded
+Submit infer: now=228490.5 ms id=927 bucketIdx=0 admittedMs=228490.5 ms length=225.8 ms
+     now=228720.3 ms id=927 req_length=225.8 ms latency=227.4 ms status=succeeded
+Submit infer: now=229292.2 ms id=928 bucketIdx=0 admittedMs=229292.2 ms length=534.1 ms
+     now=229830.2 ms id=928 req_length=534.1 ms latency=535.7 ms status=succeeded
+Submit infer: now=230094.0 ms id=929 bucketIdx=0 admittedMs=230094.0 ms length=303.0 ms
+     now=230400.9 ms id=929 req_length=303.0 ms latency=304.5 ms status=succeeded
+Submit infer: now=230895.7 ms id=930 bucketIdx=0 admittedMs=230895.7 ms length=296.5 ms
+     now=231196.1 ms id=930 req_length=296.5 ms latency=298.1 ms status=succeeded
+Submit infer: now=231697.4 ms id=931 bucketIdx=0 admittedMs=231697.4 ms length=287.1 ms
+     now=231988.4 ms id=931 req_length=287.1 ms latency=288.6 ms status=succeeded
+Submit infer: now=232499.1 ms id=932 bucketIdx=0 admittedMs=232499.1 ms length=614.0 ms
+     now=233116.9 ms id=932 req_length=614.0 ms latency=615.5 ms status=succeeded
+Submit infer: now=233300.9 ms id=933 bucketIdx=0 admittedMs=233300.8 ms length=415.3 ms
+     now=233720.0 ms id=933 req_length=415.3 ms latency=416.8 ms status=succeeded
+Submit infer: now=234102.6 ms id=934 bucketIdx=0 admittedMs=234102.6 ms length=381.2 ms
+     now=234487.6 ms id=934 req_length=381.2 ms latency=382.7 ms status=succeeded
+Submit infer: now=234904.3 ms id=935 bucketIdx=0 admittedMs=234904.3 ms length=367.2 ms
+     now=235275.6 ms id=935 req_length=367.2 ms latency=368.7 ms status=succeeded
+Submit infer: now=235706.0 ms id=936 bucketIdx=0 admittedMs=235706.0 ms length=377.1 ms
+     now=236087.0 ms id=936 req_length=377.1 ms latency=378.6 ms status=succeeded
+Submit infer: now=236507.7 ms id=937 bucketIdx=0 admittedMs=236507.7 ms length=264.4 ms
+     now=236776.1 ms id=937 req_length=264.4 ms latency=266.0 ms status=succeeded
+Submit infer: now=237309.5 ms id=938 bucketIdx=0 admittedMs=237309.5 ms length=370.0 ms
+     now=237683.4 ms id=938 req_length=370.0 ms latency=371.5 ms status=succeeded
+Submit infer: now=238111.2 ms id=939 bucketIdx=0 admittedMs=238111.2 ms length=500.5 ms
+     now=238615.5 ms id=939 req_length=500.5 ms latency=502.0 ms status=succeeded
+Submit infer: now=238912.9 ms id=940 bucketIdx=0 admittedMs=238912.9 ms length=312.9 ms
+     now=239229.6 ms id=940 req_length=312.9 ms latency=314.4 ms status=succeeded
+Submit infer: now=239714.6 ms id=941 bucketIdx=0 admittedMs=239714.6 ms length=533.2 ms
+     now=240251.7 ms id=941 req_length=533.2 ms latency=534.7 ms status=succeeded
+Submit infer: now=240516.3 ms id=942 bucketIdx=0 admittedMs=240516.3 ms length=384.4 ms
+     now=240904.7 ms id=942 req_length=384.4 ms latency=386.0 ms status=succeeded
+Submit infer: now=241318.1 ms id=943 bucketIdx=0 admittedMs=241318.1 ms length=553.1 ms
+     now=241875.0 ms id=943 req_length=553.1 ms latency=554.6 ms status=succeeded
+Submit infer: now=242119.8 ms id=944 bucketIdx=0 admittedMs=242119.8 ms length=400.5 ms
+     now=242524.2 ms id=944 req_length=400.5 ms latency=402.0 ms status=succeeded
+Submit infer: now=242921.5 ms id=945 bucketIdx=0 admittedMs=242921.5 ms length=283.2 ms
+     now=243208.8 ms id=945 req_length=283.2 ms latency=284.8 ms status=succeeded
+Submit infer: now=243723.2 ms id=946 bucketIdx=0 admittedMs=243723.2 ms length=266.1 ms
+     now=243993.2 ms id=946 req_length=266.1 ms latency=267.5 ms status=succeeded
+Submit infer: now=244124.1 ms id=947 bucketIdx=0 admittedMs=244124.1 ms length=381.8 ms
+     now=244509.8 ms id=947 req_length=381.8 ms latency=383.4 ms status=succeeded
+Submit infer: now=244524.9 ms id=948 bucketIdx=0 admittedMs=244524.9 ms length=210.4 ms
+     now=244739.3 ms id=948 req_length=210.4 ms latency=212.0 ms status=succeeded
+Submit infer: now=245326.7 ms id=949 bucketIdx=0 admittedMs=245326.7 ms length=253.9 ms
+     now=245584.5 ms id=949 req_length=253.9 ms latency=255.4 ms status=succeeded
+Submit infer: now=246128.4 ms id=950 bucketIdx=0 admittedMs=246128.4 ms length=420.9 ms
+     now=246553.2 ms id=950 req_length=420.9 ms latency=422.5 ms status=succeeded
+Submit infer: now=246930.1 ms id=951 bucketIdx=0 admittedMs=246930.1 ms length=563.0 ms
+     now=247497.1 ms id=951 req_length=563.0 ms latency=564.5 ms status=succeeded
+Submit infer: now=247731.8 ms id=952 bucketIdx=0 admittedMs=247731.8 ms length=294.7 ms
+     now=248030.5 ms id=952 req_length=294.7 ms latency=296.3 ms status=succeeded
+Submit infer: now=248132.7 ms id=953 bucketIdx=0 admittedMs=248132.7 ms length=430.9 ms
+Submit infer: now=248533.6 ms id=954 bucketIdx=0 admittedMs=248533.6 ms length=372.4 ms
+     now=248567.6 ms id=953 req_length=430.9 ms latency=432.5 ms status=succeeded
+     now=248941.5 ms id=954 req_length=372.4 ms latency=405.6 ms status=succeeded
+Submit infer: now=249335.3 ms id=955 bucketIdx=0 admittedMs=249335.3 ms length=228.2 ms
+     now=249567.4 ms id=955 req_length=228.2 ms latency=229.7 ms status=succeeded
+Submit infer: now=250137.0 ms id=956 bucketIdx=0 admittedMs=250137.0 ms length=317.0 ms
+     now=250457.9 ms id=956 req_length=317.0 ms latency=318.5 ms status=succeeded
+Submit infer: now=250938.7 ms id=957 bucketIdx=0 admittedMs=250938.7 ms length=196.3 ms
+     now=251138.9 ms id=957 req_length=196.3 ms latency=197.8 ms status=succeeded
+Submit infer: now=251740.4 ms id=958 bucketIdx=0 admittedMs=251740.4 ms length=403.2 ms
+     now=252147.5 ms id=958 req_length=403.2 ms latency=404.7 ms status=succeeded
+Submit infer: now=252542.2 ms id=959 bucketIdx=0 admittedMs=252542.2 ms length=373.0 ms
+     now=252919.2 ms id=959 req_length=373.0 ms latency=374.6 ms status=succeeded
+Submit infer: now=253343.9 ms id=960 bucketIdx=0 admittedMs=253343.9 ms length=342.5 ms
+     now=253690.3 ms id=960 req_length=342.5 ms latency=344.0 ms status=succeeded
+Submit infer: now=254145.6 ms id=961 bucketIdx=0 admittedMs=254145.6 ms length=488.8 ms
+     now=254638.3 ms id=961 req_length=488.8 ms latency=490.4 ms status=succeeded
+Submit infer: now=254947.3 ms id=962 bucketIdx=0 admittedMs=254947.3 ms length=486.5 ms
+     now=255437.7 ms id=962 req_length=486.5 ms latency=488.0 ms status=succeeded
+Submit infer: now=255749.0 ms id=963 bucketIdx=0 admittedMs=255749.0 ms length=397.5 ms
+     now=256150.5 ms id=963 req_length=397.5 ms latency=399.0 ms status=succeeded
+Submit infer: now=256550.8 ms id=964 bucketIdx=0 admittedMs=256550.8 ms length=471.5 ms
+     now=257026.1 ms id=964 req_length=471.5 ms latency=473.0 ms status=succeeded
+Submit infer: now=257352.5 ms id=965 bucketIdx=0 admittedMs=257352.5 ms length=210.0 ms
+     now=257566.5 ms id=965 req_length=210.0 ms latency=211.6 ms status=succeeded
+Submit infer: now=258154.2 ms id=966 bucketIdx=0 admittedMs=258154.2 ms length=510.9 ms
+     now=258669.0 ms id=966 req_length=510.9 ms latency=512.5 ms status=succeeded
+Submit infer: now=258955.9 ms id=967 bucketIdx=0 admittedMs=258955.9 ms length=466.6 ms
+     now=259426.4 ms id=967 req_length=466.6 ms latency=468.2 ms status=succeeded
+Submit infer: now=259757.6 ms id=968 bucketIdx=0 admittedMs=259757.6 ms length=353.8 ms
+     now=260115.4 ms id=968 req_length=353.8 ms latency=355.4 ms status=succeeded
+Submit infer: now=260158.5 ms id=969 bucketIdx=0 admittedMs=260158.5 ms length=370.9 ms
+     now=260533.4 ms id=969 req_length=370.9 ms latency=372.4 ms status=succeeded
+Submit infer: now=260559.4 ms id=970 bucketIdx=0 admittedMs=260559.4 ms length=332.5 ms
+     now=260895.7 ms id=970 req_length=332.5 ms latency=334.0 ms status=succeeded
+Submit infer: now=261361.1 ms id=971 bucketIdx=0 admittedMs=261361.1 ms length=402.4 ms
+     now=261767.4 ms id=971 req_length=402.4 ms latency=403.9 ms status=succeeded
+Submit infer: now=262162.8 ms id=972 bucketIdx=0 admittedMs=262162.8 ms length=762.9 ms
+     now=262929.5 ms id=972 req_length=762.9 ms latency=764.3 ms status=succeeded
+Submit infer: now=262964.5 ms id=973 bucketIdx=0 admittedMs=262964.5 ms length=256.8 ms
+     now=263225.2 ms id=973 req_length=256.8 ms latency=258.3 ms status=succeeded
+Submit infer: now=263365.4 ms id=974 bucketIdx=0 admittedMs=263365.4 ms length=374.1 ms
+     now=263743.3 ms id=974 req_length=374.1 ms latency=375.6 ms status=succeeded
+Submit infer: now=263766.3 ms id=975 bucketIdx=0 admittedMs=263766.3 ms length=401.7 ms
+Submit infer: now=264033.5 ms id=976 bucketIdx=0 admittedMs=264033.5 ms length=890.4 ms
+     now=264171.8 ms id=975 req_length=401.7 ms latency=403.2 ms status=succeeded
+Submit infer: now=264300.7 ms id=977 bucketIdx=0 admittedMs=264300.7 ms length=398.6 ms
+Submit infer: now=264568.0 ms id=978 bucketIdx=0 admittedMs=264568.0 ms length=441.3 ms
+Submit infer: now=264835.2 ms id=979 bucketIdx=0 admittedMs=264835.2 ms length=342.5 ms
+     now=265063.6 ms id=976 req_length=890.4 ms latency=1027.7 ms status=succeeded
+Submit infer: now=265102.5 ms id=980 bucketIdx=0 admittedMs=265102.5 ms length=521.9 ms
+Submit infer: now=265369.7 ms id=981 bucketIdx=0 admittedMs=265369.7 ms length=515.4 ms
+     now=265462.2 ms id=977 req_length=398.6 ms latency=1159.1 ms status=succeeded
+Submit infer: now=265770.6 ms id=982 bucketIdx=0 admittedMs=265770.6 ms length=412.6 ms
+     now=265985.6 ms id=980 req_length=521.9 ms latency=880.8 ms status=succeeded
+     now=266068.3 ms id=978 req_length=441.3 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=266171.4 ms id=983 bucketIdx=0 admittedMs=266171.4 ms length=305.7 ms
+     now=266335.6 ms id=979 req_length=342.5 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=266438.7 ms id=984 bucketIdx=0 admittedMs=266438.7 ms length=449.3 ms
+     now=266502.5 ms id=981 req_length=515.4 ms latency=1130.5 ms status=succeeded
+Submit infer: now=266705.9 ms id=985 bucketIdx=0 admittedMs=266705.9 ms length=257.9 ms
+     now=266809.8 ms id=983 req_length=305.7 ms latency=636.0 ms status=succeeded
+Submit infer: now=266973.1 ms id=986 bucketIdx=0 admittedMs=266973.1 ms length=461.1 ms
+     now=267261.3 ms id=984 req_length=449.3 ms latency=820.3 ms status=succeeded
+     now=267270.9 ms id=982 req_length=412.6 ms latency=1498.0 ms status=failed (7): 
+     now=267522.4 ms id=985 req_length=257.9 ms latency=814.2 ms status=succeeded
+Submit infer: now=267774.9 ms id=987 bucketIdx=0 admittedMs=267774.9 ms length=385.0 ms
+     now=267985.0 ms id=986 req_length=461.1 ms latency=1009.6 ms status=succeeded
+Submit infer: now=268175.7 ms id=988 bucketIdx=0 admittedMs=268175.7 ms length=311.9 ms
+     now=268371.6 ms id=987 req_length=385.0 ms latency=594.4 ms status=succeeded
+Submit infer: now=268576.6 ms id=989 bucketIdx=0 admittedMs=268576.6 ms length=391.7 ms
+     now=268685.0 ms id=988 req_length=311.9 ms latency=506.9 ms status=succeeded
+Submit infer: now=268977.4 ms id=990 bucketIdx=0 admittedMs=268977.4 ms length=421.3 ms
+     now=269078.1 ms id=989 req_length=391.7 ms latency=499.2 ms status=succeeded
+Submit infer: now=269378.3 ms id=991 bucketIdx=0 admittedMs=269378.3 ms length=476.5 ms
+     now=269500.9 ms id=990 req_length=421.3 ms latency=521.1 ms status=succeeded
+Submit infer: now=269779.2 ms id=992 bucketIdx=0 admittedMs=269779.2 ms length=370.8 ms
+     now=269979.5 ms id=991 req_length=476.5 ms latency=598.7 ms status=succeeded
+Submit infer: now=270180.0 ms id=993 bucketIdx=0 admittedMs=270180.0 ms length=497.0 ms
+     now=270351.8 ms id=992 req_length=370.8 ms latency=570.2 ms status=succeeded
+Submit infer: now=270580.9 ms id=994 bucketIdx=0 admittedMs=270580.9 ms length=340.2 ms
+     now=270850.9 ms id=993 req_length=497.0 ms latency=668.5 ms status=succeeded
+Submit infer: now=270981.7 ms id=995 bucketIdx=0 admittedMs=270981.7 ms length=207.4 ms
+     now=271192.7 ms id=994 req_length=340.2 ms latency=609.4 ms status=succeeded
+Submit infer: now=271249.0 ms id=996 bucketIdx=0 admittedMs=271249.0 ms length=351.7 ms
+     now=271401.7 ms id=995 req_length=207.4 ms latency=417.6 ms status=succeeded
+Submit infer: now=271516.2 ms id=997 bucketIdx=0 admittedMs=271516.2 ms length=436.5 ms
+     now=271754.8 ms id=996 req_length=351.7 ms latency=503.5 ms status=succeeded
+Submit infer: now=271783.5 ms id=998 bucketIdx=0 admittedMs=271783.5 ms length=329.6 ms
+Submit infer: now=272050.7 ms id=999 bucketIdx=0 admittedMs=272050.7 ms length=505.1 ms
+     now=272192.8 ms id=997 req_length=436.5 ms latency=674.2 ms status=succeeded
+Submit infer: now=272317.9 ms id=1000 bucketIdx=0 admittedMs=272317.9 ms length=341.4 ms
+     now=272523.9 ms id=998 req_length=329.6 ms latency=738.1 ms status=succeeded
+Submit infer: now=272585.2 ms id=1001 bucketIdx=0 admittedMs=272585.2 ms length=314.0 ms
+Submit infer: now=272785.6 ms id=1002 bucketIdx=0 admittedMs=272785.6 ms length=395.9 ms
+Submit infer: now=272986.0 ms id=1003 bucketIdx=0 admittedMs=272986.0 ms length=387.7 ms
+     now=273030.5 ms id=999 req_length=505.1 ms latency=977.3 ms status=succeeded
+Submit infer: now=273186.5 ms id=1004 bucketIdx=0 admittedMs=273186.5 ms length=347.9 ms
+     now=273371.9 ms id=1000 req_length=341.4 ms latency=1051.6 ms status=succeeded
+Submit infer: now=273386.9 ms id=1005 bucketIdx=0 admittedMs=273386.9 ms length=348.9 ms
+Submit infer: now=273587.3 ms id=1006 bucketIdx=0 admittedMs=273587.3 ms length=307.4 ms
+     now=273687.4 ms id=1001 req_length=314.0 ms latency=1099.8 ms status=succeeded
+Submit infer: now=273787.8 ms id=1007 bucketIdx=0 admittedMs=273787.8 ms length=257.3 ms
+Submit infer: now=273988.2 ms id=1008 bucketIdx=0 admittedMs=273988.2 ms length=441.0 ms
+     now=274085.5 ms id=1002 req_length=395.9 ms latency=1297.5 ms status=succeeded
+Submit infer: now=274188.6 ms id=1009 bucketIdx=0 admittedMs=274188.6 ms length=245.2 ms
+     now=274434.8 ms id=1004 req_length=347.9 ms latency=1245.5 ms status=succeeded
+Submit infer: now=274455.9 ms id=1010 bucketIdx=0 admittedMs=274455.9 ms length=528.5 ms
+     now=274486.4 ms id=1003 req_length=387.7 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=274723.1 ms id=1011 bucketIdx=0 admittedMs=274723.1 ms length=352.1 ms
+     now=274743.7 ms id=1006 req_length=307.4 ms latency=1154.0 ms status=succeeded
+     now=274887.3 ms id=1005 req_length=348.9 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=274990.4 ms id=1012 bucketIdx=0 admittedMs=274990.3 ms length=367.7 ms
+     now=275002.6 ms id=1007 req_length=257.3 ms latency=1212.5 ms status=succeeded
+Submit infer: now=275150.7 ms id=1013 bucketIdx=0 admittedMs=275150.7 ms length=392.0 ms
+     now=275249.3 ms id=1009 req_length=245.2 ms latency=1058.3 ms status=succeeded
+Submit infer: now=275311.0 ms id=1014 bucketIdx=0 admittedMs=275311.0 ms length=497.1 ms
+Submit infer: now=275471.4 ms id=1015 bucketIdx=0 admittedMs=275471.4 ms length=421.3 ms
+     now=275488.5 ms id=1008 req_length=441.0 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=275631.7 ms id=1016 bucketIdx=0 admittedMs=275631.7 ms length=313.3 ms
+     now=275779.2 ms id=1010 req_length=528.5 ms latency=1320.9 ms status=succeeded
+Submit infer: now=275792.1 ms id=1017 bucketIdx=0 admittedMs=275792.1 ms length=304.5 ms
+Submit infer: now=275992.5 ms id=1018 bucketIdx=0 admittedMs=275992.5 ms length=309.6 ms
+     now=276146.9 ms id=1012 req_length=367.7 ms latency=1154.2 ms status=succeeded
+Submit infer: now=276192.9 ms id=1019 bucketIdx=0 admittedMs=276192.9 ms length=329.2 ms
+     now=276223.4 ms id=1011 req_length=352.1 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=276393.4 ms id=1020 bucketIdx=0 admittedMs=276393.4 ms length=457.6 ms
+Submit infer: now=276593.8 ms id=1021 bucketIdx=0 admittedMs=276593.8 ms length=862.8 ms
+     now=276645.6 ms id=1014 req_length=497.1 ms latency=1331.9 ms status=succeeded
+     now=276651.0 ms id=1013 req_length=392.0 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=276727.4 ms id=1022 bucketIdx=0 admittedMs=276727.4 ms length=478.0 ms
+Submit infer: now=276861.0 ms id=1023 bucketIdx=0 admittedMs=276861.0 ms length=425.5 ms
+     now=276951.6 ms id=1017 req_length=304.5 ms latency=1157.2 ms status=succeeded
+     now=276971.8 ms id=1015 req_length=421.3 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=276994.7 ms id=1024 bucketIdx=0 admittedMs=276994.7 ms length=335.9 ms
+Submit infer: now=277128.3 ms id=1025 bucketIdx=0 admittedMs=277128.3 ms length=494.9 ms
+     now=277132.1 ms id=1016 req_length=313.3 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=277261.9 ms id=1026 bucketIdx=0 admittedMs=277261.9 ms length=397.3 ms
+     now=277263.4 ms id=1018 req_length=309.6 ms latency=1268.5 ms status=succeeded
+Submit infer: now=277395.5 ms id=1027 bucketIdx=0 admittedMs=277395.5 ms length=315.2 ms
+Submit infer: now=277595.9 ms id=1028 bucketIdx=0 admittedMs=277595.9 ms length=364.1 ms
+     now=277693.3 ms id=1019 req_length=329.2 ms latency=1498.0 ms status=failed (7): 
+     now=277723.0 ms id=1020 req_length=457.6 ms latency=1327.2 ms status=succeeded
+Submit infer: now=277796.4 ms id=1029 bucketIdx=0 admittedMs=277796.4 ms length=274.0 ms
+Submit infer: now=277996.8 ms id=1030 bucketIdx=0 admittedMs=277996.8 ms length=483.7 ms
+     now=278094.1 ms id=1021 req_length=862.8 ms latency=1498.0 ms status=failed (7): 
+     now=278149.9 ms id=1023 req_length=425.5 ms latency=1286.5 ms status=succeeded
+Submit infer: now=278197.2 ms id=1031 bucketIdx=0 admittedMs=278197.2 ms length=541.3 ms
+     now=278227.7 ms id=1022 req_length=478.0 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=278397.7 ms id=1032 bucketIdx=0 admittedMs=278397.7 ms length=321.4 ms
+     now=278495.0 ms id=1024 req_length=335.9 ms latency=1498.0 ms status=failed (7): 
+     now=278548.7 ms id=1026 req_length=397.3 ms latency=1284.6 ms status=succeeded
+Submit infer: now=278598.1 ms id=1033 bucketIdx=0 admittedMs=278598.1 ms length=332.1 ms
+     now=278628.6 ms id=1025 req_length=494.9 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=278798.5 ms id=1034 bucketIdx=0 admittedMs=278798.5 ms length=375.1 ms
+     now=278895.9 ms id=1027 req_length=315.2 ms latency=1498.0 ms status=failed (7): 
+     now=278914.3 ms id=1028 req_length=364.1 ms latency=1316.0 ms status=succeeded
+Submit infer: now=278999.0 ms id=1035 bucketIdx=0 admittedMs=278999.0 ms length=268.2 ms
+Submit infer: now=279132.6 ms id=1036 bucketIdx=0 admittedMs=279132.6 ms length=417.6 ms
+Submit infer: now=279266.2 ms id=1037 bucketIdx=0 admittedMs=279266.2 ms length=293.0 ms
+     now=279296.7 ms id=1029 req_length=274.0 ms latency=1498.0 ms status=failed (7): 
+     now=279399.4 ms id=1030 req_length=483.7 ms latency=1400.4 ms status=succeeded
+Submit infer: now=279399.8 ms id=1038 bucketIdx=0 admittedMs=279399.8 ms length=208.8 ms
+Submit infer: now=279533.4 ms id=1039 bucketIdx=0 admittedMs=279533.4 ms length=439.4 ms
+Submit infer: now=279667.1 ms id=1040 bucketIdx=0 admittedMs=279667.1 ms length=363.1 ms
+     now=279697.6 ms id=1031 req_length=541.3 ms latency=1498.0 ms status=failed (7): 
+     now=279733.0 ms id=1033 req_length=332.1 ms latency=1132.6 ms status=succeeded
+Submit infer: now=279800.7 ms id=1041 bucketIdx=0 admittedMs=279800.7 ms length=286.3 ms
+     now=279898.0 ms id=1032 req_length=321.4 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=279961.0 ms id=1042 bucketIdx=0 admittedMs=279961.0 ms length=727.8 ms
+     now=280109.6 ms id=1034 req_length=375.1 ms latency=1308.7 ms status=succeeded
+Submit infer: now=280121.4 ms id=1043 bucketIdx=0 admittedMs=280121.4 ms length=302.2 ms
+Submit infer: now=280281.7 ms id=1044 bucketIdx=0 admittedMs=280281.7 ms length=242.9 ms
+Submit infer: now=280442.1 ms id=1045 bucketIdx=0 admittedMs=280442.1 ms length=368.3 ms
+     now=280499.3 ms id=1035 req_length=268.2 ms latency=1498.0 ms status=failed (7): 
+     now=280528.6 ms id=1036 req_length=417.6 ms latency=1393.7 ms status=succeeded
+Submit infer: now=280602.4 ms id=1046 bucketIdx=0 admittedMs=280602.4 ms length=352.7 ms
+Submit infer: now=280762.7 ms id=1047 bucketIdx=0 admittedMs=280762.7 ms length=247.8 ms
+     now=280766.5 ms id=1037 req_length=293.0 ms latency=1498.0 ms status=failed (7): 
+     now=280900.1 ms id=1038 req_length=208.8 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=280923.1 ms id=1048 bucketIdx=0 admittedMs=280923.1 ms length=574.1 ms
+     now=280969.5 ms id=1039 req_length=439.4 ms latency=1433.8 ms status=succeeded
+Submit infer: now=281083.4 ms id=1049 bucketIdx=0 admittedMs=281083.4 ms length=435.9 ms
+     now=281167.4 ms id=1040 req_length=363.1 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=281243.8 ms id=1050 bucketIdx=0 admittedMs=281243.8 ms length=440.2 ms
+     now=281301.1 ms id=1041 req_length=286.3 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=281404.1 ms id=1051 bucketIdx=0 admittedMs=281404.1 ms length=259.9 ms
+Submit infer: now=281564.5 ms id=1052 bucketIdx=0 admittedMs=281564.5 ms length=379.3 ms
+     now=281621.7 ms id=1043 req_length=302.2 ms latency=1498.0 ms status=failed (7): 
+     now=281698.7 ms id=1042 req_length=727.8 ms latency=1735.4 ms status=succeeded
+Submit infer: now=281724.8 ms id=1053 bucketIdx=0 admittedMs=281724.8 ms length=366.6 ms
+     now=281782.0 ms id=1044 req_length=242.9 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=281885.2 ms id=1054 bucketIdx=0 admittedMs=281885.1 ms length=435.4 ms
+Submit infer: now=282045.5 ms id=1055 bucketIdx=0 admittedMs=282045.5 ms length=426.9 ms
+     now=282067.1 ms id=1045 req_length=368.3 ms latency=1622.8 ms status=succeeded
+     now=282102.7 ms id=1046 req_length=352.7 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=282205.8 ms id=1056 bucketIdx=0 admittedMs=282205.8 ms length=464.6 ms
+     now=282263.1 ms id=1047 req_length=247.8 ms latency=1498.0 ms status=failed (7): 
+     now=282328.6 ms id=1051 req_length=259.9 ms latency=922.2 ms status=succeeded
+Submit infer: now=282366.2 ms id=1057 bucketIdx=0 admittedMs=282366.2 ms length=688.6 ms
+     now=282423.4 ms id=1048 req_length=574.1 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=282526.5 ms id=1058 bucketIdx=0 admittedMs=282526.5 ms length=279.5 ms
+     now=282584.3 ms id=1049 req_length=435.9 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=282686.9 ms id=1059 bucketIdx=0 admittedMs=282686.9 ms length=339.3 ms
+     now=282709.4 ms id=1052 req_length=379.3 ms latency=1142.5 ms status=succeeded
+     now=282744.0 ms id=1050 req_length=440.2 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=282847.2 ms id=1060 bucketIdx=0 admittedMs=282847.2 ms length=502.6 ms
+Submit infer: now=283007.6 ms id=1061 bucketIdx=0 admittedMs=283007.6 ms length=463.1 ms
+     now=283137.7 ms id=1055 req_length=426.9 ms latency=1089.9 ms status=succeeded
+Submit infer: now=283141.2 ms id=1062 bucketIdx=0 admittedMs=283141.2 ms length=309.7 ms
+     now=283225.2 ms id=1053 req_length=366.6 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=283274.8 ms id=1063 bucketIdx=0 admittedMs=283274.8 ms length=308.7 ms
+     now=283385.5 ms id=1054 req_length=435.4 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=283408.4 ms id=1064 bucketIdx=0 admittedMs=283408.4 ms length=244.2 ms
+Submit infer: now=283542.0 ms id=1065 bucketIdx=0 admittedMs=283542.0 ms length=381.4 ms
+Submit infer: now=283675.7 ms id=1066 bucketIdx=0 admittedMs=283675.7 ms length=272.7 ms
+     now=283706.2 ms id=1056 req_length=464.6 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=283809.3 ms id=1067 bucketIdx=0 admittedMs=283809.3 ms length=472.5 ms
+     now=283827.7 ms id=1057 req_length=688.6 ms latency=1459.2 ms status=succeeded
+Submit infer: now=283942.9 ms id=1068 bucketIdx=0 admittedMs=283942.9 ms length=343.1 ms
+     now=284026.8 ms id=1058 req_length=279.5 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=284076.5 ms id=1069 bucketIdx=0 admittedMs=284076.5 ms length=218.1 ms
+     now=284139.0 ms id=1062 req_length=309.7 ms latency=995.5 ms status=succeeded
+     now=284187.2 ms id=1059 req_length=339.3 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=284210.1 ms id=1070 bucketIdx=0 admittedMs=284210.1 ms length=277.2 ms
+Submit infer: now=284343.8 ms id=1071 bucketIdx=0 admittedMs=284343.8 ms length=285.6 ms
+     now=284347.8 ms id=1060 req_length=502.6 ms latency=1498.0 ms status=failed (7): 
+     now=284384.6 ms id=1064 req_length=244.2 ms latency=973.9 ms status=succeeded
+Submit infer: now=284477.4 ms id=1072 bucketIdx=0 admittedMs=284477.4 ms length=444.3 ms
+     now=284507.9 ms id=1061 req_length=463.1 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=284611.0 ms id=1073 bucketIdx=0 admittedMs=284611.0 ms length=457.9 ms
+     now=284658.8 ms id=1066 req_length=272.7 ms latency=980.8 ms status=succeeded
+     now=284775.2 ms id=1063 req_length=308.7 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=284811.4 ms id=1074 bucketIdx=0 admittedMs=284811.4 ms length=578.7 ms
+     now=285003.4 ms id=1068 req_length=343.1 ms latency=1058.1 ms status=succeeded
+Submit infer: now=285011.9 ms id=1075 bucketIdx=0 admittedMs=285011.9 ms length=399.3 ms
+     now=285042.4 ms id=1065 req_length=381.4 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=285212.3 ms id=1076 bucketIdx=0 admittedMs=285212.3 ms length=340.3 ms
+     now=285290.6 ms id=1071 req_length=285.6 ms latency=944.4 ms status=succeeded
+     now=285309.6 ms id=1067 req_length=472.5 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=285412.7 ms id=1077 bucketIdx=0 admittedMs=285412.7 ms length=347.2 ms
+     now=285576.8 ms id=1069 req_length=218.1 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=285613.2 ms id=1078 bucketIdx=0 admittedMs=285613.2 ms length=210.2 ms
+     now=285710.5 ms id=1070 req_length=277.2 ms latency=1498.0 ms status=failed (7): 
+     now=285736.3 ms id=1072 req_length=444.3 ms latency=1256.6 ms status=succeeded
+Submit infer: now=285813.6 ms id=1079 bucketIdx=0 admittedMs=285813.6 ms length=335.2 ms
+Submit infer: now=286014.0 ms id=1080 bucketIdx=0 admittedMs=286014.0 ms length=386.2 ms
+     now=286111.5 ms id=1073 req_length=457.9 ms latency=1498.0 ms status=failed (7): 
+     now=286137.1 ms id=1075 req_length=399.3 ms latency=1122.9 ms status=succeeded
+Submit infer: now=286214.4 ms id=1081 bucketIdx=0 admittedMs=286214.4 ms length=343.1 ms
+     now=286311.7 ms id=1074 req_length=578.7 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=286374.8 ms id=1082 bucketIdx=0 admittedMs=286374.8 ms length=177.9 ms
+     now=286486.6 ms id=1077 req_length=347.2 ms latency=1071.5 ms status=succeeded
+Submit infer: now=286535.1 ms id=1083 bucketIdx=0 admittedMs=286535.1 ms length=512.8 ms
+Submit infer: now=286695.5 ms id=1084 bucketIdx=0 admittedMs=286695.5 ms length=334.1 ms
+     now=286712.7 ms id=1076 req_length=340.3 ms latency=1498.0 ms status=failed (7): 
+     now=286823.3 ms id=1079 req_length=335.2 ms latency=1007.4 ms status=succeeded
+Submit infer: now=286855.8 ms id=1085 bucketIdx=0 admittedMs=286855.8 ms length=318.8 ms
+Submit infer: now=287016.2 ms id=1086 bucketIdx=0 admittedMs=287016.2 ms length=303.4 ms
+     now=287113.5 ms id=1078 req_length=210.2 ms latency=1498.0 ms status=failed (7): 
+     now=287211.0 ms id=1080 req_length=386.2 ms latency=1194.6 ms status=succeeded
+Submit infer: now=287216.6 ms id=1087 bucketIdx=0 admittedMs=287216.6 ms length=301.2 ms
+Submit infer: now=287417.0 ms id=1088 bucketIdx=0 admittedMs=287417.0 ms length=367.8 ms
+     now=287555.6 ms id=1081 req_length=343.1 ms latency=1338.8 ms status=succeeded
+Submit infer: now=287617.5 ms id=1089 bucketIdx=0 admittedMs=287617.5 ms length=362.5 ms
+Submit infer: now=287817.9 ms id=1090 bucketIdx=0 admittedMs=287817.9 ms length=168.2 ms
+     now=287875.2 ms id=1082 req_length=177.9 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=288018.3 ms id=1091 bucketIdx=0 admittedMs=288018.3 ms length=282.5 ms
+     now=288070.5 ms id=1083 req_length=512.8 ms latency=1533.0 ms status=succeeded
+     now=288195.8 ms id=1084 req_length=334.1 ms latency=1498.0 ms status=failed (7): 
+Submit infer: now=288218.7 ms id=1092 bucketIdx=0 admittedMs=288218.7 ms length=432.9 ms
+     now=288356.2 ms id=1085 req_length=318.8 ms latency=1498.0 ms status=failed (7): 
+     now=288374.0 ms id=1086 req_length=303.4 ms latency=1355.4 ms status=succeeded
+Submit infer: now=288419.2 ms id=1093 bucketIdx=0 admittedMs=288419.2 ms length=494.8 ms
+     now=288717.0 ms id=1087 req_length=301.2 ms latency=1498.0 ms status=failed (7): 
+     now=288743.3 ms id=1088 req_length=367.8 ms latency=1323.9 ms status=succeeded
+     now=288913.0 ms id=1090 req_length=168.2 ms latency=1092.8 ms status=succeeded
+     now=289117.9 ms id=1089 req_length=362.5 ms latency=1498.0 ms status=failed (7): 
+     now=289197.1 ms id=1091 req_length=282.5 ms latency=1176.5 ms status=succeeded
+     now=289631.4 ms id=1092 req_length=432.9 ms latency=1410.2 ms status=succeeded
+     now=289919.6 ms id=1093 req_length=494.8 ms latency=1498.0 ms status=failed (4): 
