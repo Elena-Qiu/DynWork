@@ -3,15 +3,14 @@ Starting Clockwork Worker
 user clockwork directory: /workdir/clockwork
 Loading Clockwork worker default config from /workdir/clockwork/config/default.cfg
 user clockwork directory: /workdir/clockwork
-GPU0-GPU0-GPU-0 started
-PCIe_H2D_Weights-0 started
-GPUGPU0-0-PCIe_H2D_InputsPCIe_D2H_Output--0 started0 started
-
+GPU0-GPU-0 startedGPU
+0-PCIe_H2D_Weights-0 started
+GPU0-PCIe_H2D_Inputs-0 started
+GPU0-PCIe_D2H_Output-0 started
 AsyncTaskChecker-0 started
 CPU-0 started
 IO service thread listening on 0.0.0.0:12345
-GPU Clocks Changed: GPU0=1245
-Closing connection 0x7fbde4000d30, reason: End of file
+Closing connection 0x7f9dfc000d30, reason: End of file
 Received A0:GetWorkerState
 Sending R0:GetWorkerState:
  page_size=16777216
@@ -19,9 +18,9 @@ gpus=
  GPU-0 weights_cache=21.5GB (1376 pages) io_pool=512.0MB workspace_pool=512.0MB 0 models currently on GPU
 models=
 
-Received A0:LoadModelFromDisk model=0 [0.0, 16809701077023.7] /workdir/models/jobs.bucketed_bucket0/model
+Received A0:LoadModelFromDisk model=0 [0.0, 16809700540396.8] /workdir/models/jobs.bucketed_bucket0/model
 cudaMallocHost 102160300 (102160300 x 1)
-Sending R0:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=242.5 duration=4846.5
+Sending R0:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=242.5 duration=4908.1
 Network Status: Controller ✔✔✔✔✔ Worker (inputs forwarded by controller)
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [335.09]
 ****** Fake: sleeping max time (ms) 335.09 cycles 535140076
