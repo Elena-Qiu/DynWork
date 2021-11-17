@@ -4,13 +4,13 @@ user clockwork directory: /workdir/clockwork
 Loading Clockwork worker default config from /workdir/clockwork/config/default.cfg
 user clockwork directory: /workdir/clockwork
 GPUGPU0-0-GPU-0 started
-GPUPCIe_H2D_Weights-00 started
--PCIe_H2D_Inputs-GPU0-PCIe_D2H_Output-0 started
-0 started
-AsyncTaskChecker-CPU-0 started
-0 started
+GPU0-PCIe_H2D_Weights-PCIe_H2D_Inputs-0 started0
+ started
+GPU0-PCIe_D2H_Output-0 started
+AsyncTaskChecker-0 started
+CPU-0 started
 IO service thread listening on 0.0.0.0:12345
-Closing connection 0x7f8f44000d30, reason: End of file
+Closing connection 0x7fb71c000d30, reason: End of file
 Received A0:GetWorkerState
 Sending R0:GetWorkerState:
  page_size=16777216
@@ -18,956 +18,1491 @@ gpus=
  GPU-0 weights_cache=21.5GB (1376 pages) io_pool=512.0MB workspace_pool=512.0MB 0 models currently on GPU
 models=
 
-Received A0:LoadModelFromDisk model=0 [0.0, 16809706422059.5] /workdir/models/jobs.bucketed_bucket0/model
-cudaMallocHost 102160300 (102160300 x 1)
-Sending R0:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=280.8 duration=5009.0
 GPU Clocks Changed: GPU0=1245
+Received A0:LoadModelFromDisk model=0 [0.0, 16809599011541.6] /workdir/models/jobs.bucketed_bucket0/model
+cudaMallocHost 102160300 (102160300 x 1)
+Sending R0:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=282.9 duration=4817.0
 Network Status: Controller ✔✔✔✔✔ Worker (inputs forwarded by controller)
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [157.81]
-****** Fake: sleeping max time (ms) 157.81 cycles 252024859
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [328.36]
-****** Fake: sleeping max time (ms) 328.36 cycles 524387009
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [508.89]
-****** Fake: sleeping max time (ms) 508.89 cycles 812691863
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [329.17]
-****** Fake: sleeping max time (ms) 329.17 cycles 525683587
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [280.86]
-****** Fake: sleeping max time (ms) 280.86 cycles 448541082
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [262.31]
-****** Fake: sleeping max time (ms) 262.31 cycles 418906318
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [139.49]
-****** Fake: sleeping max time (ms) 139.49 cycles 222768014
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [523.57]
-****** Fake: sleeping max time (ms) 523.57 cycles 836139841
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [165.98]
-****** Fake: sleeping max time (ms) 165.98 cycles 265074118
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [333.15]
-****** Fake: sleeping max time (ms) 333.15 cycles 532037288
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [272.12]
-****** Fake: sleeping max time (ms) 272.12 cycles 434577089
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [182.22]
-****** Fake: sleeping max time (ms) 182.22 cycles 291002691
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [108.68]
-****** Fake: sleeping max time (ms) 108.68 cycles 173559580
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [547.13]
-****** Fake: sleeping max time (ms) 547.13 cycles 873771349
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [234.81]
-****** Fake: sleeping max time (ms) 234.81 cycles 374997725
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [365.41]
-****** Fake: sleeping max time (ms) 365.41 cycles 583562570
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [92.71]
-****** Fake: sleeping max time (ms) 92.71 cycles 148049998
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [340.38]
-****** Fake: sleeping max time (ms) 340.38 cycles 543580922
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [365.88]
-****** Fake: sleeping max time (ms) 365.88 cycles 584305327
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [650.98]
-****** Fake: sleeping max time (ms) 650.98 cycles 1039608066
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [262.97]
-****** Fake: sleeping max time (ms) 262.97 cycles 419964114
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [134.73]
-****** Fake: sleeping max time (ms) 134.73 cycles 215158812
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [318.49]
-****** Fake: sleeping max time (ms) 318.49 cycles 508621189
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [239.59]
-****** Fake: sleeping max time (ms) 239.59 cycles 382617920
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [358.95]
-****** Fake: sleeping max time (ms) 358.95 cycles 573243056
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [323.73]
-****** Fake: sleeping max time (ms) 323.73 cycles 516994504
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [465.17]
-****** Fake: sleeping max time (ms) 465.17 cycles 742870017
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [194.85]
-****** Fake: sleeping max time (ms) 194.85 cycles 311168443
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [212.47]
-****** Fake: sleeping max time (ms) 212.47 cycles 339309106
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [98.96]
-****** Fake: sleeping max time (ms) 98.96 cycles 158041601
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [356.65]
-****** Fake: sleeping max time (ms) 356.65 cycles 569576208
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [232.30]
-****** Fake: sleeping max time (ms) 232.30 cycles 370978139
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [431.17]
-****** Fake: sleeping max time (ms) 431.17 cycles 688570674
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [461.52]
-****** Fake: sleeping max time (ms) 461.52 cycles 737041763
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [275.27]
-****** Fake: sleeping max time (ms) 275.27 cycles 439599873
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [246.73]
-****** Fake: sleeping max time (ms) 246.73 cycles 394024094
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [332.33]
-****** Fake: sleeping max time (ms) 332.33 cycles 530733572
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [318.14]
-****** Fake: sleeping max time (ms) 318.14 cycles 508075614
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [237.93]
-****** Fake: sleeping max time (ms) 237.93 cycles 379980030
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [177.53]
-****** Fake: sleeping max time (ms) 177.53 cycles 283521566
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [214.73]
-****** Fake: sleeping max time (ms) 214.73 cycles 342920238
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [307.95]
-****** Fake: sleeping max time (ms) 307.95 cycles 491804047
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [374.03]
-****** Fake: sleeping max time (ms) 374.03 cycles 597323962
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [415.24]
-****** Fake: sleeping max time (ms) 415.24 cycles 663132259
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [86.65]
-****** Fake: sleeping max time (ms) 86.65 cycles 138379092
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [504.98]
-****** Fake: sleeping max time (ms) 504.98 cycles 806446258
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [224.43]
-****** Fake: sleeping max time (ms) 224.43 cycles 358408821
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [251.54]
-****** Fake: sleeping max time (ms) 251.54 cycles 401705274
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [208.77]
-****** Fake: sleeping max time (ms) 208.77 cycles 333400513
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [278.07]
-****** Fake: sleeping max time (ms) 278.07 cycles 444079082
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [184.63]
-****** Fake: sleeping max time (ms) 184.63 cycles 294851648
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [433.78]
-****** Fake: sleeping max time (ms) 433.78 cycles 692754204
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [105.99]
-****** Fake: sleeping max time (ms) 105.99 cycles 169266401
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [343.49]
-****** Fake: sleeping max time (ms) 343.49 cycles 548545758
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [155.85]
-****** Fake: sleeping max time (ms) 155.85 cycles 248896102
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [421.77]
-****** Fake: sleeping max time (ms) 421.77 cycles 673559934
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [185.06]
-****** Fake: sleeping max time (ms) 185.06 cycles 295548142
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [295.57]
-****** Fake: sleeping max time (ms) 295.57 cycles 472029291
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [413.70]
-****** Fake: sleeping max time (ms) 413.70 cycles 660671616
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [241.13]
-****** Fake: sleeping max time (ms) 241.13 cycles 385092448
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [482.48]
-****** Fake: sleeping max time (ms) 482.48 cycles 770514776
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [257.42]
-****** Fake: sleeping max time (ms) 257.42 cycles 411107305
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [116.19]
-****** Fake: sleeping max time (ms) 116.19 cycles 185557156
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [382.75]
-****** Fake: sleeping max time (ms) 382.75 cycles 611245660
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [202.28]
-****** Fake: sleeping max time (ms) 202.28 cycles 323045138
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [124.97]
-****** Fake: sleeping max time (ms) 124.97 cycles 199570381
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [103.11]
-****** Fake: sleeping max time (ms) 103.11 cycles 164670771
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [283.07]
-****** Fake: sleeping max time (ms) 283.07 cycles 452069403
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [591.52]
-****** Fake: sleeping max time (ms) 591.52 cycles 944663610
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [90.46]
-****** Fake: sleeping max time (ms) 90.46 cycles 144460018
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [259.83]
-****** Fake: sleeping max time (ms) 259.83 cycles 414951047
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [573.51]
-****** Fake: sleeping max time (ms) 573.51 cycles 915891151
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [258.24]
-****** Fake: sleeping max time (ms) 258.24 cycles 412409293
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [303.76]
-****** Fake: sleeping max time (ms) 303.76 cycles 485110825
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [272.67]
-****** Fake: sleeping max time (ms) 272.67 cycles 435457590
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [556.14]
-****** Fake: sleeping max time (ms) 556.14 cycles 888154322
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [180.25]
-****** Fake: sleeping max time (ms) 180.25 cycles 287855188
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [403.45]
-****** Fake: sleeping max time (ms) 403.45 cycles 644309233
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [215.39]
-****** Fake: sleeping max time (ms) 215.39 cycles 343976593
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [521.11]
-****** Fake: sleeping max time (ms) 521.11 cycles 832216575
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [347.81]
-****** Fake: sleeping max time (ms) 347.81 cycles 555451668
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [310.28]
-****** Fake: sleeping max time (ms) 310.28 cycles 495513823
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [584.35]
-****** Fake: sleeping max time (ms) 584.35 cycles 933210497
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [129.07]
-****** Fake: sleeping max time (ms) 129.07 cycles 206117783
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [276.91]
-****** Fake: sleeping max time (ms) 276.91 cycles 442224678
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [240.55]
-****** Fake: sleeping max time (ms) 240.55 cycles 384161769
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [302.78]
-****** Fake: sleeping max time (ms) 302.78 cycles 483543643
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [258.77]
-****** Fake: sleeping max time (ms) 258.77 cycles 413255967
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [601.83]
-****** Fake: sleeping max time (ms) 601.83 cycles 961120419
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [119.59]
-****** Fake: sleeping max time (ms) 119.59 cycles 190978573
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [173.38]
-****** Fake: sleeping max time (ms) 173.38 cycles 276893644
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [160.76]
-****** Fake: sleeping max time (ms) 160.76 cycles 256734980
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [509.23]
-****** Fake: sleeping max time (ms) 509.23 cycles 813236846
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [278.09]
-****** Fake: sleeping max time (ms) 278.09 cycles 444106068
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [191.79]
-****** Fake: sleeping max time (ms) 191.79 cycles 306285310
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [119.40]
-****** Fake: sleeping max time (ms) 119.40 cycles 190689257
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [173.96]
-****** Fake: sleeping max time (ms) 173.96 cycles 277814170
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [168.27]
-****** Fake: sleeping max time (ms) 168.27 cycles 268724740
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [268.29]
-****** Fake: sleeping max time (ms) 268.29 cycles 428459812
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [238.07]
-****** Fake: sleeping max time (ms) 238.07 cycles 380204785
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [120.95]
-****** Fake: sleeping max time (ms) 120.95 cycles 193159115
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [212.10]
-****** Fake: sleeping max time (ms) 212.10 cycles 338721970
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [127.70]
-****** Fake: sleeping max time (ms) 127.70 cycles 203935858
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [460.98]
-****** Fake: sleeping max time (ms) 460.98 cycles 736179722
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [435.08]
-****** Fake: sleeping max time (ms) 435.08 cycles 694826451
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [258.01]
-****** Fake: sleeping max time (ms) 258.01 cycles 412045828
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [266.32]
-****** Fake: sleeping max time (ms) 266.32 cycles 425319655
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [153.57]
-****** Fake: sleeping max time (ms) 153.57 cycles 245255197
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [392.10]
-****** Fake: sleeping max time (ms) 392.10 cycles 626182675
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [276.71]
-****** Fake: sleeping max time (ms) 276.71 cycles 441906444
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [231.61]
-****** Fake: sleeping max time (ms) 231.61 cycles 369888605
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [246.34]
-****** Fake: sleeping max time (ms) 246.34 cycles 393409237
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [219.10]
-****** Fake: sleeping max time (ms) 219.10 cycles 349900320
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [149.46]
-****** Fake: sleeping max time (ms) 149.46 cycles 238687198
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [387.79]
-****** Fake: sleeping max time (ms) 387.79 cycles 619307369
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [465.29]
-****** Fake: sleeping max time (ms) 465.29 cycles 743066189
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [235.54]
-****** Fake: sleeping max time (ms) 235.54 cycles 376158343
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [257.84]
-****** Fake: sleeping max time (ms) 257.84 cycles 411772961
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [456.39]
-****** Fake: sleeping max time (ms) 456.39 cycles 728847620
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [110.11]
-****** Fake: sleeping max time (ms) 110.11 cycles 175848131
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [222.25]
-****** Fake: sleeping max time (ms) 222.25 cycles 354929700
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [177.61]
-****** Fake: sleeping max time (ms) 177.61 cycles 283650635
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [317.09]
-****** Fake: sleeping max time (ms) 317.09 cycles 506400207
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [282.66]
-****** Fake: sleeping max time (ms) 282.66 cycles 451407126
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [310.67]
-****** Fake: sleeping max time (ms) 310.67 cycles 496146390
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [232.72]
-****** Fake: sleeping max time (ms) 232.72 cycles 371646137
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [200.76]
-****** Fake: sleeping max time (ms) 200.76 cycles 320611654
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [182.68]
-****** Fake: sleeping max time (ms) 182.68 cycles 291737427
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [293.37]
-****** Fake: sleeping max time (ms) 293.37 cycles 468509719
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [664.68]
-****** Fake: sleeping max time (ms) 664.68 cycles 1061491475
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [225.81]
-****** Fake: sleeping max time (ms) 225.81 cycles 360613984
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [436.46]
-****** Fake: sleeping max time (ms) 436.46 cycles 697020701
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [222.21]
-****** Fake: sleeping max time (ms) 222.21 cycles 354874540
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [311.55]
-****** Fake: sleeping max time (ms) 311.55 cycles 497549831
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [358.80]
-****** Fake: sleeping max time (ms) 358.80 cycles 573011084
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [100.64]
-****** Fake: sleeping max time (ms) 100.64 cycles 160726761
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [246.73]
-****** Fake: sleeping max time (ms) 246.73 cycles 394022078
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [201.08]
-****** Fake: sleeping max time (ms) 201.08 cycles 321130495
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [130.41]
-****** Fake: sleeping max time (ms) 130.41 cycles 208269739
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [291.93]
-****** Fake: sleeping max time (ms) 291.93 cycles 466215499
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [161.08]
-****** Fake: sleeping max time (ms) 161.08 cycles 257249676
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [216.89]
-****** Fake: sleeping max time (ms) 216.89 cycles 346378372
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [536.40]
-****** Fake: sleeping max time (ms) 536.40 cycles 856637739
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [189.71]
-****** Fake: sleeping max time (ms) 189.71 cycles 302964335
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [288.25]
-****** Fake: sleeping max time (ms) 288.25 cycles 460327996
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [343.54]
-****** Fake: sleeping max time (ms) 343.54 cycles 548641276
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [390.29]
-****** Fake: sleeping max time (ms) 390.29 cycles 623288625
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [125.47]
-****** Fake: sleeping max time (ms) 125.47 cycles 200381725
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [123.33]
-****** Fake: sleeping max time (ms) 123.33 cycles 196960674
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [205.62]
-****** Fake: sleeping max time (ms) 205.62 cycles 328376748
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [125.83]
-****** Fake: sleeping max time (ms) 125.83 cycles 200949936
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [486.09]
-****** Fake: sleeping max time (ms) 486.09 cycles 776284752
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [459.06]
-****** Fake: sleeping max time (ms) 459.06 cycles 733118803
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [247.06]
-****** Fake: sleeping max time (ms) 247.06 cycles 394551289
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [282.78]
-****** Fake: sleeping max time (ms) 282.78 cycles 451606278
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [283.76]
-****** Fake: sleeping max time (ms) 283.76 cycles 453158070
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [95.99]
-****** Fake: sleeping max time (ms) 95.99 cycles 153293287
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [222.41]
-****** Fake: sleeping max time (ms) 222.41 cycles 355188779
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [231.57]
-****** Fake: sleeping max time (ms) 231.57 cycles 369821248
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [473.18]
-****** Fake: sleeping max time (ms) 473.18 cycles 755666477
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [474.52]
-****** Fake: sleeping max time (ms) 474.52 cycles 757810985
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [215.49]
-****** Fake: sleeping max time (ms) 215.49 cycles 344142761
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [433.07]
-****** Fake: sleeping max time (ms) 433.07 cycles 691607880
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [444.09]
-****** Fake: sleeping max time (ms) 444.09 cycles 709217989
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [757.05]
-****** Fake: sleeping max time (ms) 757.05 cycles 1209005553
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [230.59]
-****** Fake: sleeping max time (ms) 230.59 cycles 368252209
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [231.64]
-****** Fake: sleeping max time (ms) 231.64 cycles 369935049
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [280.67]
-****** Fake: sleeping max time (ms) 280.67 cycles 448228219
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [78.63]
-****** Fake: sleeping max time (ms) 78.63 cycles 125576570
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [510.48]
-****** Fake: sleeping max time (ms) 510.48 cycles 815235005
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [300.22]
-****** Fake: sleeping max time (ms) 300.22 cycles 479453800
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [204.09]
-****** Fake: sleeping max time (ms) 204.09 cycles 325938805
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [91.76]
-****** Fake: sleeping max time (ms) 91.76 cycles 146547107
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [99.37]
-****** Fake: sleeping max time (ms) 99.37 cycles 158692098
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [225.40]
-****** Fake: sleeping max time (ms) 225.40 cycles 359969718
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [340.82]
-****** Fake: sleeping max time (ms) 340.82 cycles 544292337
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [227.15]
-****** Fake: sleeping max time (ms) 227.15 cycles 362753601
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [209.94]
-****** Fake: sleeping max time (ms) 209.94 cycles 335266469
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [180.92]
-****** Fake: sleeping max time (ms) 180.92 cycles 288923839
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [240.23]
-****** Fake: sleeping max time (ms) 240.23 cycles 383650062
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [188.95]
-****** Fake: sleeping max time (ms) 188.95 cycles 301749601
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [305.67]
-****** Fake: sleeping max time (ms) 305.67 cycles 488155100
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [239.11]
-****** Fake: sleeping max time (ms) 239.11 cycles 381859064
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [240.35]
-****** Fake: sleeping max time (ms) 240.35 cycles 383840571
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [429.91]
-****** Fake: sleeping max time (ms) 429.91 cycles 686567212
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [311.02]
-****** Fake: sleeping max time (ms) 311.02 cycles 496705852
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [312.92]
-****** Fake: sleeping max time (ms) 312.92 cycles 499735668
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [478.08]
-****** Fake: sleeping max time (ms) 478.08 cycles 763498650
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [238.17]
-****** Fake: sleeping max time (ms) 238.17 cycles 380352088
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [145.44]
-****** Fake: sleeping max time (ms) 145.44 cycles 232264598
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [321.87]
-****** Fake: sleeping max time (ms) 321.87 cycles 514024802
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [273.56]
-****** Fake: sleeping max time (ms) 273.56 cycles 436869036
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [139.53]
-****** Fake: sleeping max time (ms) 139.53 cycles 222835898
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [488.07]
-****** Fake: sleeping max time (ms) 488.07 cycles 779450445
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [570.70]
-****** Fake: sleeping max time (ms) 570.70 cycles 911412866
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [195.44]
-****** Fake: sleeping max time (ms) 195.44 cycles 312111408
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [220.32]
-****** Fake: sleeping max time (ms) 220.32 cycles 351847926
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [291.61]
-****** Fake: sleeping max time (ms) 291.61 cycles 465693859
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [276.67]
-****** Fake: sleeping max time (ms) 276.67 cycles 441839712
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [133.21]
-****** Fake: sleeping max time (ms) 133.21 cycles 212733842
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [437.48]
-****** Fake: sleeping max time (ms) 437.48 cycles 698655792
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [354.71]
-****** Fake: sleeping max time (ms) 354.71 cycles 566475182
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [60.11]
-****** Fake: sleeping max time (ms) 60.11 cycles 95991163
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [130.32]
-****** Fake: sleeping max time (ms) 130.32 cycles 208124776
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [172.10]
-****** Fake: sleeping max time (ms) 172.10 cycles 274839903
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [251.08]
-****** Fake: sleeping max time (ms) 251.08 cycles 400968735
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [205.70]
-****** Fake: sleeping max time (ms) 205.70 cycles 328498666
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [95.57]
-****** Fake: sleeping max time (ms) 95.57 cycles 152625397
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [364.69]
-****** Fake: sleeping max time (ms) 364.69 cycles 582405465
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [478.36]
-****** Fake: sleeping max time (ms) 478.36 cycles 763946204
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [241.30]
-****** Fake: sleeping max time (ms) 241.30 cycles 385357681
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [389.98]
-****** Fake: sleeping max time (ms) 389.98 cycles 622793693
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [196.61]
-****** Fake: sleeping max time (ms) 196.61 cycles 313978589
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [500.79]
-****** Fake: sleeping max time (ms) 500.79 cycles 799759514
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [327.85]
-****** Fake: sleeping max time (ms) 327.85 cycles 523571258
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [308.57]
-****** Fake: sleeping max time (ms) 308.57 cycles 492784537
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [301.62]
-****** Fake: sleeping max time (ms) 301.62 cycles 481690197
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [166.09]
-****** Fake: sleeping max time (ms) 166.09 cycles 265242682
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [280.93]
-****** Fake: sleeping max time (ms) 280.93 cycles 448644302
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [489.51]
-****** Fake: sleeping max time (ms) 489.51 cycles 781755259
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [351.46]
-****** Fake: sleeping max time (ms) 351.46 cycles 561283839
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [117.92]
-****** Fake: sleeping max time (ms) 117.92 cycles 188323681
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [153.17]
-****** Fake: sleeping max time (ms) 153.17 cycles 244615650
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [385.42]
-****** Fake: sleeping max time (ms) 385.42 cycles 615509818
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [158.29]
-****** Fake: sleeping max time (ms) 158.29 cycles 252787081
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [173.07]
-****** Fake: sleeping max time (ms) 173.07 cycles 276400275
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [517.95]
-****** Fake: sleeping max time (ms) 517.95 cycles 827161058
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [429.89]
-****** Fake: sleeping max time (ms) 429.89 cycles 686528156
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [97.12]
-****** Fake: sleeping max time (ms) 97.12 cycles 155099275
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [431.74]
-****** Fake: sleeping max time (ms) 431.74 cycles 689493486
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [317.72]
-****** Fake: sleeping max time (ms) 317.72 cycles 507391634
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [194.31]
-****** Fake: sleeping max time (ms) 194.31 cycles 310307513
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [255.52]
+****** Fake: sleeping max time (ms) 255.52 cycles 408067385
+GPU Clocks Changed: GPU0=1372
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [101.27]
+****** Fake: sleeping max time (ms) 101.27 cycles 161734805
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [260.78]
+****** Fake: sleeping max time (ms) 260.78 cycles 416464459
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [275.65]
+****** Fake: sleeping max time (ms) 275.65 cycles 440205070
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [138.35]
 ****** Fake: sleeping max time (ms) 138.35 cycles 220952019
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [567.06]
-****** Fake: sleeping max time (ms) 567.06 cycles 905601268
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [178.96]
-****** Fake: sleeping max time (ms) 178.96 cycles 285801405
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [87.24]
-****** Fake: sleeping max time (ms) 87.24 cycles 139325583
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [402.74]
-****** Fake: sleeping max time (ms) 402.74 cycles 643180542
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [302.91]
-****** Fake: sleeping max time (ms) 302.91 cycles 483754774
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [498.26]
-****** Fake: sleeping max time (ms) 498.26 cycles 795723278
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [209.44]
-****** Fake: sleeping max time (ms) 209.44 cycles 334469475
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [233.52]
-****** Fake: sleeping max time (ms) 233.52 cycles 372925628
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [233.92]
-****** Fake: sleeping max time (ms) 233.92 cycles 373563992
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [245.19]
-****** Fake: sleeping max time (ms) 245.19 cycles 391573722
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [375.73]
-****** Fake: sleeping max time (ms) 375.73 cycles 600035429
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [268.64]
-****** Fake: sleeping max time (ms) 268.64 cycles 429010310
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [360.95]
-****** Fake: sleeping max time (ms) 360.95 cycles 576439860
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [269.66]
-****** Fake: sleeping max time (ms) 269.66 cycles 430646286
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [444.05]
-****** Fake: sleeping max time (ms) 444.05 cycles 709153637
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [563.10]
-****** Fake: sleeping max time (ms) 563.10 cycles 899265408
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [129.57]
-****** Fake: sleeping max time (ms) 129.57 cycles 206927295
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [246.95]
-****** Fake: sleeping max time (ms) 246.95 cycles 394380773
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [211.01]
-****** Fake: sleeping max time (ms) 211.01 cycles 336988736
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [175.27]
-****** Fake: sleeping max time (ms) 175.27 cycles 279911822
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [136.61]
-****** Fake: sleeping max time (ms) 136.61 cycles 218163379
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [159.67]
-****** Fake: sleeping max time (ms) 159.67 cycles 254989577
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [517.40]
-****** Fake: sleeping max time (ms) 517.40 cycles 826292151
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [300.36]
-****** Fake: sleeping max time (ms) 300.36 cycles 479681024
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [150.01]
-****** Fake: sleeping max time (ms) 150.01 cycles 239571831
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [299.17]
-****** Fake: sleeping max time (ms) 299.17 cycles 477779514
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [277.77]
-****** Fake: sleeping max time (ms) 277.77 cycles 443605387
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [211.66]
-****** Fake: sleeping max time (ms) 211.66 cycles 338013903
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [513.11]
-****** Fake: sleeping max time (ms) 513.11 cycles 819434093
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [601.03]
-****** Fake: sleeping max time (ms) 601.03 cycles 959839218
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [283.68]
-****** Fake: sleeping max time (ms) 283.68 cycles 453035522
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [221.63]
-****** Fake: sleeping max time (ms) 221.63 cycles 353947973
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [238.12]
-****** Fake: sleeping max time (ms) 238.12 cycles 380270986
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [470.71]
-****** Fake: sleeping max time (ms) 470.71 cycles 751726817
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [206.44]
-****** Fake: sleeping max time (ms) 206.44 cycles 329682564
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [413.70]
-****** Fake: sleeping max time (ms) 413.70 cycles 660671155
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [151.99]
-****** Fake: sleeping max time (ms) 151.99 cycles 242723220
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [457.68]
-****** Fake: sleeping max time (ms) 457.68 cycles 730911553
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [281.71]
-****** Fake: sleeping max time (ms) 281.71 cycles 449883281
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [228.79]
-****** Fake: sleeping max time (ms) 228.79 cycles 365378821
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [550.89]
-****** Fake: sleeping max time (ms) 550.89 cycles 879774180
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [351.83]
-****** Fake: sleeping max time (ms) 351.83 cycles 561866782
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [406.53]
-****** Fake: sleeping max time (ms) 406.53 cycles 649226310
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [69.55]
-****** Fake: sleeping max time (ms) 69.55 cycles 111078507
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [142.10]
-****** Fake: sleeping max time (ms) 142.10 cycles 226940161
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [252.69]
-****** Fake: sleeping max time (ms) 252.69 cycles 403548031
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [288.56]
-****** Fake: sleeping max time (ms) 288.56 cycles 460835835
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [117.05]
-****** Fake: sleeping max time (ms) 117.05 cycles 186928018
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [310.81]
-****** Fake: sleeping max time (ms) 310.81 cycles 496364570
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [447.11]
-****** Fake: sleeping max time (ms) 447.11 cycles 714041677
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [579.18]
-****** Fake: sleeping max time (ms) 579.18 cycles 924943502
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [211.96]
-****** Fake: sleeping max time (ms) 211.96 cycles 338495871
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [188.65]
-****** Fake: sleeping max time (ms) 188.65 cycles 301266387
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [474.37]
-****** Fake: sleeping max time (ms) 474.37 cycles 757564337
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [161.14]
-****** Fake: sleeping max time (ms) 161.14 cycles 257341436
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [261.63]
-****** Fake: sleeping max time (ms) 261.63 cycles 417819638
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [464.44]
-****** Fake: sleeping max time (ms) 464.44 cycles 741709946
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [389.29]
-****** Fake: sleeping max time (ms) 389.29 cycles 621689449
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [171.73]
-****** Fake: sleeping max time (ms) 171.73 cycles 274248297
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [128.01]
-****** Fake: sleeping max time (ms) 128.01 cycles 204433947
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [129.92]
-****** Fake: sleeping max time (ms) 129.92 cycles 207481338
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [426.56]
-****** Fake: sleeping max time (ms) 426.56 cycles 681212259
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [200.49]
-****** Fake: sleeping max time (ms) 200.49 cycles 320187455
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [253.78]
-****** Fake: sleeping max time (ms) 253.78 cycles 405294083
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [256.77]
-****** Fake: sleeping max time (ms) 256.77 cycles 410064500
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [275.69]
-****** Fake: sleeping max time (ms) 275.69 cycles 440273368
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [335.23]
-****** Fake: sleeping max time (ms) 335.23 cycles 535370127
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [194.04]
-****** Fake: sleeping max time (ms) 194.04 cycles 309883225
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [246.69]
-****** Fake: sleeping max time (ms) 246.69 cycles 393967701
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [508.68]
-****** Fake: sleeping max time (ms) 508.68 cycles 812357296
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [97.99]
-****** Fake: sleeping max time (ms) 97.99 cycles 156486066
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [389.20]
-****** Fake: sleeping max time (ms) 389.20 cycles 621554383
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [377.09]
-****** Fake: sleeping max time (ms) 377.09 cycles 602211962
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [270.96]
-****** Fake: sleeping max time (ms) 270.96 cycles 432715642
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [292.73]
-****** Fake: sleeping max time (ms) 292.73 cycles 467483944
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [449.28]
-****** Fake: sleeping max time (ms) 449.28 cycles 717505831
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [193.61]
-****** Fake: sleeping max time (ms) 193.61 cycles 309190090
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [86.94]
-****** Fake: sleeping max time (ms) 86.94 cycles 138843917
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [410.73]
-****** Fake: sleeping max time (ms) 410.73 cycles 655931962
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [197.49]
-****** Fake: sleeping max time (ms) 197.49 cycles 315397981
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [246.86]
-****** Fake: sleeping max time (ms) 246.86 cycles 394239598
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [189.85]
-****** Fake: sleeping max time (ms) 189.85 cycles 303189544
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [97.73]
-****** Fake: sleeping max time (ms) 97.73 cycles 156075368
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [388.68]
-****** Fake: sleeping max time (ms) 388.68 cycles 620719812
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [142.31]
-****** Fake: sleeping max time (ms) 142.31 cycles 227267599
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [390.16]
-****** Fake: sleeping max time (ms) 390.16 cycles 623089662
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [383.09]
-****** Fake: sleeping max time (ms) 383.09 cycles 611792100
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [155.11]
-****** Fake: sleeping max time (ms) 155.11 cycles 247711191
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [126.78]
-****** Fake: sleeping max time (ms) 126.78 cycles 202461619
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [293.08]
-****** Fake: sleeping max time (ms) 293.08 cycles 468041072
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [135.63]
-****** Fake: sleeping max time (ms) 135.63 cycles 216600210
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [124.29]
-****** Fake: sleeping max time (ms) 124.29 cycles 198496839
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [187.75]
-****** Fake: sleeping max time (ms) 187.75 cycles 299831893
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [277.07]
-****** Fake: sleeping max time (ms) 277.07 cycles 442477744
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [206.68]
-****** Fake: sleeping max time (ms) 206.68 cycles 330063505
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [94.56]
-****** Fake: sleeping max time (ms) 94.56 cycles 151007890
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [221.52]
-****** Fake: sleeping max time (ms) 221.52 cycles 353770760
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [470.90]
-****** Fake: sleeping max time (ms) 470.90 cycles 752022703
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [249.71]
-****** Fake: sleeping max time (ms) 249.71 cycles 398782351
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [272.23]
-****** Fake: sleeping max time (ms) 272.23 cycles 434747413
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [178.08]
-****** Fake: sleeping max time (ms) 178.08 cycles 284387715
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [142.83]
-****** Fake: sleeping max time (ms) 142.83 cycles 228095498
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [189.41]
-****** Fake: sleeping max time (ms) 189.41 cycles 302493459
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [208.84]
-****** Fake: sleeping max time (ms) 208.84 cycles 333510667
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [205.01]
-****** Fake: sleeping max time (ms) 205.01 cycles 327406559
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [166.47]
-****** Fake: sleeping max time (ms) 166.47 cycles 265850226
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [213.05]
-****** Fake: sleeping max time (ms) 213.05 cycles 340237350
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [475.75]
-****** Fake: sleeping max time (ms) 475.75 cycles 759768706
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [262.56]
-****** Fake: sleeping max time (ms) 262.56 cycles 419304432
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [201.53]
-****** Fake: sleeping max time (ms) 201.53 cycles 321846010
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [135.85]
-****** Fake: sleeping max time (ms) 135.85 cycles 216957071
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [196.34]
-****** Fake: sleeping max time (ms) 196.34 cycles 313548895
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [229.74]
-****** Fake: sleeping max time (ms) 229.74 cycles 366891821
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [523.24]
-****** Fake: sleeping max time (ms) 523.24 cycles 835618763
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [136.61]
-****** Fake: sleeping max time (ms) 136.61 cycles 218166499
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [432.98]
-****** Fake: sleeping max time (ms) 432.98 cycles 691467982
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [242.11]
-****** Fake: sleeping max time (ms) 242.11 cycles 386642423
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [294.32]
-****** Fake: sleeping max time (ms) 294.32 cycles 470029198
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [226.39]
-****** Fake: sleeping max time (ms) 226.39 cycles 361539795
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [228.35]
-****** Fake: sleeping max time (ms) 228.35 cycles 364677585
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [200.06]
-****** Fake: sleeping max time (ms) 200.06 cycles 319498217
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [235.30]
-****** Fake: sleeping max time (ms) 235.30 cycles 375768320
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [128.46]
-****** Fake: sleeping max time (ms) 128.46 cycles 205156208
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [226.60]
-****** Fake: sleeping max time (ms) 226.60 cycles 361875141
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [107.92]
-****** Fake: sleeping max time (ms) 107.92 cycles 172350006
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [187.97]
-****** Fake: sleeping max time (ms) 187.97 cycles 300195806
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [238.77]
-****** Fake: sleeping max time (ms) 238.77 cycles 381316577
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [115.18]
-****** Fake: sleeping max time (ms) 115.18 cycles 183945647
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [333.41]
-****** Fake: sleeping max time (ms) 333.41 cycles 532448614
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [256.61]
-****** Fake: sleeping max time (ms) 256.61 cycles 409811368
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [131.56]
-****** Fake: sleeping max time (ms) 131.56 cycles 210099082
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [185.18]
-****** Fake: sleeping max time (ms) 185.18 cycles 295734084
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [427.46]
-****** Fake: sleeping max time (ms) 427.46 cycles 682659393
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [214.75]
-****** Fake: sleeping max time (ms) 214.75 cycles 342960950
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [500.48]
-****** Fake: sleeping max time (ms) 500.48 cycles 799270703
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [200.06]
-****** Fake: sleeping max time (ms) 200.06 cycles 319490063
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [163.43]
-****** Fake: sleeping max time (ms) 163.43 cycles 260992067
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [465.76]
-****** Fake: sleeping max time (ms) 465.76 cycles 743821612
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [142.51]
-****** Fake: sleeping max time (ms) 142.51 cycles 227591863
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [124.67]
-****** Fake: sleeping max time (ms) 124.67 cycles 199101809
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [219.94]
-****** Fake: sleeping max time (ms) 219.94 cycles 351241351
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [310.32]
-****** Fake: sleeping max time (ms) 310.32 cycles 495585871
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [175.29]
-****** Fake: sleeping max time (ms) 175.29 cycles 279930470
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [481.92]
-****** Fake: sleeping max time (ms) 481.92 cycles 769619902
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [242.92]
-****** Fake: sleeping max time (ms) 242.92 cycles 387948303
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [121.37]
-****** Fake: sleeping max time (ms) 121.37 cycles 193834720
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [259.45]
-****** Fake: sleeping max time (ms) 259.45 cycles 414341510
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [111.30]
-****** Fake: sleeping max time (ms) 111.30 cycles 177742487
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [446.67]
-****** Fake: sleeping max time (ms) 446.67 cycles 713327053
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [316.03]
-****** Fake: sleeping max time (ms) 316.03 cycles 504691960
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [89.92]
-****** Fake: sleeping max time (ms) 89.92 cycles 143597007
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [457.19]
-****** Fake: sleeping max time (ms) 457.19 cycles 730127305
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [83.82]
-****** Fake: sleeping max time (ms) 83.82 cycles 133862398
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [302.11]
-****** Fake: sleeping max time (ms) 302.11 cycles 482477290
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [173.28]
-****** Fake: sleeping max time (ms) 173.28 cycles 276721438
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [195.38]
-****** Fake: sleeping max time (ms) 195.38 cycles 312028978
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [289.90]
-****** Fake: sleeping max time (ms) 289.90 cycles 462965509
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [127.51]
-****** Fake: sleeping max time (ms) 127.51 cycles 203635142
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [233.95]
-****** Fake: sleeping max time (ms) 233.95 cycles 373623913
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [299.27]
-****** Fake: sleeping max time (ms) 299.27 cycles 477930418
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [473.42]
-****** Fake: sleeping max time (ms) 473.42 cycles 756047451
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [415.51]
-****** Fake: sleeping max time (ms) 415.51 cycles 663566731
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [358.51]
-****** Fake: sleeping max time (ms) 358.51 cycles 572544518
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [441.53]
-****** Fake: sleeping max time (ms) 441.53 cycles 705116348
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [264.44]
-****** Fake: sleeping max time (ms) 264.44 cycles 422308900
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [146.71]
-****** Fake: sleeping max time (ms) 146.71 cycles 234302345
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [219.53]
-****** Fake: sleeping max time (ms) 219.53 cycles 350592559
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [658.65]
-****** Fake: sleeping max time (ms) 658.65 cycles 1051869152
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [550.29]
-****** Fake: sleeping max time (ms) 550.29 cycles 878807628
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [189.51]
-****** Fake: sleeping max time (ms) 189.51 cycles 302651794
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [406.95]
-****** Fake: sleeping max time (ms) 406.95 cycles 649905794
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [255.86]
-****** Fake: sleeping max time (ms) 255.86 cycles 408605324
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [89.62]
-****** Fake: sleeping max time (ms) 89.62 cycles 143121041
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [470.82]
-****** Fake: sleeping max time (ms) 470.82 cycles 751892669
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [147.92]
+****** Fake: sleeping max time (ms) 147.92 cycles 236236018
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [192.82]
+****** Fake: sleeping max time (ms) 192.82 cycles 307935697
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [324.66]
+****** Fake: sleeping max time (ms) 324.66 cycles 518481514
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [526.97]
+****** Fake: sleeping max time (ms) 526.97 cycles 841567108
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [160.83]
 ****** Fake: sleeping max time (ms) 160.83 cycles 256849178
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [580.69]
-****** Fake: sleeping max time (ms) 580.69 cycles 927361100
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [315.07]
-****** Fake: sleeping max time (ms) 315.07 cycles 503164723
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [258.43]
-****** Fake: sleeping max time (ms) 258.43 cycles 412719525
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [210.31]
-****** Fake: sleeping max time (ms) 210.31 cycles 335871013
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [415.21]
-****** Fake: sleeping max time (ms) 415.21 cycles 663090539
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [446.28]
-****** Fake: sleeping max time (ms) 446.28 cycles 712702147
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [157.08]
-****** Fake: sleeping max time (ms) 157.08 cycles 250858368
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [145.87]
-****** Fake: sleeping max time (ms) 145.87 cycles 232951957
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [154.77]
-****** Fake: sleeping max time (ms) 154.77 cycles 247161056
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [157.00]
-****** Fake: sleeping max time (ms) 157.00 cycles 250730799
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [172.96]
-****** Fake: sleeping max time (ms) 172.96 cycles 276213894
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [219.53]
-****** Fake: sleeping max time (ms) 219.53 cycles 350586426
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [120.12]
-****** Fake: sleeping max time (ms) 120.12 cycles 191830375
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [441.26]
-****** Fake: sleeping max time (ms) 441.26 cycles 704685204
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [587.09]
-****** Fake: sleeping max time (ms) 587.09 cycles 937580350
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [376.26]
-****** Fake: sleeping max time (ms) 376.26 cycles 600893773
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [288.88]
-****** Fake: sleeping max time (ms) 288.88 cycles 461338532
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [122.92]
-****** Fake: sleeping max time (ms) 122.92 cycles 196299417
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [373.14]
-****** Fake: sleeping max time (ms) 373.14 cycles 595898523
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [106.95]
-****** Fake: sleeping max time (ms) 106.95 cycles 170797081
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [264.60]
-****** Fake: sleeping max time (ms) 264.60 cycles 422564505
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [338.73]
-****** Fake: sleeping max time (ms) 338.73 cycles 540959022
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [250.71]
-****** Fake: sleeping max time (ms) 250.71 cycles 400381808
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [401.02]
-****** Fake: sleeping max time (ms) 401.02 cycles 640433504
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [323.29]
-****** Fake: sleeping max time (ms) 323.29 cycles 516288228
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [248.62]
-****** Fake: sleeping max time (ms) 248.62 cycles 397043725
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [293.64]
-****** Fake: sleeping max time (ms) 293.64 cycles 468946005
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [215.49]
-****** Fake: sleeping max time (ms) 215.49 cycles 344133600
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [487.26]
-****** Fake: sleeping max time (ms) 487.26 cycles 778150482
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [101.16]
-****** Fake: sleeping max time (ms) 101.16 cycles 161557374
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [255.47]
-****** Fake: sleeping max time (ms) 255.47 cycles 407979493
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [512.25]
-****** Fake: sleeping max time (ms) 512.25 cycles 818058855
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [231.09]
-****** Fake: sleeping max time (ms) 231.09 cycles 369051275
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [279.55]
-****** Fake: sleeping max time (ms) 279.55 cycles 446438933
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [86.56]
-****** Fake: sleeping max time (ms) 86.56 cycles 138241834
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [220.43]
-****** Fake: sleeping max time (ms) 220.43 cycles 352024851
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [235.42]
-****** Fake: sleeping max time (ms) 235.42 cycles 375969893
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [238.32]
+****** Fake: sleeping max time (ms) 238.32 cycles 380593982
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [479.47]
+****** Fake: sleeping max time (ms) 479.47 cycles 765714207
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [98.49]
+****** Fake: sleeping max time (ms) 98.49 cycles 157288383
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [532.02]
 ****** Fake: sleeping max time (ms) 532.02 cycles 849633961
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [366.67]
-****** Fake: sleeping max time (ms) 366.67 cycles 585570192
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [432.24]
-****** Fake: sleeping max time (ms) 432.24 cycles 690292683
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [397.86]
-****** Fake: sleeping max time (ms) 397.86 cycles 635389849
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [272.32]
-****** Fake: sleeping max time (ms) 272.32 cycles 434889791
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [243.78]
-****** Fake: sleeping max time (ms) 243.78 cycles 389313759
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [401.30]
-****** Fake: sleeping max time (ms) 401.30 cycles 640872328
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [332.89]
-****** Fake: sleeping max time (ms) 332.89 cycles 531632345
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [154.33]
-****** Fake: sleeping max time (ms) 154.33 cycles 246457278
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [394.26]
-****** Fake: sleeping max time (ms) 394.26 cycles 629628976
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [98.33]
-****** Fake: sleeping max time (ms) 98.33 cycles 157034347
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [200.70]
-****** Fake: sleeping max time (ms) 200.70 cycles 320517554
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [150.60]
-****** Fake: sleeping max time (ms) 150.60 cycles 240512054
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [359.90]
-****** Fake: sleeping max time (ms) 359.90 cycles 574763628
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [207.09]
-****** Fake: sleeping max time (ms) 207.09 cycles 330726349
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [177.66]
-****** Fake: sleeping max time (ms) 177.66 cycles 283723803
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [142.19]
+****** Fake: sleeping max time (ms) 142.19 cycles 227083041
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [152.56]
+****** Fake: sleeping max time (ms) 152.56 cycles 243646273
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [106.38]
+****** Fake: sleeping max time (ms) 106.38 cycles 169892038
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [289.99]
+****** Fake: sleeping max time (ms) 289.99 cycles 463117951
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [482.57]
+****** Fake: sleeping max time (ms) 482.57 cycles 770662382
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [231.52]
+****** Fake: sleeping max time (ms) 231.52 cycles 369738421
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [239.19]
+****** Fake: sleeping max time (ms) 239.19 cycles 381984453
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [277.49]
+****** Fake: sleeping max time (ms) 277.49 cycles 443158099
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [231.61]
+****** Fake: sleeping max time (ms) 231.61 cycles 369888605
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [120.12]
+****** Fake: sleeping max time (ms) 120.12 cycles 191830375
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [247.79]
+****** Fake: sleeping max time (ms) 247.79 cycles 395727086
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [178.06]
+****** Fake: sleeping max time (ms) 178.06 cycles 284369101
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [228.67]
+****** Fake: sleeping max time (ms) 228.67 cycles 365178990
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [454.42]
+****** Fake: sleeping max time (ms) 454.42 cycles 725714504
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [241.11]
+****** Fake: sleeping max time (ms) 241.11 cycles 385045026
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [198.65]
+****** Fake: sleeping max time (ms) 198.65 cycles 317247987
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [135.67]
+****** Fake: sleeping max time (ms) 135.67 cycles 216661303
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [277.07]
+****** Fake: sleeping max time (ms) 277.07 cycles 442477744
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [260.17]
+****** Fake: sleeping max time (ms) 260.17 cycles 415489091
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [352.02]
+****** Fake: sleeping max time (ms) 352.02 cycles 562177799
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [296.96]
+****** Fake: sleeping max time (ms) 296.96 cycles 474248828
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [244.75]
+****** Fake: sleeping max time (ms) 244.75 cycles 390860252
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [239.61]
+****** Fake: sleeping max time (ms) 239.61 cycles 382660358
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [68.82]
+****** Fake: sleeping max time (ms) 68.82 cycles 109908323
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [233.95]
+****** Fake: sleeping max time (ms) 233.95 cycles 373623913
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [567.03]
+****** Fake: sleeping max time (ms) 567.03 cycles 905553065
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [282.78]
+****** Fake: sleeping max time (ms) 282.78 cycles 451606278
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [241.99]
+****** Fake: sleeping max time (ms) 241.99 cycles 386451562
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [220.45]
+****** Fake: sleeping max time (ms) 220.45 cycles 352051097
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [231.64]
+****** Fake: sleeping max time (ms) 231.64 cycles 369935049
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [441.77]
+****** Fake: sleeping max time (ms) 441.77 cycles 705506795
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [392.72]
+****** Fake: sleeping max time (ms) 392.72 cycles 627174625
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [264.32]
+****** Fake: sleeping max time (ms) 264.32 cycles 422126376
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [118.03]
+****** Fake: sleeping max time (ms) 118.03 cycles 188489434
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [120.95]
+****** Fake: sleeping max time (ms) 120.95 cycles 193159115
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [272.23]
+****** Fake: sleeping max time (ms) 272.23 cycles 434747413
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [513.79]
+****** Fake: sleeping max time (ms) 513.79 cycles 820516093
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [87.29]
+****** Fake: sleeping max time (ms) 87.29 cycles 139402859
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [310.67]
+****** Fake: sleeping max time (ms) 310.67 cycles 496146390
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [222.35]
+****** Fake: sleeping max time (ms) 222.35 cycles 355091097
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [283.63]
+****** Fake: sleeping max time (ms) 283.63 cycles 452957360
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [115.75]
+****** Fake: sleeping max time (ms) 115.75 cycles 184845491
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [530.36]
+****** Fake: sleeping max time (ms) 530.36 cycles 846982134
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [196.23]
+****** Fake: sleeping max time (ms) 196.23 cycles 313382690
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [34.95]
+****** Fake: sleeping max time (ms) 34.95 cycles 55810937
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [569.68]
+****** Fake: sleeping max time (ms) 569.68 cycles 909779188
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [480.38]
+****** Fake: sleeping max time (ms) 480.38 cycles 767171724
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [469.45]
+****** Fake: sleeping max time (ms) 469.45 cycles 749708138
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [230.45]
+****** Fake: sleeping max time (ms) 230.45 cycles 368027482
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [91.92]
+****** Fake: sleeping max time (ms) 91.92 cycles 146794856
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [147.29]
+****** Fake: sleeping max time (ms) 147.29 cycles 235220113
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [297.54]
+****** Fake: sleeping max time (ms) 297.54 cycles 475169127
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [174.03]
+****** Fake: sleeping max time (ms) 174.03 cycles 277924631
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [192.52]
+****** Fake: sleeping max time (ms) 192.52 cycles 307449085
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [237.01]
+****** Fake: sleeping max time (ms) 237.01 cycles 378505108
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [287.19]
+****** Fake: sleeping max time (ms) 287.19 cycles 458648931
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [216.24]
+****** Fake: sleeping max time (ms) 216.24 cycles 345338782
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [482.76]
+****** Fake: sleeping max time (ms) 482.76 cycles 770973199
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [145.46]
+****** Fake: sleeping max time (ms) 145.46 cycles 232293282
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [146.85]
+****** Fake: sleeping max time (ms) 146.85 cycles 234519460
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [163.43]
+****** Fake: sleeping max time (ms) 163.43 cycles 260989746
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [533.01]
+****** Fake: sleeping max time (ms) 533.01 cycles 851222926
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [115.12]
+****** Fake: sleeping max time (ms) 115.12 cycles 183853604
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [540.29]
+****** Fake: sleeping max time (ms) 540.29 cycles 862842357
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [250.56]
+****** Fake: sleeping max time (ms) 250.56 cycles 400142469
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [349.12]
+****** Fake: sleeping max time (ms) 349.12 cycles 557539680
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [231.72]
+****** Fake: sleeping max time (ms) 231.72 cycles 370051815
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [137.57]
+****** Fake: sleeping max time (ms) 137.57 cycles 219695395
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [247.19]
+****** Fake: sleeping max time (ms) 247.19 cycles 394759268
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [205.01]
+****** Fake: sleeping max time (ms) 205.01 cycles 327406559
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [284.89]
+****** Fake: sleeping max time (ms) 284.89 cycles 454969988
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [286.40]
+****** Fake: sleeping max time (ms) 286.40 cycles 457375495
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [307.94]
+****** Fake: sleeping max time (ms) 307.94 cycles 491781521
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [465.29]
+****** Fake: sleeping max time (ms) 465.29 cycles 743066189
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [509.22]
+****** Fake: sleeping max time (ms) 509.22 cycles 813232113
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [240.55]
+****** Fake: sleeping max time (ms) 240.55 cycles 384161769
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [132.17]
+****** Fake: sleeping max time (ms) 132.17 cycles 211067916
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [320.42]
+****** Fake: sleeping max time (ms) 320.42 cycles 511708789
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [124.07]
+****** Fake: sleeping max time (ms) 124.07 cycles 198132309
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [377.09]
+****** Fake: sleeping max time (ms) 377.09 cycles 602211962
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [110.66]
+****** Fake: sleeping max time (ms) 110.66 cycles 176720127
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [260.51]
+****** Fake: sleeping max time (ms) 260.51 cycles 416034516
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [251.10]
 ****** Fake: sleeping max time (ms) 251.10 cycles 401009875
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [169.18]
-****** Fake: sleeping max time (ms) 169.18 cycles 270179754
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [80.21]
-****** Fake: sleeping max time (ms) 80.21 cycles 128088823
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [282.90]
-****** Fake: sleeping max time (ms) 282.90 cycles 451797454
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [588.04]
+****** Fake: sleeping max time (ms) 588.04 cycles 939105435
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [392.10]
+****** Fake: sleeping max time (ms) 392.10 cycles 626182675
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [261.09]
+****** Fake: sleeping max time (ms) 261.09 cycles 416967544
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [221.57]
+****** Fake: sleeping max time (ms) 221.57 cycles 353844726
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [240.50]
+****** Fake: sleeping max time (ms) 240.50 cycles 384075906
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [187.97]
+****** Fake: sleeping max time (ms) 187.97 cycles 300195806
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [193.65]
+****** Fake: sleeping max time (ms) 193.65 cycles 309264393
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [89.92]
+****** Fake: sleeping max time (ms) 89.92 cycles 143597007
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [476.55]
+****** Fake: sleeping max time (ms) 476.55 cycles 761042681
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [228.09]
+****** Fake: sleeping max time (ms) 228.09 cycles 364255313
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [131.56]
+****** Fake: sleeping max time (ms) 131.56 cycles 210099082
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [342.54]
+****** Fake: sleeping max time (ms) 342.54 cycles 547037701
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [459.77]
+****** Fake: sleeping max time (ms) 459.77 cycles 734256012
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [91.38]
+****** Fake: sleeping max time (ms) 91.38 cycles 145928958
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [206.68]
+****** Fake: sleeping max time (ms) 206.68 cycles 330063505
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [239.98]
+****** Fake: sleeping max time (ms) 239.98 cycles 383242586
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [378.00]
+****** Fake: sleeping max time (ms) 378.00 cycles 603663407
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [436.30]
+****** Fake: sleeping max time (ms) 436.30 cycles 696764296
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [302.18]
+****** Fake: sleeping max time (ms) 302.18 cycles 482579720
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [324.22]
+****** Fake: sleeping max time (ms) 324.22 cycles 517777826
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [854.82]
+****** Fake: sleeping max time (ms) 854.82 cycles 1365143518
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [49.87]
+****** Fake: sleeping max time (ms) 49.87 cycles 79641061
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [470.31]
+****** Fake: sleeping max time (ms) 470.31 cycles 751090405
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [164.13]
+****** Fake: sleeping max time (ms) 164.13 cycles 262109346
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [202.28]
+****** Fake: sleeping max time (ms) 202.28 cycles 323045223
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [220.58]
+****** Fake: sleeping max time (ms) 220.58 cycles 352273503
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [523.24]
+****** Fake: sleeping max time (ms) 523.24 cycles 835618763
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [97.46]
+****** Fake: sleeping max time (ms) 97.46 cycles 155644508
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [206.65]
+****** Fake: sleeping max time (ms) 206.65 cycles 330016177
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [382.50]
+****** Fake: sleeping max time (ms) 382.50 cycles 610856031
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [57.21]
+****** Fake: sleeping max time (ms) 57.21 cycles 91361092
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [265.05]
+****** Fake: sleeping max time (ms) 265.05 cycles 423285536
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [114.88]
+****** Fake: sleeping max time (ms) 114.88 cycles 183457650
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [136.79]
+****** Fake: sleeping max time (ms) 136.79 cycles 218448026
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [258.43]
+****** Fake: sleeping max time (ms) 258.43 cycles 412719525
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [325.90]
+****** Fake: sleeping max time (ms) 325.90 cycles 520456058
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [293.77]
+****** Fake: sleeping max time (ms) 293.77 cycles 469147918
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [528.82]
+****** Fake: sleeping max time (ms) 528.82 cycles 844518583
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [180.94]
+****** Fake: sleeping max time (ms) 180.94 cycles 288958698
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [227.61]
+****** Fake: sleeping max time (ms) 227.61 cycles 363498334
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [449.41]
+****** Fake: sleeping max time (ms) 449.41 cycles 717703896
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [264.71]
+****** Fake: sleeping max time (ms) 264.71 cycles 422743785
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [248.84]
+****** Fake: sleeping max time (ms) 248.84 cycles 397403173
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [107.17]
+****** Fake: sleeping max time (ms) 107.17 cycles 171156967
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [254.75]
+****** Fake: sleeping max time (ms) 254.75 cycles 406832341
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [486.85]
+****** Fake: sleeping max time (ms) 486.85 cycles 777493992
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [214.73]
+****** Fake: sleeping max time (ms) 214.73 cycles 342920238
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [175.27]
+****** Fake: sleeping max time (ms) 175.27 cycles 279911822
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [346.65]
+****** Fake: sleeping max time (ms) 346.65 cycles 553600671
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [327.85]
+****** Fake: sleeping max time (ms) 327.85 cycles 523571258
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [70.72]
+****** Fake: sleeping max time (ms) 70.72 cycles 112940670
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [519.46]
+****** Fake: sleeping max time (ms) 519.46 cycles 829569834
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [506.85]
+****** Fake: sleeping max time (ms) 506.85 cycles 809445345
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [368.14]
+****** Fake: sleeping max time (ms) 368.14 cycles 587912851
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [116.97]
+****** Fake: sleeping max time (ms) 116.97 cycles 186802292
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [238.32]
+****** Fake: sleeping max time (ms) 238.32 cycles 380590394
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [156.55]
+****** Fake: sleeping max time (ms) 156.55 cycles 250017046
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [214.57]
+****** Fake: sleeping max time (ms) 214.57 cycles 342662967
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [311.70]
+****** Fake: sleeping max time (ms) 311.70 cycles 497788088
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [226.92]
+****** Fake: sleeping max time (ms) 226.92 cycles 362387644
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [463.56]
+****** Fake: sleeping max time (ms) 463.56 cycles 740299322
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [283.32]
+****** Fake: sleeping max time (ms) 283.32 cycles 452469054
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [501.47]
+****** Fake: sleeping max time (ms) 501.47 cycles 800848441
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [79.26]
+****** Fake: sleeping max time (ms) 79.26 cycles 126580516
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [364.29]
+****** Fake: sleeping max time (ms) 364.29 cycles 581765166
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [224.85]
+****** Fake: sleeping max time (ms) 224.85 cycles 359081072
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [141.33]
+****** Fake: sleeping max time (ms) 141.33 cycles 225696622
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [269.58]
+****** Fake: sleeping max time (ms) 269.58 cycles 430522809
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [236.96]
+****** Fake: sleeping max time (ms) 236.96 cycles 378426116
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [550.13]
+****** Fake: sleeping max time (ms) 550.13 cycles 878564342
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [185.97]
+****** Fake: sleeping max time (ms) 185.97 cycles 296993894
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [173.07]
+****** Fake: sleeping max time (ms) 173.07 cycles 276400275
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [244.31]
+****** Fake: sleeping max time (ms) 244.31 cycles 390168382
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [358.71]
+****** Fake: sleeping max time (ms) 358.71 cycles 572862883
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [104.37]
+****** Fake: sleeping max time (ms) 104.37 cycles 166686411
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [173.96]
+****** Fake: sleeping max time (ms) 173.96 cycles 277814170
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [374.95]
+****** Fake: sleeping max time (ms) 374.95 cycles 598797536
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [235.18]
+****** Fake: sleeping max time (ms) 235.18 cycles 375586026
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [92.28]
+****** Fake: sleeping max time (ms) 92.28 cycles 147370038
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [560.33]
+****** Fake: sleeping max time (ms) 560.33 cycles 894839869
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [182.22]
+****** Fake: sleeping max time (ms) 182.22 cycles 291002691
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [289.59]
+****** Fake: sleeping max time (ms) 289.59 cycles 462472485
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [366.67]
+****** Fake: sleeping max time (ms) 366.67 cycles 585570192
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [333.26]
+****** Fake: sleeping max time (ms) 333.26 cycles 532216415
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [556.38]
+****** Fake: sleeping max time (ms) 556.38 cycles 888539360
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [388.60]
+****** Fake: sleeping max time (ms) 388.60 cycles 620599597
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [421.42]
+****** Fake: sleeping max time (ms) 421.42 cycles 673015433
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [220.08]
+****** Fake: sleeping max time (ms) 220.08 cycles 351463711
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [225.71]
+****** Fake: sleeping max time (ms) 225.71 cycles 360455421
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [268.81]
+****** Fake: sleeping max time (ms) 268.81 cycles 429291592
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [110.08]
+****** Fake: sleeping max time (ms) 110.08 cycles 175803167
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [150.68]
+****** Fake: sleeping max time (ms) 150.68 cycles 240632665
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [488.80]
+****** Fake: sleeping max time (ms) 488.80 cycles 780606589
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [376.26]
+****** Fake: sleeping max time (ms) 376.26 cycles 600893773
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [492.22]
+****** Fake: sleeping max time (ms) 492.22 cycles 786070198
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [420.05]
 ****** Fake: sleeping max time (ms) 420.05 cycles 670813037
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [245.33]
-****** Fake: sleeping max time (ms) 245.33 cycles 391792133
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [150.90]
-****** Fake: sleeping max time (ms) 150.90 cycles 240989146
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [171.47]
-****** Fake: sleeping max time (ms) 171.47 cycles 273830390
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [439.54]
-****** Fake: sleeping max time (ms) 439.54 cycles 701951642
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [412.07]
+****** Fake: sleeping max time (ms) 412.07 cycles 658082806
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [269.23]
+****** Fake: sleeping max time (ms) 269.23 cycles 429961000
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [347.27]
+****** Fake: sleeping max time (ms) 347.27 cycles 554595171
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [90.46]
+****** Fake: sleeping max time (ms) 90.46 cycles 144460018
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [218.89]
+****** Fake: sleeping max time (ms) 218.89 cycles 349560884
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [256.77]
+****** Fake: sleeping max time (ms) 256.77 cycles 410064500
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [431.56]
+****** Fake: sleeping max time (ms) 431.56 cycles 689196535
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [547.13]
+****** Fake: sleeping max time (ms) 547.13 cycles 873771349
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [336.39]
+****** Fake: sleeping max time (ms) 336.39 cycles 537221560
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [219.65]
+****** Fake: sleeping max time (ms) 219.65 cycles 350785564
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [406.47]
+****** Fake: sleeping max time (ms) 406.47 cycles 649135058
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [489.51]
+****** Fake: sleeping max time (ms) 489.51 cycles 781755259
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [401.02]
+****** Fake: sleeping max time (ms) 401.02 cycles 640433504
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [313.10]
+****** Fake: sleeping max time (ms) 313.10 cycles 500019077
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [324.73]
+****** Fake: sleeping max time (ms) 324.73 cycles 518589355
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [82.96]
+****** Fake: sleeping max time (ms) 82.96 cycles 132479755
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [506.18]
+****** Fake: sleeping max time (ms) 506.18 cycles 808370803
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [397.44]
+****** Fake: sleeping max time (ms) 397.44 cycles 634717311
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [202.16]
+****** Fake: sleeping max time (ms) 202.16 cycles 322847072
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [382.75]
+****** Fake: sleeping max time (ms) 382.75 cycles 611245660
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [317.41]
+****** Fake: sleeping max time (ms) 317.41 cycles 506903657
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [234.31]
+****** Fake: sleeping max time (ms) 234.31 cycles 374185294
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [240.31]
+****** Fake: sleeping max time (ms) 240.31 cycles 383769661
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [365.53]
+****** Fake: sleeping max time (ms) 365.53 cycles 583750600
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [417.83]
+****** Fake: sleeping max time (ms) 417.83 cycles 667280093
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [168.79]
+****** Fake: sleeping max time (ms) 168.79 cycles 269553415
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [410.88]
+****** Fake: sleeping max time (ms) 410.88 cycles 656173892
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [92.37]
+****** Fake: sleeping max time (ms) 92.37 cycles 147509659
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [152.88]
+****** Fake: sleeping max time (ms) 152.88 cycles 244151364
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [133.95]
+****** Fake: sleeping max time (ms) 133.95 cycles 213916589
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [526.79]
+****** Fake: sleeping max time (ms) 526.79 cycles 841289782
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [165.96]
+****** Fake: sleeping max time (ms) 165.96 cycles 265035594
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [182.41]
+****** Fake: sleeping max time (ms) 182.41 cycles 291305296
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [523.57]
+****** Fake: sleeping max time (ms) 523.57 cycles 836139841
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [100.08]
+****** Fake: sleeping max time (ms) 100.08 cycles 159831753
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [159.36]
+****** Fake: sleeping max time (ms) 159.36 cycles 254502660
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [142.33]
+****** Fake: sleeping max time (ms) 142.33 cycles 227299581
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [234.87]
+****** Fake: sleeping max time (ms) 234.87 cycles 375095093
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [285.08]
+****** Fake: sleeping max time (ms) 285.08 cycles 455273607
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [348.64]
+****** Fake: sleeping max time (ms) 348.64 cycles 556783996
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [300.12]
+****** Fake: sleeping max time (ms) 300.12 cycles 479298129
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [185.06]
+****** Fake: sleeping max time (ms) 185.06 cycles 295548142
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [324.10]
+****** Fake: sleeping max time (ms) 324.10 cycles 517588764
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [408.47]
+****** Fake: sleeping max time (ms) 408.47 cycles 652332088
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [459.06]
+****** Fake: sleeping max time (ms) 459.06 cycles 733118803
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [190.02]
+****** Fake: sleeping max time (ms) 190.02 cycles 303463069
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [375.25]
+****** Fake: sleeping max time (ms) 375.25 cycles 599273697
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [526.74]
+****** Fake: sleeping max time (ms) 526.74 cycles 841204204
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [330.56]
+****** Fake: sleeping max time (ms) 330.56 cycles 527904979
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [457.68]
+****** Fake: sleeping max time (ms) 457.68 cycles 730911553
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [222.82]
+****** Fake: sleeping max time (ms) 222.82 cycles 355850888
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [122.26]
+****** Fake: sleeping max time (ms) 122.26 cycles 195251182
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [166.07]
+****** Fake: sleeping max time (ms) 166.07 cycles 265213558
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [209.83]
+****** Fake: sleeping max time (ms) 209.83 cycles 335098757
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [255.21]
+****** Fake: sleeping max time (ms) 255.21 cycles 407562850
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [79.81]
+****** Fake: sleeping max time (ms) 79.81 cycles 127455439
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [454.37]
+****** Fake: sleeping max time (ms) 454.37 cycles 725622936
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [297.23]
+****** Fake: sleeping max time (ms) 297.23 cycles 474679489
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [494.03]
+****** Fake: sleeping max time (ms) 494.03 cycles 788958995
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [464.44]
+****** Fake: sleeping max time (ms) 464.44 cycles 741709946
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [101.82]
+****** Fake: sleeping max time (ms) 101.82 cycles 162610451
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [176.89]
+****** Fake: sleeping max time (ms) 176.89 cycles 282492867
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [560.77]
+****** Fake: sleeping max time (ms) 560.77 cycles 895546381
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [118.29]
+****** Fake: sleeping max time (ms) 118.29 cycles 188905581
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [76.54]
+****** Fake: sleeping max time (ms) 76.54 cycles 122228149
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [123.50]
+****** Fake: sleeping max time (ms) 123.50 cycles 197233327
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [256.92]
+****** Fake: sleeping max time (ms) 256.92 cycles 410303859
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [103.13]
+****** Fake: sleeping max time (ms) 103.13 cycles 164691684
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [273.84]
+****** Fake: sleeping max time (ms) 273.84 cycles 437324455
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [157.81]
+****** Fake: sleeping max time (ms) 157.81 cycles 252024859
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [175.90]
+****** Fake: sleeping max time (ms) 175.90 cycles 280913897
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [234.77]
+****** Fake: sleeping max time (ms) 234.77 cycles 374922845
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [176.30]
+****** Fake: sleeping max time (ms) 176.30 cycles 281558819
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [191.32]
+****** Fake: sleeping max time (ms) 191.32 cycles 305537099
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [169.25]
+****** Fake: sleeping max time (ms) 169.25 cycles 270293429
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [263.47]
+****** Fake: sleeping max time (ms) 263.47 cycles 420768949
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [529.27]
+****** Fake: sleeping max time (ms) 529.27 cycles 845236834
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [301.61]
+****** Fake: sleeping max time (ms) 301.61 cycles 481668545
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [135.67]
+****** Fake: sleeping max time (ms) 135.67 cycles 216672869
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [138.76]
+****** Fake: sleeping max time (ms) 138.76 cycles 221604267
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [272.12]
+****** Fake: sleeping max time (ms) 272.12 cycles 434577089
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [222.21]
+****** Fake: sleeping max time (ms) 222.21 cycles 354874540
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [341.39]
+****** Fake: sleeping max time (ms) 341.39 cycles 545194995
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [311.11]
+****** Fake: sleeping max time (ms) 311.11 cycles 496837899
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [136.25]
+****** Fake: sleeping max time (ms) 136.25 cycles 217590493
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [403.03]
+****** Fake: sleeping max time (ms) 403.03 cycles 643636996
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [320.34]
+****** Fake: sleeping max time (ms) 320.34 cycles 511582832
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [129.67]
+****** Fake: sleeping max time (ms) 129.67 cycles 207082095
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [171.65]
+****** Fake: sleeping max time (ms) 171.65 cycles 274120219
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [87.40]
+****** Fake: sleeping max time (ms) 87.40 cycles 139572490
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [297.19]
+****** Fake: sleeping max time (ms) 297.19 cycles 474605421
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [211.66]
+****** Fake: sleeping max time (ms) 211.66 cycles 338013903
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [110.11]
+****** Fake: sleeping max time (ms) 110.11 cycles 175848131
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [124.97]
+****** Fake: sleeping max time (ms) 124.97 cycles 199570381
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [298.35]
+****** Fake: sleeping max time (ms) 298.35 cycles 476460198
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [242.65]
+****** Fake: sleeping max time (ms) 242.65 cycles 387505408
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [82.30]
+****** Fake: sleeping max time (ms) 82.30 cycles 131434133
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [161.63]
+****** Fake: sleeping max time (ms) 161.63 cycles 258128684
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [430.10]
+****** Fake: sleeping max time (ms) 430.10 cycles 686870398
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [388.68]
+****** Fake: sleeping max time (ms) 388.68 cycles 620719812
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [217.08]
+****** Fake: sleeping max time (ms) 217.08 cycles 346683440
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [396.75]
+****** Fake: sleeping max time (ms) 396.75 cycles 633617574
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [311.68]
+****** Fake: sleeping max time (ms) 311.68 cycles 497757861
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [254.56]
+****** Fake: sleeping max time (ms) 254.56 cycles 406534438
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [235.97]
+****** Fake: sleeping max time (ms) 235.97 cycles 376841251
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [389.48]
+****** Fake: sleeping max time (ms) 389.48 cycles 622001141
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [269.66]
+****** Fake: sleeping max time (ms) 269.66 cycles 430646286
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [374.07]
+****** Fake: sleeping max time (ms) 374.07 cycles 597382616
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [240.35]
+****** Fake: sleeping max time (ms) 240.35 cycles 383840571
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [519.39]
+****** Fake: sleeping max time (ms) 519.39 cycles 829473516
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [145.57]
+****** Fake: sleeping max time (ms) 145.57 cycles 232483225
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [233.71]
+****** Fake: sleeping max time (ms) 233.71 cycles 373235620
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [79.20]
+****** Fake: sleeping max time (ms) 79.20 cycles 126476873
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [272.98]
+****** Fake: sleeping max time (ms) 272.98 cycles 435942977
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [192.59]
+****** Fake: sleeping max time (ms) 192.59 cycles 307558850
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [388.40]
+****** Fake: sleeping max time (ms) 388.40 cycles 620274102
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [357.32]
+****** Fake: sleeping max time (ms) 357.32 cycles 570635971
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [69.55]
+****** Fake: sleeping max time (ms) 69.55 cycles 111078507
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [87.24]
+****** Fake: sleeping max time (ms) 87.24 cycles 139325583
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [140.45]
+****** Fake: sleeping max time (ms) 140.45 cycles 224301920
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [284.34]
+****** Fake: sleeping max time (ms) 284.34 cycles 454088766
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [176.73]
+****** Fake: sleeping max time (ms) 176.73 cycles 282235441
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [195.44]
+****** Fake: sleeping max time (ms) 195.44 cycles 312111408
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [648.93]
+****** Fake: sleeping max time (ms) 648.93 cycles 1036340739
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [142.28]
+****** Fake: sleeping max time (ms) 142.28 cycles 227222457
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [284.90]
+****** Fake: sleeping max time (ms) 284.90 cycles 454980502
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [242.25]
+****** Fake: sleeping max time (ms) 242.25 cycles 386868053
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [497.80]
+****** Fake: sleeping max time (ms) 497.80 cycles 794989912
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [378.91]
+****** Fake: sleeping max time (ms) 378.91 cycles 605121990
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [58.09]
+****** Fake: sleeping max time (ms) 58.09 cycles 92776634
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [469.37]
+****** Fake: sleeping max time (ms) 469.37 cycles 749579621
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [246.54]
+****** Fake: sleeping max time (ms) 246.54 cycles 393726651
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [256.98]
+****** Fake: sleeping max time (ms) 256.98 cycles 410394177
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [487.51]
+****** Fake: sleeping max time (ms) 487.51 cycles 778546193
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [277.63]
+****** Fake: sleeping max time (ms) 277.63 cycles 443375889
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [490.25]
+****** Fake: sleeping max time (ms) 490.25 cycles 782926941
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [278.05]
+****** Fake: sleeping max time (ms) 278.05 cycles 444038230
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [514.22]
+****** Fake: sleeping max time (ms) 514.22 cycles 821205737
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [193.39]
+****** Fake: sleeping max time (ms) 193.39 cycles 308844963
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [546.18]
+****** Fake: sleeping max time (ms) 546.18 cycles 872256904
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [263.35]
+****** Fake: sleeping max time (ms) 263.35 cycles 420575158
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [363.68]
+****** Fake: sleeping max time (ms) 363.68 cycles 580802858
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [173.13]
+****** Fake: sleeping max time (ms) 173.13 cycles 276490426
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [222.64]
+****** Fake: sleeping max time (ms) 222.64 cycles 355554508
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [204.97]
+****** Fake: sleeping max time (ms) 204.97 cycles 327338228
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [277.51]
+****** Fake: sleeping max time (ms) 277.51 cycles 443183521
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [403.16]
+****** Fake: sleeping max time (ms) 403.16 cycles 643838649
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [216.89]
+****** Fake: sleeping max time (ms) 216.89 cycles 346378372
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [272.00]
+****** Fake: sleeping max time (ms) 272.00 cycles 434379678
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [352.54]
+****** Fake: sleeping max time (ms) 352.54 cycles 563013611
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [191.46]
 ****** Fake: sleeping max time (ms) 191.46 cycles 305763494
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [309.91]
-****** Fake: sleeping max time (ms) 309.91 cycles 494927883
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [480.31]
+****** Fake: sleeping max time (ms) 480.31 cycles 767061811
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [241.76]
+****** Fake: sleeping max time (ms) 241.76 cycles 386088168
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [99.47]
+****** Fake: sleeping max time (ms) 99.47 cycles 158849673
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [487.86]
+****** Fake: sleeping max time (ms) 487.86 cycles 779104649
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [190.97]
+****** Fake: sleeping max time (ms) 190.97 cycles 304986520
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [158.93]
+****** Fake: sleeping max time (ms) 158.93 cycles 253816760
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [186.78]
+****** Fake: sleeping max time (ms) 186.78 cycles 298280514
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [59.07]
+****** Fake: sleeping max time (ms) 59.07 cycles 94338431
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [460.71]
+****** Fake: sleeping max time (ms) 460.71 cycles 735754264
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [218.50]
+****** Fake: sleeping max time (ms) 218.50 cycles 348948271
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [117.00]
+****** Fake: sleeping max time (ms) 117.00 cycles 186855796
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [455.08]
+****** Fake: sleeping max time (ms) 455.08 cycles 726758333
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [166.06]
+****** Fake: sleeping max time (ms) 166.06 cycles 265199206
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [143.91]
+****** Fake: sleeping max time (ms) 143.91 cycles 229826123
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [452.24]
+****** Fake: sleeping max time (ms) 452.24 cycles 722228980
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [579.18]
+****** Fake: sleeping max time (ms) 579.18 cycles 924943502
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [181.07]
+****** Fake: sleeping max time (ms) 181.07 cycles 289162486
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [495.88]
+****** Fake: sleeping max time (ms) 495.88 cycles 791927969
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [169.62]
+****** Fake: sleeping max time (ms) 169.62 cycles 270889143
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [304.92]
+****** Fake: sleeping max time (ms) 304.92 cycles 486959443
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [340.63]
+****** Fake: sleeping max time (ms) 340.63 cycles 543988208
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [233.92]
+****** Fake: sleeping max time (ms) 233.92 cycles 373563992
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [407.99]
+****** Fake: sleeping max time (ms) 407.99 cycles 651554866
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [245.55]
+****** Fake: sleeping max time (ms) 245.55 cycles 392150163
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [358.95]
+****** Fake: sleeping max time (ms) 358.95 cycles 573243056
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [622.30]
+****** Fake: sleeping max time (ms) 622.30 cycles 993818283
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [142.83]
+****** Fake: sleeping max time (ms) 142.83 cycles 228095498
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [339.23]
+****** Fake: sleeping max time (ms) 339.23 cycles 541743811
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [578.63]
+****** Fake: sleeping max time (ms) 578.63 cycles 924065751
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [257.35]
+****** Fake: sleeping max time (ms) 257.35 cycles 410981246
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [252.75]
+****** Fake: sleeping max time (ms) 252.75 cycles 403641676
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [125.51]
+****** Fake: sleeping max time (ms) 125.51 cycles 200447257
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [184.36]
+****** Fake: sleeping max time (ms) 184.36 cycles 294425480
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [134.73]
+****** Fake: sleeping max time (ms) 134.73 cycles 215158812
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [81.94]
+****** Fake: sleeping max time (ms) 81.94 cycles 130852539
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [181.89]
+****** Fake: sleeping max time (ms) 181.89 cycles 290485997
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [331.84]
+****** Fake: sleeping max time (ms) 331.84 cycles 529948428
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [351.41]
+****** Fake: sleeping max time (ms) 351.41 cycles 561196878
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [194.46]
+****** Fake: sleeping max time (ms) 194.46 cycles 310559186
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [248.29]
+****** Fake: sleeping max time (ms) 248.29 cycles 396524499
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [353.66]
+****** Fake: sleeping max time (ms) 353.66 cycles 564798670
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [544.86]
+****** Fake: sleeping max time (ms) 544.86 cycles 870134547
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [216.03]
+****** Fake: sleeping max time (ms) 216.03 cycles 345007830
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [254.16]
+****** Fake: sleeping max time (ms) 254.16 cycles 405900897
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [456.39]
+****** Fake: sleeping max time (ms) 456.39 cycles 728847620
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [318.14]
+****** Fake: sleeping max time (ms) 318.14 cycles 508075614
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [105.92]
+****** Fake: sleeping max time (ms) 105.92 cycles 169158657
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [126.70]
+****** Fake: sleeping max time (ms) 126.70 cycles 202341133
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [129.35]
+****** Fake: sleeping max time (ms) 129.35 cycles 206570057
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [417.81]
+****** Fake: sleeping max time (ms) 417.81 cycles 667244228
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [443.27]
+****** Fake: sleeping max time (ms) 443.27 cycles 707895277
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [128.57]
+****** Fake: sleeping max time (ms) 128.57 cycles 205321527
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [419.75]
+****** Fake: sleeping max time (ms) 419.75 cycles 670340103
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [316.03]
+****** Fake: sleeping max time (ms) 316.03 cycles 504691960
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [245.91]
+****** Fake: sleeping max time (ms) 245.91 cycles 392717183
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [484.64]
+****** Fake: sleeping max time (ms) 484.64 cycles 773970180
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [580.97]
+****** Fake: sleeping max time (ms) 580.97 cycles 927807763
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [147.84]
+****** Fake: sleeping max time (ms) 147.84 cycles 236103470
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [467.92]
+****** Fake: sleeping max time (ms) 467.92 cycles 747275850
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [283.74]
+****** Fake: sleeping max time (ms) 283.74 cycles 453138266
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [101.03]
+****** Fake: sleeping max time (ms) 101.03 cycles 161345308
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [536.30]
+****** Fake: sleeping max time (ms) 536.30 cycles 856464014
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [318.49]
+****** Fake: sleeping max time (ms) 318.49 cycles 508621189
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [211.96]
+****** Fake: sleeping max time (ms) 211.96 cycles 338495871
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [439.01]
+****** Fake: sleeping max time (ms) 439.01 cycles 701097163
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [399.38]
+****** Fake: sleeping max time (ms) 399.38 cycles 637810885
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [402.49]
+****** Fake: sleeping max time (ms) 402.49 cycles 642774886
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [473.20]
+****** Fake: sleeping max time (ms) 473.20 cycles 755694965
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [321.88]
+****** Fake: sleeping max time (ms) 321.88 cycles 514045251
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [132.69]
+****** Fake: sleeping max time (ms) 132.69 cycles 211907431
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [263.36]
+****** Fake: sleeping max time (ms) 263.36 cycles 420581415
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [380.93]
+****** Fake: sleeping max time (ms) 380.93 cycles 608352364
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [103.53]
+****** Fake: sleeping max time (ms) 103.53 cycles 165342249
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [538.30]
+****** Fake: sleeping max time (ms) 538.30 cycles 859657239
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [328.30]
+****** Fake: sleeping max time (ms) 328.30 cycles 524288658
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [729.44]
+****** Fake: sleeping max time (ms) 729.44 cycles 1164910728
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [261.66]
+****** Fake: sleeping max time (ms) 261.66 cycles 417870591
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [162.33]
+****** Fake: sleeping max time (ms) 162.33 cycles 259237298
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [156.95]
+****** Fake: sleeping max time (ms) 156.95 cycles 250645071
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [464.46]
+****** Fake: sleeping max time (ms) 464.46 cycles 741741275
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [234.01]
+****** Fake: sleeping max time (ms) 234.01 cycles 373719301
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [170.09]
+****** Fake: sleeping max time (ms) 170.09 cycles 271637183
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [294.45]
+****** Fake: sleeping max time (ms) 294.45 cycles 470232206
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [237.63]
+****** Fake: sleeping max time (ms) 237.63 cycles 379496300
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [248.26]
+****** Fake: sleeping max time (ms) 248.26 cycles 396465531
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [415.51]
+****** Fake: sleeping max time (ms) 415.51 cycles 663566731
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [337.67]
+****** Fake: sleeping max time (ms) 337.67 cycles 539265404
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [268.12]
+****** Fake: sleeping max time (ms) 268.12 cycles 428193671
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [295.06]
+****** Fake: sleeping max time (ms) 295.06 cycles 471213553
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [153.93]
+****** Fake: sleeping max time (ms) 153.93 cycles 245818945
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [239.97]
+****** Fake: sleeping max time (ms) 239.97 cycles 383225033
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [125.30]
+****** Fake: sleeping max time (ms) 125.30 cycles 200108214
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [432.68]
+****** Fake: sleeping max time (ms) 432.68 cycles 690995206
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [121.98]
+****** Fake: sleeping max time (ms) 121.98 cycles 194804567
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [271.99]
+****** Fake: sleeping max time (ms) 271.99 cycles 434362459
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [289.96]
+****** Fake: sleeping max time (ms) 289.96 cycles 463072080
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [466.88]
+****** Fake: sleeping max time (ms) 466.88 cycles 745608835
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [116.18]
+****** Fake: sleeping max time (ms) 116.18 cycles 185537524
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [610.69]
+****** Fake: sleeping max time (ms) 610.69 cycles 975275463
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [300.98]
+****** Fake: sleeping max time (ms) 300.98 cycles 480668846
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [127.70]
+****** Fake: sleeping max time (ms) 127.70 cycles 203935858
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [491.55]
+****** Fake: sleeping max time (ms) 491.55 cycles 785001845
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [480.34]
+****** Fake: sleeping max time (ms) 480.34 cycles 767104317
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [169.18]
+****** Fake: sleeping max time (ms) 169.18 cycles 270179754
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [129.99]
+****** Fake: sleeping max time (ms) 129.99 cycles 207586136
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [430.16]
+****** Fake: sleeping max time (ms) 430.16 cycles 686963372
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [260.54]
+****** Fake: sleeping max time (ms) 260.54 cycles 416079944
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [168.39]
+****** Fake: sleeping max time (ms) 168.39 cycles 268920112
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [375.46]
+****** Fake: sleeping max time (ms) 375.46 cycles 599614422
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [192.45]
+****** Fake: sleeping max time (ms) 192.45 cycles 307340813
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [796.37]
+****** Fake: sleeping max time (ms) 796.37 cycles 1271800320
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [438.86]
+****** Fake: sleeping max time (ms) 438.86 cycles 700866999
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [100.57]
+****** Fake: sleeping max time (ms) 100.57 cycles 160616380
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [228.90]
+****** Fake: sleeping max time (ms) 228.90 cycles 365560801
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [149.90]
+****** Fake: sleeping max time (ms) 149.90 cycles 239382655
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [521.99]
+****** Fake: sleeping max time (ms) 521.99 cycles 833611017
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [121.95]
+****** Fake: sleeping max time (ms) 121.95 cycles 194747919
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [273.12]
+****** Fake: sleeping max time (ms) 273.12 cycles 436168062
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [130.24]
+****** Fake: sleeping max time (ms) 130.24 cycles 207986583
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [167.24]
+****** Fake: sleeping max time (ms) 167.24 cycles 267077998
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [265.52]
+****** Fake: sleeping max time (ms) 265.52 cycles 424028098
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [78.63]
+****** Fake: sleeping max time (ms) 78.63 cycles 125576570
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [415.21]
+****** Fake: sleeping max time (ms) 415.21 cycles 663090539
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [255.07]
+****** Fake: sleeping max time (ms) 255.07 cycles 407345760
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [420.77]
+****** Fake: sleeping max time (ms) 420.77 cycles 671967253
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [110.57]
+****** Fake: sleeping max time (ms) 110.57 cycles 176579375
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [160.85]
+****** Fake: sleeping max time (ms) 160.85 cycles 256885396
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [508.96]
+****** Fake: sleeping max time (ms) 508.96 cycles 812801275
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [481.06]
+****** Fake: sleeping max time (ms) 481.06 cycles 768258029
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [152.90]
+****** Fake: sleeping max time (ms) 152.90 cycles 244187008
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [549.57]
+****** Fake: sleeping max time (ms) 549.57 cycles 877655780
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [150.78]
+****** Fake: sleeping max time (ms) 150.78 cycles 240796715
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [252.55]
+****** Fake: sleeping max time (ms) 252.55 cycles 403326602
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [277.07]
+****** Fake: sleeping max time (ms) 277.07 cycles 442479047
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [671.51]
+****** Fake: sleeping max time (ms) 671.51 cycles 1072402778
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [82.67]
+****** Fake: sleeping max time (ms) 82.67 cycles 132016165
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [351.73]
+****** Fake: sleeping max time (ms) 351.73 cycles 561715592
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [172.39]
+****** Fake: sleeping max time (ms) 172.39 cycles 275299668
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [123.33]
+****** Fake: sleeping max time (ms) 123.33 cycles 196960674
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [94.73]
+****** Fake: sleeping max time (ms) 94.73 cycles 151279811
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [516.83]
+****** Fake: sleeping max time (ms) 516.83 cycles 825372701
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [130.35]
+****** Fake: sleeping max time (ms) 130.35 cycles 208161349
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [456.74]
+****** Fake: sleeping max time (ms) 456.74 cycles 729420283
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [385.58]
+****** Fake: sleeping max time (ms) 385.58 cycles 615777626
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [298.31]
+****** Fake: sleeping max time (ms) 298.31 cycles 476395961
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [403.71]
+****** Fake: sleeping max time (ms) 403.71 cycles 644722473
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [163.25]
+****** Fake: sleeping max time (ms) 163.25 cycles 260708717
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [201.08]
+****** Fake: sleeping max time (ms) 201.08 cycles 321130495
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [188.06]
+****** Fake: sleeping max time (ms) 188.06 cycles 300331328
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [267.08]
+****** Fake: sleeping max time (ms) 267.08 cycles 426520799
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [442.52]
+****** Fake: sleeping max time (ms) 442.52 cycles 706708070
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [223.98]
+****** Fake: sleeping max time (ms) 223.98 cycles 357694466
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [461.93]
+****** Fake: sleeping max time (ms) 461.93 cycles 737705709
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [500.79]
+****** Fake: sleeping max time (ms) 500.79 cycles 799759514
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [203.60]
+****** Fake: sleeping max time (ms) 203.60 cycles 325150159
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [495.14]
+****** Fake: sleeping max time (ms) 495.14 cycles 790731951
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [197.11]
+****** Fake: sleeping max time (ms) 197.11 cycles 314780029
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [232.15]
+****** Fake: sleeping max time (ms) 232.15 cycles 370746327
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [438.75]
+****** Fake: sleeping max time (ms) 438.75 cycles 700675979
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [189.41]
+****** Fake: sleeping max time (ms) 189.41 cycles 302493459
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [506.43]
+****** Fake: sleeping max time (ms) 506.43 cycles 808763074
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [263.63]
+****** Fake: sleeping max time (ms) 263.63 cycles 421021748
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [138.46]
+****** Fake: sleeping max time (ms) 138.46 cycles 221116545
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [260.16]
+****** Fake: sleeping max time (ms) 260.16 cycles 415468925
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [307.07]
+****** Fake: sleeping max time (ms) 307.07 cycles 490383422
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [439.81]
+****** Fake: sleeping max time (ms) 439.81 cycles 702383289
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [541.20]
+****** Fake: sleeping max time (ms) 541.20 cycles 864291910
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [204.00]
+****** Fake: sleeping max time (ms) 204.00 cycles 325787336
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [113.02]
+****** Fake: sleeping max time (ms) 113.02 cycles 180487301
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [248.20]
+****** Fake: sleeping max time (ms) 248.20 cycles 396368528
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [258.97]
+****** Fake: sleeping max time (ms) 258.97 cycles 413576807
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [235.30]
+****** Fake: sleeping max time (ms) 235.30 cycles 375768320
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [126.74]
+****** Fake: sleeping max time (ms) 126.74 cycles 202408922
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [303.74]
+****** Fake: sleeping max time (ms) 303.74 cycles 485074739
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [293.30]
+****** Fake: sleeping max time (ms) 293.30 cycles 468394429
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [497.16]
+****** Fake: sleeping max time (ms) 497.16 cycles 793966868
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [261.10]
+****** Fake: sleeping max time (ms) 261.10 cycles 416979761
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [456.53]
+****** Fake: sleeping max time (ms) 456.53 cycles 729077436
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [494.10]
+****** Fake: sleeping max time (ms) 494.10 cycles 789084626
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [360.03]
+****** Fake: sleeping max time (ms) 360.03 cycles 574962977
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [433.05]
+****** Fake: sleeping max time (ms) 433.05 cycles 691583450
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [310.71]
+****** Fake: sleeping max time (ms) 310.71 cycles 496198453
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [268.05]
+****** Fake: sleeping max time (ms) 268.05 cycles 428073402
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [557.29]
+****** Fake: sleeping max time (ms) 557.29 cycles 889988791
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [214.76]
+****** Fake: sleeping max time (ms) 214.76 cycles 342977686
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [86.23]
+****** Fake: sleeping max time (ms) 86.23 cycles 137703726
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [178.08]
+****** Fake: sleeping max time (ms) 178.08 cycles 284387715
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [461.48]
+****** Fake: sleeping max time (ms) 461.48 cycles 736988348
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [298.96]
+****** Fake: sleeping max time (ms) 298.96 cycles 477445077
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [107.61]
+****** Fake: sleeping max time (ms) 107.61 cycles 171854904
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [205.29]
+****** Fake: sleeping max time (ms) 205.29 cycles 327850116
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [297.64]
+****** Fake: sleeping max time (ms) 297.64 cycles 475332686
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [311.57]
+****** Fake: sleeping max time (ms) 311.57 cycles 497574103
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [259.37]
+****** Fake: sleeping max time (ms) 259.37 cycles 414220142
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [200.71]
+****** Fake: sleeping max time (ms) 200.71 cycles 320533300
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [433.07]
+****** Fake: sleeping max time (ms) 433.07 cycles 691607880
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [205.89]
+****** Fake: sleeping max time (ms) 205.89 cycles 328798535
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [205.45]
+****** Fake: sleeping max time (ms) 205.45 cycles 328101149
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [192.26]
+****** Fake: sleeping max time (ms) 192.26 cycles 307039782
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [225.09]
+****** Fake: sleeping max time (ms) 225.09 cycles 359470878
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [250.07]
+****** Fake: sleeping max time (ms) 250.07 cycles 399365448
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [175.55]
+****** Fake: sleeping max time (ms) 175.55 cycles 280345581
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [198.48]
+****** Fake: sleeping max time (ms) 198.48 cycles 316965536
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [106.41]
+****** Fake: sleeping max time (ms) 106.41 cycles 169938363
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [591.52]
+****** Fake: sleeping max time (ms) 591.52 cycles 944663610
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [185.65]
+****** Fake: sleeping max time (ms) 185.65 cycles 296483893
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [279.64]
+****** Fake: sleeping max time (ms) 279.64 cycles 446589695
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [222.15]
+****** Fake: sleeping max time (ms) 222.15 cycles 354771188
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [256.17]
+****** Fake: sleeping max time (ms) 256.17 cycles 409110606
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [357.96]
+****** Fake: sleeping max time (ms) 357.96 cycles 571667575
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [230.18]
+****** Fake: sleeping max time (ms) 230.18 cycles 367598521
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [458.96]
+****** Fake: sleeping max time (ms) 458.96 cycles 732957915
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [479.83]
+****** Fake: sleeping max time (ms) 479.83 cycles 766287200
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [94.60]
+****** Fake: sleeping max time (ms) 94.60 cycles 151079031
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [875.42]
+****** Fake: sleeping max time (ms) 875.42 cycles 1398045953
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [137.66]
+****** Fake: sleeping max time (ms) 137.66 cycles 219841043
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [272.10]
+****** Fake: sleeping max time (ms) 272.10 cycles 434543964
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [108.92]
 ****** Fake: sleeping max time (ms) 108.92 cycles 173944836
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [258.23]
+****** Fake: sleeping max time (ms) 258.23 cycles 412392887
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [358.34]
+****** Fake: sleeping max time (ms) 358.34 cycles 572272378
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [653.92]
+****** Fake: sleeping max time (ms) 653.92 cycles 1044315562
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [478.38]
+****** Fake: sleeping max time (ms) 478.38 cycles 763974636
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [99.33]
+****** Fake: sleeping max time (ms) 99.33 cycles 158633802
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [420.01]
+****** Fake: sleeping max time (ms) 420.01 cycles 670748763
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [98.96]
+****** Fake: sleeping max time (ms) 98.96 cycles 158041601
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [431.46]
+****** Fake: sleeping max time (ms) 431.46 cycles 689047660
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [182.68]
+****** Fake: sleeping max time (ms) 182.68 cycles 291737427
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [385.42]
+****** Fake: sleeping max time (ms) 385.42 cycles 615509818
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [471.15]
+****** Fake: sleeping max time (ms) 471.15 cycles 752433070
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [279.39]
+****** Fake: sleeping max time (ms) 279.39 cycles 446193047
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [375.67]
+****** Fake: sleeping max time (ms) 375.67 cycles 599938667
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [375.44]
+****** Fake: sleeping max time (ms) 375.44 cycles 599577980
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [558.58]
+****** Fake: sleeping max time (ms) 558.58 cycles 892050264
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [444.05]
+****** Fake: sleeping max time (ms) 444.05 cycles 709153637
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [415.97]
+****** Fake: sleeping max time (ms) 415.97 cycles 664296257
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [440.00]
+****** Fake: sleeping max time (ms) 440.00 cycles 702676544
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [365.88]
+****** Fake: sleeping max time (ms) 365.88 cycles 584305327
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [131.02]
+****** Fake: sleeping max time (ms) 131.02 cycles 209236392
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [481.90]
+****** Fake: sleeping max time (ms) 481.90 cycles 769586969
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [509.57]
+****** Fake: sleeping max time (ms) 509.57 cycles 813780119
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [324.20]
+****** Fake: sleeping max time (ms) 324.20 cycles 517753646
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [186.71]
+****** Fake: sleeping max time (ms) 186.71 cycles 298178654
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [431.15]
+****** Fake: sleeping max time (ms) 431.15 cycles 688543673
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [241.14]
+****** Fake: sleeping max time (ms) 241.14 cycles 385104461
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [90.26]
+****** Fake: sleeping max time (ms) 90.26 cycles 144143429
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [479.55]
+****** Fake: sleeping max time (ms) 479.55 cycles 765835528
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [132.85]
+****** Fake: sleeping max time (ms) 132.85 cycles 212165954
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [124.34]
+****** Fake: sleeping max time (ms) 124.34 cycles 198574145
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [170.86]
+****** Fake: sleeping max time (ms) 170.86 cycles 272868873
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [296.83]
+****** Fake: sleeping max time (ms) 296.83 cycles 474042970
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [364.32]
+****** Fake: sleeping max time (ms) 364.32 cycles 581821248
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [326.77]
+****** Fake: sleeping max time (ms) 326.77 cycles 521857695
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [147.41]
+****** Fake: sleeping max time (ms) 147.41 cycles 235420204
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [241.69]
+****** Fake: sleeping max time (ms) 241.69 cycles 385977094
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [419.37]
+****** Fake: sleeping max time (ms) 419.37 cycles 669729495
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [249.66]
+****** Fake: sleeping max time (ms) 249.66 cycles 398709444
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [245.86]
+****** Fake: sleeping max time (ms) 245.86 cycles 392636252
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [305.16]
+****** Fake: sleeping max time (ms) 305.16 cycles 487345526
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [373.16]
+****** Fake: sleeping max time (ms) 373.16 cycles 595933498
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [146.27]
+****** Fake: sleeping max time (ms) 146.27 cycles 233599163
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [228.69]
+****** Fake: sleeping max time (ms) 228.69 cycles 365214672
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [238.27]
+****** Fake: sleeping max time (ms) 238.27 cycles 380513189
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [480.51]
+****** Fake: sleeping max time (ms) 480.51 cycles 767366757
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [373.88]
 ****** Fake: sleeping max time (ms) 373.88 cycles 597082675
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [279.55]
+****** Fake: sleeping max time (ms) 279.55 cycles 446438933
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [172.10]
+****** Fake: sleeping max time (ms) 172.10 cycles 274839903
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [555.70]
+****** Fake: sleeping max time (ms) 555.70 cycles 887451359
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [437.03]
+****** Fake: sleeping max time (ms) 437.03 cycles 697936518
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [266.26]
+****** Fake: sleeping max time (ms) 266.26 cycles 425214278
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [109.46]
+****** Fake: sleeping max time (ms) 109.46 cycles 174812517
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [159.26]
+****** Fake: sleeping max time (ms) 159.26 cycles 254335482
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [114.14]
+****** Fake: sleeping max time (ms) 114.14 cycles 182283986
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [117.00]
+****** Fake: sleeping max time (ms) 117.00 cycles 186854439
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [295.07]
+****** Fake: sleeping max time (ms) 295.07 cycles 471223933
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [487.45]
+****** Fake: sleeping max time (ms) 487.45 cycles 778459388
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [162.28]
+****** Fake: sleeping max time (ms) 162.28 cycles 259160713
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [380.03]
+****** Fake: sleeping max time (ms) 380.03 cycles 606910687
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [209.58]
+****** Fake: sleeping max time (ms) 209.58 cycles 334700627
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [160.98]
+****** Fake: sleeping max time (ms) 160.98 cycles 257078857
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [588.85]
+****** Fake: sleeping max time (ms) 588.85 cycles 940386428
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [404.61]
+****** Fake: sleeping max time (ms) 404.61 cycles 646168906
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [261.87]
+****** Fake: sleeping max time (ms) 261.87 cycles 418212188
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [201.00]
+****** Fake: sleeping max time (ms) 201.00 cycles 320998559
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [363.19]
+****** Fake: sleeping max time (ms) 363.19 cycles 580006665
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [259.57]
+****** Fake: sleeping max time (ms) 259.57 cycles 414527554
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [185.92]
+****** Fake: sleeping max time (ms) 185.92 cycles 296917153
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [159.70]
+****** Fake: sleeping max time (ms) 159.70 cycles 255043048
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [182.73]
+****** Fake: sleeping max time (ms) 182.73 cycles 291816866
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [143.16]
+****** Fake: sleeping max time (ms) 143.16 cycles 228631423
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [239.94]
+****** Fake: sleeping max time (ms) 239.94 cycles 383178382
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [195.38]
+****** Fake: sleeping max time (ms) 195.38 cycles 312028978
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [225.81]
+****** Fake: sleeping max time (ms) 225.81 cycles 360613984
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [360.84]
+****** Fake: sleeping max time (ms) 360.84 cycles 576256336
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [177.16]
+****** Fake: sleeping max time (ms) 177.16 cycles 282919959
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [298.45]
+****** Fake: sleeping max time (ms) 298.45 cycles 476617401
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [215.42]
+****** Fake: sleeping max time (ms) 215.42 cycles 344031948
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [494.43]
+****** Fake: sleeping max time (ms) 494.43 cycles 789597118
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [195.93]
+****** Fake: sleeping max time (ms) 195.93 cycles 312902912
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [208.05]
+****** Fake: sleeping max time (ms) 208.05 cycles 332256272
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [401.84]
+****** Fake: sleeping max time (ms) 401.84 cycles 641735692
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [492.76]
+****** Fake: sleeping max time (ms) 492.76 cycles 786932910
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [264.94]
+****** Fake: sleeping max time (ms) 264.94 cycles 423113041
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [247.11]
+****** Fake: sleeping max time (ms) 247.11 cycles 394636801
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [207.77]
+****** Fake: sleeping max time (ms) 207.77 cycles 331801612
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [108.68]
+****** Fake: sleeping max time (ms) 108.68 cycles 173559580
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [461.30]
+****** Fake: sleeping max time (ms) 461.30 cycles 736694426
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [337.47]
+****** Fake: sleeping max time (ms) 337.47 cycles 538946243
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [223.83]
+****** Fake: sleeping max time (ms) 223.83 cycles 357451321
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [208.68]
+****** Fake: sleeping max time (ms) 208.68 cycles 333259672
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [236.57]
+****** Fake: sleeping max time (ms) 236.57 cycles 377799441
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [178.14]
+****** Fake: sleeping max time (ms) 178.14 cycles 284487729
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [140.26]
+****** Fake: sleeping max time (ms) 140.26 cycles 223989479
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [405.75]
+****** Fake: sleeping max time (ms) 405.75 cycles 647977314
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [318.19]
+****** Fake: sleeping max time (ms) 318.19 cycles 508147653
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [410.81]
+****** Fake: sleeping max time (ms) 410.81 cycles 656065068
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [431.74]
+****** Fake: sleeping max time (ms) 431.74 cycles 689493486
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [147.87]
+****** Fake: sleeping max time (ms) 147.87 cycles 236155608
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [329.22]
+****** Fake: sleeping max time (ms) 329.22 cycles 525763133
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [437.70]
+****** Fake: sleeping max time (ms) 437.70 cycles 699002205
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [351.83]
+****** Fake: sleeping max time (ms) 351.83 cycles 561866782
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [344.90]
+****** Fake: sleeping max time (ms) 344.90 cycles 550800772
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [273.56]
+****** Fake: sleeping max time (ms) 273.56 cycles 436869036
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [99.40]
+****** Fake: sleeping max time (ms) 99.40 cycles 158737194
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [197.29]
+****** Fake: sleeping max time (ms) 197.29 cycles 315076810
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [130.32]
+****** Fake: sleeping max time (ms) 130.32 cycles 208124776
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [93.67]
+****** Fake: sleeping max time (ms) 93.67 cycles 149598742
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [120.08]
+****** Fake: sleeping max time (ms) 120.08 cycles 191764532
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [169.95]
+****** Fake: sleeping max time (ms) 169.95 cycles 271405542
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [205.53]
+****** Fake: sleeping max time (ms) 205.53 cycles 328225138
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [97.89]
+****** Fake: sleeping max time (ms) 97.89 cycles 156335620
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [102.19]
+****** Fake: sleeping max time (ms) 102.19 cycles 163195420
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [260.26]
+****** Fake: sleeping max time (ms) 260.26 cycles 415633932
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [108.71]
+****** Fake: sleeping max time (ms) 108.71 cycles 173616714
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [178.79]
+****** Fake: sleeping max time (ms) 178.79 cycles 285522284
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [103.21]
+****** Fake: sleeping max time (ms) 103.21 cycles 164829459
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [573.44]
+****** Fake: sleeping max time (ms) 573.44 cycles 915777390
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [488.05]
+****** Fake: sleeping max time (ms) 488.05 cycles 779421195
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [191.70]
+****** Fake: sleeping max time (ms) 191.70 cycles 306139327
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [244.30]
+****** Fake: sleeping max time (ms) 244.30 cycles 390149004
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [204.90]
+****** Fake: sleeping max time (ms) 204.90 cycles 327218149
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [91.09]
+****** Fake: sleeping max time (ms) 91.09 cycles 145476511
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [455.38]
+****** Fake: sleeping max time (ms) 455.38 cycles 727244215
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [488.22]
+****** Fake: sleeping max time (ms) 488.22 cycles 779685784
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [232.26]
+****** Fake: sleeping max time (ms) 232.26 cycles 370911573
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [554.35]
+****** Fake: sleeping max time (ms) 554.35 cycles 885302882
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [238.35]
+****** Fake: sleeping max time (ms) 238.35 cycles 380647177
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [113.92]
+****** Fake: sleeping max time (ms) 113.92 cycles 181924033
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [239.11]
+****** Fake: sleeping max time (ms) 239.11 cycles 381859064
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [190.77]
+****** Fake: sleeping max time (ms) 190.77 cycles 304657648
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [515.37]
+****** Fake: sleeping max time (ms) 515.37 cycles 823045537
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [241.13]
+****** Fake: sleeping max time (ms) 241.13 cycles 385092448
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [291.47]
+****** Fake: sleeping max time (ms) 291.47 cycles 465483030
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [485.08]
+****** Fake: sleeping max time (ms) 485.08 cycles 774680133
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [349.06]
+****** Fake: sleeping max time (ms) 349.06 cycles 557453475
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [163.49]
+****** Fake: sleeping max time (ms) 163.49 cycles 261086941
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [584.35]
+****** Fake: sleeping max time (ms) 584.35 cycles 933210497
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [497.95]
+****** Fake: sleeping max time (ms) 497.95 cycles 795228680
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [116.53]
+****** Fake: sleeping max time (ms) 116.53 cycles 186106056
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [321.48]
+****** Fake: sleeping max time (ms) 321.48 cycles 513401071
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [150.85]
+****** Fake: sleeping max time (ms) 150.85 cycles 240913685
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [567.06]
+****** Fake: sleeping max time (ms) 567.06 cycles 905601268
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [456.11]
+****** Fake: sleeping max time (ms) 456.11 cycles 728411887
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [258.07]
+****** Fake: sleeping max time (ms) 258.07 cycles 412134724
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [354.71]
+****** Fake: sleeping max time (ms) 354.71 cycles 566475182
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [340.44]
+****** Fake: sleeping max time (ms) 340.44 cycles 543679033
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [111.29]
+****** Fake: sleeping max time (ms) 111.29 cycles 177733922
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [139.59]
+****** Fake: sleeping max time (ms) 139.59 cycles 222923965
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [252.47]
+****** Fake: sleeping max time (ms) 252.47 cycles 403192711
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [375.35]
+****** Fake: sleeping max time (ms) 375.35 cycles 599437888
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [199.35]
+****** Fake: sleeping max time (ms) 199.35 cycles 318364981
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [258.99]
+****** Fake: sleeping max time (ms) 258.99 cycles 413607460
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [656.11]
+****** Fake: sleeping max time (ms) 656.11 cycles 1047804625
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [526.49]
+****** Fake: sleeping max time (ms) 526.49 cycles 840808617
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [115.82]
+****** Fake: sleeping max time (ms) 115.82 cycles 184970194
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [346.48]
+****** Fake: sleeping max time (ms) 346.48 cycles 553330844
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [132.93]
+****** Fake: sleeping max time (ms) 132.93 cycles 212284964
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [379.06]
+****** Fake: sleeping max time (ms) 379.06 cycles 605362033
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [156.06]
+****** Fake: sleeping max time (ms) 156.06 cycles 249233280
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [247.85]
+****** Fake: sleeping max time (ms) 247.85 cycles 395812507
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [51.44]
+****** Fake: sleeping max time (ms) 51.44 cycles 82153502
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [330.74]
+****** Fake: sleeping max time (ms) 330.74 cycles 528191135
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [178.67]
+****** Fake: sleeping max time (ms) 178.67 cycles 285328229
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [365.41]
+****** Fake: sleeping max time (ms) 365.41 cycles 583562570
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [261.99]
+****** Fake: sleeping max time (ms) 261.99 cycles 418394643
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [143.46]
+****** Fake: sleeping max time (ms) 143.46 cycles 229111557
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [174.01]
+****** Fake: sleeping max time (ms) 174.01 cycles 277899651
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [102.78]
+****** Fake: sleeping max time (ms) 102.78 cycles 164136350
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [149.46]
+****** Fake: sleeping max time (ms) 149.46 cycles 238689579
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [358.80]
+****** Fake: sleeping max time (ms) 358.80 cycles 573011084
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [224.74]
+****** Fake: sleeping max time (ms) 224.74 cycles 358910193
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [493.25]
+****** Fake: sleeping max time (ms) 493.25 cycles 787717522
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [155.52]
+****** Fake: sleeping max time (ms) 155.52 cycles 248365876
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [282.12]
+****** Fake: sleeping max time (ms) 282.12 cycles 450541011
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [77.85]
+****** Fake: sleeping max time (ms) 77.85 cycles 124326791
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [499.70]
+****** Fake: sleeping max time (ms) 499.70 cycles 798017034
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [271.59]
+****** Fake: sleeping max time (ms) 271.59 cycles 433723900
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [199.37]
+****** Fake: sleeping max time (ms) 199.37 cycles 318393806

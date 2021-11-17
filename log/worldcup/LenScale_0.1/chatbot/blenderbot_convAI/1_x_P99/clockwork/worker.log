@@ -4,14 +4,14 @@ user clockwork directory: /workdir/clockwork
 Loading Clockwork worker default config from /workdir/clockwork/config/default.cfg
 user clockwork directory: /workdir/clockwork
 GPUGPU00--GPU-0 started
-GPU0-PCIe_H2D_Inputs-0 started
-GPU0-PCIe_D2H_Output-0 started
+GPU0-GPUPCIe_D2H_Output-00 started-
+PCIe_H2D_Inputs-0 started
 PCIe_H2D_Weights-0 started
 AsyncTaskChecker-0 started
 CPU-0 started
 IO service thread listening on 0.0.0.0:12345
 GPU Clocks Changed: GPU0=1245
-Closing connection 0x7f8c7c000d30, reason: End of file
+Closing connection 0x7f2dc0000d30, reason: End of file
 Received A0:GetWorkerState
 Sending R0:GetWorkerState:
  page_size=16777216
@@ -19,25 +19,13 @@ gpus=
  GPU-0 weights_cache=21.5GB (1376 pages) io_pool=512.0MB workspace_pool=512.0MB 0 models currently on GPU
 models=
 
-Received A0:LoadModelFromDisk model=0 [0.0, 16809704767723.4] /workdir/models/jobs.bucketed_bucket0/model
+Received A0:LoadModelFromDisk model=0 [0.0, 16809596348716.7] /workdir/models/jobs.bucketed_bucket0/model
 cudaMallocHost 102160300 (102160300 x 1)
-Sending R0:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=64.4 b2=75.7 b4=98.3 b8=143.3 duration=4738.3
+Sending R0:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=64.7 b2=65.8 b4=68.1 b8=72.6 duration=4751.6
 Network Status: Controller ✔✔✔✔✔ Worker (inputs forwarded by controller)
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [66.42]
-****** Fake: sleeping max time (ms) 66.42 cycles 106077506
-GPU Clocks Changed: GPU0=1432
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [51.25]
-****** Fake: sleeping max time (ms) 51.25 cycles 81848498
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [70.83]
-****** Fake: sleeping max time (ms) 70.83 cycles 113113057
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [59.24]
-****** Fake: sleeping max time (ms) 59.24 cycles 94609272
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [57.35]
-****** Fake: sleeping max time (ms) 57.35 cycles 91587690
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [51.48]
-****** Fake: sleeping max time (ms) 51.48 cycles 82207737
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [64.39]
-****** Fake: sleeping max time (ms) 64.39 cycles 102833992
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [111.96]
-****** Fake: sleeping max time (ms) 111.96 cycles 178807390
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [63.66]
+****** Fake: sleeping max time (ms) 63.66 cycles 101672990
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [83.01]
+****** Fake: sleeping max time (ms) 83.01 cycles 132559322
+GPU Clocks Changed: GPU0=1372
 GPU Clocks Changed: GPU0=1245

@@ -1,0 +1,2363 @@
+Waiting worker...
+Starting Clockwork Controller
+Logging requests to /local/clockwork_request_log.tsv
+Logging actions to /local/clockwork_action_log.tsv
+ConcurrentInferAndLoadScheduler using:
+	 default_slo=200000000
+	 latest_delta=10000000
+	 schedule_ahead=10000000
+	 max_allowable_exec_time=250000000
+	 max_batch_size=10
+	 generate_inputs=0
+	 max_gpus=1
+IO service thread listening for clients on 0.0.0.0:12346
+Connecting to worker localhost:12345
+Connection established
+(Startup) Running ControllerStartup
+(Startup-1) Bouncing LS and Infer requests until startup is complete
+(Startup-2) Querying current worker state
+Clockwork page_size=16777216
+Worker 0 1 GPUs 0 models
+GPU 0 21.5 GB (1376 pages) 0 loaded models
+
+(Startup-3) Awaiting LoadModel requests from clients
+Client  --> Req0:LoadModel path=/workdir/models/jobs.bucketed_bucket0/model
+(Startup-4) LoadModelStage has begun
+Worker <--  A0:LoadModelFromDisk model=0 [0.0, 16809584379845.2] /workdir/models/jobs.bucketed_bucket0/model
+Worker  --> R0:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=15.4 b2=15.6 b4=16.1 b8=17.1 duration=4956.2
+Client <--  Rsp0:LoadModel model_id=[0->0] input=602112 output=4000
+Client  --> Req1:LoadModel path=/workdir/models/jobs.bucketed_bucket1/model
+Worker <--  A1:LoadModelFromDisk model=1 [0.0, 16809584374887.4] /workdir/models/jobs.bucketed_bucket1/model
+Worker  --> R1:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=31.1 b2=31.3 b4=31.8 b8=32.8 duration=4877.7
+Client <--  Rsp0:LoadModel model_id=[1->1] input=602112 output=4000
+Client  --> Req2:LoadModel path=/workdir/models/jobs.bucketed_bucket2/model
+Worker <--  A2:LoadModelFromDisk model=2 [0.0, 16809584370008.4] /workdir/models/jobs.bucketed_bucket2/model
+Worker  --> R2:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=32.4 b2=32.7 b4=33.2 b8=34.1 duration=4835.4
+Client <--  Rsp0:LoadModel model_id=[2->2] input=602112 output=4000
+Client  --> Req3:LoadModel path=/workdir/models/jobs.bucketed_bucket3/model
+Worker <--  A3:LoadModelFromDisk model=3 [0.0, 16809584365172.0] /workdir/models/jobs.bucketed_bucket3/model
+Worker  --> R3:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=26.5 b2=26.7 b4=27.2 b8=28.1 duration=4935.4
+Client <--  Rsp0:LoadModel model_id=[3->3] input=602112 output=4000
+Client  --> Req4:LoadModel path=/workdir/models/jobs.bucketed_bucket4/model
+Worker <--  A4:LoadModelFromDisk model=4 [0.0, 16809584360235.4] /workdir/models/jobs.bucketed_bucket4/model
+Worker  --> R4:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=24.0 b2=24.3 b4=24.7 b8=25.7 duration=4931.0
+Client <--  Rsp0:LoadModel model_id=[4->4] input=602112 output=4000
+Client  --> Req5:LoadModel path=/workdir/models/jobs.bucketed_bucket5/model
+Worker <--  A5:LoadModelFromDisk model=5 [0.0, 16809584355303.3] /workdir/models/jobs.bucketed_bucket5/model
+Worker  --> R5:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=33.0 b2=33.3 b4=33.8 b8=34.7 duration=4936.6
+Client <--  Rsp0:LoadModel model_id=[5->5] input=602112 output=4000
+Client  --> Req6:LoadModel path=/workdir/models/jobs.bucketed_bucket6/model
+Worker <--  A6:LoadModelFromDisk model=6 [0.0, 16809584350365.8] /workdir/models/jobs.bucketed_bucket6/model
+Worker  --> R6:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=29.6 b2=29.8 b4=30.3 b8=31.3 duration=4927.0
+Client <--  Rsp0:LoadModel model_id=[6->6] input=602112 output=4000
+Client  --> Req7:LoadModel path=/workdir/models/jobs.bucketed_bucket7/model
+Worker <--  A7:LoadModelFromDisk model=7 [0.0, 16809584345437.6] /workdir/models/jobs.bucketed_bucket7/model
+Worker  --> R7:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=35.5 b2=35.8 b4=36.3 b8=37.2 duration=4797.8
+Client <--  Rsp0:LoadModel model_id=[7->7] input=602112 output=4000
+Client  --> Req8:LoadModel path=/workdir/models/jobs.bucketed_bucket8/model
+Worker <--  A8:LoadModelFromDisk model=8 [0.0, 16809584340638.7] /workdir/models/jobs.bucketed_bucket8/model
+Worker  --> R8:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=27.8 b2=28.1 b4=28.6 b8=29.5 duration=4948.4
+Client <--  Rsp0:LoadModel model_id=[8->8] input=602112 output=4000
+Client  --> Req9:LoadModel path=/workdir/models/jobs.bucketed_bucket9/model
+Worker <--  A9:LoadModelFromDisk model=9 [0.0, 16809584335689.2] /workdir/models/jobs.bucketed_bucket9/model
+Worker  --> R9:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=37.3 b2=37.6 b4=38.1 b8=39.0 duration=4709.7
+Client <--  Rsp0:LoadModel model_id=[9->9] input=602112 output=4000
+Client  --> Req10:LoadModel path=/workdir/models/jobs.bucketed_bucket10/model
+Worker <--  A10:LoadModelFromDisk model=10 [0.0, 16809584330978.5] /workdir/models/jobs.bucketed_bucket10/model
+Worker  --> R10:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=32.5 b2=32.7 b4=33.2 b8=34.1 duration=4935.4
+Client <--  Rsp0:LoadModel model_id=[10->10] input=602112 output=4000
+Client  --> Req11:LoadModel path=/workdir/models/jobs.bucketed_bucket11/model
+Worker <--  A11:LoadModelFromDisk model=11 [0.0, 16809584326042.1] /workdir/models/jobs.bucketed_bucket11/model
+Worker  --> R11:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=35.1 b2=35.3 b4=35.8 b8=36.8 duration=4953.9
+Client <--  Rsp0:LoadModel model_id=[11->11] input=602112 output=4000
+Client  --> Req12:LoadModel path=/workdir/models/jobs.bucketed_bucket12/model
+Worker <--  A12:LoadModelFromDisk model=12 [0.0, 16809584321087.2] /workdir/models/jobs.bucketed_bucket12/model
+Worker  --> R12:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=47.1 b2=47.4 b4=47.9 b8=48.8 duration=4988.6
+Client <--  Rsp0:LoadModel model_id=[12->12] input=602112 output=4000
+Client  --> Req13:LoadModel path=/workdir/models/jobs.bucketed_bucket13/model
+Worker <--  A13:LoadModelFromDisk model=13 [0.0, 16809584316097.4] /workdir/models/jobs.bucketed_bucket13/model
+Worker  --> R13:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=40.1 b2=40.3 b4=40.8 b8=41.8 duration=4876.4
+Client <--  Rsp0:LoadModel model_id=[13->13] input=602112 output=4000
+Client  --> Req14:LoadModel path=/workdir/models/jobs.bucketed_bucket14/model
+Worker <--  A14:LoadModelFromDisk model=14 [0.0, 16809584311220.0] /workdir/models/jobs.bucketed_bucket14/model
+Worker  --> R14:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=52.7 b2=52.9 b4=53.4 b8=54.4 duration=4772.7
+Client <--  Rsp0:LoadModel model_id=[14->14] input=602112 output=4000
+Client  --> Req15:LoadModel path=/workdir/models/jobs.bucketed_bucket15/model
+Worker <--  A15:LoadModelFromDisk model=15 [0.0, 16809584306446.2] /workdir/models/jobs.bucketed_bucket15/model
+Worker  --> R15:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=26.6 b2=26.9 b4=27.4 b8=28.3 duration=4939.3
+Client <--  Rsp0:LoadModel model_id=[15->15] input=602112 output=4000
+Client  --> Req16:LoadModel path=/workdir/models/jobs.bucketed_bucket16/model
+Worker <--  A16:LoadModelFromDisk model=16 [0.0, 16809584301505.8] /workdir/models/jobs.bucketed_bucket16/model
+Worker  --> R16:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=66.0 b2=66.2 b4=66.7 b8=67.7 duration=4902.7
+Client <--  Rsp0:LoadModel model_id=[16->16] input=602112 output=4000
+Client  --> Req17:LoadModel path=/workdir/models/jobs.bucketed_bucket17/model
+Worker <--  A17:LoadModelFromDisk model=17 [0.0, 16809584296602.1] /workdir/models/jobs.bucketed_bucket17/model
+Worker  --> R17:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=41.5 b2=41.8 b4=42.3 b8=43.2 duration=4935.8
+Client <--  Rsp0:LoadModel model_id=[17->17] input=602112 output=4000
+Client  --> Req18:LoadModel path=/workdir/models/jobs.bucketed_bucket18/model
+Worker <--  A18:LoadModelFromDisk model=18 [0.0, 16809584291665.3] /workdir/models/jobs.bucketed_bucket18/model
+Worker  --> R18:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=61.4 b2=61.6 b4=62.1 b8=63.1 duration=4907.7
+Client <--  Rsp0:LoadModel model_id=[18->18] input=602112 output=4000
+Client  --> Req19:LoadModel path=/workdir/models/jobs.bucketed_bucket19/model
+Worker <--  A19:LoadModelFromDisk model=19 [0.0, 16809584286756.5] /workdir/models/jobs.bucketed_bucket19/model
+Worker  --> R19:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=33.9 b2=34.1 b4=34.6 b8=35.6 duration=4860.2
+Client <--  Rsp0:LoadModel model_id=[19->19] input=602112 output=4000
+(Startup-5) LoadModelStage ending in 0 seconds...(Startup-6) LoadModelStage complete.  Printing loaded models: 
+Clockwork page_size=16777216
+Worker 0 1 GPUs 20 models
+GPU 0 21.5 GB (1376 pages) 0 loaded models
+M-0 src=/workdir/models/jobs.bucketed_bucket0/model input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=15.4 b2=15.6 b4=16.1 b8=17.1
+M-1 src=/workdir/models/jobs.bucketed_bucket1/model input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=31.1 b2=31.3 b4=31.8 b8=32.8
+M-2 src=/workdir/models/jobs.bucketed_bucket2/model input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=32.4 b2=32.7 b4=33.2 b8=34.1
+M-3 src=/workdir/models/jobs.bucketed_bucket3/model input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=26.5 b2=26.7 b4=27.2 b8=28.1
+M-4 src=/workdir/models/jobs.bucketed_bucket4/model input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=24.0 b2=24.3 b4=24.7 b8=25.7
+M-5 src=/workdir/models/jobs.bucketed_bucket5/model input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=33.0 b2=33.3 b4=33.8 b8=34.7
+M-6 src=/workdir/models/jobs.bucketed_bucket6/model input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=29.6 b2=29.8 b4=30.3 b8=31.3
+M-7 src=/workdir/models/jobs.bucketed_bucket7/model input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=35.5 b2=35.8 b4=36.3 b8=37.2
+M-8 src=/workdir/models/jobs.bucketed_bucket8/model input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=27.8 b2=28.1 b4=28.6 b8=29.5
+M-9 src=/workdir/models/jobs.bucketed_bucket9/model input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=37.3 b2=37.6 b4=38.1 b8=39.0
+M-10 src=/workdir/models/jobs.bucketed_bucket10/model input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=32.5 b2=32.7 b4=33.2 b8=34.1
+M-11 src=/workdir/models/jobs.bucketed_bucket11/model input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=35.1 b2=35.3 b4=35.8 b8=36.8
+M-12 src=/workdir/models/jobs.bucketed_bucket12/model input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=47.1 b2=47.4 b4=47.9 b8=48.8
+M-13 src=/workdir/models/jobs.bucketed_bucket13/model input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=40.1 b2=40.3 b4=40.8 b8=41.8
+M-14 src=/workdir/models/jobs.bucketed_bucket14/model input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=52.7 b2=52.9 b4=53.4 b8=54.4
+M-15 src=/workdir/models/jobs.bucketed_bucket15/model input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=26.6 b2=26.9 b4=27.4 b8=28.3
+M-16 src=/workdir/models/jobs.bucketed_bucket16/model input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=66.0 b2=66.2 b4=66.7 b8=67.7
+M-17 src=/workdir/models/jobs.bucketed_bucket17/model input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=41.5 b2=41.8 b4=42.3 b8=43.2
+M-18 src=/workdir/models/jobs.bucketed_bucket18/model input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=61.4 b2=61.6 b4=62.1 b8=63.1
+M-19 src=/workdir/models/jobs.bucketed_bucket19/model input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=33.9 b2=34.1 b4=34.6 b8=35.6
+
+(Startup-end) Transitioning to scheduler
+Created 20 models
+Created 1 GPUs on 1 Workers
+Total GPU capacity 1376 pages (1376 per GPU).
+Total model pages 140 (10% oversubscription).
+GPU infer thread [0] started
+GPU infer thread [2] started
+GPU infer thread [1] started
+GPU infer thread [3] started
+GPU infer thread [4] started
+GPU load thread [0] started
+GPU load thread [1] started
+ * Admitting inference requests
+GPU load thread [3] started
+GPU load thread [2] started
+GPU load thread [4] started
+Client  --> Req20:Infer model=0 b=1 input=94846
+Worker <--  A0:LoadWeights model=0 gpu=0 [0.0, 10.9]
+Worker  --> R0:LoadWeights duration=7.9
+Network Status:  Client ✔✔✔✔✔ Controller ✔✔✔✔✔ Workers (inputs generated by client)
+Worker <--  A1:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.8]
+W0-GPU0 LoadW min=7.97 max=7.97 mean=7.97 e2emean=8.71 e2emax=8.71 throughput=0.0 utilization=0.00 clock=[0-0] norm_max=0.00 norm_mean=0.00
+Worker  --> R1:Infer exec=22.8 input=0.1 output=0.0 gpu0=1245
+Client <--  Rsp20:Infer received=1637159794247697580 departure=0 model_id=0 b=1 output=4000
+Client throughput=0.0 success=100.00% min=33.5 max=33.5 mean=33.5
+Client  --> Req21:Infer model=0 b=1 input=94846
+Worker <--  A2:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R2:Infer exec=14.4 input=0.0 output=0.0 gpu0=1245
+Client <--  Rsp21:Infer received=1637159794321271887 departure=0 model_id=0 b=1 output=4000
+Client  --> Req22:Infer model=0 b=1 input=94846
+Worker <--  A3:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R3:Infer exec=22.4 input=0.0 output=0.0 gpu0=1245
+Client <--  Rsp22:Infer received=1637159794395039376 departure=0 model_id=0 b=1 output=4000
+Client  --> Req23:Infer model=0 b=1 input=94846
+Worker <--  A4:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R4:Infer exec=22.2 input=0.0 output=0.0 gpu0=1245
+Client <--  Rsp23:Infer received=1637159794469052361 departure=0 model_id=0 b=1 output=4000
+Client  --> Req24:Infer model=0 b=1 input=94846
+Worker <--  A5:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R5:Infer exec=9.2 input=0.0 output=0.0 gpu0=1245
+Client <--  Rsp24:Infer received=1637159794542836194 departure=0 model_id=0 b=1 output=4000
+Client  --> Req25:Infer model=0 b=1 input=94846
+Worker <--  A6:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R6:Infer exec=11.8 input=0.0 output=0.0 gpu0=1245
+Client <--  Rsp25:Infer received=1637159794616582940 departure=0 model_id=0 b=1 output=4000
+Client  --> Req26:Infer model=0 b=1 input=94846
+Worker <--  A7:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R7:Infer exec=37.9 input=0.0 output=0.0 gpu0=1245
+Client <--  Rsp26:Infer received=1637159794690421250 departure=0 model_id=0 b=1 output=4000
+Client  --> Req27:Infer model=0 b=1 input=94846
+Worker <--  A8:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R8:Infer exec=11.8 input=0.0 output=0.0 gpu0=1245
+Client <--  Rsp27:Infer received=1637159794764177774 departure=0 model_id=0 b=1 output=4000
+Client  --> Req28:Infer model=0 b=1 input=94846
+Worker <--  A9:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R9:Infer exec=28.2 input=0.0 output=0.0 gpu0=1245
+Client <--  Rsp28:Infer received=1637159794838170156 departure=0 model_id=0 b=1 output=4000
+Client  --> Req29:Infer model=0 b=1 input=94846
+Worker <--  A10:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R10:Infer exec=26.4 input=0.0 output=0.0 gpu0=1245
+Client <--  Rsp29:Infer received=1637159794911861168 departure=0 model_id=0 b=1 output=4000
+Client  --> Req30:Infer model=0 b=1 input=94846
+Worker <--  A11:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R11:Infer exec=17.0 input=0.0 output=0.0 gpu0=1245
+Client <--  Rsp30:Infer received=1637159794985720361 departure=0 model_id=0 b=1 output=4000
+Client  --> Req31:Infer model=11 b=1 input=60942
+Worker <--  A12:LoadWeights model=11 gpu=0 [0.0, 10.9]
+Worker  --> R12:LoadWeights duration=7.8
+Client <--  Rsp31:Infer received=1637159795058897615 departure=0 model_id=11 b=1 output=0
+Client  --> Req32:Infer model=0 b=1 input=94846
+Worker <--  A13:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R13:Infer exec=27.7 input=0.0 output=0.0 gpu0=1245
+Client <--  Rsp32:Infer received=1637159795133367087 departure=0 model_id=0 b=1 output=4000
+Client  --> Req33:Infer model=15 b=1 input=33637
+Worker <--  A14:LoadWeights model=15 gpu=0 [0.0, 10.9]
+Worker  --> R14:LoadWeights duration=7.8
+Worker <--  A15:Infer model=15 gpu=0 batch=1 input=33637 [0.0, 10.9]
+Worker  --> R15:Infer exec=34.9 input=0.0 output=0.0 gpu0=1245
+Client <--  Rsp33:Infer received=1637159795205951592 departure=0 model_id=15 b=1 output=4000
+Client  --> Req34:Infer model=0 b=1 input=94846
+Worker <--  A16:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R16:Infer exec=24.2 input=0.0 output=0.0 gpu0=1312
+Client <--  Rsp34:Infer received=1637159795280974633 departure=0 model_id=0 b=1 output=4000
+Client  --> Req35:Infer model=0 b=1 input=94846
+Worker <--  A17:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R17:Infer exec=14.7 input=0.0 output=0.0 gpu0=1312
+Client <--  Rsp35:Infer received=1637159795354890257 departure=0 model_id=0 b=1 output=4000
+Client  --> Req36:Infer model=0 b=1 input=94846
+Worker <--  A18:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R18:Infer exec=18.2 input=0.0 output=0.0 gpu0=1312
+Client <--  Rsp36:Infer received=1637159795428715157 departure=0 model_id=0 b=1 output=4000
+Client  --> Req37:Infer model=0 b=1 input=94846
+Worker <--  A19:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R19:Infer exec=16.0 input=0.0 output=0.0 gpu0=1312
+Client <--  Rsp37:Infer received=1637159795502580565 departure=0 model_id=0 b=1 output=4000
+Client  --> Req38:Infer model=0 b=1 input=94846
+Worker <--  A20:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R20:Infer exec=39.7 input=0.0 output=0.0 gpu0=1312
+Client <--  Rsp38:Infer received=1637159795576384583 departure=0 model_id=0 b=1 output=4000
+Client  --> Req39:Infer model=0 b=1 input=94846
+Worker <--  A21:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R21:Infer exec=5.0 input=0.0 output=0.0 gpu0=1312
+Client <--  Rsp39:Infer received=1637159795650184130 departure=0 model_id=0 b=1 output=4000
+Client  --> Req40:Infer model=0 b=1 input=94846
+Worker <--  A22:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R22:Infer exec=23.7 input=0.0 output=0.0 gpu0=1312
+Client <--  Rsp40:Infer received=1637159795724041017 departure=0 model_id=0 b=1 output=4000
+Client  --> Req41:Infer model=9 b=1 input=115165
+Worker <--  A23:LoadWeights model=9 gpu=0 [0.0, 10.9]
+Worker  --> R23:LoadWeights duration=7.8
+Client <--  Rsp41:Infer received=1637159795798158276 departure=0 model_id=9 b=1 output=0
+Client  --> Req42:Infer model=0 b=1 input=94846
+Worker <--  A24:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R24:Infer exec=39.1 input=0.0 output=0.0 gpu0=1312
+Client <--  Rsp42:Infer received=1637159795871768831 departure=0 model_id=0 b=1 output=4000
+Client  --> Req43:Infer model=0 b=1 input=94846
+Worker <--  A25:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R25:Infer exec=9.3 input=0.0 output=0.0 gpu0=1312
+Client <--  Rsp43:Infer received=1637159795945563559 departure=0 model_id=0 b=1 output=4000
+Client  --> Req44:Infer model=0 b=1 input=94846
+Worker <--  A26:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R26:Infer exec=13.1 input=0.0 output=0.0 gpu0=1312
+Client <--  Rsp44:Infer received=1637159796019352979 departure=0 model_id=0 b=1 output=4000
+Client  --> Req45:Infer model=0 b=1 input=94846
+Worker <--  A27:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R27:Infer exec=16.2 input=0.0 output=0.0 gpu0=1312
+Client <--  Rsp45:Infer received=1637159796093146729 departure=0 model_id=0 b=1 output=4000
+Client  --> Req46:Infer model=0 b=1 input=94846
+Worker <--  A28:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R28:Infer exec=6.2 input=0.0 output=0.0 gpu0=1312
+Client <--  Rsp46:Infer received=1637159796166990836 departure=0 model_id=0 b=1 output=4000
+Client  --> Req47:Infer model=0 b=1 input=94846
+Worker <--  A29:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R29:Infer exec=15.5 input=0.0 output=0.0 gpu0=1312
+Client <--  Rsp47:Infer received=1637159796240820136 departure=0 model_id=0 b=1 output=4000
+Client  --> Req48:Infer model=0 b=1 input=94846
+Worker <--  A30:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R30:Infer exec=11.0 input=0.0 output=0.0 gpu0=1312
+Client <--  Rsp48:Infer received=1637159796314728008 departure=0 model_id=0 b=1 output=4000
+Client  --> Req49:Infer model=0 b=1 input=94846
+Worker <--  A31:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R31:Infer exec=11.4 input=0.0 output=0.0 gpu0=1312
+Client <--  Rsp49:Infer received=1637159796388544457 departure=0 model_id=0 b=1 output=4000
+Client  --> Req50:Infer model=0 b=1 input=94846
+Worker <--  A32:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R32:Infer exec=32.3 input=0.0 output=0.0 gpu0=1312
+Client <--  Rsp50:Infer received=1637159796462317604 departure=0 model_id=0 b=1 output=4000
+Client  --> Req51:Infer model=0 b=1 input=94846
+Worker <--  A33:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R33:Infer exec=3.3 input=0.0 output=0.0 gpu0=1312
+Client <--  Rsp51:Infer received=1637159796536172606 departure=0 model_id=0 b=1 output=4000
+Client  --> Req52:Infer model=0 b=1 input=94846
+Worker <--  A34:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R34:Infer exec=20.0 input=0.0 output=0.0 gpu0=1312
+Client <--  Rsp52:Infer received=1637159796609983397 departure=0 model_id=0 b=1 output=4000
+Client  --> Req53:Infer model=0 b=1 input=94846
+Worker <--  A35:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R35:Infer exec=22.0 input=0.0 output=0.0 gpu0=1312
+Client <--  Rsp53:Infer received=1637159796683777706 departure=0 model_id=0 b=1 output=4000
+Client  --> Req54:Infer model=0 b=1 input=94846
+Worker <--  A36:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R36:Infer exec=20.8 input=0.0 output=0.0 gpu0=1312
+Client <--  Rsp54:Infer received=1637159796757715331 departure=0 model_id=0 b=1 output=4000
+Client  --> Req55:Infer model=0 b=1 input=94846
+Worker <--  A37:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R37:Infer exec=18.6 input=0.0 output=0.0 gpu0=1312
+Client <--  Rsp55:Infer received=1637159796831528358 departure=0 model_id=0 b=1 output=4000
+Client  --> Req56:Infer model=10 b=1 input=52741
+Worker <--  A38:LoadWeights model=10 gpu=0 [0.0, 10.9]
+Worker  --> R38:LoadWeights duration=7.8
+Client <--  Rsp56:Infer received=1637159796904508239 departure=0 model_id=10 b=1 output=0
+Client  --> Req57:Infer model=0 b=1 input=94846
+Worker <--  A39:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R39:Infer exec=27.9 input=0.0 output=0.0 gpu0=1312
+Client <--  Rsp57:Infer received=1637159796979183536 departure=0 model_id=0 b=1 output=4000
+Client  --> Req58:Infer model=0 b=1 input=94846
+Worker <--  A40:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R40:Infer exec=29.1 input=0.0 output=0.0 gpu0=1312
+Client <--  Rsp58:Infer received=1637159797052991883 departure=0 model_id=0 b=1 output=4000
+Client  --> Req59:Infer model=0 b=1 input=94846
+Worker <--  A41:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R41:Infer exec=7.1 input=0.0 output=0.0 gpu0=1312
+Client <--  Rsp59:Infer received=1637159797126831380 departure=0 model_id=0 b=1 output=4000
+Client  --> Req60:Infer model=0 b=1 input=94846
+Worker <--  A42:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R42:Infer exec=34.1 input=0.0 output=0.0 gpu0=1312
+Client <--  Rsp60:Infer received=1637159797200625479 departure=0 model_id=0 b=1 output=4000
+Client  --> Req61:Infer model=0 b=1 input=94846
+Worker <--  A43:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R43:Infer exec=6.8 input=0.0 output=0.0 gpu0=1312
+Client <--  Rsp61:Infer received=1637159797274486767 departure=0 model_id=0 b=1 output=4000
+Client  --> Req62:Infer model=0 b=1 input=94846
+Worker <--  A44:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R44:Infer exec=8.1 input=0.0 output=0.0 gpu0=1312
+Client <--  Rsp62:Infer received=1637159797348283451 departure=0 model_id=0 b=1 output=4000
+Client  --> Req63:Infer model=0 b=1 input=94846
+Worker <--  A45:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R45:Infer exec=18.0 input=0.0 output=0.0 gpu0=1312
+Client <--  Rsp63:Infer received=1637159797422082649 departure=0 model_id=0 b=1 output=4000
+Client  --> Req64:Infer model=0 b=1 input=94846
+Worker <--  A46:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R46:Infer exec=10.0 input=0.0 output=0.0 gpu0=1312
+Client <--  Rsp64:Infer received=1637159797496078801 departure=0 model_id=0 b=1 output=4000
+Client  --> Req65:Infer model=0 b=1 input=94846
+Worker <--  A47:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R47:Infer exec=11.3 input=0.0 output=0.0 gpu0=1312
+Client <--  Rsp65:Infer received=1637159797569881352 departure=0 model_id=0 b=1 output=4000
+Client  --> Req66:Infer model=0 b=1 input=94846
+Worker <--  A48:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R48:Infer exec=6.9 input=0.0 output=0.0 gpu0=1312
+Client <--  Rsp66:Infer received=1637159797643618181 departure=0 model_id=0 b=1 output=4000
+Client  --> Req67:Infer model=0 b=1 input=94846
+Worker <--  A49:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R49:Infer exec=37.2 input=0.0 output=0.0 gpu0=1312
+Client <--  Rsp67:Infer received=1637159797717471716 departure=0 model_id=0 b=1 output=4000
+Client  --> Req68:Infer model=4 b=1 input=69447
+Worker <--  A50:LoadWeights model=4 gpu=0 [0.0, 10.9]
+Worker  --> R50:LoadWeights duration=7.8
+Worker <--  A51:Infer model=4 gpu=0 batch=1 input=69447 [0.0, 10.9]
+Worker  --> R51:Infer exec=46.9 input=0.0 output=0.0 gpu0=1312
+Client <--  Rsp68:Infer received=1637159797790879728 departure=0 model_id=4 b=1 output=4000
+Client  --> Req69:Infer model=3 b=1 input=114223
+Worker <--  A52:LoadWeights model=3 gpu=0 [0.0, 10.9]
+Worker  --> R52:LoadWeights duration=7.8
+Worker <--  A53:Infer model=3 gpu=0 batch=1 input=114223 [0.0, 10.9]
+Worker  --> R53:Infer exec=27.4 input=0.0 output=0.0 gpu0=1312
+Client <--  Rsp69:Infer received=1637159797865418833 departure=0 model_id=3 b=1 output=4000
+Client  --> Req70:Infer model=0 b=1 input=94846
+Worker <--  A54:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R54:Infer exec=36.8 input=0.0 output=0.0 gpu0=1447
+Client <--  Rsp70:Infer received=1637159797938912472 departure=0 model_id=0 b=1 output=4000
+Client  --> Req71:Infer model=0 b=1 input=94846
+Worker <--  A55:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R55:Infer exec=8.3 input=0.0 output=0.0 gpu0=1447
+Client <--  Rsp71:Infer received=1637159798012990969 departure=0 model_id=0 b=1 output=4000
+Client  --> Req72:Infer model=1 b=1 input=52741
+Worker <--  A56:LoadWeights model=1 gpu=0 [0.0, 10.9]
+Worker  --> R56:LoadWeights duration=7.8
+Worker <--  A57:Infer model=1 gpu=0 batch=1 input=52741 [0.0, 10.9]
+Worker  --> R57:Infer exec=34.7 input=0.0 output=0.0 gpu0=1447
+Client <--  Rsp72:Infer received=1637159798085825298 departure=0 model_id=1 b=1 output=4000
+Client  --> Req73:Infer model=0 b=1 input=94846
+Worker <--  A58:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R58:Infer exec=24.8 input=0.0 output=0.0 gpu0=1447
+Client <--  Rsp73:Infer received=1637159798160419579 departure=0 model_id=0 b=1 output=4000
+Client  --> Req74:Infer model=0 b=1 input=94846
+Worker <--  A59:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R59:Infer exec=8.8 input=0.0 output=0.0 gpu0=1447
+Client <--  Rsp74:Infer received=1637159798234261380 departure=0 model_id=0 b=1 output=4000
+Client  --> Req75:Infer model=0 b=1 input=94846
+Worker <--  A60:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R60:Infer exec=25.8 input=0.0 output=0.0 gpu0=1485
+Client <--  Rsp75:Infer received=1637159798308221844 departure=0 model_id=0 b=1 output=4000
+Client  --> Req76:Infer model=0 b=1 input=94846
+Worker <--  A61:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R61:Infer exec=9.8 input=0.0 output=0.0 gpu0=1485
+Client <--  Rsp76:Infer received=1637159798381915301 departure=0 model_id=0 b=1 output=4000
+Client  --> Req77:Infer model=0 b=1 input=94846
+Worker <--  A62:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R62:Infer exec=6.6 input=0.0 output=0.0 gpu0=1485
+Client <--  Rsp77:Infer received=1637159798455785598 departure=0 model_id=0 b=1 output=4000
+Client  --> Req78:Infer model=0 b=1 input=94846
+Worker <--  A63:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R63:Infer exec=22.5 input=0.0 output=0.0 gpu0=1485
+Client <--  Rsp78:Infer received=1637159798529549526 departure=0 model_id=0 b=1 output=4000
+Client  --> Req79:Infer model=1 b=1 input=52741
+Worker <--  A64:Infer model=1 gpu=0 batch=1 input=52741 [0.0, 10.9]
+Worker  --> R64:Infer exec=35.5 input=0.0 output=0.0 gpu0=1485
+Client <--  Rsp79:Infer received=1637159798602593032 departure=0 model_id=1 b=1 output=4000
+Client  --> Req80:Infer model=0 b=1 input=94846
+Worker <--  A65:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R65:Infer exec=24.6 input=0.0 output=0.0 gpu0=1485
+Client <--  Rsp80:Infer received=1637159798677264837 departure=0 model_id=0 b=1 output=4000
+Client  --> Req81:Infer model=0 b=1 input=94846
+Worker <--  A66:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R66:Infer exec=20.0 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp81:Infer received=1637159798751069204 departure=0 model_id=0 b=1 output=4000
+Client  --> Req82:Infer model=0 b=1 input=94846
+Worker <--  A67:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R67:Infer exec=20.2 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp82:Infer received=1637159798824997190 departure=0 model_id=0 b=1 output=4000
+Client  --> Req83:Infer model=6 b=1 input=33637
+Worker <--  A68:LoadWeights model=6 gpu=0 [0.0, 10.9]
+Worker  --> R68:LoadWeights duration=7.8
+Worker <--  A69:Infer model=6 gpu=0 batch=1 input=33637 [0.0, 10.9]
+Worker  --> R69:Infer exec=37.9 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp83:Infer received=1637159798897544748 departure=0 model_id=6 b=1 output=4000
+Client  --> Req84:Infer model=0 b=1 input=94846
+Worker <--  A70:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R70:Infer exec=4.9 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp84:Infer received=1637159798972678140 departure=0 model_id=0 b=1 output=4000
+Client  --> Req85:Infer model=0 b=1 input=94846
+Worker <--  A71:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R71:Infer exec=17.0 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp85:Infer received=1637159799046390314 departure=0 model_id=0 b=1 output=4000
+Client  --> Req86:Infer model=0 b=1 input=94846
+Worker <--  A72:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R72:Infer exec=34.7 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp86:Infer received=1637159799120241615 departure=0 model_id=0 b=1 output=4000
+Client  --> Req87:Infer model=0 b=1 input=94846
+Worker <--  A73:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R73:Infer exec=9.0 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp87:Infer received=1637159799194076991 departure=0 model_id=0 b=1 output=4000
+Client  --> Req88:Infer model=0 b=1 input=94846
+Worker <--  A74:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R74:Infer exec=21.4 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp88:Infer received=1637159799267987377 departure=0 model_id=0 b=1 output=4000
+Client  --> Req89:Infer model=0 b=1 input=94846
+Worker <--  A75:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R75:Infer exec=9.6 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp89:Infer received=1637159799341721273 departure=0 model_id=0 b=1 output=4000
+Client  --> Req90:Infer model=12 b=1 input=60942
+Worker <--  A76:LoadWeights model=12 gpu=0 [0.0, 10.9]
+Worker  --> R76:LoadWeights duration=7.8
+Client <--  Rsp90:Infer received=1637159799414938617 departure=0 model_id=12 b=1 output=0
+Client  --> Req91:Infer model=0 b=1 input=94846
+Worker <--  A77:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R77:Infer exec=15.8 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp91:Infer received=1637159799489385740 departure=0 model_id=0 b=1 output=4000
+Client  --> Req92:Infer model=0 b=1 input=94846
+Worker <--  A78:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R78:Infer exec=24.3 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp92:Infer received=1637159799563275243 departure=0 model_id=0 b=1 output=4000
+Client  --> Req93:Infer model=0 b=1 input=94846
+Worker <--  A79:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R79:Infer exec=24.9 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp93:Infer received=1637159799637106918 departure=0 model_id=0 b=1 output=4000
+Client  --> Req94:Infer model=0 b=1 input=94846
+Worker <--  A80:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R80:Infer exec=10.2 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp94:Infer received=1637159799710874757 departure=0 model_id=0 b=1 output=4000
+Client  --> Req95:Infer model=0 b=1 input=94846
+Worker <--  A81:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R81:Infer exec=26.2 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp95:Infer received=1637159799784751130 departure=0 model_id=0 b=1 output=4000
+Client  --> Req96:Infer model=0 b=1 input=94846
+Worker <--  A82:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R82:Infer exec=8.4 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp96:Infer received=1637159799858593840 departure=0 model_id=0 b=1 output=4000
+Client  --> Req97:Infer model=0 b=1 input=94846
+Worker <--  A83:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R83:Infer exec=11.3 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp97:Infer received=1637159799932517497 departure=0 model_id=0 b=1 output=4000
+Client  --> Req98:Infer model=0 b=1 input=94846
+Worker <--  A84:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R84:Infer exec=10.5 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp98:Infer received=1637159800006212979 departure=0 model_id=0 b=1 output=4000
+Client  --> Req99:Infer model=0 b=1 input=94846
+Worker <--  A85:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R85:Infer exec=14.3 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp99:Infer received=1637159800080129582 departure=0 model_id=0 b=1 output=4000
+Client  --> Req100:Infer model=0 b=1 input=94846
+Worker <--  A86:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R86:Infer exec=10.5 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp100:Infer received=1637159800154054705 departure=0 model_id=0 b=1 output=4000
+Client  --> Req101:Infer model=0 b=1 input=94846
+Worker <--  A87:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R87:Infer exec=26.1 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp101:Infer received=1637159800227903561 departure=0 model_id=0 b=1 output=4000
+Client  --> Req102:Infer model=0 b=1 input=94846
+Worker <--  A88:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R88:Infer exec=9.4 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp102:Infer received=1637159800301507201 departure=0 model_id=0 b=1 output=4000
+Client  --> Req103:Infer model=0 b=1 input=94846
+Worker <--  A89:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R89:Infer exec=17.4 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp103:Infer received=1637159800375503912 departure=0 model_id=0 b=1 output=4000
+Client  --> Req104:Infer model=0 b=1 input=94846
+Worker <--  A90:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R90:Infer exec=18.2 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp104:Infer received=1637159800449229497 departure=0 model_id=0 b=1 output=4000
+Client  --> Req105:Infer model=0 b=1 input=94846
+Worker <--  A91:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R91:Infer exec=5.5 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp105:Infer received=1637159800523021221 departure=0 model_id=0 b=1 output=4000
+Client  --> Req106:Infer model=8 b=1 input=100027
+Worker <--  A92:LoadWeights model=8 gpu=0 [0.0, 10.9]
+Worker  --> R92:LoadWeights duration=7.8
+Worker <--  A93:Infer model=8 gpu=0 batch=1 input=100027 [0.0, 10.9]
+Worker  --> R93:Infer exec=32.9 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp106:Infer received=1637159800596932027 departure=0 model_id=8 b=1 output=4000
+Client  --> Req107:Infer model=0 b=1 input=94846
+Worker <--  A94:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R94:Infer exec=20.6 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp107:Infer received=1637159800670756089 departure=0 model_id=0 b=1 output=4000
+Client  --> Req108:Infer model=0 b=1 input=94846
+Worker <--  A95:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R95:Infer exec=4.6 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp108:Infer received=1637159800744488937 departure=0 model_id=0 b=1 output=4000
+Client  --> Req109:Infer model=0 b=1 input=94846
+Worker <--  A96:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R96:Infer exec=11.1 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp109:Infer received=1637159800781508525 departure=0 model_id=0 b=1 output=4000
+Client  --> Req110:Infer model=0 b=1 input=94846
+Worker <--  A97:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R97:Infer exec=4.0 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp110:Infer received=1637159800818325919 departure=0 model_id=0 b=1 output=4000
+Client  --> Req111:Infer model=0 b=1 input=94846
+Worker <--  A98:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R98:Infer exec=19.4 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp111:Infer received=1637159800855337126 departure=0 model_id=0 b=1 output=4000
+Client  --> Req112:Infer model=0 b=1 input=94846
+Worker <--  A99:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R99:Infer exec=23.3 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp112:Infer received=1637159800892198312 departure=0 model_id=0 b=1 output=4000
+Client  --> Req113:Infer model=0 b=1 input=94846
+Worker <--  A100:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R100:Infer exec=19.1 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp113:Infer received=1637159800929099098 departure=0 model_id=0 b=1 output=4000
+Client  --> Req114:Infer model=0 b=1 input=94846
+Worker <--  A101:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R101:Infer exec=20.7 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp114:Infer received=1637159800966047517 departure=0 model_id=0 b=1 output=4000
+Client  --> Req115:Infer model=0 b=1 input=94846
+Worker <--  A102:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R102:Infer exec=17.3 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp115:Infer received=1637159800990573752 departure=0 model_id=0 b=1 output=4000
+Client  --> Req116:Infer model=0 b=1 input=94846
+Worker <--  A103:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R103:Infer exec=20.5 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp116:Infer received=1637159801015266003 departure=0 model_id=0 b=1 output=4000
+Client  --> Req117:Infer model=0 b=1 input=94846
+Worker <--  A104:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R104:Infer exec=2.4 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp117:Infer received=1637159801039868506 departure=0 model_id=0 b=1 output=4000
+Client  --> Req118:Infer model=0 b=1 input=94846
+Worker <--  A105:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R105:Infer exec=15.5 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp118:Infer received=1637159801064548394 departure=0 model_id=0 b=1 output=4000
+Client  --> Req119:Infer model=0 b=1 input=94846
+Worker <--  A106:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R106:Infer exec=6.1 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp119:Infer received=1637159801089186377 departure=0 model_id=0 b=1 output=4000
+Client  --> Req120:Infer model=0 b=1 input=94846
+Worker <--  A107:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Client  --> Req121:Infer model=0 b=1 input=94846
+Worker <--  A108:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R107:Infer exec=34.0 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp120:Infer received=1637159801113803197 departure=0 model_id=0 b=1 output=4000
+Worker  --> R108:Infer exec=2.9 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp121:Infer received=1637159801138321610 departure=0 model_id=0 b=1 output=4000
+Client  --> Req122:Infer model=0 b=1 input=94846
+Worker <--  A109:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Worker  --> R109:Infer exec=23.3 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp122:Infer received=1637159801162943599 departure=0 model_id=0 b=1 output=4000
+Client  --> Req123:Infer model=0 b=1 input=94846
+Worker <--  A110:Infer model=0 gpu=0 batch=1 input=94846 [0.0, 10.9]
+Client  --> Req124:Infer model=0 b=1 input=94846
+Client  --> Req125:Infer model=10 b=1 input=52741
+Worker <--  A111:Infer model=10 gpu=0 batch=1 input=52741 [0.0, 10.9]
+Worker  --> R110:Infer exec=46.3 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp123:Infer received=1637159801187640250 departure=0 model_id=0 b=1 output=4000
+Client  --> Req126:Infer model=0 b=1 input=94846
+Client <--  Rsp124:Infer received=1637159801205983924 departure=0 model_id=0 b=1 output=0
+Client  --> Req127:Infer model=12 b=1 input=60942
+Worker <--  A112:Infer model=12 gpu=0 batch=1 input=60942 [0.0, 12.1]
+Worker  --> R111:Infer exec=41.6 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp125:Infer received=1637159801223712569 departure=0 model_id=10 b=1 output=4000
+Client  --> Req128:Infer model=0 b=1 input=94846
+Client <--  Rsp126:Infer received=1637159801242906711 departure=0 model_id=0 b=1 output=0
+Client  --> Req129:Infer model=0 b=1 input=94846
+Client  --> Req130:Infer model=0 b=1 input=94846
+Client <--  Rsp128:Infer received=1637159801279822583 departure=0 model_id=0 b=1 output=0
+Worker  --> R112:Infer exec=46.4 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp127:Infer received=1637159801260710785 departure=0 model_id=12 b=1 output=4000
+Client  --> Req131:Infer model=0 b=1 input=94846
+Client <--  Rsp129:Infer received=1637159801298278214 departure=0 model_id=0 b=1 output=0
+Client  --> Req132:Infer model=8 b=1 input=100027
+Worker <--  A113:Infer model=8 gpu=0 batch=1 input=100027 [0.0, 10.9]
+Client <--  Rsp130:Infer received=1637159801316736569 departure=0 model_id=0 b=1 output=0
+Client  --> Req133:Infer model=0 b=1 input=94846
+Client <--  Rsp131:Infer received=1637159801335197648 departure=0 error 8: 
+Worker  --> R113:Infer exec=34.0 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp132:Infer received=1637159801353602574 departure=0 model_id=8 b=1 output=4000
+Client  --> Req134:Infer model=0 b=1 input=94846
+Client  --> Req135:Infer model=0 b=1 input=94846
+Client <--  Rsp133:Infer received=1637159801372098923 departure=0 model_id=0 b=1 output=0
+Client  --> Req136:Infer model=0 b=1 input=94846
+Client <--  Rsp134:Infer received=1637159801390480802 departure=0 model_id=0 b=1 output=0
+Client  --> Req137:Infer model=0 b=1 input=94846
+Client <--  Rsp135:Infer received=1637159801408964649 departure=0 model_id=0 b=1 output=0
+Client  --> Req138:Infer model=0 b=1 input=94846
+Client <--  Rsp136:Infer received=1637159801427561641 departure=0 model_id=0 b=1 output=0
+Client  --> Req139:Infer model=7 b=1 input=84728
+Worker <--  A114:LoadWeights model=7 gpu=0 [0.0, 10.9]
+Client <--  Rsp137:Infer received=1637159801445873397 departure=0 model_id=0 b=1 output=0
+Worker  --> R114:LoadWeights duration=7.9
+Worker <--  A115:Infer model=7 gpu=0 batch=1 input=84728 [0.0, 10.9]
+Client  --> Req140:Infer model=1 b=1 input=52741
+Client <--  Rsp138:Infer received=1637159801464425271 departure=0 model_id=0 b=1 output=0
+Worker  --> R115:Infer exec=22.3 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp139:Infer received=1637159801482587705 departure=0 model_id=7 b=1 output=4000
+Client  --> Req141:Infer model=0 b=1 input=94846
+Client  --> Req142:Infer model=0 b=1 input=94846
+Client <--  Rsp140:Infer received=1637159801500527693 departure=0 model_id=1 b=1 output=0
+Client  --> Req143:Infer model=0 b=1 input=94846
+Client <--  Rsp141:Infer received=1637159801519748863 departure=0 model_id=0 b=1 output=0
+Client  --> Req144:Infer model=0 b=1 input=94846
+Client <--  Rsp142:Infer received=1637159801538206799 departure=0 model_id=0 b=1 output=0
+Client  --> Req145:Infer model=0 b=1 input=94846
+Client <--  Rsp143:Infer received=1637159801556687923 departure=0 model_id=0 b=1 output=0
+Client  --> Req146:Infer model=0 b=1 input=94846
+Client <--  Rsp144:Infer received=1637159801571522102 departure=0 model_id=0 b=1 output=0
+Client  --> Req147:Infer model=0 b=1 input=94846
+Client <--  Rsp145:Infer received=1637159801586290630 departure=0 model_id=0 b=1 output=0
+Client  --> Req148:Infer model=0 b=1 input=94846
+Client <--  Rsp146:Infer received=1637159801601053710 departure=0 model_id=0 b=1 output=0
+Client  --> Req149:Infer model=0 b=1 input=94846
+Client <--  Rsp147:Infer received=1637159801615723412 departure=0 model_id=0 b=1 output=0
+Client  --> Req150:Infer model=0 b=1 input=94846
+Client <--  Rsp148:Infer received=1637159801630554379 departure=0 model_id=0 b=1 output=0
+Client  --> Req151:Infer model=0 b=1 input=94846
+Client <--  Rsp149:Infer received=1637159801645259350 departure=0 model_id=0 b=1 output=0
+Client  --> Req152:Infer model=0 b=1 input=94846
+Client <--  Rsp150:Infer received=1637159801660059377 departure=0 model_id=0 b=1 output=0
+Client  --> Req153:Infer model=0 b=1 input=94846
+Client  --> Req154:Infer model=0 b=1 input=94846
+Client <--  Rsp151:Infer received=1637159801674757714 departure=0 error 8: 
+Client  --> Req155:Infer model=0 b=1 input=94846
+Client <--  Rsp152:Infer received=1637159801689630516 departure=0 model_id=0 b=1 output=0
+Client  --> Req156:Infer model=0 b=1 input=94846
+Client <--  Rsp153:Infer received=1637159801704367685 departure=0 model_id=0 b=1 output=0
+Client  --> Req157:Infer model=10 b=1 input=52741
+Worker <--  A116:Infer model=10 gpu=0 batch=1 input=52741 [0.0, 10.9]
+Client <--  Rsp154:Infer received=1637159801716718769 departure=0 model_id=0 b=1 output=0
+Client  --> Req158:Infer model=0 b=1 input=94846
+Client <--  Rsp155:Infer received=1637159801729159879 departure=0 model_id=0 b=1 output=0
+Worker  --> R116:Infer exec=22.2 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp157:Infer received=1637159801752835857 departure=0 model_id=10 b=1 output=4000
+Client  --> Req159:Infer model=0 b=1 input=94846
+Client <--  Rsp156:Infer received=1637159801741225937 departure=0 model_id=0 b=1 output=0
+Client  --> Req160:Infer model=0 b=1 input=94846
+Client  --> Req161:Infer model=0 b=1 input=94846
+Client <--  Rsp158:Infer received=1637159801765834097 departure=0 model_id=0 b=1 output=0
+Client <--  Rsp159:Infer received=1637159801778141111 departure=0 model_id=0 b=1 output=0
+Client  --> Req162:Infer model=0 b=1 input=94846
+Client <--  Rsp160:Infer received=1637159801792964325 departure=0 model_id=0 b=1 output=0
+Client  --> Req163:Infer model=11 b=1 input=60942
+Worker <--  A117:Infer model=11 gpu=0 batch=1 input=60942 [0.0, 10.9]
+Client <--  Rsp161:Infer received=1637159801807706104 departure=0 model_id=0 b=1 output=0
+Client  --> Req164:Infer model=11 b=1 input=60942
+Client  --> Req165:Infer model=0 b=1 input=94846
+Client <--  Rsp162:Infer received=1637159801822466879 departure=0 error 8: 
+Worker  --> R117:Infer exec=38.8 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp163:Infer received=1637159801836591742 departure=0 model_id=11 b=1 output=4000
+Client  --> Req166:Infer model=0 b=1 input=94846
+Client  --> Req167:Infer model=0 b=1 input=94846
+Client <--  Rsp164:Infer received=1637159801851351121 departure=0 model_id=11 b=1 output=0
+Client  --> Req168:Infer model=9 b=1 input=115165
+Worker <--  A118:Infer model=9 gpu=0 batch=1 input=115165 [0.0, 10.9]
+Client <--  Rsp165:Infer received=1637159801864355089 departure=0 model_id=0 b=1 output=0
+Client  --> Req169:Infer model=0 b=1 input=94846
+Client <--  Rsp166:Infer received=1637159801876611886 departure=0 model_id=0 b=1 output=0
+Client  --> Req170:Infer model=19 b=1 input=69447
+Worker <--  A119:LoadWeights model=19 gpu=0 [0.0, 10.9]
+Client <--  Rsp167:Infer received=1637159801888911496 departure=0 error 8: 
+Worker  --> R119:LoadWeights duration=7.8
+Worker <--  A120:Infer model=19 gpu=0 batch=1 input=69447 [0.0, 10.9]
+Client  --> Req171:Infer model=8 b=1 input=100027
+Worker  --> R118:Infer exec=39.0 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp168:Infer received=1637159801901603409 departure=0 model_id=9 b=1 output=4000
+Client  --> Req172:Infer model=0 b=1 input=94846
+Client <--  Rsp169:Infer received=1637159801913509809 departure=0 model_id=0 b=1 output=0
+Client  --> Req173:Infer model=0 b=1 input=94846
+Client  --> Req174:Infer model=7 b=1 input=84728
+Worker <--  A121:Infer model=7 gpu=0 batch=1 input=84728 [0.0, 10.9]
+Worker  --> R120:Infer exec=34.9 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp170:Infer received=1637159801925428500 departure=0 model_id=19 b=1 output=4000
+Client <--  Rsp171:Infer received=1637159801938155404 departure=0 model_id=8 b=1 output=0
+Client  --> Req175:Infer model=0 b=1 input=94846
+Client <--  Rsp172:Infer received=1637159801950537428 departure=0 error 8: 
+Client  --> Req176:Infer model=0 b=1 input=94846
+Client <--  Rsp173:Infer received=1637159801962703221 departure=0 model_id=0 b=1 output=0
+Client  --> Req177:Infer model=0 b=1 input=94846
+Worker  --> R121:Infer exec=51.9 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp174:Infer received=1637159801974778149 departure=0 model_id=7 b=1 output=4000
+Client  --> Req178:Infer model=0 b=1 input=94846
+Client <--  Rsp175:Infer received=1637159801987325908 departure=0 error 8: 
+Client <--  Rsp176:Infer received=1637159801999627893 departure=0 model_id=0 b=1 output=0
+Client  --> Req179:Infer model=0 b=1 input=94846
+Client <--  Rsp177:Infer received=1637159802014478835 departure=0 model_id=0 b=1 output=0
+Client  --> Req180:Infer model=0 b=1 input=94846
+Client <--  Rsp178:Infer received=1637159802029282563 departure=0 model_id=0 b=1 output=0
+Client  --> Req181:Infer model=0 b=1 input=94846
+Client  --> Req182:Infer model=0 b=1 input=94846
+Client <--  Rsp179:Infer received=1637159802044196083 departure=0 model_id=0 b=1 output=0
+Client  --> Req183:Infer model=0 b=1 input=94846
+Client <--  Rsp180:Infer received=1637159802058803276 departure=0 model_id=0 b=1 output=0
+Client  --> Req184:Infer model=0 b=1 input=94846
+Client <--  Rsp181:Infer received=1637159802073473047 departure=0 model_id=0 b=1 output=0
+Client  --> Req185:Infer model=0 b=1 input=94846
+Client <--  Rsp182:Infer received=1637159802085814982 departure=0 model_id=0 b=1 output=0
+Client  --> Req186:Infer model=0 b=1 input=94846
+Client <--  Rsp183:Infer received=1637159802098022191 departure=0 model_id=0 b=1 output=0
+Client  --> Req187:Infer model=0 b=1 input=94846
+Client <--  Rsp184:Infer received=1637159802110417834 departure=0 model_id=0 b=1 output=0
+Client  --> Req188:Infer model=0 b=1 input=94846
+Client <--  Rsp185:Infer received=1637159802122709622 departure=0 model_id=0 b=1 output=0
+Client  --> Req189:Infer model=0 b=1 input=94846
+Client <--  Rsp186:Infer received=1637159802134958457 departure=0 model_id=0 b=1 output=0
+Client <--  Rsp187:Infer received=1637159802147322252 departure=0 model_id=0 b=1 output=0
+Client  --> Req190:Infer model=0 b=1 input=94846
+Client <--  Rsp188:Infer received=1637159802162127308 departure=0 model_id=0 b=1 output=0
+Client  --> Req191:Infer model=0 b=1 input=94846
+Client <--  Rsp189:Infer received=1637159802176899467 departure=0 model_id=0 b=1 output=0
+Client  --> Req192:Infer model=0 b=1 input=94846
+Client <--  Rsp190:Infer received=1637159802191616452 departure=0 model_id=0 b=1 output=0
+Client  --> Req193:Infer model=0 b=1 input=94846
+Client <--  Rsp191:Infer received=1637159802206379183 departure=0 model_id=0 b=1 output=0
+Client  --> Req194:Infer model=0 b=1 input=94846
+Client <--  Rsp192:Infer received=1637159802221109507 departure=0 model_id=0 b=1 output=0
+Client  --> Req195:Infer model=0 b=1 input=94846
+Client <--  Rsp193:Infer received=1637159802235931395 departure=0 model_id=0 b=1 output=0
+Client  --> Req196:Infer model=0 b=1 input=94846
+Client <--  Rsp194:Infer received=1637159802250770882 departure=0 model_id=0 b=1 output=0
+Client  --> Req197:Infer model=0 b=1 input=94846
+Client  --> Req198:Infer model=0 b=1 input=94846
+Client <--  Rsp195:Infer received=1637159802265533124 departure=0 model_id=0 b=1 output=0
+Client  --> Req199:Infer model=0 b=1 input=94846
+Client <--  Rsp196:Infer received=1637159802280322465 departure=0 model_id=0 b=1 output=0
+Client  --> Req200:Infer model=0 b=1 input=94846
+Client <--  Rsp197:Infer received=1637159802294930636 departure=0 model_id=0 b=1 output=0
+Client  --> Req201:Infer model=0 b=1 input=94846
+Client <--  Rsp198:Infer received=1637159802307385784 departure=0 model_id=0 b=1 output=0
+Client  --> Req202:Infer model=0 b=1 input=94846
+Client <--  Rsp199:Infer received=1637159802319595787 departure=0 model_id=0 b=1 output=0
+Client  --> Req203:Infer model=0 b=1 input=94846
+Client <--  Rsp200:Infer received=1637159802331893512 departure=0 model_id=0 b=1 output=0
+Client  --> Req204:Infer model=0 b=1 input=94846
+Client <--  Rsp201:Infer received=1637159802344200385 departure=0 model_id=0 b=1 output=0
+Client  --> Req205:Infer model=0 b=1 input=94846
+Client <--  Rsp202:Infer received=1637159802356495177 departure=0 model_id=0 b=1 output=0
+Client  --> Req206:Infer model=0 b=1 input=94846
+Client  --> Req207:Infer model=0 b=1 input=94846
+Client <--  Rsp203:Infer received=1637159802368838997 departure=0 error 8: 
+Client  --> Req208:Infer model=10 b=1 input=52741
+Worker <--  A122:Infer model=10 gpu=0 batch=1 input=52741 [0.0, 10.9]
+Client <--  Rsp204:Infer received=1637159802379334307 departure=0 model_id=0 b=1 output=0
+Client  --> Req209:Infer model=0 b=1 input=94846
+Client <--  Rsp205:Infer received=1637159802389902043 departure=0 model_id=0 b=1 output=0
+Client  --> Req210:Infer model=0 b=1 input=94846
+Client <--  Rsp206:Infer received=1637159802400592421 departure=0 model_id=0 b=1 output=0
+Client <--  Rsp207:Infer received=1637159802411061471 departure=0 error 8: 
+Client  --> Req211:Infer model=0 b=1 input=94846
+Client  --> Req212:Infer model=5 b=1 input=101113
+Worker <--  A123:LoadWeights model=5 gpu=0 [0.0, 10.9]
+Worker  --> R122:Infer exec=47.0 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp208:Infer received=1637159802420774968 departure=0 model_id=10 b=1 output=4000
+Client <--  Rsp209:Infer received=1637159802432096789 departure=0 model_id=0 b=1 output=0
+Worker  --> R123:LoadWeights duration=7.9
+Worker <--  A124:Infer model=5 gpu=0 batch=1 input=101113 [0.0, 10.9]
+Client  --> Req213:Infer model=0 b=1 input=94846
+Client <--  Rsp210:Infer received=1637159802442648392 departure=0 model_id=0 b=1 output=0
+Client  --> Req214:Infer model=0 b=1 input=94846
+Worker <--  A125:Infer model=0 gpu=0 batch=2 input=189692 [0.0, 19.8]
+Client <--  Rsp211:Infer received=1637159802454955335 departure=0 error 8: 
+Client  --> Req215:Infer model=5 b=1 input=101113
+Worker <--  A126:Infer model=5 gpu=0 batch=1 input=101113 [0.0, 19.9]
+Worker  --> R124:Infer exec=36.0 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp212:Infer received=1637159802467384154 departure=0 model_id=5 b=1 output=4000
+Client  --> Req216:Infer model=0 b=1 input=94846
+Client  --> Req217:Infer model=10 b=1 input=52741
+Client  --> Req218:Infer model=0 b=1 input=94846
+Worker  --> R125:Infer exec=26.9 input=0.1 output=0.0 gpu0=1597
+Client <--  Rsp213:Infer received=1637159802479584518 departure=0 model_id=0 b=1 output=4000
+Client <--  Rsp214:Infer received=1637159802491864712 departure=0 model_id=0 b=1 output=4000
+Client  --> Req219:Infer model=3 b=1 input=114223
+Worker <--  A127:Infer model=3 gpu=0 batch=1 input=114223 [0.0, 19.8]
+Client <--  Rsp216:Infer received=1637159802516469031 departure=0 model_id=0 b=1 output=0
+Client  --> Req220:Infer model=0 b=1 input=94846
+Client  --> Req221:Infer model=0 b=1 input=94846
+Client <--  Rsp217:Infer received=1637159802526211164 departure=0 model_id=10 b=1 output=0
+Worker  --> R126:Infer exec=34.4 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp215:Infer received=1637159802504327893 departure=0 model_id=5 b=1 output=4000
+Client  --> Req222:Infer model=0 b=1 input=94846
+Client <--  Rsp218:Infer received=1637159802537568535 departure=0 model_id=0 b=1 output=0
+Client  --> Req223:Infer model=0 b=1 input=94846
+Client  --> Req224:Infer model=0 b=1 input=94846
+Client <--  Rsp220:Infer received=1637159802560175719 departure=0 model_id=0 b=1 output=0
+Worker  --> R127:Infer exec=31.4 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp219:Infer received=1637159802548423322 departure=0 model_id=3 b=1 output=4000
+Client  --> Req225:Infer model=0 b=1 input=94846
+Client <--  Rsp221:Infer received=1637159802569165373 departure=0 error 8: 
+Client  --> Req226:Infer model=0 b=1 input=94846
+Client <--  Rsp222:Infer received=1637159802579827815 departure=0 error 8: 
+Client  --> Req227:Infer model=0 b=1 input=94846
+Client <--  Rsp223:Infer received=1637159802590334370 departure=0 error 8: 
+Client  --> Req228:Infer model=0 b=1 input=94846
+Client <--  Rsp224:Infer received=1637159802600881013 departure=0 error 8: 
+Client  --> Req229:Infer model=0 b=1 input=94846
+Client <--  Rsp225:Infer received=1637159802611387358 departure=0 error 8: 
+Client  --> Req230:Infer model=0 b=1 input=94846
+Client <--  Rsp226:Infer received=1637159802622085629 departure=0 error 8: 
+Client  --> Req231:Infer model=0 b=1 input=94846
+Client <--  Rsp227:Infer received=1637159802632539523 departure=0 error 8: 
+Client  --> Req232:Infer model=0 b=1 input=94846
+Client <--  Rsp228:Infer received=1637159802643039093 departure=0 error 8: 
+Client  --> Req233:Infer model=0 b=1 input=94846
+Client <--  Rsp229:Infer received=1637159802653589089 departure=0 error 8: 
+Client  --> Req234:Infer model=0 b=1 input=94846
+Client <--  Rsp230:Infer received=1637159802664256141 departure=0 error 8: 
+Client  --> Req235:Infer model=0 b=1 input=94846
+Client <--  Rsp231:Infer received=1637159802674684123 departure=0 error 8: 
+Client  --> Req236:Infer model=0 b=1 input=94846
+Client <--  Rsp232:Infer received=1637159802685351453 departure=0 error 8: 
+Client  --> Req237:Infer model=0 b=1 input=94846
+Client <--  Rsp233:Infer received=1637159802695943564 departure=0 error 8: 
+Client  --> Req238:Infer model=11 b=1 input=60942
+Worker <--  A128:Infer model=11 gpu=0 batch=1 input=60942 [0.0, 10.9]
+Client <--  Rsp234:Infer received=1637159802706317209 departure=0 model_id=0 b=1 output=0
+Client  --> Req239:Infer model=0 b=1 input=94846
+Client <--  Rsp235:Infer received=1637159802716828024 departure=0 model_id=0 b=1 output=0
+Client  --> Req240:Infer model=4 b=1 input=69447
+Client <--  Rsp236:Infer received=1637159802727397576 departure=0 model_id=0 b=1 output=0
+Client  --> Req241:Infer model=0 b=1 input=94846
+Client <--  Rsp237:Infer received=1637159802737979490 departure=0 error 8: 
+Worker  --> R128:Infer exec=33.0 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp238:Infer received=1637159802747941765 departure=0 model_id=11 b=1 output=4000
+Client  --> Req242:Infer model=0 b=1 input=94846
+Client  --> Req243:Infer model=0 b=1 input=94846
+Client <--  Rsp239:Infer received=1637159802759090168 departure=0 error 8: 
+Client  --> Req244:Infer model=11 b=1 input=60942
+Worker <--  A129:Infer model=11 gpu=0 batch=1 input=60942 [0.0, 10.9]
+Client <--  Rsp240:Infer received=1637159802769232356 departure=0 model_id=4 b=1 output=0
+Client  --> Req245:Infer model=0 b=1 input=94846
+Client <--  Rsp241:Infer received=1637159802780191627 departure=0 model_id=0 b=1 output=0
+Client  --> Req246:Infer model=0 b=1 input=94846
+Client <--  Rsp242:Infer received=1637159802790669407 departure=0 model_id=0 b=1 output=0
+Client  --> Req247:Infer model=0 b=1 input=94846
+Client <--  Rsp243:Infer received=1637159802801270038 departure=0 error 8: 
+Worker  --> R129:Infer exec=33.8 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp244:Infer received=1637159802811168548 departure=0 model_id=11 b=1 output=4000
+Client  --> Req248:Infer model=0 b=1 input=94846
+Client  --> Req249:Infer model=0 b=1 input=94846
+Client <--  Rsp245:Infer received=1637159802822356411 departure=0 error 8: 
+Client  --> Req250:Infer model=0 b=1 input=94846
+Client <--  Rsp246:Infer received=1637159802832909411 departure=0 error 8: 
+Client  --> Req251:Infer model=0 b=1 input=94846
+Client <--  Rsp247:Infer received=1637159802843464715 departure=0 error 8: 
+Client  --> Req252:Infer model=0 b=1 input=94846
+Client <--  Rsp248:Infer received=1637159802853985866 departure=0 error 8: 
+Client  --> Req253:Infer model=0 b=1 input=94846
+Client <--  Rsp249:Infer received=1637159802864527761 departure=0 error 8: 
+Client  --> Req254:Infer model=0 b=1 input=94846
+Client <--  Rsp250:Infer received=1637159802875135656 departure=0 error 8: 
+Client  --> Req255:Infer model=0 b=1 input=94846
+Client <--  Rsp251:Infer received=1637159802885680414 departure=0 error 8: 
+Client  --> Req256:Infer model=0 b=1 input=94846
+Client <--  Rsp252:Infer received=1637159802896169508 departure=0 error 8: 
+Client  --> Req257:Infer model=0 b=1 input=94846
+Client <--  Rsp253:Infer received=1637159802906737663 departure=0 error 8: 
+Client  --> Req258:Infer model=0 b=1 input=94846
+Client <--  Rsp254:Infer received=1637159802917319787 departure=0 error 8: 
+Client  --> Req259:Infer model=3 b=1 input=114223
+Worker <--  A130:Infer model=3 gpu=0 batch=1 input=114223 [0.0, 10.9]
+Client <--  Rsp255:Infer received=1637159802927783737 departure=0 model_id=0 b=1 output=0
+Client  --> Req260:Infer model=0 b=1 input=94846
+Client <--  Rsp256:Infer received=1637159802938558904 departure=0 model_id=0 b=1 output=0
+Client  --> Req261:Infer model=0 b=1 input=94846
+Worker  --> R130:Infer exec=19.5 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp259:Infer received=1637159802970394254 departure=0 model_id=3 b=1 output=4000
+Worker <--  A131:Infer model=0 gpu=0 batch=2 input=189692 [0.0, 10.8]
+Client <--  Rsp257:Infer received=1637159802948920467 departure=0 error 8: 
+Client  --> Req262:Infer model=0 b=1 input=94846
+Client <--  Rsp258:Infer received=1637159802959490717 departure=0 error 7: 
+Client  --> Req263:Infer model=0 b=1 input=94846
+Worker  --> R131:Infer exec=22.7 input=0.1 output=0.0 gpu0=1597
+Client <--  Rsp260:Infer received=1637159802980632824 departure=0 model_id=0 b=1 output=4000
+Client <--  Rsp261:Infer received=1637159802991093632 departure=0 model_id=0 b=1 output=4000
+Client  --> Req264:Infer model=0 b=1 input=94846
+Client  --> Req265:Infer model=0 b=1 input=94846
+Client  --> Req266:Infer model=0 b=1 input=94846
+Client <--  Rsp262:Infer received=1637159803001689375 departure=0 error 8: 
+Client  --> Req267:Infer model=0 b=1 input=94846
+Client <--  Rsp263:Infer received=1637159803012178608 departure=0 error 8: 
+Client  --> Req268:Infer model=0 b=1 input=94846
+Client <--  Rsp264:Infer received=1637159803022867590 departure=0 error 8: 
+Client  --> Req269:Infer model=0 b=1 input=94846
+Client <--  Rsp265:Infer received=1637159803033262118 departure=0 error 8: 
+Client  --> Req270:Infer model=0 b=1 input=94846
+Client <--  Rsp266:Infer received=1637159803043879582 departure=0 error 8: 
+Client  --> Req271:Infer model=0 b=1 input=94846
+Client <--  Rsp267:Infer received=1637159803054361412 departure=0 error 8: 
+Client  --> Req272:Infer model=0 b=1 input=94846
+Client <--  Rsp268:Infer received=1637159803064895833 departure=0 error 8: 
+Client  --> Req273:Infer model=0 b=1 input=94846
+Client <--  Rsp269:Infer received=1637159803075465944 departure=0 error 8: 
+Client  --> Req274:Infer model=7 b=1 input=84728
+Client <--  Rsp270:Infer received=1637159803086017546 departure=0 model_id=0 b=1 output=0
+Client  --> Req275:Infer model=0 b=1 input=94846
+Client <--  Rsp271:Infer received=1637159803096633823 departure=0 error 8: 
+Client  --> Req276:Infer model=0 b=1 input=94846
+Client <--  Rsp272:Infer received=1637159803107193457 departure=0 error 8: 
+Client  --> Req277:Infer model=0 b=1 input=94846
+Client <--  Rsp273:Infer received=1637159803117703573 departure=0 error 8: 
+Client  --> Req278:Infer model=0 b=1 input=94846
+Client <--  Rsp274:Infer received=1637159803127992151 departure=0 model_id=7 b=1 output=0
+Client  --> Req279:Infer model=0 b=1 input=94846
+Client <--  Rsp275:Infer received=1637159803138953098 departure=0 error 8: 
+Client  --> Req280:Infer model=0 b=1 input=94846
+Client <--  Rsp276:Infer received=1637159803149310469 departure=0 error 8: 
+Client  --> Req281:Infer model=0 b=1 input=94846
+Client <--  Rsp277:Infer received=1637159803159855367 departure=0 error 8: 
+Client  --> Req282:Infer model=14 b=1 input=60942
+Worker <--  A132:LoadWeights model=14 gpu=0 [0.0, 10.9]
+Client <--  Rsp278:Infer received=1637159803170455021 departure=0 model_id=0 b=1 output=0
+Worker  --> R132:LoadWeights duration=7.9
+Client  --> Req283:Infer model=13 b=1 input=111253
+Worker <--  A133:LoadWeights model=13 gpu=0 [0.0, 10.9]
+Client <--  Rsp279:Infer received=1637159803180928400 departure=0 model_id=0 b=1 output=0
+Worker  --> R133:LoadWeights duration=7.8
+Client  --> Req284:Infer model=0 b=1 input=94846
+Client <--  Rsp280:Infer received=1637159803191518765 departure=0 error 8: 
+Client  --> Req285:Infer model=0 b=1 input=94846
+Client <--  Rsp281:Infer received=1637159803202133016 departure=0 error 8: 
+Client  --> Req286:Infer model=4 b=1 input=69447
+Worker <--  A134:Infer model=4 gpu=0 batch=1 input=69447 [0.0, 10.9]
+Client <--  Rsp282:Infer received=1637159803211973556 departure=0 model_id=14 b=1 output=0
+Client <--  Rsp283:Infer received=1637159803223473684 departure=0 model_id=13 b=1 output=0
+Client  --> Req287:Infer model=0 b=1 input=94846
+Client <--  Rsp284:Infer received=1637159803233795786 departure=0 model_id=0 b=1 output=0
+Worker  --> R134:Infer exec=21.5 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp286:Infer received=1637159803254400039 departure=0 model_id=4 b=1 output=4000
+Client  --> Req288:Infer model=0 b=1 input=94846
+Client <--  Rsp285:Infer received=1637159803244278035 departure=0 model_id=0 b=1 output=0
+Client  --> Req289:Infer model=0 b=1 input=94846
+Client  --> Req290:Infer model=0 b=1 input=94846
+Client <--  Rsp287:Infer received=1637159803267122753 departure=0 model_id=0 b=1 output=0
+Client  --> Req291:Infer model=0 b=1 input=94846
+Client <--  Rsp288:Infer received=1637159803279555971 departure=0 model_id=0 b=1 output=0
+Client  --> Req292:Infer model=0 b=1 input=94846
+Client <--  Rsp289:Infer received=1637159803291689427 departure=0 model_id=0 b=1 output=0
+Client  --> Req293:Infer model=0 b=1 input=94846
+Client <--  Rsp290:Infer received=1637159803304112727 departure=0 model_id=0 b=1 output=0
+Client  --> Req294:Infer model=0 b=1 input=94846
+Client <--  Rsp291:Infer received=1637159803316293117 departure=0 model_id=0 b=1 output=0
+Client  --> Req295:Infer model=3 b=1 input=114223
+Worker <--  A135:Infer model=3 gpu=0 batch=1 input=114223 [0.0, 10.9]
+Client  --> Req296:Infer model=1 b=1 input=52741
+Client <--  Rsp292:Infer received=1637159803328586441 departure=0 model_id=0 b=1 output=0
+Client  --> Req297:Infer model=0 b=1 input=94846
+Client <--  Rsp293:Infer received=1637159803339168006 departure=0 model_id=0 b=1 output=0
+Client  --> Req298:Infer model=0 b=1 input=94846
+Client <--  Rsp294:Infer received=1637159803349709552 departure=0 error 8: 
+Client  --> Req299:Infer model=0 b=1 input=94846
+Worker  --> R135:Infer exec=40.5 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp295:Infer received=1637159803360815910 departure=0 model_id=3 b=1 output=4000
+Client  --> Req300:Infer model=0 b=1 input=94846
+Client <--  Rsp296:Infer received=1637159803370000423 departure=0 model_id=1 b=1 output=0
+Client  --> Req301:Infer model=0 b=1 input=94846
+Client <--  Rsp297:Infer received=1637159803381380842 departure=0 error 8: 
+Client  --> Req302:Infer model=0 b=1 input=94846
+Client <--  Rsp298:Infer received=1637159803391914285 departure=0 error 8: 
+Client  --> Req303:Infer model=0 b=1 input=94846
+Client <--  Rsp299:Infer received=1637159803402420491 departure=0 error 8: 
+Client  --> Req304:Infer model=13 b=1 input=111253
+Worker <--  A136:Infer model=13 gpu=0 batch=1 input=111253 [0.0, 10.9]
+Client <--  Rsp300:Infer received=1637159803413001287 departure=0 model_id=0 b=1 output=0
+Client  --> Req305:Infer model=0 b=1 input=94846
+Client <--  Rsp301:Infer received=1637159803423531378 departure=0 model_id=0 b=1 output=0
+Client  --> Req306:Infer model=0 b=1 input=94846
+Client <--  Rsp302:Infer received=1637159803434200944 departure=0 model_id=0 b=1 output=0
+Worker  --> R136:Infer exec=27.5 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp304:Infer received=1637159803455528063 departure=0 model_id=13 b=1 output=4000
+Client  --> Req307:Infer model=0 b=1 input=94846
+Client <--  Rsp303:Infer received=1637159803444614469 departure=0 error 8: 
+Client  --> Req308:Infer model=0 b=1 input=94846
+Client  --> Req309:Infer model=0 b=1 input=94846
+Client <--  Rsp305:Infer received=1637159803465707966 departure=0 error 8: 
+Client  --> Req310:Infer model=0 b=1 input=94846
+Client <--  Rsp306:Infer received=1637159803476246089 departure=0 error 8: 
+Client  --> Req311:Infer model=0 b=1 input=94846
+Client <--  Rsp307:Infer received=1637159803486817177 departure=0 error 8: 
+Client  --> Req312:Infer model=7 b=1 input=84728
+Client <--  Rsp308:Infer received=1637159803497395390 departure=0 model_id=0 b=1 output=0
+Client  --> Req313:Infer model=5 b=1 input=101113
+Worker <--  A137:Infer model=5 gpu=0 batch=1 input=101113 [0.0, 10.9]
+Client <--  Rsp309:Infer received=1637159803507916960 departure=0 model_id=0 b=1 output=0
+Client  --> Req314:Infer model=0 b=1 input=94846
+Client <--  Rsp310:Infer received=1637159803518523738 departure=0 model_id=0 b=1 output=0
+Client  --> Req315:Infer model=0 b=1 input=94846
+Worker  --> R137:Infer exec=20.0 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp313:Infer received=1637159803550276255 departure=0 model_id=5 b=1 output=4000
+Worker <--  A138:Infer model=0 gpu=0 batch=2 input=189692 [0.0, 10.9]
+Client <--  Rsp311:Infer received=1637159803529070102 departure=0 error 8: 
+Client  --> Req316:Infer model=0 b=1 input=94846
+Client <--  Rsp312:Infer received=1637159803539355816 departure=0 model_id=7 b=1 output=0
+Client  --> Req317:Infer model=10 b=1 input=52741
+Client  --> Req318:Infer model=0 b=1 input=94846
+Worker  --> R138:Infer exec=29.4 input=0.1 output=0.0 gpu0=1597
+Client <--  Rsp314:Infer received=1637159803560666941 departure=0 model_id=0 b=1 output=4000
+Client <--  Rsp315:Infer received=1637159803571271554 departure=0 model_id=0 b=1 output=4000
+Client  --> Req319:Infer model=0 b=1 input=94846
+Client  --> Req320:Infer model=0 b=1 input=94846
+Client <--  Rsp316:Infer received=1637159803581752895 departure=0 error 8: 
+Client  --> Req321:Infer model=0 b=1 input=94846
+Client <--  Rsp317:Infer received=1637159803591493422 departure=0 model_id=10 b=1 output=0
+Client  --> Req322:Infer model=0 b=1 input=94846
+Client <--  Rsp318:Infer received=1637159803602914139 departure=0 model_id=0 b=1 output=0
+Client  --> Req323:Infer model=0 b=1 input=94846
+Client <--  Rsp319:Infer received=1637159803613423278 departure=0 model_id=0 b=1 output=0
+Client  --> Req324:Infer model=0 b=1 input=94846
+Client <--  Rsp320:Infer received=1637159803623960493 departure=0 model_id=0 b=1 output=0
+Client  --> Req325:Infer model=0 b=1 input=94846
+Client <--  Rsp321:Infer received=1637159803633249350 departure=0 model_id=0 b=1 output=0
+Client  --> Req326:Infer model=0 b=1 input=94846
+Client <--  Rsp322:Infer received=1637159803642445527 departure=0 model_id=0 b=1 output=0
+Client  --> Req327:Infer model=0 b=1 input=94846
+Client <--  Rsp323:Infer received=1637159803651641844 departure=0 model_id=0 b=1 output=0
+Client  --> Req328:Infer model=0 b=1 input=94846
+Client <--  Rsp324:Infer received=1637159803660980569 departure=0 model_id=0 b=1 output=0
+Client  --> Req329:Infer model=0 b=1 input=94846
+Client <--  Rsp325:Infer received=1637159803670095311 departure=0 model_id=0 b=1 output=0
+Client  --> Req330:Infer model=0 b=1 input=94846
+Client <--  Rsp326:Infer received=1637159803679276961 departure=0 model_id=0 b=1 output=0
+Client  --> Req331:Infer model=8 b=1 input=100027
+Worker <--  A139:Infer model=8 gpu=0 batch=1 input=100027 [0.0, 10.9]
+Client <--  Rsp327:Infer received=1637159803688583837 departure=0 model_id=0 b=1 output=0
+Client  --> Req332:Infer model=1 b=1 input=52741
+Client <--  Rsp328:Infer received=1637159803697718693 departure=0 model_id=0 b=1 output=0
+Client  --> Req333:Infer model=13 b=1 input=111253
+Client <--  Rsp329:Infer received=1637159803706970325 departure=0 model_id=0 b=1 output=0
+Worker  --> R139:Infer exec=24.9 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp331:Infer received=1637159803725584288 departure=0 model_id=8 b=1 output=4000
+Client  --> Req334:Infer model=0 b=1 input=94846
+Client <--  Rsp330:Infer received=1637159803716202611 departure=0 model_id=0 b=1 output=0
+Client  --> Req335:Infer model=1 b=1 input=52741
+Worker <--  A140:Infer model=1 gpu=0 batch=1 input=52741 [0.0, 10.9]
+Client  --> Req336:Infer model=2 b=1 input=98318
+Worker <--  A141:LoadWeights model=2 gpu=0 [0.0, 10.9]
+Client <--  Rsp332:Infer received=1637159803733952139 departure=0 error 7: 
+Worker  --> R141:LoadWeights duration=7.9
+Client  --> Req337:Infer model=0 b=1 input=94846
+Client <--  Rsp333:Infer received=1637159803744194550 departure=0 model_id=13 b=1 output=0
+Client  --> Req338:Infer model=0 b=1 input=94846
+Client <--  Rsp334:Infer received=1637159803753112407 departure=0 model_id=0 b=1 output=0
+Worker  --> R140:Infer exec=39.7 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp335:Infer received=1637159803761541438 departure=0 model_id=1 b=1 output=4000
+Client  --> Req339:Infer model=0 b=1 input=94846
+Client  --> Req340:Infer model=0 b=1 input=94846
+Client <--  Rsp336:Infer received=1637159803771692008 departure=0 model_id=2 b=1 output=0
+Client  --> Req341:Infer model=0 b=1 input=94846
+Client <--  Rsp337:Infer received=1637159803782222099 departure=0 error 8: 
+Client  --> Req342:Infer model=0 b=1 input=94846
+Client <--  Rsp338:Infer received=1637159803792733891 departure=0 error 8: 
+Client  --> Req343:Infer model=0 b=1 input=94846
+Client <--  Rsp339:Infer received=1637159803803225919 departure=0 error 8: 
+Client  --> Req344:Infer model=0 b=1 input=94846
+Client <--  Rsp340:Infer received=1637159803813763343 departure=0 error 8: 
+Client  --> Req345:Infer model=0 b=1 input=94846
+Client <--  Rsp341:Infer received=1637159803824360972 departure=0 error 8: 
+Client  --> Req346:Infer model=0 b=1 input=94846
+Client <--  Rsp342:Infer received=1637159803834931152 departure=0 error 8: 
+Client  --> Req347:Infer model=0 b=1 input=94846
+Client <--  Rsp343:Infer received=1637159803845420176 departure=0 error 8: 
+Client  --> Req348:Infer model=0 b=1 input=94846
+Client <--  Rsp344:Infer received=1637159803855996223 departure=0 error 8: 
+Client  --> Req349:Infer model=0 b=1 input=94846
+Client <--  Rsp345:Infer received=1637159803866470231 departure=0 error 8: 
+Client  --> Req350:Infer model=0 b=1 input=94846
+Client <--  Rsp346:Infer received=1637159803877104318 departure=0 error 8: 
+Client  --> Req351:Infer model=0 b=1 input=94846
+Client <--  Rsp347:Infer received=1637159803887688536 departure=0 error 8: 
+Client  --> Req352:Infer model=0 b=1 input=94846
+Client <--  Rsp348:Infer received=1637159803898244329 departure=0 error 8: 
+Client  --> Req353:Infer model=0 b=1 input=94846
+Client <--  Rsp349:Infer received=1637159803908717918 departure=0 error 8: 
+Client  --> Req354:Infer model=0 b=1 input=94846
+Client <--  Rsp350:Infer received=1637159803919250314 departure=0 error 8: 
+Client  --> Req355:Infer model=0 b=1 input=94846
+Client <--  Rsp351:Infer received=1637159803929818050 departure=0 error 8: 
+Client  --> Req356:Infer model=0 b=1 input=94846
+Client <--  Rsp352:Infer received=1637159803940394447 departure=0 error 8: 
+Client  --> Req357:Infer model=4 b=1 input=69447
+Worker <--  A142:Infer model=4 gpu=0 batch=1 input=69447 [0.0, 10.9]
+Client <--  Rsp353:Infer received=1637159803951040685 departure=0 model_id=0 b=1 output=0
+Client <--  Rsp354:Infer received=1637159803961464617 departure=0 model_id=0 b=1 output=0
+Client  --> Req358:Infer model=0 b=1 input=94846
+Client <--  Rsp355:Infer received=1637159803972014264 departure=0 model_id=0 b=1 output=0
+Worker  --> R142:Infer exec=22.9 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp357:Infer received=1637159803992737178 departure=0 model_id=4 b=1 output=4000
+Client  --> Req359:Infer model=0 b=1 input=94846
+Client <--  Rsp356:Infer received=1637159803982491345 departure=0 model_id=0 b=1 output=0
+Client  --> Req360:Infer model=0 b=1 input=94846
+Client  --> Req361:Infer model=0 b=1 input=94846
+Client <--  Rsp358:Infer received=1637159804005420431 departure=0 model_id=0 b=1 output=0
+Client  --> Req362:Infer model=0 b=1 input=94846
+Client <--  Rsp359:Infer received=1637159804017768163 departure=0 model_id=0 b=1 output=0
+Client  --> Req363:Infer model=0 b=1 input=94846
+Client <--  Rsp360:Infer received=1637159804030004426 departure=0 model_id=0 b=1 output=0
+Client  --> Req364:Infer model=0 b=1 input=94846
+Client <--  Rsp361:Infer received=1637159804042235801 departure=0 model_id=0 b=1 output=0
+Client  --> Req365:Infer model=0 b=1 input=94846
+Client <--  Rsp362:Infer received=1637159804054603577 departure=0 model_id=0 b=1 output=0
+Client  --> Req366:Infer model=0 b=1 input=94846
+Client <--  Rsp363:Infer received=1637159804067008020 departure=0 model_id=0 b=1 output=0
+Client  --> Req367:Infer model=0 b=1 input=94846
+Client <--  Rsp364:Infer received=1637159804079227731 departure=0 model_id=0 b=1 output=0
+Client  --> Req368:Infer model=0 b=1 input=94846
+Client <--  Rsp365:Infer received=1637159804091699013 departure=0 model_id=0 b=1 output=0
+Client  --> Req369:Infer model=0 b=1 input=94846
+Client <--  Rsp366:Infer received=1637159804103905803 departure=0 model_id=0 b=1 output=0
+Client  --> Req370:Infer model=0 b=1 input=94846
+Client <--  Rsp367:Infer received=1637159804116178175 departure=0 model_id=0 b=1 output=0
+Client  --> Req371:Infer model=0 b=1 input=94846
+Client <--  Rsp368:Infer received=1637159804128493011 departure=0 model_id=0 b=1 output=0
+Client <--  Rsp369:Infer received=1637159804140864768 departure=0 model_id=0 b=1 output=0
+Client  --> Req372:Infer model=0 b=1 input=94846
+Client <--  Rsp370:Infer received=1637159804155541803 departure=0 model_id=0 b=1 output=0
+Client  --> Req373:Infer model=0 b=1 input=94846
+Client <--  Rsp371:Infer received=1637159804170413348 departure=0 model_id=0 b=1 output=0
+Client  --> Req374:Infer model=0 b=1 input=94846
+Client  --> Req375:Infer model=0 b=1 input=94846
+Client <--  Rsp372:Infer received=1637159804185118738 departure=0 model_id=0 b=1 output=0
+Client  --> Req376:Infer model=0 b=1 input=94846
+Client <--  Rsp373:Infer received=1637159804199795703 departure=0 model_id=0 b=1 output=0
+Client  --> Req377:Infer model=0 b=1 input=94846
+Client <--  Rsp374:Infer received=1637159804214595940 departure=0 model_id=0 b=1 output=0
+Client  --> Req378:Infer model=0 b=1 input=94846
+Client <--  Rsp375:Infer received=1637159804226891988 departure=0 model_id=0 b=1 output=0
+Client  --> Req379:Infer model=0 b=1 input=94846
+Client <--  Rsp376:Infer received=1637159804239203890 departure=0 model_id=0 b=1 output=0
+Client throughput=12.8 success=35.96% (228/356 violations) min=3.6 max=70.1 mean=25.2
+Client  --> Req380:Infer model=0 b=1 input=94846
+Client <--  Rsp377:Infer received=1637159804251501126 departure=0 model_id=0 b=1 output=0
+Client  --> Req381:Infer model=0 b=1 input=94846
+Client <--  Rsp378:Infer received=1637159804263801295 departure=0 model_id=0 b=1 output=0
+Client  --> Req382:Infer model=0 b=1 input=94846
+Client <--  Rsp379:Infer received=1637159804276099927 departure=0 model_id=0 b=1 output=0
+Client  --> Req383:Infer model=0 b=1 input=94846
+Client <--  Rsp380:Infer received=1637159804288470637 departure=0 model_id=0 b=1 output=0
+Client  --> Req384:Infer model=0 b=1 input=94846
+Client <--  Rsp381:Infer received=1637159804300769828 departure=0 model_id=0 b=1 output=0
+Client  --> Req385:Infer model=10 b=1 input=52741
+Client <--  Rsp382:Infer received=1637159804313027463 departure=0 model_id=0 b=1 output=0
+Client  --> Req386:Infer model=0 b=1 input=94846
+Client <--  Rsp383:Infer received=1637159804325323931 departure=0 model_id=0 b=1 output=0
+Client  --> Req387:Infer model=0 b=1 input=94846
+Client <--  Rsp384:Infer received=1637159804337660697 departure=0 model_id=0 b=1 output=0
+Client  --> Req388:Infer model=0 b=1 input=94846
+Client <--  Rsp385:Infer received=1637159804349113123 departure=0 model_id=10 b=1 output=0
+Client  --> Req389:Infer model=11 b=1 input=60942
+Worker <--  A143:Infer model=11 gpu=0 batch=1 input=60942 [0.0, 10.9]
+Client <--  Rsp386:Infer received=1637159804362310483 departure=0 model_id=0 b=1 output=0
+Client  --> Req390:Infer model=0 b=1 input=94846
+Client <--  Rsp387:Infer received=1637159804374575801 departure=0 model_id=0 b=1 output=0
+Client  --> Req391:Infer model=0 b=1 input=94846
+Client <--  Rsp388:Infer received=1637159804386883862 departure=0 error 8: 
+Worker  --> R143:Infer exec=34.7 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp389:Infer received=1637159804398547560 departure=0 model_id=11 b=1 output=4000
+W0-GPU0 LoadW min=7.88 max=7.95 mean=7.90 e2emean=8.20 e2emax=8.29 throughput=1.6 utilization=0.01 clock=[0-0] norm_max=0.00 norm_mean=0.00
+W0-GPU0 Infer min=2.50 max=51.94 mean=21.97 e2emean=23.92 e2emax=66.46 throughput=12.5 utilization=0.27 clock=[1245-1597] norm_max=60.11 norm_mean=23.61
+Client  --> Req392:Infer model=0 b=1 input=94846
+Client  --> Req393:Infer model=0 b=1 input=94846
+Client <--  Rsp390:Infer received=1637159804411454028 departure=0 model_id=0 b=1 output=0
+Client  --> Req394:Infer model=6 b=1 input=33637
+Worker <--  A144:Infer model=6 gpu=0 batch=1 input=33637 [0.0, 10.9]
+Client <--  Rsp391:Infer received=1637159804423821455 departure=0 model_id=0 b=1 output=0
+Client <--  Rsp392:Infer received=1637159804436068754 departure=0 model_id=0 b=1 output=0
+Client  --> Req395:Infer model=0 b=1 input=94846
+Worker  --> R144:Infer exec=21.2 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp394:Infer received=1637159804464582483 departure=0 model_id=6 b=1 output=4000
+Client <--  Rsp393:Infer received=1637159804450832462 departure=0 model_id=0 b=1 output=0
+Client  --> Req396:Infer model=0 b=1 input=94846
+Client  --> Req397:Infer model=0 b=1 input=94846
+Client <--  Rsp395:Infer received=1637159804480490904 departure=0 model_id=0 b=1 output=0
+Client  --> Req398:Infer model=16 b=1 input=114223
+Worker <--  A145:LoadWeights model=16 gpu=0 [0.0, 10.9]
+Worker  --> R145:LoadWeights duration=7.8
+Client <--  Rsp396:Infer received=1637159804495173526 departure=0 model_id=0 b=1 output=0
+Client  --> Req399:Infer model=0 b=1 input=94846
+Client <--  Rsp397:Infer received=1637159804509930670 departure=0 model_id=0 b=1 output=0
+Client  --> Req400:Infer model=0 b=1 input=94846
+Client <--  Rsp398:Infer received=1637159804524997354 departure=0 model_id=16 b=1 output=0
+Client  --> Req401:Infer model=0 b=1 input=94846
+Client <--  Rsp399:Infer received=1637159804539475478 departure=0 model_id=0 b=1 output=0
+Client  --> Req402:Infer model=0 b=1 input=94846
+Client <--  Rsp400:Infer received=1637159804554217536 departure=0 model_id=0 b=1 output=0
+Client  --> Req403:Infer model=0 b=1 input=94846
+Client <--  Rsp401:Infer received=1637159804569002686 departure=0 model_id=0 b=1 output=0
+Client  --> Req404:Infer model=0 b=1 input=94846
+Client <--  Rsp402:Infer received=1637159804583706750 departure=0 model_id=0 b=1 output=0
+Client  --> Req405:Infer model=0 b=1 input=94846
+Client <--  Rsp403:Infer received=1637159804598492878 departure=0 model_id=0 b=1 output=0
+Client  --> Req406:Infer model=0 b=1 input=94846
+Client <--  Rsp404:Infer received=1637159804613264130 departure=0 model_id=0 b=1 output=0
+Client  --> Req407:Infer model=0 b=1 input=94846
+Client <--  Rsp405:Infer received=1637159804628104525 departure=0 model_id=0 b=1 output=0
+Client  --> Req408:Infer model=12 b=1 input=60942
+Client <--  Rsp406:Infer received=1637159804642761376 departure=0 model_id=0 b=1 output=0
+Client  --> Req409:Infer model=0 b=1 input=94846
+Client <--  Rsp407:Infer received=1637159804657579911 departure=0 model_id=0 b=1 output=0
+Client  --> Req410:Infer model=0 b=1 input=94846
+Client <--  Rsp408:Infer received=1637159804671710152 departure=0 model_id=12 b=1 output=0
+Client  --> Req411:Infer model=0 b=1 input=94846
+Client <--  Rsp409:Infer received=1637159804687122065 departure=0 model_id=0 b=1 output=0
+Client  --> Req412:Infer model=0 b=1 input=94846
+Client <--  Rsp410:Infer received=1637159804702031674 departure=0 model_id=0 b=1 output=0
+Client  --> Req413:Infer model=0 b=1 input=94846
+Client <--  Rsp411:Infer received=1637159804716652416 departure=0 model_id=0 b=1 output=0
+Client  --> Req414:Infer model=0 b=1 input=94846
+Client <--  Rsp412:Infer received=1637159804731478913 departure=0 model_id=0 b=1 output=0
+Client  --> Req415:Infer model=0 b=1 input=94846
+Client <--  Rsp413:Infer received=1637159804746208050 departure=0 model_id=0 b=1 output=0
+Client  --> Req416:Infer model=0 b=1 input=94846
+Client <--  Rsp414:Infer received=1637159804760966451 departure=0 model_id=0 b=1 output=0
+Client  --> Req417:Infer model=0 b=1 input=94846
+Client <--  Rsp415:Infer received=1637159804775732674 departure=0 model_id=0 b=1 output=0
+Client  --> Req418:Infer model=0 b=1 input=94846
+Client <--  Rsp416:Infer received=1637159804790447563 departure=0 model_id=0 b=1 output=0
+Client  --> Req419:Infer model=0 b=1 input=94846
+Client <--  Rsp417:Infer received=1637159804805215533 departure=0 model_id=0 b=1 output=0
+Client  --> Req420:Infer model=0 b=1 input=94846
+Client <--  Rsp418:Infer received=1637159804820051807 departure=0 model_id=0 b=1 output=0
+Client  --> Req421:Infer model=0 b=1 input=94846
+Client <--  Rsp419:Infer received=1637159804834774938 departure=0 model_id=0 b=1 output=0
+Client  --> Req422:Infer model=0 b=1 input=94846
+Client <--  Rsp420:Infer received=1637159804849524189 departure=0 model_id=0 b=1 output=0
+Client  --> Req423:Infer model=0 b=1 input=94846
+Client <--  Rsp421:Infer received=1637159804864300191 departure=0 model_id=0 b=1 output=0
+Client  --> Req424:Infer model=0 b=1 input=94846
+Client <--  Rsp422:Infer received=1637159804879027931 departure=0 model_id=0 b=1 output=0
+Client  --> Req425:Infer model=0 b=1 input=94846
+Client <--  Rsp423:Infer received=1637159804893822510 departure=0 model_id=0 b=1 output=0
+Client  --> Req426:Infer model=0 b=1 input=94846
+Client <--  Rsp424:Infer received=1637159804908637064 departure=0 model_id=0 b=1 output=0
+Client  --> Req427:Infer model=0 b=1 input=94846
+Client <--  Rsp425:Infer received=1637159804923436392 departure=0 model_id=0 b=1 output=0
+Client  --> Req428:Infer model=4 b=1 input=69447
+Worker <--  A146:Infer model=4 gpu=0 batch=1 input=69447 [0.0, 10.9]
+Client <--  Rsp426:Infer received=1637159804938219168 departure=0 model_id=0 b=1 output=0
+Client  --> Req429:Infer model=0 b=1 input=94846
+Client <--  Rsp427:Infer received=1637159804952944882 departure=0 model_id=0 b=1 output=0
+Worker  --> R146:Infer exec=26.9 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp428:Infer received=1637159804970912806 departure=0 model_id=4 b=1 output=4000
+Client  --> Req430:Infer model=0 b=1 input=94846
+Client  --> Req431:Infer model=0 b=1 input=94846
+Client <--  Rsp429:Infer received=1637159804989890717 departure=0 model_id=0 b=1 output=0
+Client  --> Req432:Infer model=0 b=1 input=94846
+Client <--  Rsp430:Infer received=1637159805008278671 departure=0 model_id=0 b=1 output=0
+Client  --> Req433:Infer model=0 b=1 input=94846
+Client <--  Rsp431:Infer received=1637159805026729064 departure=0 model_id=0 b=1 output=0
+Client  --> Req434:Infer model=0 b=1 input=94846
+Client <--  Rsp432:Infer received=1637159805041524272 departure=0 model_id=0 b=1 output=0
+Client  --> Req435:Infer model=0 b=1 input=94846
+Client <--  Rsp433:Infer received=1637159805056330794 departure=0 model_id=0 b=1 output=0
+Client  --> Req436:Infer model=0 b=1 input=94846
+Client <--  Rsp434:Infer received=1637159805071131799 departure=0 model_id=0 b=1 output=0
+Client  --> Req437:Infer model=0 b=1 input=94846
+Client <--  Rsp435:Infer received=1637159805085811906 departure=0 model_id=0 b=1 output=0
+Client  --> Req438:Infer model=0 b=1 input=94846
+Client <--  Rsp436:Infer received=1637159805100644270 departure=0 model_id=0 b=1 output=0
+Client  --> Req439:Infer model=0 b=1 input=94846
+Client <--  Rsp437:Infer received=1637159805115296930 departure=0 model_id=0 b=1 output=0
+Client  --> Req440:Infer model=0 b=1 input=94846
+Client <--  Rsp438:Infer received=1637159805130245930 departure=0 model_id=0 b=1 output=0
+Client  --> Req441:Infer model=0 b=1 input=94846
+Client <--  Rsp439:Infer received=1637159805144858710 departure=0 model_id=0 b=1 output=0
+Client  --> Req442:Infer model=8 b=1 input=100027
+Worker <--  A147:Infer model=8 gpu=0 batch=1 input=100027 [0.0, 10.9]
+Client <--  Rsp440:Infer received=1637159805159664045 departure=0 model_id=0 b=1 output=0
+Client  --> Req443:Infer model=10 b=1 input=52741
+Worker  --> R147:Infer exec=26.1 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp442:Infer received=1637159805189311661 departure=0 model_id=8 b=1 output=4000
+Client <--  Rsp441:Infer received=1637159805174477272 departure=0 model_id=0 b=1 output=0
+Client  --> Req444:Infer model=0 b=1 input=94846
+Client  --> Req445:Infer model=17 b=1 input=69447
+Worker <--  A148:LoadWeights model=17 gpu=0 [0.0, 10.9]
+Worker  --> R148:LoadWeights duration=7.8
+Client <--  Rsp443:Infer received=1637159805203434638 departure=0 model_id=10 b=1 output=0
+Client  --> Req446:Infer model=0 b=1 input=94846
+Client <--  Rsp444:Infer received=1637159805218716156 departure=0 model_id=0 b=1 output=0
+Client  --> Req447:Infer model=0 b=1 input=94846
+Client <--  Rsp445:Infer received=1637159805233033504 departure=0 model_id=17 b=1 output=0
+Client  --> Req448:Infer model=0 b=1 input=94846
+Client <--  Rsp446:Infer received=1637159805248251536 departure=0 model_id=0 b=1 output=0
+Client  --> Req449:Infer model=0 b=1 input=94846
+Client <--  Rsp447:Infer received=1637159805266785530 departure=0 model_id=0 b=1 output=0
+Client  --> Req450:Infer model=0 b=1 input=94846
+Client <--  Rsp448:Infer received=1637159805285155186 departure=0 model_id=0 b=1 output=0
+Client  --> Req451:Infer model=0 b=1 input=94846
+Client <--  Rsp449:Infer received=1637159805303678215 departure=0 model_id=0 b=1 output=0
+Client  --> Req452:Infer model=0 b=1 input=94846
+Client <--  Rsp450:Infer received=1637159805322080836 departure=0 model_id=0 b=1 output=0
+Client  --> Req453:Infer model=0 b=1 input=94846
+Client <--  Rsp451:Infer received=1637159805340556093 departure=0 model_id=0 b=1 output=0
+Client  --> Req454:Infer model=0 b=1 input=94846
+Client <--  Rsp452:Infer received=1637159805359024924 departure=0 model_id=0 b=1 output=0
+Client  --> Req455:Infer model=0 b=1 input=94846
+Client <--  Rsp453:Infer received=1637159805377422936 departure=0 model_id=0 b=1 output=0
+Client  --> Req456:Infer model=0 b=1 input=94846
+Client <--  Rsp454:Infer received=1637159805395891348 departure=0 model_id=0 b=1 output=0
+Client  --> Req457:Infer model=0 b=1 input=94846
+Client <--  Rsp455:Infer received=1637159805414358573 departure=0 model_id=0 b=1 output=0
+Client  --> Req458:Infer model=0 b=1 input=94846
+Client <--  Rsp456:Infer received=1637159805432898853 departure=0 model_id=0 b=1 output=0
+Client  --> Req459:Infer model=0 b=1 input=94846
+Client <--  Rsp457:Infer received=1637159805451251258 departure=0 model_id=0 b=1 output=0
+Client  --> Req460:Infer model=0 b=1 input=94846
+Client <--  Rsp458:Infer received=1637159805469709194 departure=0 model_id=0 b=1 output=0
+Client  --> Req461:Infer model=0 b=1 input=94846
+Client <--  Rsp459:Infer received=1637159805488183543 departure=0 model_id=0 b=1 output=0
+Client  --> Req462:Infer model=0 b=1 input=94846
+Client <--  Rsp460:Infer received=1637159805506622971 departure=0 model_id=0 b=1 output=0
+Client  --> Req463:Infer model=0 b=1 input=94846
+Client <--  Rsp461:Infer received=1637159805525173029 departure=0 model_id=0 b=1 output=0
+Client  --> Req464:Infer model=0 b=1 input=94846
+Client <--  Rsp462:Infer received=1637159805543595765 departure=0 model_id=0 b=1 output=0
+Client  --> Req465:Infer model=0 b=1 input=94846
+Client <--  Rsp463:Infer received=1637159805562012424 departure=0 model_id=0 b=1 output=0
+Client  --> Req466:Infer model=0 b=1 input=94846
+Client <--  Rsp464:Infer received=1637159805580472944 departure=0 model_id=0 b=1 output=0
+Client  --> Req467:Infer model=0 b=1 input=94846
+Client <--  Rsp465:Infer received=1637159805598930042 departure=0 model_id=0 b=1 output=0
+Client  --> Req468:Infer model=0 b=1 input=94846
+Client <--  Rsp466:Infer received=1637159805617488481 departure=0 model_id=0 b=1 output=0
+Client  --> Req469:Infer model=8 b=1 input=100027
+Worker <--  A149:Infer model=8 gpu=0 batch=1 input=100027 [0.0, 10.9]
+Client <--  Rsp467:Infer received=1637159805635864772 departure=0 model_id=0 b=1 output=0
+Client  --> Req470:Infer model=0 b=1 input=94846
+Client <--  Rsp468:Infer received=1637159805654289952 departure=0 error 8: 
+Worker  --> R149:Infer exec=23.5 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp469:Infer received=1637159805672856632 departure=0 model_id=8 b=1 output=4000
+Client  --> Req471:Infer model=0 b=1 input=94846
+Client  --> Req472:Infer model=0 b=1 input=94846
+Client <--  Rsp470:Infer received=1637159805691215602 departure=0 model_id=0 b=1 output=0
+Client  --> Req473:Infer model=0 b=1 input=94846
+Client <--  Rsp471:Infer received=1637159805709640643 departure=0 model_id=0 b=1 output=0
+Client  --> Req474:Infer model=0 b=1 input=94846
+Client <--  Rsp472:Infer received=1637159805728102629 departure=0 model_id=0 b=1 output=0
+Client  --> Req475:Infer model=17 b=1 input=69447
+Worker <--  A150:Infer model=17 gpu=0 batch=1 input=69447 [0.0, 10.9]
+Client <--  Rsp473:Infer received=1637159805746641093 departure=0 model_id=0 b=1 output=0
+Client  --> Req476:Infer model=0 b=1 input=94846
+Client <--  Rsp474:Infer received=1637159805765052026 departure=0 model_id=0 b=1 output=0
+Worker  --> R150:Infer exec=34.6 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp475:Infer received=1637159805783207057 departure=0 model_id=17 b=1 output=4000
+Client  --> Req477:Infer model=0 b=1 input=94846
+Client  --> Req478:Infer model=9 b=1 input=115165
+Worker <--  A151:Infer model=9 gpu=0 batch=1 input=115165 [0.0, 10.9]
+Client <--  Rsp476:Infer received=1637159805802151792 departure=0 model_id=0 b=1 output=0
+Client  --> Req479:Infer model=0 b=1 input=94846
+Client <--  Rsp477:Infer received=1637159805820433517 departure=0 model_id=0 b=1 output=0
+Client  --> Req480:Infer model=0 b=1 input=94846
+Worker  --> R151:Infer exec=37.1 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp478:Infer received=1637159805839335998 departure=0 model_id=9 b=1 output=4000
+Client  --> Req481:Infer model=0 b=1 input=94846
+Client <--  Rsp479:Infer received=1637159805857403377 departure=0 model_id=0 b=1 output=0
+Client  --> Req482:Infer model=0 b=1 input=94846
+Client <--  Rsp480:Infer received=1637159805875774010 departure=0 model_id=0 b=1 output=0
+Client  --> Req483:Infer model=0 b=1 input=94846
+Client <--  Rsp481:Infer received=1637159805894252340 departure=0 model_id=0 b=1 output=0
+Client  --> Req484:Infer model=0 b=1 input=94846
+Client <--  Rsp482:Infer received=1637159805912686251 departure=0 model_id=0 b=1 output=0
+Client  --> Req485:Infer model=0 b=1 input=94846
+Client <--  Rsp483:Infer received=1637159805931207604 departure=0 model_id=0 b=1 output=0
+Client  --> Req486:Infer model=0 b=1 input=94846
+Client <--  Rsp484:Infer received=1637159805949608548 departure=0 model_id=0 b=1 output=0
+Client  --> Req487:Infer model=0 b=1 input=94846
+Client <--  Rsp485:Infer received=1637159805968069348 departure=0 model_id=0 b=1 output=0
+Client  --> Req488:Infer model=0 b=1 input=94846
+Client <--  Rsp486:Infer received=1637159805986608999 departure=0 model_id=0 b=1 output=0
+Client  --> Req489:Infer model=0 b=1 input=94846
+Client <--  Rsp487:Infer received=1637159806005150886 departure=0 model_id=0 b=1 output=0
+Client  --> Req490:Infer model=0 b=1 input=94846
+Client <--  Rsp488:Infer received=1637159806023482128 departure=0 model_id=0 b=1 output=0
+Client  --> Req491:Infer model=0 b=1 input=94846
+Client <--  Rsp489:Infer received=1637159806042027437 departure=0 model_id=0 b=1 output=0
+Client  --> Req492:Infer model=0 b=1 input=94846
+Client <--  Rsp490:Infer received=1637159806060417067 departure=0 model_id=0 b=1 output=0
+Client  --> Req493:Infer model=0 b=1 input=94846
+Client <--  Rsp491:Infer received=1637159806078795523 departure=0 model_id=0 b=1 output=0
+Client  --> Req494:Infer model=0 b=1 input=94846
+Client <--  Rsp492:Infer received=1637159806097365416 departure=0 model_id=0 b=1 output=0
+Client  --> Req495:Infer model=0 b=1 input=94846
+Client <--  Rsp493:Infer received=1637159806115962478 departure=0 model_id=0 b=1 output=0
+Client  --> Req496:Infer model=0 b=1 input=94846
+Client <--  Rsp494:Infer received=1637159806134174220 departure=0 model_id=0 b=1 output=0
+Client  --> Req497:Infer model=0 b=1 input=94846
+Client <--  Rsp495:Infer received=1637159806152630061 departure=0 model_id=0 b=1 output=0
+Client  --> Req498:Infer model=0 b=1 input=94846
+Client <--  Rsp496:Infer received=1637159806171192830 departure=0 model_id=0 b=1 output=0
+Client  --> Req499:Infer model=0 b=1 input=94846
+Client <--  Rsp497:Infer received=1637159806189527775 departure=0 model_id=0 b=1 output=0
+Client  --> Req500:Infer model=0 b=1 input=94846
+Client <--  Rsp498:Infer received=1637159806208176659 departure=0 model_id=0 b=1 output=0
+Client  --> Req501:Infer model=0 b=1 input=94846
+Client <--  Rsp499:Infer received=1637159806226502035 departure=0 model_id=0 b=1 output=0
+Client  --> Req502:Infer model=0 b=1 input=94846
+Client <--  Rsp500:Infer received=1637159806244993565 departure=0 model_id=0 b=1 output=0
+Client  --> Req503:Infer model=0 b=1 input=94846
+Client <--  Rsp501:Infer received=1637159806263386268 departure=0 model_id=0 b=1 output=0
+Client  --> Req504:Infer model=0 b=1 input=94846
+Client <--  Rsp502:Infer received=1637159806281923196 departure=0 model_id=0 b=1 output=0
+Client  --> Req505:Infer model=0 b=1 input=94846
+Client <--  Rsp503:Infer received=1637159806300332941 departure=0 model_id=0 b=1 output=0
+Client  --> Req506:Infer model=0 b=1 input=94846
+Client <--  Rsp504:Infer received=1637159806318856249 departure=0 model_id=0 b=1 output=0
+Client  --> Req507:Infer model=0 b=1 input=94846
+Client <--  Rsp505:Infer received=1637159806337374669 departure=0 model_id=0 b=1 output=0
+Client  --> Req508:Infer model=0 b=1 input=94846
+Client <--  Rsp506:Infer received=1637159806355733569 departure=0 model_id=0 b=1 output=0
+Client  --> Req509:Infer model=0 b=1 input=94846
+Client <--  Rsp507:Infer received=1637159806374151765 departure=0 model_id=0 b=1 output=0
+Client  --> Req510:Infer model=0 b=1 input=94846
+Client <--  Rsp508:Infer received=1637159806392661174 departure=0 model_id=0 b=1 output=0
+Client  --> Req511:Infer model=0 b=1 input=94846
+Client <--  Rsp509:Infer received=1637159806411077834 departure=0 model_id=0 b=1 output=0
+Client  --> Req512:Infer model=0 b=1 input=94846
+Client <--  Rsp510:Infer received=1637159806429570481 departure=0 model_id=0 b=1 output=0
+Client  --> Req513:Infer model=10 b=1 input=52741
+Client <--  Rsp511:Infer received=1637159806447976944 departure=0 model_id=0 b=1 output=0
+Client  --> Req514:Infer model=10 b=1 input=52741
+Client <--  Rsp512:Infer received=1637159806466459185 departure=0 model_id=0 b=1 output=0
+Client  --> Req515:Infer model=0 b=1 input=94846
+Client <--  Rsp513:Infer received=1637159806484081391 departure=0 model_id=10 b=1 output=0
+Client  --> Req516:Infer model=0 b=1 input=94846
+Client <--  Rsp514:Infer received=1637159806502567124 departure=0 model_id=10 b=1 output=0
+Client  --> Req517:Infer model=0 b=1 input=94846
+Client <--  Rsp515:Infer received=1637159806521810434 departure=0 model_id=0 b=1 output=0
+Client  --> Req518:Infer model=0 b=1 input=94846
+Client <--  Rsp516:Infer received=1637159806540310485 departure=0 model_id=0 b=1 output=0
+Client  --> Req519:Infer model=0 b=1 input=94846
+Client <--  Rsp517:Infer received=1637159806558830581 departure=0 model_id=0 b=1 output=0
+Client  --> Req520:Infer model=0 b=1 input=94846
+Client <--  Rsp518:Infer received=1637159806577156515 departure=0 model_id=0 b=1 output=0
+Client  --> Req521:Infer model=0 b=1 input=94846
+Client <--  Rsp519:Infer received=1637159806595725151 departure=0 model_id=0 b=1 output=0
+Client  --> Req522:Infer model=0 b=1 input=94846
+Client <--  Rsp520:Infer received=1637159806614098927 departure=0 model_id=0 b=1 output=0
+Client  --> Req523:Infer model=0 b=1 input=94846
+Client <--  Rsp521:Infer received=1637159806632647868 departure=0 model_id=0 b=1 output=0
+Client  --> Req524:Infer model=0 b=1 input=94846
+Client <--  Rsp522:Infer received=1637159806651019479 departure=0 model_id=0 b=1 output=0
+Client  --> Req525:Infer model=0 b=1 input=94846
+Client <--  Rsp523:Infer received=1637159806669436418 departure=0 model_id=0 b=1 output=0
+Client  --> Req526:Infer model=0 b=1 input=94846
+Client <--  Rsp524:Infer received=1637159806688064000 departure=0 model_id=0 b=1 output=0
+Client  --> Req527:Infer model=0 b=1 input=94846
+Client <--  Rsp525:Infer received=1637159806706392100 departure=0 model_id=0 b=1 output=0
+Client  --> Req528:Infer model=9 b=1 input=115165
+Worker <--  A152:Infer model=9 gpu=0 batch=1 input=115165 [0.0, 10.9]
+Client <--  Rsp526:Infer received=1637159806724888379 departure=0 model_id=0 b=1 output=0
+Client  --> Req529:Infer model=1 b=1 input=52741
+Client <--  Rsp527:Infer received=1637159806743355395 departure=0 model_id=0 b=1 output=0
+Client  --> Req530:Infer model=0 b=1 input=94846
+Worker  --> R152:Infer exec=45.6 input=0.0 output=0.0 gpu0=1410
+Client <--  Rsp528:Infer received=1637159806762177139 departure=0 model_id=9 b=1 output=4000
+Client  --> Req531:Infer model=0 b=1 input=94846
+Client <--  Rsp529:Infer received=1637159806779509849 departure=0 model_id=1 b=1 output=0
+Client  --> Req532:Infer model=0 b=1 input=94846
+Client <--  Rsp530:Infer received=1637159806798878107 departure=0 model_id=0 b=1 output=0
+Client  --> Req533:Infer model=0 b=1 input=94846
+Client <--  Rsp531:Infer received=1637159806817173311 departure=0 model_id=0 b=1 output=0
+Client  --> Req534:Infer model=0 b=1 input=94846
+Client <--  Rsp532:Infer received=1637159806835653387 departure=0 model_id=0 b=1 output=0
+Client  --> Req535:Infer model=0 b=1 input=94846
+Client <--  Rsp533:Infer received=1637159806854157209 departure=0 model_id=0 b=1 output=0
+Client  --> Req536:Infer model=0 b=1 input=94846
+Client <--  Rsp534:Infer received=1637159806872564789 departure=0 model_id=0 b=1 output=0
+Client  --> Req537:Infer model=0 b=1 input=94846
+Client <--  Rsp535:Infer received=1637159806891144739 departure=0 model_id=0 b=1 output=0
+Client  --> Req538:Infer model=0 b=1 input=94846
+Client <--  Rsp536:Infer received=1637159806909507481 departure=0 model_id=0 b=1 output=0
+Client <--  Rsp537:Infer received=1637159806927926235 departure=0 model_id=0 b=1 output=0
+Client  --> Req539:Infer model=0 b=1 input=94846
+Client <--  Rsp538:Infer received=1637159806946370762 departure=0 model_id=0 b=1 output=0
+Client  --> Req540:Infer model=0 b=1 input=94846
+Client <--  Rsp539:Infer received=1637159806970983043 departure=0 model_id=0 b=1 output=0
+Client  --> Req541:Infer model=0 b=1 input=94846
+Client <--  Rsp540:Infer received=1637159806995603705 departure=0 model_id=0 b=1 output=0
+Client  --> Req542:Infer model=2 b=1 input=98318
+Worker <--  A153:Infer model=2 gpu=0 batch=1 input=98318 [0.0, 10.9]
+Client  --> Req543:Infer model=0 b=1 input=94846
+Client <--  Rsp541:Infer received=1637159807020203414 departure=0 error 8: 
+Worker  --> R153:Infer exec=23.1 input=0.0 output=0.0 gpu0=1410
+Client <--  Rsp542:Infer received=1637159807038854743 departure=0 model_id=2 b=1 output=4000
+Client  --> Req544:Infer model=0 b=1 input=94846
+Client  --> Req545:Infer model=0 b=1 input=94846
+Client <--  Rsp543:Infer received=1637159807057116213 departure=0 model_id=0 b=1 output=0
+Client  --> Req546:Infer model=0 b=1 input=94846
+Client <--  Rsp544:Infer received=1637159807075557597 departure=0 model_id=0 b=1 output=0
+Client  --> Req547:Infer model=0 b=1 input=94846
+Client <--  Rsp545:Infer received=1637159807094010923 departure=0 model_id=0 b=1 output=0
+Client  --> Req548:Infer model=0 b=1 input=94846
+Client <--  Rsp546:Infer received=1637159807112487717 departure=0 model_id=0 b=1 output=0
+Client  --> Req549:Infer model=0 b=1 input=94846
+Client <--  Rsp547:Infer received=1637159807131029463 departure=0 model_id=0 b=1 output=0
+Client  --> Req550:Infer model=0 b=1 input=94846
+Client <--  Rsp548:Infer received=1637159807149383474 departure=0 model_id=0 b=1 output=0
+Client  --> Req551:Infer model=0 b=1 input=94846
+Client <--  Rsp549:Infer received=1637159807167915653 departure=0 model_id=0 b=1 output=0
+Client  --> Req552:Infer model=0 b=1 input=94846
+Client <--  Rsp550:Infer received=1637159807186323023 departure=0 model_id=0 b=1 output=0
+Client  --> Req553:Infer model=0 b=1 input=94846
+Client <--  Rsp551:Infer received=1637159807204782356 departure=0 model_id=0 b=1 output=0
+Client  --> Req554:Infer model=0 b=1 input=94846
+Client <--  Rsp552:Infer received=1637159807223210400 departure=0 model_id=0 b=1 output=0
+Client  --> Req555:Infer model=0 b=1 input=94846
+Client <--  Rsp553:Infer received=1637159807241657440 departure=0 model_id=0 b=1 output=0
+Client  --> Req556:Infer model=17 b=1 input=69447
+Worker <--  A154:Infer model=17 gpu=0 batch=1 input=69447 [0.0, 10.9]
+Client <--  Rsp554:Infer received=1637159807260201282 departure=0 model_id=0 b=1 output=0
+Client  --> Req557:Infer model=0 b=1 input=94846
+Client <--  Rsp555:Infer received=1637159807278617383 departure=0 model_id=0 b=1 output=0
+Client  --> Req558:Infer model=0 b=1 input=94846
+Worker  --> R154:Infer exec=54.9 input=0.0 output=0.0 gpu0=1410
+Client <--  Rsp556:Infer received=1637159807296620996 departure=0 model_id=17 b=1 output=4000
+Client <--  Rsp557:Infer received=1637159807315530461 departure=0 model_id=0 b=1 output=0
+Client  --> Req559:Infer model=0 b=1 input=94846
+Client <--  Rsp558:Infer received=1637159807340274953 departure=0 model_id=0 b=1 output=0
+Client  --> Req560:Infer model=18 b=1 input=115165
+Worker <--  A155:LoadWeights model=18 gpu=0 [0.0, 10.9]
+Worker  --> R155:LoadWeights duration=7.8
+Client <--  Rsp559:Infer received=1637159807364714585 departure=0 model_id=0 b=1 output=0
+Client  --> Req561:Infer model=0 b=1 input=94846
+Client <--  Rsp560:Infer received=1637159807389734744 departure=0 model_id=18 b=1 output=0
+Client  --> Req562:Infer model=15 b=1 input=33637
+Worker <--  A156:Infer model=15 gpu=0 batch=1 input=33637 [0.0, 10.9]
+Client <--  Rsp561:Infer received=1637159807414278021 departure=0 model_id=0 b=1 output=0
+Client  --> Req563:Infer model=0 b=1 input=94846
+Worker  --> R156:Infer exec=29.9 input=0.0 output=0.0 gpu0=1410
+Client <--  Rsp562:Infer received=1637159807437359293 departure=0 model_id=15 b=1 output=4000
+Client  --> Req564:Infer model=0 b=1 input=94846
+Client  --> Req565:Infer model=0 b=1 input=94846
+Client <--  Rsp563:Infer received=1637159807463179423 departure=0 model_id=0 b=1 output=0
+Client  --> Req566:Infer model=0 b=1 input=94846
+Client <--  Rsp564:Infer received=1637159807481706992 departure=0 model_id=0 b=1 output=0
+Client  --> Req567:Infer model=0 b=1 input=94846
+Client <--  Rsp565:Infer received=1637159807500090406 departure=0 model_id=0 b=1 output=0
+Client <--  Rsp566:Infer received=1637159807518541987 departure=0 model_id=0 b=1 output=0
+Client  --> Req568:Infer model=0 b=1 input=94846
+Client <--  Rsp567:Infer received=1637159807537097911 departure=0 model_id=0 b=1 output=0
+Client  --> Req569:Infer model=0 b=1 input=94846
+Client <--  Rsp568:Infer received=1637159807561727793 departure=0 model_id=0 b=1 output=0
+Client  --> Req570:Infer model=0 b=1 input=94846
+Client <--  Rsp569:Infer received=1637159807586266181 departure=0 model_id=0 b=1 output=0
+Client  --> Req571:Infer model=0 b=1 input=94846
+Client  --> Req572:Infer model=6 b=1 input=33637
+Client <--  Rsp570:Infer received=1637159807610881814 departure=0 model_id=0 b=1 output=0
+Client  --> Req573:Infer model=0 b=1 input=94846
+Client <--  Rsp571:Infer received=1637159807629324944 departure=0 model_id=0 b=1 output=0
+Client  --> Req574:Infer model=8 b=1 input=100027
+Worker <--  A157:Infer model=8 gpu=0 batch=1 input=100027 [0.0, 10.9]
+Client <--  Rsp572:Infer received=1637159807646552402 departure=0 model_id=6 b=1 output=0
+Worker  --> R157:Infer exec=20.2 input=0.0 output=0.0 gpu0=1590
+Client <--  Rsp574:Infer received=1637159807684710695 departure=0 model_id=8 b=1 output=4000
+Client <--  Rsp573:Infer received=1637159807666170555 departure=0 model_id=0 b=1 output=0
+Client  --> Req575:Infer model=0 b=1 input=94846
+Client  --> Req576:Infer model=11 b=1 input=60942
+Worker <--  A158:Infer model=11 gpu=0 batch=1 input=60942 [0.0, 10.9]
+Client <--  Rsp575:Infer received=1637159807709321928 departure=0 model_id=0 b=1 output=0
+Client  --> Req577:Infer model=0 b=1 input=94846
+Worker  --> R158:Infer exec=48.1 input=0.0 output=0.0 gpu0=1590
+Client <--  Rsp576:Infer received=1637159807733216232 departure=0 model_id=11 b=1 output=4000
+Client  --> Req578:Infer model=0 b=1 input=94846
+Client <--  Rsp577:Infer received=1637159807758484889 departure=0 model_id=0 b=1 output=0
+Client  --> Req579:Infer model=0 b=1 input=94846
+Client <--  Rsp578:Infer received=1637159807783058897 departure=0 model_id=0 b=1 output=0
+Client  --> Req580:Infer model=0 b=1 input=94846
+Client <--  Rsp579:Infer received=1637159807807745769 departure=0 model_id=0 b=1 output=0
+Client  --> Req581:Infer model=11 b=1 input=60942
+Client <--  Rsp580:Infer received=1637159807832400863 departure=0 model_id=0 b=1 output=0
+Client  --> Req582:Infer model=0 b=1 input=94846
+Client <--  Rsp581:Infer received=1637159807856317168 departure=0 model_id=11 b=1 output=0
+Client  --> Req583:Infer model=0 b=1 input=94846
+Client <--  Rsp582:Infer received=1637159807881578421 departure=0 model_id=0 b=1 output=0
+Client  --> Req584:Infer model=0 b=1 input=94846
+Client <--  Rsp583:Infer received=1637159807906207814 departure=0 model_id=0 b=1 output=0
+Client  --> Req585:Infer model=0 b=1 input=94846
+Client <--  Rsp584:Infer received=1637159807930786780 departure=0 model_id=0 b=1 output=0
+Client  --> Req586:Infer model=0 b=1 input=94846
+Client <--  Rsp585:Infer received=1637159807955371823 departure=0 model_id=0 b=1 output=0
+Client  --> Req587:Infer model=0 b=1 input=94846
+Client <--  Rsp586:Infer received=1637159807979987665 departure=0 model_id=0 b=1 output=0
+Client  --> Req588:Infer model=0 b=1 input=94846
+Client <--  Rsp587:Infer received=1637159808004570822 departure=0 model_id=0 b=1 output=0
+Client  --> Req589:Infer model=0 b=1 input=94846
+Client <--  Rsp588:Infer received=1637159808029189249 departure=0 model_id=0 b=1 output=0
+Client  --> Req590:Infer model=0 b=1 input=94846
+Client <--  Rsp589:Infer received=1637159808053898611 departure=0 model_id=0 b=1 output=0
+Client  --> Req591:Infer model=0 b=1 input=94846
+Client <--  Rsp590:Infer received=1637159808078468498 departure=0 model_id=0 b=1 output=0
+Client  --> Req592:Infer model=0 b=1 input=94846
+Client <--  Rsp591:Infer received=1637159808103041597 departure=0 model_id=0 b=1 output=0
+Client  --> Req593:Infer model=0 b=1 input=94846
+Client <--  Rsp592:Infer received=1637159808127711847 departure=0 model_id=0 b=1 output=0
+Client  --> Req594:Infer model=0 b=1 input=94846
+Client <--  Rsp593:Infer received=1637159808152294864 departure=0 model_id=0 b=1 output=0
+Client  --> Req595:Infer model=0 b=1 input=94846
+Client <--  Rsp594:Infer received=1637159808176956314 departure=0 model_id=0 b=1 output=0
+Client  --> Req596:Infer model=0 b=1 input=94846
+Client <--  Rsp595:Infer received=1637159808201471514 departure=0 model_id=0 b=1 output=0
+Client  --> Req597:Infer model=6 b=1 input=33637
+Worker <--  A159:Infer model=6 gpu=0 batch=1 input=33637 [0.0, 10.9]
+Client <--  Rsp596:Infer received=1637159808226168095 departure=0 model_id=0 b=1 output=0
+Worker  --> R159:Infer exec=22.9 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp597:Infer received=1637159808249657245 departure=0 model_id=6 b=1 output=4000
+Client  --> Req598:Infer model=0 b=1 input=94846
+Client  --> Req599:Infer model=4 b=1 input=69447
+Worker <--  A160:Infer model=4 gpu=0 batch=1 input=69447 [0.0, 10.9]
+Client <--  Rsp598:Infer received=1637159808275385114 departure=0 model_id=0 b=1 output=0
+Worker  --> R160:Infer exec=18.5 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp599:Infer received=1637159808299483078 departure=0 model_id=4 b=1 output=4000
+Client  --> Req600:Infer model=0 b=1 input=94846
+Client  --> Req601:Infer model=0 b=1 input=94846
+Client <--  Rsp600:Infer received=1637159808324598291 departure=0 model_id=0 b=1 output=0
+Client  --> Req602:Infer model=0 b=1 input=94846
+Client <--  Rsp601:Infer received=1637159808349140870 departure=0 model_id=0 b=1 output=0
+Client  --> Req603:Infer model=0 b=1 input=94846
+Client <--  Rsp602:Infer received=1637159808373848974 departure=0 model_id=0 b=1 output=0
+Client  --> Req604:Infer model=10 b=1 input=52741
+Client <--  Rsp603:Infer received=1637159808398418721 departure=0 model_id=0 b=1 output=0
+Client  --> Req605:Infer model=13 b=1 input=111253
+Worker <--  A161:Infer model=13 gpu=0 batch=1 input=111253 [0.0, 10.9]
+Client <--  Rsp604:Infer received=1637159808422210707 departure=0 model_id=10 b=1 output=0
+Client  --> Req606:Infer model=0 b=1 input=94846
+Worker  --> R161:Infer exec=28.5 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp605:Infer received=1637159808447904982 departure=0 model_id=13 b=1 output=4000
+Client  --> Req607:Infer model=0 b=1 input=94846
+Client <--  Rsp606:Infer received=1637159808472197037 departure=0 model_id=0 b=1 output=0
+Client  --> Req608:Infer model=0 b=1 input=94846
+Client  --> Req609:Infer model=0 b=1 input=94846
+Client <--  Rsp607:Infer received=1637159808496818467 departure=0 model_id=0 b=1 output=0
+Client  --> Req610:Infer model=0 b=1 input=94846
+Client <--  Rsp608:Infer received=1637159808515292676 departure=0 model_id=0 b=1 output=0
+Client  --> Req611:Infer model=13 b=1 input=111253
+Worker <--  A162:Infer model=13 gpu=0 batch=1 input=111253 [0.0, 10.9]
+Client <--  Rsp609:Infer received=1637159808533751241 departure=0 model_id=0 b=1 output=0
+Client  --> Req612:Infer model=0 b=1 input=94846
+Client <--  Rsp610:Infer received=1637159808552269730 departure=0 error 8: 
+Worker  --> R162:Infer exec=27.1 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp611:Infer received=1637159808570892144 departure=0 model_id=13 b=1 output=4000
+Client  --> Req613:Infer model=0 b=1 input=94846
+Client  --> Req614:Infer model=0 b=1 input=94846
+Client <--  Rsp612:Infer received=1637159808589116668 departure=0 model_id=0 b=1 output=0
+Client  --> Req615:Infer model=0 b=1 input=94846
+Client <--  Rsp613:Infer received=1637159808607547156 departure=0 model_id=0 b=1 output=0
+Client  --> Req616:Infer model=0 b=1 input=94846
+Client <--  Rsp614:Infer received=1637159808625997340 departure=0 model_id=0 b=1 output=0
+Client  --> Req617:Infer model=1 b=1 input=52741
+Worker <--  A163:Infer model=1 gpu=0 batch=1 input=52741 [0.0, 10.9]
+Client <--  Rsp615:Infer received=1637159808644434253 departure=0 model_id=0 b=1 output=0
+Client  --> Req618:Infer model=0 b=1 input=94846
+Client <--  Rsp616:Infer received=1637159808662861948 departure=0 model_id=0 b=1 output=0
+Client  --> Req619:Infer model=0 b=1 input=94846
+Worker  --> R163:Infer exec=36.6 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp617:Infer received=1637159808680931352 departure=0 model_id=1 b=1 output=4000
+Client  --> Req620:Infer model=0 b=1 input=94846
+Client <--  Rsp618:Infer received=1637159808699848710 departure=0 model_id=0 b=1 output=0
+Client  --> Req621:Infer model=0 b=1 input=94846
+Client <--  Rsp619:Infer received=1637159808718300290 departure=0 model_id=0 b=1 output=0
+Client  --> Req622:Infer model=0 b=1 input=94846
+Client <--  Rsp620:Infer received=1637159808736835402 departure=0 model_id=0 b=1 output=0
+Client  --> Req623:Infer model=0 b=1 input=94846
+Client <--  Rsp621:Infer received=1637159808755260722 departure=0 model_id=0 b=1 output=0
+Client  --> Req624:Infer model=0 b=1 input=94846
+Client <--  Rsp622:Infer received=1637159808773742264 departure=0 model_id=0 b=1 output=0
+Client  --> Req625:Infer model=0 b=1 input=94846
+Client <--  Rsp623:Infer received=1637159808792133990 departure=0 model_id=0 b=1 output=0
+Client  --> Req626:Infer model=0 b=1 input=94846
+Client <--  Rsp624:Infer received=1637159808810575444 departure=0 model_id=0 b=1 output=0
+Client  --> Req627:Infer model=0 b=1 input=94846
+Client <--  Rsp625:Infer received=1637159808829153508 departure=0 model_id=0 b=1 output=0
+Client  --> Req628:Infer model=0 b=1 input=94846
+Client <--  Rsp626:Infer received=1637159808847587349 departure=0 model_id=0 b=1 output=0
+Client  --> Req629:Infer model=0 b=1 input=94846
+Client <--  Rsp627:Infer received=1637159808865962731 departure=0 model_id=0 b=1 output=0
+Client  --> Req630:Infer model=1 b=1 input=52741
+Worker <--  A164:Infer model=1 gpu=0 batch=1 input=52741 [0.0, 10.9]
+Client <--  Rsp628:Infer received=1637159808884435963 departure=0 model_id=0 b=1 output=0
+Client  --> Req631:Infer model=0 b=1 input=94846
+Client <--  Rsp629:Infer received=1637159808903126822 departure=0 model_id=0 b=1 output=0
+Worker  --> R164:Infer exec=33.3 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp630:Infer received=1637159808920594188 departure=0 model_id=1 b=1 output=4000
+Client  --> Req632:Infer model=0 b=1 input=94846
+Client  --> Req633:Infer model=3 b=1 input=114223
+Worker <--  A165:Infer model=3 gpu=0 batch=1 input=114223 [0.0, 10.9]
+Client <--  Rsp631:Infer received=1637159808939797200 departure=0 model_id=0 b=1 output=0
+Client  --> Req634:Infer model=0 b=1 input=94846
+Client <--  Rsp632:Infer received=1637159808958249269 departure=0 model_id=0 b=1 output=0
+Worker  --> R165:Infer exec=31.2 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp633:Infer received=1637159808977060187 departure=0 model_id=3 b=1 output=4000
+Client  --> Req635:Infer model=0 b=1 input=94846
+Client  --> Req636:Infer model=9 b=1 input=115165
+Worker <--  A166:Infer model=9 gpu=0 batch=1 input=115165 [0.0, 10.9]
+Client <--  Rsp634:Infer received=1637159808995214869 departure=0 model_id=0 b=1 output=0
+Client  --> Req637:Infer model=0 b=1 input=94846
+Client <--  Rsp635:Infer received=1637159809013678043 departure=0 model_id=0 b=1 output=0
+Client  --> Req638:Infer model=0 b=1 input=94846
+Worker  --> R166:Infer exec=40.8 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp636:Infer received=1637159809032462491 departure=0 model_id=9 b=1 output=4000
+Client  --> Req639:Infer model=0 b=1 input=94846
+Client <--  Rsp637:Infer received=1637159809050540416 departure=0 model_id=0 b=1 output=0
+Client  --> Req640:Infer model=0 b=1 input=94846
+Client <--  Rsp638:Infer received=1637159809068977470 departure=0 model_id=0 b=1 output=0
+Client  --> Req641:Infer model=0 b=1 input=94846
+Client <--  Rsp639:Infer received=1637159809087515375 departure=0 model_id=0 b=1 output=0
+Client  --> Req642:Infer model=0 b=1 input=94846
+Client <--  Rsp640:Infer received=1637159809102276430 departure=0 model_id=0 b=1 output=0
+Client  --> Req643:Infer model=0 b=1 input=94846
+Client <--  Rsp641:Infer received=1637159809117066818 departure=0 model_id=0 b=1 output=0
+Client  --> Req644:Infer model=0 b=1 input=94846
+Client <--  Rsp642:Infer received=1637159809131808178 departure=0 model_id=0 b=1 output=0
+Client  --> Req645:Infer model=0 b=1 input=94846
+Client <--  Rsp643:Infer received=1637159809146690199 departure=0 model_id=0 b=1 output=0
+Client  --> Req646:Infer model=0 b=1 input=94846
+Client <--  Rsp644:Infer received=1637159809161312617 departure=0 model_id=0 b=1 output=0
+Client  --> Req647:Infer model=0 b=1 input=94846
+Client <--  Rsp645:Infer received=1637159809176031906 departure=0 model_id=0 b=1 output=0
+Client  --> Req648:Infer model=0 b=1 input=94846
+Client <--  Rsp646:Infer received=1637159809190800434 departure=0 model_id=0 b=1 output=0
+Client  --> Req649:Infer model=0 b=1 input=94846
+Client <--  Rsp647:Infer received=1637159809205614220 departure=0 model_id=0 b=1 output=0
+Client  --> Req650:Infer model=0 b=1 input=94846
+Client <--  Rsp648:Infer received=1637159809220448819 departure=0 model_id=0 b=1 output=0
+Client  --> Req651:Infer model=0 b=1 input=94846
+Client <--  Rsp649:Infer received=1637159809235092888 departure=0 model_id=0 b=1 output=0
+Client  --> Req652:Infer model=0 b=1 input=94846
+Client <--  Rsp650:Infer received=1637159809249929023 departure=0 model_id=0 b=1 output=0
+Client  --> Req653:Infer model=13 b=1 input=111253
+Worker <--  A167:Infer model=13 gpu=0 batch=1 input=111253 [0.0, 10.9]
+Client <--  Rsp651:Infer received=1637159809264684141 departure=0 model_id=0 b=1 output=0
+Client  --> Req654:Infer model=0 b=1 input=94846
+Client  --> Req655:Infer model=0 b=1 input=94846
+Client <--  Rsp652:Infer received=1637159809279467336 departure=0 error 8: 
+Client  --> Req656:Infer model=0 b=1 input=94846
+Client  --> Req657:Infer model=0 b=1 input=94846
+Client <--  Rsp654:Infer received=1637159809309045250 departure=0 model_id=0 b=1 output=0
+Worker  --> R167:Infer exec=62.2 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp653:Infer received=1637159809294480661 departure=0 model_id=13 b=1 output=4000
+Client  --> Req658:Infer model=0 b=1 input=94846
+Client <--  Rsp655:Infer received=1637159809321241843 departure=0 model_id=0 b=1 output=0
+Client  --> Req659:Infer model=0 b=1 input=94846
+Client <--  Rsp656:Infer received=1637159809333572463 departure=0 model_id=0 b=1 output=0
+Client  --> Req660:Infer model=0 b=1 input=94846
+Client <--  Rsp657:Infer received=1637159809345838200 departure=0 model_id=0 b=1 output=0
+Client  --> Req661:Infer model=0 b=1 input=94846
+Client <--  Rsp658:Infer received=1637159809358233773 departure=0 model_id=0 b=1 output=0
+Client  --> Req662:Infer model=0 b=1 input=94846
+Client <--  Rsp659:Infer received=1637159809370435046 departure=0 model_id=0 b=1 output=0
+Client <--  Rsp660:Infer received=1637159809382784174 departure=0 model_id=0 b=1 output=0
+Client  --> Req663:Infer model=0 b=1 input=94846
+Client <--  Rsp661:Infer received=1637159809397574632 departure=0 model_id=0 b=1 output=0
+Client  --> Req664:Infer model=13 b=1 input=111253
+Client <--  Rsp662:Infer received=1637159809412355872 departure=0 model_id=0 b=1 output=0
+Client  --> Req665:Infer model=0 b=1 input=94846
+Client <--  Rsp663:Infer received=1637159809427066640 departure=0 model_id=0 b=1 output=0
+Client  --> Req666:Infer model=0 b=1 input=94846
+Client <--  Rsp664:Infer received=1637159809442055729 departure=0 model_id=13 b=1 output=0
+Client  --> Req667:Infer model=0 b=1 input=94846
+Client <--  Rsp665:Infer received=1637159809456697983 departure=0 model_id=0 b=1 output=0
+Client  --> Req668:Infer model=0 b=1 input=94846
+Client <--  Rsp666:Infer received=1637159809471394783 departure=0 model_id=0 b=1 output=0
+Client  --> Req669:Infer model=13 b=1 input=111253
+Client <--  Rsp667:Infer received=1637159809486087183 departure=0 model_id=0 b=1 output=0
+Client  --> Req670:Infer model=1 b=1 input=52741
+Worker <--  A168:Infer model=1 gpu=0 batch=1 input=52741 [0.0, 10.9]
+Client <--  Rsp668:Infer received=1637159809500866956 departure=0 model_id=0 b=1 output=0
+Client  --> Req671:Infer model=0 b=1 input=94846
+Worker  --> R168:Infer exec=17.3 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp670:Infer received=1637159809529748962 departure=0 model_id=1 b=1 output=4000
+Client <--  Rsp669:Infer received=1637159809516018428 departure=0 model_id=13 b=1 output=0
+Client  --> Req672:Infer model=13 b=1 input=111253
+Client  --> Req673:Infer model=7 b=1 input=84728
+Client <--  Rsp671:Infer received=1637159809545307125 departure=0 model_id=0 b=1 output=0
+Client  --> Req674:Infer model=0 b=1 input=94846
+Client <--  Rsp672:Infer received=1637159809560278195 departure=0 model_id=13 b=1 output=0
+Client  --> Req675:Infer model=0 b=1 input=94846
+Client  --> Req676:Infer model=0 b=1 input=94846
+Client <--  Rsp673:Infer received=1637159809574447827 departure=0 model_id=7 b=1 output=0
+Client  --> Req677:Infer model=0 b=1 input=94846
+Client <--  Rsp674:Infer received=1637159809589546359 departure=0 model_id=0 b=1 output=0
+Client  --> Req678:Infer model=0 b=1 input=94846
+Client <--  Rsp675:Infer received=1637159809604426634 departure=0 model_id=0 b=1 output=0
+Client  --> Req679:Infer model=0 b=1 input=94846
+Client <--  Rsp676:Infer received=1637159809616603811 departure=0 model_id=0 b=1 output=0
+Client  --> Req680:Infer model=0 b=1 input=94846
+Client <--  Rsp677:Infer received=1637159809628999664 departure=0 model_id=0 b=1 output=0
+Client  --> Req681:Infer model=0 b=1 input=94846
+Client <--  Rsp678:Infer received=1637159809641293338 departure=0 model_id=0 b=1 output=0
+Client  --> Req682:Infer model=0 b=1 input=94846
+Client <--  Rsp679:Infer received=1637159809653536585 departure=0 model_id=0 b=1 output=0
+Client  --> Req683:Infer model=0 b=1 input=94846
+Client <--  Rsp680:Infer received=1637159809665805186 departure=0 model_id=0 b=1 output=0
+Client <--  Rsp681:Infer received=1637159809678179736 departure=0 model_id=0 b=1 output=0
+Client  --> Req684:Infer model=0 b=1 input=94846
+Client <--  Rsp682:Infer received=1637159809692861870 departure=0 model_id=0 b=1 output=0
+Client  --> Req685:Infer model=10 b=1 input=52741
+Client <--  Rsp683:Infer received=1637159809707732437 departure=0 model_id=0 b=1 output=0
+Client  --> Req686:Infer model=0 b=1 input=94846
+Client  --> Req687:Infer model=0 b=1 input=94846
+Client <--  Rsp684:Infer received=1637159809722379649 departure=0 model_id=0 b=1 output=0
+Client  --> Req688:Infer model=0 b=1 input=94846
+Client <--  Rsp685:Infer received=1637159809736438721 departure=0 model_id=10 b=1 output=0
+Client  --> Req689:Infer model=0 b=1 input=94846
+Client <--  Rsp686:Infer received=1637159809751923200 departure=0 model_id=0 b=1 output=0
+Client  --> Req690:Infer model=1 b=1 input=52741
+Worker <--  A169:Infer model=1 gpu=0 batch=1 input=52741 [0.0, 10.9]
+Client <--  Rsp687:Infer received=1637159809764315701 departure=0 model_id=0 b=1 output=0
+Client  --> Req691:Infer model=0 b=1 input=94846
+Client <--  Rsp688:Infer received=1637159809776545678 departure=0 model_id=0 b=1 output=0
+Client  --> Req692:Infer model=0 b=1 input=94846
+Client <--  Rsp689:Infer received=1637159809788877905 departure=0 error 8: 
+Worker  --> R169:Infer exec=34.6 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp690:Infer received=1637159809800377614 departure=0 model_id=1 b=1 output=4000
+Client  --> Req693:Infer model=0 b=1 input=94846
+Client  --> Req694:Infer model=0 b=1 input=94846
+Client <--  Rsp691:Infer received=1637159809813454846 departure=0 model_id=0 b=1 output=0
+Client  --> Req695:Infer model=3 b=1 input=114223
+Worker <--  A170:Infer model=3 gpu=0 batch=1 input=114223 [0.0, 10.9]
+Client <--  Rsp692:Infer received=1637159809825811168 departure=0 model_id=0 b=1 output=0
+Client  --> Req696:Infer model=0 b=1 input=94846
+Client <--  Rsp693:Infer received=1637159809838045615 departure=0 model_id=0 b=1 output=0
+Worker  --> R170:Infer exec=22.1 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp695:Infer received=1637159809863022542 departure=0 model_id=3 b=1 output=4000
+Client  --> Req697:Infer model=0 b=1 input=94846
+Client <--  Rsp694:Infer received=1637159809850424287 departure=0 model_id=0 b=1 output=0
+Client  --> Req698:Infer model=0 b=1 input=94846
+Client  --> Req699:Infer model=0 b=1 input=94846
+Client <--  Rsp696:Infer received=1637159809874987608 departure=0 model_id=0 b=1 output=0
+Client  --> Req700:Infer model=0 b=1 input=94846
+Client <--  Rsp697:Infer received=1637159809887562885 departure=0 model_id=0 b=1 output=0
+Client  --> Req701:Infer model=0 b=1 input=94846
+Client <--  Rsp698:Infer received=1637159809899599400 departure=0 model_id=0 b=1 output=0
+Client  --> Req702:Infer model=0 b=1 input=94846
+Client <--  Rsp699:Infer received=1637159809911906484 departure=0 model_id=0 b=1 output=0
+Client  --> Req703:Infer model=0 b=1 input=94846
+Client <--  Rsp700:Infer received=1637159809924199599 departure=0 model_id=0 b=1 output=0
+Client  --> Req704:Infer model=11 b=1 input=60942
+Client <--  Rsp701:Infer received=1637159809936554035 departure=0 model_id=0 b=1 output=0
+Client  --> Req705:Infer model=0 b=1 input=94846
+Client <--  Rsp702:Infer received=1637159809948841144 departure=0 model_id=0 b=1 output=0
+Client  --> Req706:Infer model=0 b=1 input=94846
+Client <--  Rsp703:Infer received=1637159809961112468 departure=0 model_id=0 b=1 output=0
+Client  --> Req707:Infer model=0 b=1 input=94846
+Client <--  Rsp704:Infer received=1637159809972812903 departure=0 model_id=11 b=1 output=0
+Client  --> Req708:Infer model=0 b=1 input=94846
+Client <--  Rsp705:Infer received=1637159809985867436 departure=0 model_id=0 b=1 output=0
+Client  --> Req709:Infer model=10 b=1 input=52741
+Client <--  Rsp706:Infer received=1637159809998087566 departure=0 model_id=0 b=1 output=0
+Client  --> Req710:Infer model=0 b=1 input=94846
+Client <--  Rsp707:Infer received=1637159810010365106 departure=0 model_id=0 b=1 output=0
+Client  --> Req711:Infer model=0 b=1 input=94846
+Client <--  Rsp708:Infer received=1637159810022740635 departure=0 model_id=0 b=1 output=0
+Client  --> Req712:Infer model=0 b=1 input=94846
+Client <--  Rsp709:Infer received=1637159810034125593 departure=0 model_id=10 b=1 output=0
+Client  --> Req713:Infer model=0 b=1 input=94846
+Client <--  Rsp710:Infer received=1637159810047257861 departure=0 model_id=0 b=1 output=0
+Client  --> Req714:Infer model=0 b=1 input=94846
+Client <--  Rsp711:Infer received=1637159810059570811 departure=0 model_id=0 b=1 output=0
+Client  --> Req715:Infer model=0 b=1 input=94846
+Client <--  Rsp712:Infer received=1637159810071839970 departure=0 model_id=0 b=1 output=0
+Client  --> Req716:Infer model=0 b=1 input=94846
+Client <--  Rsp713:Infer received=1637159810084208305 departure=0 model_id=0 b=1 output=0
+Client  --> Req717:Infer model=0 b=1 input=94846
+Client <--  Rsp714:Infer received=1637159810096468524 departure=0 model_id=0 b=1 output=0
+Client  --> Req718:Infer model=0 b=1 input=94846
+Client <--  Rsp715:Infer received=1637159810108781823 departure=0 model_id=0 b=1 output=0
+Client  --> Req719:Infer model=0 b=1 input=94846
+Client <--  Rsp716:Infer received=1637159810121131440 departure=0 model_id=0 b=1 output=0
+Client  --> Req720:Infer model=0 b=1 input=94846
+Client <--  Rsp717:Infer received=1637159810133455635 departure=0 model_id=0 b=1 output=0
+Client  --> Req721:Infer model=0 b=1 input=94846
+Client <--  Rsp718:Infer received=1637159810145664171 departure=0 model_id=0 b=1 output=0
+Client  --> Req722:Infer model=0 b=1 input=94846
+Client <--  Rsp719:Infer received=1637159810158059465 departure=0 model_id=0 b=1 output=0
+Client  --> Req723:Infer model=0 b=1 input=94846
+Client <--  Rsp720:Infer received=1637159810170283367 departure=0 model_id=0 b=1 output=0
+Client  --> Req724:Infer model=0 b=1 input=94846
+Client <--  Rsp721:Infer received=1637159810182617898 departure=0 model_id=0 b=1 output=0
+Client  --> Req725:Infer model=0 b=1 input=94846
+Client <--  Rsp722:Infer received=1637159810194952569 departure=0 model_id=0 b=1 output=0
+Client  --> Req726:Infer model=0 b=1 input=94846
+Client <--  Rsp723:Infer received=1637159810207294364 departure=0 model_id=0 b=1 output=0
+Client  --> Req727:Infer model=0 b=1 input=94846
+Client <--  Rsp724:Infer received=1637159810219576932 departure=0 model_id=0 b=1 output=0
+Client  --> Req728:Infer model=0 b=1 input=94846
+Client <--  Rsp725:Infer received=1637159810231852936 departure=0 model_id=0 b=1 output=0
+Client  --> Req729:Infer model=0 b=1 input=94846
+Client <--  Rsp726:Infer received=1637159810244108825 departure=0 model_id=0 b=1 output=0
+Client  --> Req730:Infer model=0 b=1 input=94846
+Client <--  Rsp727:Infer received=1637159810256467662 departure=0 model_id=0 b=1 output=0
+Client  --> Req731:Infer model=5 b=1 input=101113
+Worker <--  A171:Infer model=5 gpu=0 batch=1 input=101113 [0.0, 10.9]
+Client <--  Rsp728:Infer received=1637159810268835228 departure=0 model_id=0 b=1 output=0
+Client  --> Req732:Infer model=0 b=1 input=94846
+Client <--  Rsp729:Infer received=1637159810281049980 departure=0 model_id=0 b=1 output=0
+Client  --> Req733:Infer model=0 b=1 input=94846
+Client <--  Rsp730:Infer received=1637159810293387375 departure=0 error 8: 
+Client  --> Req734:Infer model=0 b=1 input=94846
+Client  --> Req735:Infer model=0 b=1 input=94846
+Worker  --> R171:Infer exec=49.8 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp731:Infer received=1637159810305837704 departure=0 model_id=5 b=1 output=4000
+Client <--  Rsp732:Infer received=1637159810318039815 departure=0 model_id=0 b=1 output=0
+Client  --> Req736:Infer model=0 b=1 input=94846
+Client <--  Rsp733:Infer received=1637159810330257710 departure=0 model_id=0 b=1 output=0
+Client  --> Req737:Infer model=0 b=1 input=94846
+Client <--  Rsp734:Infer received=1637159810342608794 departure=0 model_id=0 b=1 output=0
+Client  --> Req738:Infer model=0 b=1 input=94846
+Client <--  Rsp735:Infer received=1637159810355006951 departure=0 model_id=0 b=1 output=0
+Client  --> Req739:Infer model=13 b=1 input=111253
+Client <--  Rsp736:Infer received=1637159810367196770 departure=0 model_id=0 b=1 output=0
+Client  --> Req740:Infer model=0 b=1 input=94846
+Client <--  Rsp737:Infer received=1637159810379489675 departure=0 model_id=0 b=1 output=0
+Client  --> Req741:Infer model=0 b=1 input=94846
+Client <--  Rsp738:Infer received=1637159810391896284 departure=0 model_id=0 b=1 output=0
+Client  --> Req742:Infer model=0 b=1 input=94846
+Client <--  Rsp739:Infer received=1637159810404405211 departure=0 model_id=13 b=1 output=0
+Client  --> Req743:Infer model=0 b=1 input=94846
+Client <--  Rsp740:Infer received=1637159810416404989 departure=0 model_id=0 b=1 output=0
+Client  --> Req744:Infer model=0 b=1 input=94846
+Client <--  Rsp741:Infer received=1637159810428705926 departure=0 model_id=0 b=1 output=0
+Client  --> Req745:Infer model=0 b=1 input=94846
+Client <--  Rsp742:Infer received=1637159810441023556 departure=0 model_id=0 b=1 output=0
+Client  --> Req746:Infer model=0 b=1 input=94846
+Client <--  Rsp743:Infer received=1637159810453343839 departure=0 model_id=0 b=1 output=0
+Client  --> Req747:Infer model=0 b=1 input=94846
+Client <--  Rsp744:Infer received=1637159810465730193 departure=0 model_id=0 b=1 output=0
+Client  --> Req748:Infer model=0 b=1 input=94846
+Client <--  Rsp745:Infer received=1637159810477963872 departure=0 model_id=0 b=1 output=0
+Client  --> Req749:Infer model=1 b=1 input=52741
+Worker <--  A172:Infer model=1 gpu=0 batch=1 input=52741 [0.0, 10.9]
+Client <--  Rsp746:Infer received=1637159810490208936 departure=0 model_id=0 b=1 output=0
+Client  --> Req750:Infer model=0 b=1 input=94846
+Client <--  Rsp747:Infer received=1637159810502549264 departure=0 model_id=0 b=1 output=0
+Client  --> Req751:Infer model=0 b=1 input=94846
+Client <--  Rsp748:Infer received=1637159810514875834 departure=0 error 8: 
+Worker  --> R172:Infer exec=34.1 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp749:Infer received=1637159810526537087 departure=0 model_id=1 b=1 output=4000
+Client  --> Req752:Infer model=0 b=1 input=94846
+Client  --> Req753:Infer model=0 b=1 input=94846
+Client <--  Rsp750:Infer received=1637159810539486089 departure=0 model_id=0 b=1 output=0
+Client  --> Req754:Infer model=0 b=1 input=94846
+Client <--  Rsp751:Infer received=1637159810551829071 departure=0 model_id=0 b=1 output=0
+Client  --> Req755:Infer model=0 b=1 input=94846
+Client <--  Rsp752:Infer received=1637159810564113037 departure=0 model_id=0 b=1 output=0
+Client  --> Req756:Infer model=12 b=1 input=60942
+Client <--  Rsp753:Infer received=1637159810576514337 departure=0 model_id=0 b=1 output=0
+Client  --> Req757:Infer model=0 b=1 input=94846
+Client <--  Rsp754:Infer received=1637159810588654847 departure=0 model_id=0 b=1 output=0
+Client  --> Req758:Infer model=0 b=1 input=94846
+Client <--  Rsp755:Infer received=1637159810600995594 departure=0 model_id=0 b=1 output=0
+Client  --> Req759:Infer model=0 b=1 input=94846
+Client <--  Rsp756:Infer received=1637159810612692467 departure=0 model_id=12 b=1 output=0
+Client  --> Req760:Infer model=0 b=1 input=94846
+Client <--  Rsp757:Infer received=1637159810625613882 departure=0 model_id=0 b=1 output=0
+Client  --> Req761:Infer model=0 b=1 input=94846
+Client <--  Rsp758:Infer received=1637159810637942337 departure=0 model_id=0 b=1 output=0
+Client  --> Req762:Infer model=0 b=1 input=94846
+Client <--  Rsp759:Infer received=1637159810650242855 departure=0 model_id=0 b=1 output=0
+Client  --> Req763:Infer model=0 b=1 input=94846
+Client <--  Rsp760:Infer received=1637159810662538624 departure=0 model_id=0 b=1 output=0
+Client  --> Req764:Infer model=0 b=1 input=94846
+Client <--  Rsp761:Infer received=1637159810674890686 departure=0 model_id=0 b=1 output=0
+Client  --> Req765:Infer model=0 b=1 input=94846
+Client <--  Rsp762:Infer received=1637159810687097615 departure=0 model_id=0 b=1 output=0
+Client  --> Req766:Infer model=0 b=1 input=94846
+Client <--  Rsp763:Infer received=1637159810699456801 departure=0 model_id=0 b=1 output=0
+Client  --> Req767:Infer model=0 b=1 input=94846
+Client <--  Rsp764:Infer received=1637159810711756760 departure=0 model_id=0 b=1 output=0
+Client  --> Req768:Infer model=0 b=1 input=94846
+Client <--  Rsp765:Infer received=1637159810724074529 departure=0 model_id=0 b=1 output=0
+Client  --> Req769:Infer model=0 b=1 input=94846
+Client <--  Rsp766:Infer received=1637159810736294659 departure=0 model_id=0 b=1 output=0
+Client  --> Req770:Infer model=0 b=1 input=94846
+Client <--  Rsp767:Infer received=1637159810748700569 departure=0 model_id=0 b=1 output=0
+Client  --> Req771:Infer model=0 b=1 input=94846
+Client <--  Rsp768:Infer received=1637159810760948985 departure=0 model_id=0 b=1 output=0
+Client  --> Req772:Infer model=1 b=1 input=52741
+Worker <--  A173:Infer model=1 gpu=0 batch=1 input=52741 [0.0, 10.9]
+Client <--  Rsp769:Infer received=1637159810773262145 departure=0 model_id=0 b=1 output=0
+Client <--  Rsp770:Infer received=1637159810785564409 departure=0 model_id=0 b=1 output=0
+Client  --> Req773:Infer model=0 b=1 input=94846
+Client <--  Rsp771:Infer received=1637159810800373585 departure=0 model_id=0 b=1 output=0
+Client  --> Req774:Infer model=0 b=1 input=94846
+Worker  --> R173:Infer exec=33.7 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp772:Infer received=1637159810814510531 departure=0 model_id=1 b=1 output=4000
+Client  --> Req775:Infer model=0 b=1 input=94846
+Client  --> Req776:Infer model=0 b=1 input=94846
+Client <--  Rsp773:Infer received=1637159810830132180 departure=0 model_id=0 b=1 output=0
+Client  --> Req777:Infer model=2 b=1 input=98318
+Worker <--  A174:Infer model=2 gpu=0 batch=1 input=98318 [0.0, 10.9]
+Client <--  Rsp774:Infer received=1637159810844619105 departure=0 model_id=0 b=1 output=0
+Client  --> Req778:Infer model=0 b=1 input=94846
+Client <--  Rsp775:Infer received=1637159810859451189 departure=0 error 8: 
+Client  --> Req779:Infer model=5 b=1 input=101113
+Worker  --> R174:Infer exec=28.3 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp777:Infer received=1637159810884192678 departure=0 model_id=2 b=1 output=4000
+Client <--  Rsp776:Infer received=1637159810871660494 departure=0 model_id=0 b=1 output=0
+Client  --> Req780:Infer model=0 b=1 input=94846
+Client  --> Req781:Infer model=2 b=1 input=98318
+Worker <--  A175:Infer model=2 gpu=0 batch=1 input=98318 [0.0, 10.9]
+Client <--  Rsp778:Infer received=1637159810896425240 departure=0 model_id=0 b=1 output=0
+Client  --> Req782:Infer model=0 b=1 input=94846
+Client <--  Rsp779:Infer received=1637159810908736933 departure=0 model_id=5 b=1 output=0
+Client  --> Req783:Infer model=19 b=1 input=69447
+Worker <--  A176:Infer model=19 gpu=0 batch=1 input=69447 [0.0, 10.9]
+Client <--  Rsp780:Infer received=1637159810920945888 departure=0 model_id=0 b=1 output=0
+Worker  --> R175:Infer exec=35.6 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp781:Infer received=1637159810933366185 departure=0 model_id=2 b=1 output=4000
+Client  --> Req784:Infer model=0 b=1 input=94846
+Client <--  Rsp782:Infer received=1637159810948032185 departure=0 model_id=0 b=1 output=0
+Client  --> Req785:Infer model=0 b=1 input=94846
+Worker  --> R176:Infer exec=33.1 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp783:Infer received=1637159810962292123 departure=0 model_id=19 b=1 output=4000
+Client  --> Req786:Infer model=13 b=1 input=111253
+Client  --> Req787:Infer model=0 b=1 input=94846
+Client <--  Rsp784:Infer received=1637159810977601438 departure=0 model_id=0 b=1 output=0
+Client  --> Req788:Infer model=0 b=1 input=94846
+Client <--  Rsp785:Infer received=1637159810992274213 departure=0 model_id=0 b=1 output=0
+Client  --> Req789:Infer model=0 b=1 input=94846
+Client <--  Rsp786:Infer received=1637159811007323645 departure=0 model_id=13 b=1 output=0
+Client  --> Req790:Infer model=1 b=1 input=52741
+Worker <--  A177:Infer model=1 gpu=0 batch=1 input=52741 [0.0, 10.9]
+Client <--  Rsp787:Infer received=1637159811019356040 departure=0 model_id=0 b=1 output=0
+Client  --> Req791:Infer model=0 b=1 input=94846
+Worker  --> R177:Infer exec=17.5 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp790:Infer received=1637159811055524043 departure=0 model_id=1 b=1 output=4000
+Client <--  Rsp788:Infer received=1637159811031803506 departure=0 error 8: 
+Client  --> Req792:Infer model=0 b=1 input=94846
+Client <--  Rsp789:Infer received=1637159811044044798 departure=0 model_id=0 b=1 output=0
+Client  --> Req793:Infer model=0 b=1 input=94846
+Client  --> Req794:Infer model=5 b=1 input=101113
+Client <--  Rsp791:Infer received=1637159811068682781 departure=0 model_id=0 b=1 output=0
+Client  --> Req795:Infer model=0 b=1 input=94846
+Client  --> Req796:Infer model=0 b=1 input=94846
+Client <--  Rsp792:Infer received=1637159811080948378 departure=0 error 8: 
+Client  --> Req797:Infer model=0 b=1 input=94846
+Client <--  Rsp793:Infer received=1637159811091464151 departure=0 error 8: 
+Client  --> Req798:Infer model=0 b=1 input=94846
+Client <--  Rsp794:Infer received=1637159811102085387 departure=0 model_id=5 b=1 output=0
+Client  --> Req799:Infer model=0 b=1 input=94846
+Client <--  Rsp795:Infer received=1637159811112512042 departure=0 error 8: 
+Client <--  Rsp796:Infer received=1637159811123028094 departure=0 model_id=0 b=1 output=0
+Client  --> Req800:Infer model=0 b=1 input=94846
+Client <--  Rsp797:Infer received=1637159811133662320 departure=0 model_id=0 b=1 output=0
+Client  --> Req801:Infer model=0 b=1 input=94846
+Client <--  Rsp798:Infer received=1637159811144200373 departure=0 model_id=0 b=1 output=0
+Client  --> Req802:Infer model=0 b=1 input=94846
+Client <--  Rsp799:Infer received=1637159811154747646 departure=0 model_id=0 b=1 output=0
+Client  --> Req803:Infer model=0 b=1 input=94846
+Client <--  Rsp800:Infer received=1637159811167080920 departure=0 model_id=0 b=1 output=0
+Client  --> Req804:Infer model=0 b=1 input=94846
+Client <--  Rsp801:Infer received=1637159811179309361 departure=0 model_id=0 b=1 output=0
+Client  --> Req805:Infer model=0 b=1 input=94846
+Client <--  Rsp802:Infer received=1637159811191682864 departure=0 model_id=0 b=1 output=0
+Client  --> Req806:Infer model=0 b=1 input=94846
+Client <--  Rsp803:Infer received=1637159811203973046 departure=0 model_id=0 b=1 output=0
+Client  --> Req807:Infer model=0 b=1 input=94846
+Client <--  Rsp804:Infer received=1637159811216263088 departure=0 model_id=0 b=1 output=0
+Client  --> Req808:Infer model=0 b=1 input=94846
+Client <--  Rsp805:Infer received=1637159811228510875 departure=0 model_id=0 b=1 output=0
+Client  --> Req809:Infer model=0 b=1 input=94846
+Client <--  Rsp806:Infer received=1637159811240872854 departure=0 model_id=0 b=1 output=0
+Client  --> Req810:Infer model=0 b=1 input=94846
+Client <--  Rsp807:Infer received=1637159811253225894 departure=0 model_id=0 b=1 output=0
+Client  --> Req811:Infer model=0 b=1 input=94846
+Client <--  Rsp808:Infer received=1637159811265484018 departure=0 model_id=0 b=1 output=0
+Client  --> Req812:Infer model=0 b=1 input=94846
+Client <--  Rsp809:Infer received=1637159811277875680 departure=0 model_id=0 b=1 output=0
+Client  --> Req813:Infer model=0 b=1 input=94846
+Client <--  Rsp810:Infer received=1637159811290133804 departure=0 model_id=0 b=1 output=0
+Client  --> Req814:Infer model=0 b=1 input=94846
+Client <--  Rsp811:Infer received=1637159811302373559 departure=0 model_id=0 b=1 output=0
+Client  --> Req815:Infer model=0 b=1 input=94846
+Client <--  Rsp812:Infer received=1637159811314684973 departure=0 model_id=0 b=1 output=0
+Client  --> Req816:Infer model=0 b=1 input=94846
+Client <--  Rsp813:Infer received=1637159811327060851 departure=0 model_id=0 b=1 output=0
+Client  --> Req817:Infer model=0 b=1 input=94846
+Client <--  Rsp814:Infer received=1637159811339318626 departure=0 model_id=0 b=1 output=0
+Client  --> Req818:Infer model=7 b=1 input=84728
+Client <--  Rsp815:Infer received=1637159811351643938 departure=0 model_id=0 b=1 output=0
+Client  --> Req819:Infer model=0 b=1 input=94846
+Client <--  Rsp816:Infer received=1637159811363908767 departure=0 model_id=0 b=1 output=0
+Client  --> Req820:Infer model=0 b=1 input=94846
+Client  --> Req821:Infer model=0 b=1 input=94846
+Client <--  Rsp817:Infer received=1637159811376214174 departure=0 error 8: 
+Client  --> Req822:Infer model=0 b=1 input=94846
+Client <--  Rsp818:Infer received=1637159811386565469 departure=0 model_id=7 b=1 output=0
+Client  --> Req823:Infer model=0 b=1 input=94846
+Client <--  Rsp819:Infer received=1637159811397317379 departure=0 error 8: 
+Client  --> Req824:Infer model=0 b=1 input=94846
+Client <--  Rsp820:Infer received=1637159811407968087 departure=0 error 8: 
+Client  --> Req825:Infer model=0 b=1 input=94846
+Client <--  Rsp821:Infer received=1637159811418788931 departure=0 model_id=0 b=1 output=0
+Client  --> Req826:Infer model=0 b=1 input=94846
+Client <--  Rsp822:Infer received=1637159811429089801 departure=0 error 8: 
+Client  --> Req827:Infer model=3 b=1 input=114223
+Worker <--  A178:Infer model=3 gpu=0 batch=1 input=114223 [0.0, 10.9]
+Client <--  Rsp823:Infer received=1637159811439568767 departure=0 model_id=0 b=1 output=0
+Client  --> Req828:Infer model=5 b=1 input=101113
+Client <--  Rsp824:Infer received=1637159811450057582 departure=0 model_id=0 b=1 output=0
+Client  --> Req829:Infer model=0 b=1 input=94846
+Client <--  Rsp825:Infer received=1637159811460617216 departure=0 model_id=0 b=1 output=0
+Worker  --> R178:Infer exec=19.7 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp827:Infer received=1637159811482105670 departure=0 model_id=3 b=1 output=4000
+Client  --> Req830:Infer model=0 b=1 input=94846
+Client <--  Rsp826:Infer received=1637159811471178736 departure=0 error 8: 
+Client  --> Req831:Infer model=0 b=1 input=94846
+Client <--  Rsp828:Infer received=1637159811492379371 departure=0 model_id=5 b=1 output=0
+Client  --> Req832:Infer model=0 b=1 input=94846
+Client <--  Rsp829:Infer received=1637159811502967571 departure=0 model_id=0 b=1 output=0
+Client  --> Req833:Infer model=0 b=1 input=94846
+Client <--  Rsp830:Infer received=1637159811513379489 departure=0 model_id=0 b=1 output=0
+Client  --> Req834:Infer model=0 b=1 input=94846
+Client <--  Rsp831:Infer received=1637159811523911885 departure=0 model_id=0 b=1 output=0
+Client  --> Req835:Infer model=0 b=1 input=94846
+Client <--  Rsp832:Infer received=1637159811536258709 departure=0 model_id=0 b=1 output=0
+Client  --> Req836:Infer model=13 b=1 input=111253
+Client <--  Rsp833:Infer received=1637159811548586884 departure=0 model_id=0 b=1 output=0
+Client  --> Req837:Infer model=0 b=1 input=94846
+Client <--  Rsp834:Infer received=1637159811560790182 departure=0 model_id=0 b=1 output=0
+Client  --> Req838:Infer model=0 b=1 input=94846
+Client <--  Rsp835:Infer received=1637159811573161870 departure=0 model_id=0 b=1 output=0
+Client  --> Req839:Infer model=0 b=1 input=94846
+Client <--  Rsp836:Infer received=1637159811585630707 departure=0 model_id=13 b=1 output=0
+Client  --> Req840:Infer model=0 b=1 input=94846
+Client  --> Req841:Infer model=0 b=1 input=94846
+Client <--  Rsp837:Infer received=1637159811597727775 departure=0 error 8: 
+Client  --> Req842:Infer model=0 b=1 input=94846
+Client <--  Rsp838:Infer received=1637159811608211561 departure=0 error 8: 
+Client  --> Req843:Infer model=13 b=1 input=111253
+Client <--  Rsp839:Infer received=1637159811618817012 departure=0 model_id=0 b=1 output=0
+Client  --> Req844:Infer model=0 b=1 input=94846
+Client <--  Rsp840:Infer received=1637159811629451098 departure=0 error 8: 
+Client  --> Req845:Infer model=0 b=1 input=94846
+Client <--  Rsp841:Infer received=1637159811639905271 departure=0 error 8: 
+Client  --> Req846:Infer model=0 b=1 input=94846
+Client <--  Rsp842:Infer received=1637159811650482645 departure=0 error 8: 
+Client  --> Req847:Infer model=0 b=1 input=94846
+Client <--  Rsp843:Infer received=1637159811661411046 departure=0 model_id=13 b=1 output=0
+Client  --> Req848:Infer model=0 b=1 input=94846
+Client <--  Rsp844:Infer received=1637159811671552047 departure=0 error 8: 
+Client  --> Req849:Infer model=0 b=1 input=94846
+Client <--  Rsp845:Infer received=1637159811682110214 departure=0 error 8: 
+Client  --> Req850:Infer model=0 b=1 input=94846
+Client <--  Rsp846:Infer received=1637159811692663214 departure=0 error 8: 
+Client  --> Req851:Infer model=0 b=1 input=94846
+Client <--  Rsp847:Infer received=1637159811703156638 departure=0 error 8: 
+Client <--  Rsp848:Infer received=1637159811713738412 departure=0 model_id=0 b=1 output=0
+Client  --> Req852:Infer model=0 b=1 input=94846
+Client <--  Rsp849:Infer received=1637159811724430188 departure=0 model_id=0 b=1 output=0
+Client  --> Req853:Infer model=0 b=1 input=94846
+Client <--  Rsp850:Infer received=1637159811734857681 departure=0 model_id=0 b=1 output=0
+Client  --> Req854:Infer model=0 b=1 input=94846
+Client <--  Rsp851:Infer received=1637159811745430515 departure=0 model_id=0 b=1 output=0
+Client  --> Req855:Infer model=0 b=1 input=94846
+Client <--  Rsp852:Infer received=1637159811757777828 departure=0 model_id=0 b=1 output=0
+Client  --> Req856:Infer model=0 b=1 input=94846
+Client <--  Rsp853:Infer received=1637159811770000821 departure=0 model_id=0 b=1 output=0
+Client  --> Req857:Infer model=2 b=1 input=98318
+Worker <--  A179:Infer model=2 gpu=0 batch=1 input=98318 [0.0, 10.9]
+Client <--  Rsp854:Infer received=1637159811782297079 departure=0 model_id=0 b=1 output=0
+Client  --> Req858:Infer model=0 b=1 input=94846
+Client <--  Rsp855:Infer received=1637159811794599064 departure=0 model_id=0 b=1 output=0
+Client  --> Req859:Infer model=0 b=1 input=94846
+Client <--  Rsp856:Infer received=1637159811806972567 departure=0 error 8: 
+Worker  --> R179:Infer exec=40.8 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp857:Infer received=1637159811819405646 departure=0 model_id=2 b=1 output=4000
+Client  --> Req860:Infer model=0 b=1 input=94846
+Client <--  Rsp858:Infer received=1637159811833969746 departure=0 model_id=0 b=1 output=0
+Client  --> Req861:Infer model=5 b=1 input=101113
+Client <--  Rsp859:Infer received=1637159811848850161 departure=0 model_id=0 b=1 output=0
+Client  --> Req862:Infer model=0 b=1 input=94846
+Client <--  Rsp860:Infer received=1637159811863474465 departure=0 model_id=0 b=1 output=0
+Client  --> Req863:Infer model=0 b=1 input=94846
+Client <--  Rsp861:Infer received=1637159811878420392 departure=0 model_id=5 b=1 output=0
+Client  --> Req864:Infer model=0 b=1 input=94846
+Client <--  Rsp862:Infer received=1637159811893044207 departure=0 model_id=0 b=1 output=0
+Client  --> Req865:Infer model=0 b=1 input=94846
+Client <--  Rsp863:Infer received=1637159811907885371 departure=0 model_id=0 b=1 output=0
+Client  --> Req866:Infer model=0 b=1 input=94846
+Client <--  Rsp864:Infer received=1637159811922594533 departure=0 model_id=0 b=1 output=0
+Client  --> Req867:Infer model=0 b=1 input=94846
+Client <--  Rsp865:Infer received=1637159811937340013 departure=0 model_id=0 b=1 output=0
+Client  --> Req868:Infer model=0 b=1 input=94846
+Client <--  Rsp866:Infer received=1637159811952299419 departure=0 model_id=0 b=1 output=0
+Client  --> Req869:Infer model=0 b=1 input=94846
+Client <--  Rsp867:Infer received=1637159811966878326 departure=0 model_id=0 b=1 output=0
+Client  --> Req870:Infer model=0 b=1 input=94846
+Client <--  Rsp868:Infer received=1637159811981635819 departure=0 model_id=0 b=1 output=0
+Client  --> Req871:Infer model=0 b=1 input=94846
+Client <--  Rsp869:Infer received=1637159811996488297 departure=0 model_id=0 b=1 output=0
+Client  --> Req872:Infer model=4 b=1 input=69447
+Worker <--  A180:Infer model=4 gpu=0 batch=1 input=69447 [0.0, 10.9]
+Client <--  Rsp870:Infer received=1637159812011238107 departure=0 model_id=0 b=1 output=0
+Client  --> Req873:Infer model=0 b=1 input=94846
+Worker  --> R180:Infer exec=20.9 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp872:Infer received=1637159812040340396 departure=0 model_id=4 b=1 output=4000
+Client <--  Rsp871:Infer received=1637159812025915771 departure=0 model_id=0 b=1 output=0
+Client  --> Req874:Infer model=0 b=1 input=94846
+Client  --> Req875:Infer model=0 b=1 input=94846
+Client <--  Rsp873:Infer received=1637159812059248115 departure=0 model_id=0 b=1 output=0
+Client  --> Req876:Infer model=0 b=1 input=94846
+Client <--  Rsp874:Infer received=1637159812077694737 departure=0 model_id=0 b=1 output=0
+Client <--  Rsp875:Infer received=1637159812096068024 departure=0 model_id=0 b=1 output=0
+Client  --> Req877:Infer model=0 b=1 input=94846
+Client <--  Rsp876:Infer received=1637159812114648533 departure=0 model_id=0 b=1 output=0
+Client  --> Req878:Infer model=0 b=1 input=94846
+Client <--  Rsp877:Infer received=1637159812151459363 departure=0 model_id=0 b=1 output=0
+Client  --> Req879:Infer model=0 b=1 input=94846
+Client <--  Rsp878:Infer received=1637159812188434601 departure=0 model_id=0 b=1 output=0
+Client  --> Req880:Infer model=0 b=1 input=94846
+Client <--  Rsp879:Infer received=1637159812225230065 departure=0 model_id=0 b=1 output=0
+Client <--  Rsp880:Infer received=1637159812262206142 departure=0 model_id=0 b=1 output=0
+Client  --> Req881:Infer model=0 b=1 input=94846
+Client <--  Rsp881:Infer received=1637159812336240149 departure=0 model_id=0 b=1 output=0
+Client  --> Req882:Infer model=0 b=1 input=94846
+Client <--  Rsp882:Infer received=1637159812409943314 departure=0 model_id=0 b=1 output=0
+Client  --> Req883:Infer model=0 b=1 input=94846
+Client <--  Rsp883:Infer received=1637159812483827090 departure=0 model_id=0 b=1 output=0
+Client  --> Req884:Infer model=0 b=1 input=94846
+Client <--  Rsp884:Infer received=1637159812557542059 departure=0 model_id=0 b=1 output=0
+Client  --> Req885:Infer model=0 b=1 input=94846
+Client <--  Rsp885:Infer received=1637159812631398667 departure=0 model_id=0 b=1 output=0
+Client  --> Req886:Infer model=0 b=1 input=94846
+Client <--  Rsp886:Infer received=1637159812705279510 departure=0 model_id=0 b=1 output=0
+Client  --> Req887:Infer model=0 b=1 input=94846
+Client <--  Rsp887:Infer received=1637159812779084435 departure=0 model_id=0 b=1 output=0
+Client  --> Req888:Infer model=0 b=1 input=94846
+Client <--  Rsp888:Infer received=1637159812852969330 departure=0 model_id=0 b=1 output=0
+Client  --> Req889:Infer model=0 b=1 input=94846
+Client <--  Rsp889:Infer received=1637159812926800306 departure=0 model_id=0 b=1 output=0
+Client  --> Req890:Infer model=0 b=1 input=94846
+Client <--  Rsp890:Infer received=1637159813000592310 departure=0 model_id=0 b=1 output=0
+Client  --> Req891:Infer model=0 b=1 input=94846
+Client <--  Rsp891:Infer received=1637159813074351628 departure=0 model_id=0 b=1 output=0
+Client  --> Req892:Infer model=0 b=1 input=94846
+Client <--  Rsp892:Infer received=1637159813148205722 departure=0 model_id=0 b=1 output=0
+Client  --> Req893:Infer model=0 b=1 input=94846
+Client <--  Rsp893:Infer received=1637159813222054159 departure=0 model_id=0 b=1 output=0
+Client  --> Req894:Infer model=10 b=1 input=52741
+Client <--  Rsp894:Infer received=1637159813295095081 departure=0 model_id=10 b=1 output=0
+Client  --> Req895:Infer model=0 b=1 input=94846
+Client <--  Rsp895:Infer received=1637159813369720302 departure=0 model_id=0 b=1 output=0
+Client  --> Req896:Infer model=0 b=1 input=94846
+Client <--  Rsp896:Infer received=1637159813443551208 departure=0 model_id=0 b=1 output=0
+Client  --> Req897:Infer model=0 b=1 input=94846
+Client <--  Rsp897:Infer received=1637159813517355853 departure=0 model_id=0 b=1 output=0
+Client  --> Req898:Infer model=0 b=1 input=94846
+Client <--  Rsp898:Infer received=1637159813591212322 departure=0 model_id=0 b=1 output=0
+Client  --> Req899:Infer model=0 b=1 input=94846
+Client <--  Rsp899:Infer received=1637159813665149039 departure=0 model_id=0 b=1 output=0
+Client  --> Req900:Infer model=11 b=1 input=60942
+Client <--  Rsp900:Infer received=1637159813738206095 departure=0 model_id=11 b=1 output=0
+Client  --> Req901:Infer model=0 b=1 input=94846
+Client <--  Rsp901:Infer received=1637159813812678710 departure=0 model_id=0 b=1 output=0
+Client  --> Req902:Infer model=2 b=1 input=98318
+Worker <--  A181:Infer model=2 gpu=0 batch=1 input=98318 [0.0, 10.9]
+Worker  --> R181:Infer exec=35.3 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp902:Infer received=1637159813886580925 departure=0 model_id=2 b=1 output=4000
+Client  --> Req903:Infer model=9 b=1 input=115165
+Worker <--  A182:Infer model=9 gpu=0 batch=1 input=115165 [0.0, 10.9]
+Worker  --> R182:Infer exec=36.0 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp903:Infer received=1637159813960675974 departure=0 model_id=9 b=1 output=4000
+Client  --> Req904:Infer model=0 b=1 input=94846
+Client <--  Rsp904:Infer received=1637159814034122051 departure=0 model_id=0 b=1 output=0
+Client  --> Req905:Infer model=0 b=1 input=94846
+Client <--  Rsp905:Infer received=1637159814108086565 departure=0 model_id=0 b=1 output=0
+Client  --> Req906:Infer model=0 b=1 input=94846
+Client <--  Rsp906:Infer received=1637159814181844277 departure=0 model_id=0 b=1 output=0
+Client  --> Req907:Infer model=0 b=1 input=94846
+Client <--  Rsp907:Infer received=1637159814255662262 departure=0 model_id=0 b=1 output=0
+Client throughput=3.7 success=6.97% (494/531 violations) min=18.3 max=63.5 mean=33.4
+Client  --> Req908:Infer model=0 b=1 input=94846
+Client <--  Rsp908:Infer received=1637159814329508604 departure=0 model_id=0 b=1 output=0
+Client  --> Req909:Infer model=0 b=1 input=94846
+Client <--  Rsp909:Infer received=1637159814403451187 departure=0 model_id=0 b=1 output=0
+Client  --> Req910:Infer model=0 b=1 input=94846
+Client <--  Rsp910:Infer received=1637159814477308704 departure=0 model_id=0 b=1 output=0
+Client  --> Req911:Infer model=0 b=1 input=94846
+Client <--  Rsp911:Infer received=1637159814550969125 departure=0 model_id=0 b=1 output=0
+Client  --> Req912:Infer model=0 b=1 input=94846
+Client <--  Rsp912:Infer received=1637159814624901023 departure=0 model_id=0 b=1 output=0
+Client  --> Req913:Infer model=0 b=1 input=94846
+Client <--  Rsp913:Infer received=1637159814698832362 departure=0 model_id=0 b=1 output=0
+Client  --> Req914:Infer model=2 b=1 input=98318
+Worker <--  A183:Infer model=2 gpu=0 batch=1 input=98318 [0.0, 10.9]
+Worker  --> R183:Infer exec=35.9 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp914:Infer received=1637159814772604322 departure=0 model_id=2 b=1 output=4000
+W0-GPU0 LoadW min=7.88 max=7.89 mean=7.88 e2emean=8.16 e2emax=8.18 throughput=0.3 utilization=0.00 clock=[0-0] norm_max=0.00 norm_mean=0.00
+W0-GPU0 Infer min=17.36 max=62.23 mean=32.13 e2emean=33.36 e2emax=63.37 throughput=3.6 utilization=0.11 clock=[1410-1597] norm_max=72.02 norm_mean=36.60
+Client  --> Req915:Infer model=0 b=1 input=94846
+Client <--  Rsp915:Infer received=1637159814846286535 departure=0 model_id=0 b=1 output=0
+Client  --> Req916:Infer model=0 b=1 input=94846
+Client <--  Rsp916:Infer received=1637159814920353717 departure=0 model_id=0 b=1 output=0
+Client  --> Req917:Infer model=0 b=1 input=94846
+Client <--  Rsp917:Infer received=1637159814993961757 departure=0 model_id=0 b=1 output=0
+Client  --> Req918:Infer model=1 b=1 input=52741
+Worker <--  A184:Infer model=1 gpu=0 batch=1 input=52741 [0.0, 10.9]
+Worker  --> R184:Infer exec=35.3 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp918:Infer received=1637159815066997371 departure=0 model_id=1 b=1 output=4000
+Client  --> Req919:Infer model=0 b=1 input=94846
+Client <--  Rsp919:Infer received=1637159815141577264 departure=0 model_id=0 b=1 output=0
+Client  --> Req920:Infer model=0 b=1 input=94846
+Client <--  Rsp920:Infer received=1637159815215541289 departure=0 model_id=0 b=1 output=0
+Client  --> Req921:Infer model=3 b=1 input=114223
+Worker <--  A185:Infer model=3 gpu=0 batch=1 input=114223 [0.0, 10.9]
+Worker  --> R185:Infer exec=27.1 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp921:Infer received=1637159815289706949 departure=0 model_id=3 b=1 output=4000
+Client  --> Req922:Infer model=0 b=1 input=94846
+Client <--  Rsp922:Infer received=1637159815363354589 departure=0 model_id=0 b=1 output=0
+Client  --> Req923:Infer model=0 b=1 input=94846
+Client <--  Rsp923:Infer received=1637159815437024440 departure=0 model_id=0 b=1 output=0
+Client  --> Req924:Infer model=1 b=1 input=52741
+Worker <--  A186:Infer model=1 gpu=0 batch=1 input=52741 [0.0, 10.9]
+Worker  --> R186:Infer exec=33.7 input=0.0 output=0.0 gpu0=1597
+Client <--  Rsp924:Infer received=1637159815509986231 departure=0 model_id=1 b=1 output=4000
+Client  --> Req925:Infer model=0 b=1 input=94846
+Client <--  Rsp925:Infer received=1637159815584556416 departure=0 model_id=0 b=1 output=0
+Client  --> Req926:Infer model=0 b=1 input=94846
+Client <--  Rsp926:Infer received=1637159815658477768 departure=0 model_id=0 b=1 output=0
+Client  --> Req927:Infer model=0 b=1 input=94846
+Client <--  Rsp927:Infer received=1637159815732375792 departure=0 model_id=0 b=1 output=0
+Client  --> Req928:Infer model=0 b=1 input=94846
+Client <--  Rsp928:Infer received=1637159815806158717 departure=0 model_id=0 b=1 output=0
+Client  --> Req929:Infer model=0 b=1 input=94846
+Client <--  Rsp929:Infer received=1637159815880025033 departure=0 model_id=0 b=1 output=0
+Client  --> Req930:Infer model=11 b=1 input=60942
+Client <--  Rsp930:Infer received=1637159815953147252 departure=0 model_id=11 b=1 output=0
+Client  --> Req931:Infer model=5 b=1 input=101113
+Client <--  Rsp931:Infer received=1637159816027733361 departure=0 model_id=5 b=1 output=0
+Client  --> Req932:Infer model=0 b=1 input=94846
+Client <--  Rsp932:Infer received=1637159816101440507 departure=0 model_id=0 b=1 output=0
+Client  --> Req933:Infer model=0 b=1 input=94846
+Client <--  Rsp933:Infer received=1637159816175390494 departure=0 model_id=0 b=1 output=0
+Client  --> Req934:Infer model=0 b=1 input=94846
+Client <--  Rsp934:Infer received=1637159816249148694 departure=0 model_id=0 b=1 output=0
+Client  --> Req935:Infer model=7 b=1 input=84728
+Client <--  Rsp935:Infer received=1637159816322759528 departure=0 model_id=7 b=1 output=0
+Client  --> Req936:Infer model=0 b=1 input=94846
+Client <--  Rsp936:Infer received=1637159816396900184 departure=0 model_id=0 b=1 output=0
+Closing connection 0x7f82529e2010, reason: End of file
