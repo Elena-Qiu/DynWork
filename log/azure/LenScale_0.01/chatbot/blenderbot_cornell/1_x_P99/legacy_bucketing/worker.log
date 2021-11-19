@@ -4,13 +4,13 @@ user clockwork directory: /workdir/clockwork
 Loading Clockwork worker default config from /workdir/clockwork/config/default.cfg
 user clockwork directory: /workdir/clockwork
 GPUGPU0-0-GPU-0 started
-GPU0-PCIe_H2D_Inputs-0 started
-PCIe_H2D_Weights-0 started
 GPU0-PCIe_D2H_Output-0 started
-AsyncTaskChecker-0 started
-CPU-0 started
+PCIe_H2D_Weights-0 started
+CPU-AsyncTaskChecker-0 started
+0 started
+GPU0-PCIe_H2D_Inputs-0 started
 IO service thread listening on 0.0.0.0:12345
-Closing connection 0x7f31f0000d30, reason: End of file
+Closing connection 0x7f0f24000d30, reason: End of file
 Received A0:GetWorkerState
 Sending R0:GetWorkerState:
  page_size=16777216
@@ -18,71 +18,73 @@ gpus=
  GPU-0 weights_cache=21.5GB (1376 pages) io_pool=512.0MB workspace_pool=512.0MB 0 models currently on GPU
 models=
 
-Received A0:LoadModelFromDisk model=0 [0.0, 16809602339665.6] /workdir/models/jobs.bucketed_bucket0/model
+Received A0:LoadModelFromDisk model=0 [0.0, 16809549426731.5] /workdir/models/jobs.bucketed_bucket0/model
 cudaMallocHost 102160300 (102160300 x 1)
-Sending R0:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=6.4 b2=6.5 b4=6.6 b8=7.0 duration=4721.2
-Received A1:LoadModelFromDisk model=1 [0.0, 16809602334942.8] /workdir/models/jobs.bucketed_bucket1/model
+Sending R0:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=6.4 b2=6.5 b4=6.6 b8=7.0 duration=4725.5
+Received A1:LoadModelFromDisk model=1 [0.0, 16809549422004.7] /workdir/models/jobs.bucketed_bucket1/model
 cudaMallocHost 102160300 (102160300 x 1)
-Sending R1:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=6.2 b2=6.3 b4=6.5 b8=6.9 duration=4943.0
-Received A2:LoadModelFromDisk model=2 [0.0, 16809602329998.6] /workdir/models/jobs.bucketed_bucket2/model
+Sending R1:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=6.2 b2=6.3 b4=6.5 b8=6.9 duration=4933.3
+Received A2:LoadModelFromDisk model=2 [0.0, 16809549417070.2] /workdir/models/jobs.bucketed_bucket2/model
 cudaMallocHost 102160300 (102160300 x 1)
-Sending R2:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=5.9 b2=6.0 b4=6.2 b8=6.5 duration=4945.3
-Received A3:LoadModelFromDisk model=3 [0.0, 16809602325052.1] /workdir/models/jobs.bucketed_bucket3/model
+Sending R2:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=5.9 b2=6.0 b4=6.2 b8=6.5 duration=4915.5
+Received A3:LoadModelFromDisk model=3 [0.0, 16809549412153.4] /workdir/models/jobs.bucketed_bucket3/model
 cudaMallocHost 102160300 (102160300 x 1)
-Sending R3:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=6.2 b2=6.2 b4=6.4 b8=6.8 duration=4946.3
-Received A4:LoadModelFromDisk model=4 [0.0, 16809602320104.7] /workdir/models/jobs.bucketed_bucket4/model
+Sending R3:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=6.2 b2=6.2 b4=6.4 b8=6.8 duration=4928.1
+Received A4:LoadModelFromDisk model=4 [0.0, 16809549407224.3] /workdir/models/jobs.bucketed_bucket4/model
 cudaMallocHost 102160300 (102160300 x 1)
-Sending R4:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=6.6 b2=6.6 b4=6.8 b8=7.2 duration=4945.4
-Received A5:LoadModelFromDisk model=5 [0.0, 16809602315158.1] /workdir/models/jobs.bucketed_bucket5/model
+Sending R4:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=6.6 b2=6.6 b4=6.8 b8=7.2 duration=4931.3
+Received A5:LoadModelFromDisk model=5 [0.0, 16809549402292.0] /workdir/models/jobs.bucketed_bucket5/model
 cudaMallocHost 102160300 (102160300 x 1)
-Sending R5:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=5.8 b2=5.9 b4=6.1 b8=6.5 duration=4964.6
-Received A6:LoadModelFromDisk model=6 [0.0, 16809602310192.4] /workdir/models/jobs.bucketed_bucket6/model
+Sending R5:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=5.8 b2=5.9 b4=6.1 b8=6.5 duration=4930.2
+Received A6:LoadModelFromDisk model=6 [0.0, 16809549397360.8] /workdir/models/jobs.bucketed_bucket6/model
 cudaMallocHost 102160300 (102160300 x 1)
-Sending R6:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=8.1 b2=8.2 b4=8.4 b8=8.8 duration=4926.9
-Received A7:LoadModelFromDisk model=7 [0.0, 16809602305264.4] /workdir/models/jobs.bucketed_bucket7/model
+Sending R6:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=8.1 b2=8.2 b4=8.4 b8=8.8 duration=4891.6
+Received A7:LoadModelFromDisk model=7 [0.0, 16809549392468.1] /workdir/models/jobs.bucketed_bucket7/model
 cudaMallocHost 102160300 (102160300 x 1)
-Sending R7:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=9.3 b2=9.4 b4=9.6 b8=10.0 duration=4933.2
-Received A8:LoadModelFromDisk model=8 [0.0, 16809602300330.0] /workdir/models/jobs.bucketed_bucket8/model
+Sending R7:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=9.3 b2=9.4 b4=9.6 b8=10.0 duration=4934.3
+Received A8:LoadModelFromDisk model=8 [0.0, 16809549387532.8] /workdir/models/jobs.bucketed_bucket8/model
 cudaMallocHost 102160300 (102160300 x 1)
-Sending R8:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=8.9 b2=9.0 b4=9.2 b8=9.6 duration=4944.9
-Received A9:LoadModelFromDisk model=9 [0.0, 16809602295384.1] /workdir/models/jobs.bucketed_bucket9/model
+Sending R8:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=8.9 b2=9.0 b4=9.2 b8=9.6 duration=4924.7
+Received A9:LoadModelFromDisk model=9 [0.0, 16809549382607.2] /workdir/models/jobs.bucketed_bucket9/model
 cudaMallocHost 102160300 (102160300 x 1)
-Sending R9:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=8.6 b2=8.7 b4=8.9 b8=9.2 duration=4915.0
-Received A10:LoadModelFromDisk model=10 [0.0, 16809602290468.2] /workdir/models/jobs.bucketed_bucket10/model
+Sending R9:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=8.6 b2=8.7 b4=8.9 b8=9.2 duration=4916.9
+Received A10:LoadModelFromDisk model=10 [0.0, 16809549377689.4] /workdir/models/jobs.bucketed_bucket10/model
 cudaMallocHost 102160300 (102160300 x 1)
-Sending R10:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=9.0 b2=9.1 b4=9.3 b8=9.7 duration=4924.6
-Received A11:LoadModelFromDisk model=11 [0.0, 16809602285542.4] /workdir/models/jobs.bucketed_bucket11/model
+Sending R10:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=9.0 b2=9.1 b4=9.3 b8=9.7 duration=4914.1
+Received A11:LoadModelFromDisk model=11 [0.0, 16809549372774.2] /workdir/models/jobs.bucketed_bucket11/model
 cudaMallocHost 102160300 (102160300 x 1)
-Sending R11:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=8.4 b2=8.5 b4=8.7 b8=9.1 duration=4944.7
-Received A12:LoadModelFromDisk model=12 [0.0, 16809602280596.6] /workdir/models/jobs.bucketed_bucket12/model
+Sending R11:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=8.4 b2=8.5 b4=8.7 b8=9.1 duration=4923.8
+Received A12:LoadModelFromDisk model=12 [0.0, 16809549367849.4] /workdir/models/jobs.bucketed_bucket12/model
 cudaMallocHost 102160300 (102160300 x 1)
-Sending R12:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=9.6 b2=9.7 b4=9.9 b8=10.3 duration=4925.8
-Received A13:LoadModelFromDisk model=13 [0.0, 16809602275669.7] /workdir/models/jobs.bucketed_bucket13/model
+Sending R12:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=9.6 b2=9.7 b4=9.9 b8=10.3 duration=4916.4
+Received A13:LoadModelFromDisk model=13 [0.0, 16809549362931.9] /workdir/models/jobs.bucketed_bucket13/model
 cudaMallocHost 102160300 (102160300 x 1)
-Sending R13:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=8.5 b2=8.6 b4=8.8 b8=9.2 duration=4906.6
-Received A14:LoadModelFromDisk model=14 [0.0, 16809602270762.1] /workdir/models/jobs.bucketed_bucket14/model
+Sending R13:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=8.5 b2=8.6 b4=8.8 b8=9.2 duration=4900.7
+Received A14:LoadModelFromDisk model=14 [0.0, 16809549358030.1] /workdir/models/jobs.bucketed_bucket14/model
 cudaMallocHost 102160300 (102160300 x 1)
-Sending R14:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=9.3 b2=9.4 b4=9.6 b8=10.0 duration=4953.0
-Received A15:LoadModelFromDisk model=15 [0.0, 16809602265808.0] /workdir/models/jobs.bucketed_bucket15/model
+Sending R14:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=9.3 b2=9.4 b4=9.6 b8=10.0 duration=4907.0
+Received A15:LoadModelFromDisk model=15 [0.0, 16809549353122.1] /workdir/models/jobs.bucketed_bucket15/model
 cudaMallocHost 102160300 (102160300 x 1)
-Sending R15:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=8.8 b2=8.9 b4=9.0 b8=9.4 duration=4928.2
-Received A16:LoadModelFromDisk model=16 [0.0, 16809602260878.9] /workdir/models/jobs.bucketed_bucket16/model
+Sending R15:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=8.8 b2=8.9 b4=9.0 b8=9.4 duration=4920.8
+Received A16:LoadModelFromDisk model=16 [0.0, 16809549348200.4] /workdir/models/jobs.bucketed_bucket16/model
 cudaMallocHost 102160300 (102160300 x 1)
-Sending R16:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=9.8 b2=9.9 b4=10.1 b8=10.5 duration=4916.6
-Received A17:LoadModelFromDisk model=17 [0.0, 16809602255961.1] /workdir/models/jobs.bucketed_bucket17/model
+Sending R16:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=9.8 b2=9.9 b4=10.1 b8=10.5 duration=4899.1
+Received A17:LoadModelFromDisk model=17 [0.0, 16809549343300.2] /workdir/models/jobs.bucketed_bucket17/model
 cudaMallocHost 102160300 (102160300 x 1)
-Sending R17:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=10.5 b2=10.6 b4=10.8 b8=11.2 duration=4902.7
-Received A18:LoadModelFromDisk model=18 [0.0, 16809602251057.4] /workdir/models/jobs.bucketed_bucket18/model
+Sending R17:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=10.5 b2=10.6 b4=10.8 b8=11.2 duration=4909.0
+Received A18:LoadModelFromDisk model=18 [0.0, 16809549338390.1] /workdir/models/jobs.bucketed_bucket18/model
 cudaMallocHost 102160300 (102160300 x 1)
-Sending R18:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=8.3 b2=8.4 b4=8.6 b8=9.0 duration=4914.0
-Received A19:LoadModelFromDisk model=19 [0.0, 16809602246142.2] /workdir/models/jobs.bucketed_bucket19/model
+Sending R18:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=8.3 b2=8.4 b4=8.6 b8=9.0 duration=4893.7
+Received A19:LoadModelFromDisk model=19 [0.0, 16809549333495.5] /workdir/models/jobs.bucketed_bucket19/model
 cudaMallocHost 102160300 (102160300 x 1)
-Sending R19:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=9.6 b2=9.7 b4=9.9 b8=10.2 duration=4903.7
+Sending R19:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=9.6 b2=9.7 b4=9.9 b8=10.2 duration=4893.7
 Network Status: Controller ✔✔✔✔✔ Worker (inputs forwarded by controller)
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.73]
 ****** Fake: sleeping max time (ms) 6.73 cycles 10748210
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.74]
 ****** Fake: sleeping max time (ms) 5.74 cycles 9170966
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [7.76]
+****** Fake: sleeping max time (ms) 7.76 cycles 12393684
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [7.13]
 ****** Fake: sleeping max time (ms) 7.13 cycles 11386278
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.17]
@@ -95,17 +97,21 @@ Network Status: Controller ✔✔✔✔✔ Worker (inputs forwarded by controlle
 ****** Fake: sleeping max time (ms) 4.65 cycles 7431444
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.32]
 ****** Fake: sleeping max time (ms) 5.32 cycles 8495728
+GPU Clocks Changed: GPU0=1372
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.56]
 ****** Fake: sleeping max time (ms) 5.56 cycles 8881556
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.82]
 ****** Fake: sleeping max time (ms) 5.82 cycles 9294611
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [8.11]
 ****** Fake: sleeping max time (ms) 8.11 cycles 12948453
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [7.78]
+****** Fake: sleeping max time (ms) 7.78 cycles 12431803
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [7.92]
 ****** Fake: sleeping max time (ms) 7.92 cycles 12640291
-GPU Clocks Changed: GPU0=1372
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.66]
 ****** Fake: sleeping max time (ms) 5.66 cycles 9040057
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.18]
+****** Fake: sleeping max time (ms) 5.18 cycles 8274300
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [8.43]
 ****** Fake: sleeping max time (ms) 8.43 cycles 13455800
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [4.95]
@@ -116,18 +122,18 @@ GPU Clocks Changed: GPU0=1372
 ****** Fake: sleeping max time (ms) 5.66 cycles 9033766
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [7.46]
 ****** Fake: sleeping max time (ms) 7.46 cycles 11906271
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [4.54]
-****** Fake: sleeping max time (ms) 4.54 cycles 7250748
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.03]
-****** Fake: sleeping max time (ms) 6.03 cycles 9630537
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [7.95]
+****** Fake: sleeping max time (ms) 7.95 cycles 12697329
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.18]
 ****** Fake: sleeping max time (ms) 6.18 cycles 9865468
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.81]
-****** Fake: sleeping max time (ms) 6.81 cycles 10871459
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [7.14]
-****** Fake: sleeping max time (ms) 7.14 cycles 11397601
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.98]
-****** Fake: sleeping max time (ms) 5.98 cycles 9549133
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [9.57]
+****** Fake: sleeping max time (ms) 9.57 cycles 15277265
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.22]
+****** Fake: sleeping max time (ms) 6.22 cycles 9934211
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.99]
+****** Fake: sleeping max time (ms) 5.99 cycles 9572045
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [7.33]
+****** Fake: sleeping max time (ms) 7.33 cycles 11699609
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [7.17]
 ****** Fake: sleeping max time (ms) 7.17 cycles 11457037
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.34]
@@ -142,18 +148,18 @@ GPU Clocks Changed: GPU0=1372
 ****** Fake: sleeping max time (ms) 6.54 cycles 10442168
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.20]
 ****** Fake: sleeping max time (ms) 6.20 cycles 9907860
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.83]
-****** Fake: sleeping max time (ms) 5.83 cycles 9315233
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.67]
 ****** Fake: sleeping max time (ms) 5.67 cycles 9054265
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.48]
+****** Fake: sleeping max time (ms) 6.48 cycles 10351767
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.79]
 ****** Fake: sleeping max time (ms) 5.79 cycles 9238887
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [9.54]
 ****** Fake: sleeping max time (ms) 9.54 cycles 15233358
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [4.55]
 ****** Fake: sleeping max time (ms) 4.55 cycles 7266691
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.59]
-****** Fake: sleeping max time (ms) 5.59 cycles 8934152
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.45]
+****** Fake: sleeping max time (ms) 5.45 cycles 8709269
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.74]
 ****** Fake: sleeping max time (ms) 6.74 cycles 10768128
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [7.37]
@@ -200,14 +206,14 @@ GPU Clocks Changed: GPU0=1372
 ****** Fake: sleeping max time (ms) 6.86 cycles 10949476
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.55]
 ****** Fake: sleeping max time (ms) 5.55 cycles 8869138
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.84]
-****** Fake: sleeping max time (ms) 5.84 cycles 9329770
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.21]
+****** Fake: sleeping max time (ms) 5.21 cycles 8319601
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.51]
 ****** Fake: sleeping max time (ms) 5.51 cycles 8805350
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [4.90]
-****** Fake: sleeping max time (ms) 4.90 cycles 7824380
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.13]
 ****** Fake: sleeping max time (ms) 6.13 cycles 9781866
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [7.09]
+****** Fake: sleeping max time (ms) 7.09 cycles 11320823
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.92]
 ****** Fake: sleeping max time (ms) 5.92 cycles 9449123
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.78]
@@ -330,16 +336,18 @@ GPU Clocks Changed: GPU0=1372
 ****** Fake: sleeping max time (ms) 5.34 cycles 8532741
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.25]
 ****** Fake: sleeping max time (ms) 6.25 cycles 9986740
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.72]
-****** Fake: sleeping max time (ms) 6.72 cycles 10729987
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.30]
+****** Fake: sleeping max time (ms) 6.30 cycles 10064408
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.41]
 ****** Fake: sleeping max time (ms) 6.41 cycles 10232997
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.71]
 ****** Fake: sleeping max time (ms) 5.71 cycles 9119340
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.05]
-****** Fake: sleeping max time (ms) 6.05 cycles 9659021
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.76]
-****** Fake: sleeping max time (ms) 6.76 cycles 10792088
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.40]
+****** Fake: sleeping max time (ms) 5.40 cycles 8620849
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.13]
+****** Fake: sleeping max time (ms) 6.13 cycles 9796953
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.22]
+****** Fake: sleeping max time (ms) 5.22 cycles 8333243
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.19]
 ****** Fake: sleeping max time (ms) 6.19 cycles 9878980
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [7.78]
@@ -380,14 +388,12 @@ GPU Clocks Changed: GPU0=1372
 ****** Fake: sleeping max time (ms) 7.46 cycles 11913390
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.20]
 ****** Fake: sleeping max time (ms) 6.20 cycles 9905583
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.06]
-****** Fake: sleeping max time (ms) 6.06 cycles 9671182
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.96]
+****** Fake: sleeping max time (ms) 5.96 cycles 9512186
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.17]
 ****** Fake: sleeping max time (ms) 6.17 cycles 9857300
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.26]
 ****** Fake: sleeping max time (ms) 6.26 cycles 9991013
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [8.38]
-****** Fake: sleeping max time (ms) 8.38 cycles 13380598
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [8.02]
 ****** Fake: sleeping max time (ms) 8.02 cycles 12801696
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [7.67]
@@ -402,12 +408,12 @@ GPU Clocks Changed: GPU0=1372
 ****** Fake: sleeping max time (ms) 10.12 cycles 16154945
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.35]
 ****** Fake: sleeping max time (ms) 6.35 cycles 10135035
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [4.98]
-****** Fake: sleeping max time (ms) 4.98 cycles 7954366
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.55]
+****** Fake: sleeping max time (ms) 6.55 cycles 10465425
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.96]
 ****** Fake: sleeping max time (ms) 5.96 cycles 9510195
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.67]
-****** Fake: sleeping max time (ms) 6.67 cycles 10649601
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.27]
+****** Fake: sleeping max time (ms) 6.27 cycles 10012344
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.89]
 ****** Fake: sleeping max time (ms) 6.89 cycles 11004338
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [4.39]
@@ -442,8 +448,8 @@ GPU Clocks Changed: GPU0=1372
 ****** Fake: sleeping max time (ms) 7.16 cycles 11435426
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.43]
 ****** Fake: sleeping max time (ms) 5.43 cycles 8668500
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.51]
-****** Fake: sleeping max time (ms) 6.51 cycles 10402810
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [7.87]
+****** Fake: sleeping max time (ms) 7.87 cycles 12573272
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.01]
 ****** Fake: sleeping max time (ms) 6.01 cycles 9596064
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [8.21]
@@ -570,8 +576,8 @@ GPU Clocks Changed: GPU0=1372
 ****** Fake: sleeping max time (ms) 11.14 cycles 17792765
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [7.16]
 ****** Fake: sleeping max time (ms) 7.16 cycles 11439183
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.06]
-****** Fake: sleeping max time (ms) 6.06 cycles 9676278
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [9.92]
+****** Fake: sleeping max time (ms) 9.92 cycles 15843360
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [7.57]
 ****** Fake: sleeping max time (ms) 7.57 cycles 12089956
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.32]
@@ -646,12 +652,10 @@ GPU Clocks Changed: GPU0=1372
 ****** Fake: sleeping max time (ms) 6.93 cycles 11059246
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [7.22]
 ****** Fake: sleeping max time (ms) 7.22 cycles 11525446
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.96]
-****** Fake: sleeping max time (ms) 6.96 cycles 11121385
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.90]
-****** Fake: sleeping max time (ms) 5.90 cycles 9419910
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.82]
-****** Fake: sleeping max time (ms) 5.82 cycles 9291353
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [8.82]
+****** Fake: sleeping max time (ms) 8.82 cycles 14093126
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [7.49]
+****** Fake: sleeping max time (ms) 7.49 cycles 11964830
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.56]
 ****** Fake: sleeping max time (ms) 5.56 cycles 8872327
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.38]
@@ -686,8 +690,8 @@ GPU Clocks Changed: GPU0=1372
 ****** Fake: sleeping max time (ms) 6.66 cycles 10636360
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.77]
 ****** Fake: sleeping max time (ms) 5.77 cycles 9207544
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.39]
-****** Fake: sleeping max time (ms) 6.39 cycles 10204479
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.14]
+****** Fake: sleeping max time (ms) 5.14 cycles 8210095
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.53]
 ****** Fake: sleeping max time (ms) 5.53 cycles 8832977
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [9.78]
@@ -696,8 +700,8 @@ GPU Clocks Changed: GPU0=1372
 ****** Fake: sleeping max time (ms) 5.14 cycles 8206123
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.19]
 ****** Fake: sleeping max time (ms) 6.19 cycles 9880738
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.42]
-****** Fake: sleeping max time (ms) 6.42 cycles 10259586
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [7.34]
+****** Fake: sleeping max time (ms) 7.34 cycles 11717560
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.98]
 ****** Fake: sleeping max time (ms) 5.98 cycles 9555743
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.81]
@@ -708,22 +712,22 @@ GPU Clocks Changed: GPU0=1372
 ****** Fake: sleeping max time (ms) 7.73 cycles 12337274
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.43]
 ****** Fake: sleeping max time (ms) 5.43 cycles 8666200
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.53]
-****** Fake: sleeping max time (ms) 5.53 cycles 8825399
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [10.49]
 ****** Fake: sleeping max time (ms) 10.49 cycles 16760351
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.94]
 ****** Fake: sleeping max time (ms) 6.94 cycles 11077679
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.65]
 ****** Fake: sleeping max time (ms) 6.65 cycles 10613120
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [7.57]
-****** Fake: sleeping max time (ms) 7.57 cycles 12090215
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.61]
+****** Fake: sleeping max time (ms) 6.61 cycles 10549025
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [7.20]
 ****** Fake: sleeping max time (ms) 7.20 cycles 11493777
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.27]
 ****** Fake: sleeping max time (ms) 5.27 cycles 8412946
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.35]
 ****** Fake: sleeping max time (ms) 5.35 cycles 8546587
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.50]
+****** Fake: sleeping max time (ms) 6.50 cycles 10376956
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.42]
 ****** Fake: sleeping max time (ms) 6.42 cycles 10251080
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.49]
@@ -742,8 +746,8 @@ GPU Clocks Changed: GPU0=1372
 ****** Fake: sleeping max time (ms) 6.73 cycles 10742217
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.02]
 ****** Fake: sleeping max time (ms) 5.02 cycles 8024153
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.29]
-****** Fake: sleeping max time (ms) 6.29 cycles 10044233
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.77]
+****** Fake: sleeping max time (ms) 5.77 cycles 9210175
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [4.56]
 ****** Fake: sleeping max time (ms) 4.56 cycles 7286856
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.84]
@@ -764,8 +768,8 @@ GPU Clocks Changed: GPU0=1372
 ****** Fake: sleeping max time (ms) 6.23 cycles 9941798
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.27]
 ****** Fake: sleeping max time (ms) 6.27 cycles 10014076
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [8.29]
-****** Fake: sleeping max time (ms) 8.29 cycles 13234609
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.00]
+****** Fake: sleeping max time (ms) 5.00 cycles 7988833
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.01]
 ****** Fake: sleeping max time (ms) 6.01 cycles 9600938
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.20]
@@ -834,32 +838,36 @@ GPU Clocks Changed: GPU0=1372
 ****** Fake: sleeping max time (ms) 5.71 cycles 9124257
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [4.88]
 ****** Fake: sleeping max time (ms) 4.88 cycles 7788217
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [9.24]
-****** Fake: sleeping max time (ms) 9.24 cycles 14755877
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.83]
+****** Fake: sleeping max time (ms) 6.83 cycles 10902019
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [7.48]
 ****** Fake: sleeping max time (ms) 7.48 cycles 11949045
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [7.47]
-****** Fake: sleeping max time (ms) 7.47 cycles 11931800
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.18]
+****** Fake: sleeping max time (ms) 5.18 cycles 8275688
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.50]
+****** Fake: sleeping max time (ms) 5.50 cycles 8781764
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [7.08]
 ****** Fake: sleeping max time (ms) 7.08 cycles 11299444
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.05]
 ****** Fake: sleeping max time (ms) 6.05 cycles 9655678
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.66]
 ****** Fake: sleeping max time (ms) 5.66 cycles 9037044
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [7.77]
-****** Fake: sleeping max time (ms) 7.77 cycles 12408062
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [10.05]
+****** Fake: sleeping max time (ms) 10.05 cycles 16043855
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.51]
 ****** Fake: sleeping max time (ms) 6.51 cycles 10402651
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [4.87]
 ****** Fake: sleeping max time (ms) 4.87 cycles 7781837
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [7.18]
-****** Fake: sleeping max time (ms) 7.18 cycles 11473113
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.81]
+****** Fake: sleeping max time (ms) 5.81 cycles 9273999
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.31]
 ****** Fake: sleeping max time (ms) 5.31 cycles 8482865
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.95]
+****** Fake: sleeping max time (ms) 6.95 cycles 11102114
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.86]
 ****** Fake: sleeping max time (ms) 5.86 cycles 9360285
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [7.05]
-****** Fake: sleeping max time (ms) 7.05 cycles 11251632
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.80]
+****** Fake: sleeping max time (ms) 5.80 cycles 9263018
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.66]
 ****** Fake: sleeping max time (ms) 5.66 cycles 9031348
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.44]
@@ -870,14 +878,14 @@ GPU Clocks Changed: GPU0=1372
 ****** Fake: sleeping max time (ms) 5.58 cycles 8905963
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.50]
 ****** Fake: sleeping max time (ms) 6.50 cycles 10376273
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [7.10]
-****** Fake: sleeping max time (ms) 7.10 cycles 11336194
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.33]
+****** Fake: sleeping max time (ms) 6.33 cycles 10113797
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.24]
 ****** Fake: sleeping max time (ms) 6.24 cycles 9972782
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [7.24]
 ****** Fake: sleeping max time (ms) 7.24 cycles 11567513
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.96]
-****** Fake: sleeping max time (ms) 5.96 cycles 9522343
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.14]
+****** Fake: sleeping max time (ms) 6.14 cycles 9798525
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.26]
 ****** Fake: sleeping max time (ms) 5.26 cycles 8401889
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.93]
@@ -914,6 +922,8 @@ GPU Clocks Changed: GPU0=1372
 ****** Fake: sleeping max time (ms) 9.04 cycles 14440917
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.12]
 ****** Fake: sleeping max time (ms) 6.12 cycles 9774092
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.79]
+****** Fake: sleeping max time (ms) 5.79 cycles 9254576
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.52]
 ****** Fake: sleeping max time (ms) 5.52 cycles 8822269
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.23]
@@ -942,8 +952,8 @@ GPU Clocks Changed: GPU0=1372
 ****** Fake: sleeping max time (ms) 6.74 cycles 10765980
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [9.32]
 ****** Fake: sleeping max time (ms) 9.32 cycles 14883162
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.07]
-****** Fake: sleeping max time (ms) 6.07 cycles 9698603
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.72]
+****** Fake: sleeping max time (ms) 5.72 cycles 9129297
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.33]
 ****** Fake: sleeping max time (ms) 5.33 cycles 8506607
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.94]
@@ -996,8 +1006,8 @@ GPU Clocks Changed: GPU0=1372
 ****** Fake: sleeping max time (ms) 7.43 cycles 11859620
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.54]
 ****** Fake: sleeping max time (ms) 6.54 cycles 10438486
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.90]
-****** Fake: sleeping max time (ms) 6.90 cycles 11021305
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.86]
+****** Fake: sleeping max time (ms) 5.86 cycles 9363464
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [7.31]
 ****** Fake: sleeping max time (ms) 7.31 cycles 11670191
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.19]
@@ -1062,12 +1072,12 @@ GPU Clocks Changed: GPU0=1372
 ****** Fake: sleeping max time (ms) 7.00 cycles 11181125
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.42]
 ****** Fake: sleeping max time (ms) 6.42 cycles 10250116
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.10]
-****** Fake: sleeping max time (ms) 5.10 cycles 8152450
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.51]
+****** Fake: sleeping max time (ms) 6.51 cycles 10389961
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.36]
 ****** Fake: sleeping max time (ms) 6.36 cycles 10161107
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.33]
-****** Fake: sleeping max time (ms) 5.33 cycles 8518585
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.73]
+****** Fake: sleeping max time (ms) 6.73 cycles 10752304
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [8.25]
 ****** Fake: sleeping max time (ms) 8.25 cycles 13177732
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.20]
@@ -1128,8 +1138,8 @@ GPU Clocks Changed: GPU0=1372
 ****** Fake: sleeping max time (ms) 5.64 cycles 8999214
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [8.58]
 ****** Fake: sleeping max time (ms) 8.58 cycles 13694343
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.07]
-****** Fake: sleeping max time (ms) 6.07 cycles 9690852
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.48]
+****** Fake: sleeping max time (ms) 6.48 cycles 10342491
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.10]
 ****** Fake: sleeping max time (ms) 6.10 cycles 9743467
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.79]
@@ -1154,8 +1164,6 @@ GPU Clocks Changed: GPU0=1372
 ****** Fake: sleeping max time (ms) 5.50 cycles 8775516
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.70]
 ****** Fake: sleeping max time (ms) 6.70 cycles 10701463
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.77]
-****** Fake: sleeping max time (ms) 6.77 cycles 10810572
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.23]
 ****** Fake: sleeping max time (ms) 6.23 cycles 9943096
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.77]
@@ -1516,7 +1524,6 @@ GPU Clocks Changed: GPU0=1372
 ****** Fake: sleeping max time (ms) 5.50 cycles 8784815
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.16]
 ****** Fake: sleeping max time (ms) 5.16 cycles 8245487
-GPU Clocks Changed: GPU0=1380
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [7.97]
 ****** Fake: sleeping max time (ms) 7.97 cycles 12728637
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [8.00]
@@ -1577,6 +1584,7 @@ GPU Clocks Changed: GPU0=1380
 ****** Fake: sleeping max time (ms) 6.48 cycles 10356196
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [8.17]
 ****** Fake: sleeping max time (ms) 8.17 cycles 13049049
+GPU Clocks Changed: GPU0=1342
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [7.18]
 ****** Fake: sleeping max time (ms) 7.18 cycles 11468247
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [7.31]
@@ -1693,8 +1701,6 @@ GPU Clocks Changed: GPU0=1380
 ****** Fake: sleeping max time (ms) 5.76 cycles 9198290
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.83]
 ****** Fake: sleeping max time (ms) 6.83 cycles 10901730
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.91]
-****** Fake: sleeping max time (ms) 6.91 cycles 11040546
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.76]
 ****** Fake: sleeping max time (ms) 5.76 cycles 9199717
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.65]
@@ -1719,22 +1725,20 @@ GPU Clocks Changed: GPU0=1380
 ****** Fake: sleeping max time (ms) 7.67 cycles 12251833
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.87]
 ****** Fake: sleeping max time (ms) 5.87 cycles 9371418
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.19]
-****** Fake: sleeping max time (ms) 6.19 cycles 9884507
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [7.98]
+****** Fake: sleeping max time (ms) 7.98 cycles 12743853
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [8.10]
 ****** Fake: sleeping max time (ms) 8.10 cycles 12930957
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [7.21]
-****** Fake: sleeping max time (ms) 7.21 cycles 11515584
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.55]
-****** Fake: sleeping max time (ms) 6.55 cycles 10452843
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.60]
+****** Fake: sleeping max time (ms) 6.60 cycles 10541001
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [9.68]
+****** Fake: sleeping max time (ms) 9.68 cycles 15460664
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.60]
 ****** Fake: sleeping max time (ms) 6.60 cycles 10544760
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [7.67]
 ****** Fake: sleeping max time (ms) 7.67 cycles 12250895
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.73]
 ****** Fake: sleeping max time (ms) 5.73 cycles 9143859
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [8.03]
-****** Fake: sleeping max time (ms) 8.03 cycles 12817253
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.60]
 ****** Fake: sleeping max time (ms) 6.60 cycles 10535438
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [7.40]
@@ -1755,12 +1759,14 @@ GPU Clocks Changed: GPU0=1380
 ****** Fake: sleeping max time (ms) 7.97 cycles 12726730
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.87]
 ****** Fake: sleeping max time (ms) 5.87 cycles 9371430
-****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [7.56]
-****** Fake: sleeping max time (ms) 7.56 cycles 12076207
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [7.95]
+****** Fake: sleeping max time (ms) 7.95 cycles 12694788
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.41]
 ****** Fake: sleeping max time (ms) 6.41 cycles 10231383
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [6.63]
 ****** Fake: sleeping max time (ms) 6.63 cycles 10585168
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.57]
+****** Fake: sleeping max time (ms) 5.57 cycles 8898484
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [7.76]
 ****** Fake: sleeping max time (ms) 7.76 cycles 12398140
 ****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [5.15]

@@ -23,8 +23,8 @@ if __name__ == '__main__':
     args.num = 1000
     args.batch = 8
     args.trace_point = 300
-    args.length_scale = 0.01
-    args.rate_downgrade = 0.2
+    args.length_scale = 0.1
+    args.rate_downgrade = 0.1
 
     '''
     max_throughput = batch_size/avg_latency (per second)
