@@ -1,0 +1,41 @@
+Using CUDA Driver 11040 Runtime 11010
+Starting Clockwork Worker
+user clockwork directory: /workdir/clockwork
+Loading Clockwork worker default config from /workdir/clockwork/config/default.cfg
+user clockwork directory: /workdir/clockwork
+GPUGPU0-GPU-0 started
+GPU0-PCIe_H2D_Inputs-0 started
+0-GPU0-AsyncTaskChecker-0 started
+PCIe_D2H_OutputPCIe_H2D_Weights-0 started
+-0 started
+CPU-0 started
+IO service thread listening on 0.0.0.0:12345
+GPU Clocks Changed: GPU0=1245
+Closing connection 0x7f537c000d30, reason: End of file
+Received A0:GetWorkerState
+Sending R0:GetWorkerState:
+ page_size=16777216
+gpus=
+ GPU-0 weights_cache=21.5GB (1376 pages) io_pool=512.0MB workspace_pool=512.0MB 0 models currently on GPU
+models=
+
+Received A0:LoadModelFromDisk model=0 [0.0, 16809418271736.4] /workdir/models/jobs.bucketed_bucket0/model
+cudaMallocHost 102160300 (102160300 x 1)
+Sending R0:LoadModelFromDisk input=602112 output=4000 weights=112.0 MB (7 pages) xfer=8.4 b1=28.0 b2=28.1 b4=28.1 b8=28.1 duration=4898.6
+Network Status: Controller ✔✔✔✔✔ Worker (inputs forwarded by controller)
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [27.11]
+****** Fake: sleeping max time (ms) 27.11 cycles 43287309
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [42.39]
+****** Fake: sleeping max time (ms) 42.39 cycles 67697896
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [14.23]
+****** Fake: sleeping max time (ms) 14.23 cycles 22729958
+****** Fake: sleeping batch size 2 single_input_size 602112 time (ms): [18.73, 27.42]
+****** Fake: sleeping max time (ms) 27.42 cycles 43786140
+GPU Clocks Changed: GPU0=1372
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [28.36]
+****** Fake: sleeping max time (ms) 28.36 cycles 45295736
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [52.93]
+****** Fake: sleeping max time (ms) 52.93 cycles 84523683
+****** Fake: sleeping batch size 1 single_input_size 602112 time (ms): [43.38]
+****** Fake: sleeping max time (ms) 43.38 cycles 69275420
+GPU Clocks Changed: GPU0=1245
