@@ -10,4 +10,4 @@
 | Summarization |      bart_cnn      | node-1 |     10     |      100      |    P50     |
 |  Translation  |      fsmt_wmt      |  nfs   |     10     |      100      |    P50     |
 |  Translation  |     mbart_wmt      |  nfs   |     10     |      100      |    P50     |
-
+| Static_Classification| resnet_imagenet| new_node-1|20|128|/|
