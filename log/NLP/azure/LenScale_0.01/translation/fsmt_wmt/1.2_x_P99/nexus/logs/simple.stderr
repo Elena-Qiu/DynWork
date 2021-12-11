@@ -1,0 +1,38 @@
+I1211 05:03:27.206660 144752 frontend.cpp:85] App port 9001, rpc port 9002
+I1211 05:03:27.208389 144752 rpc_service_base.h:46] RPC service is listening on 0.0.0.0:9002
+I1211 05:03:27.212199 144752 model_handler.cpp:90] fake:fake_0:1:224x224:57 load balance policy: 3
+I1211 05:03:27.212270 144752 frontend.cpp:315] Update model route for fake:fake_0:1:224x224:57
+I1211 05:03:27.212769 144752 model_handler.cpp:177] - backend 3438925334: 37503.7
+I1211 05:03:27.212798 144752 model_handler.cpp:182] Total throughput: 37503.7
+I1211 05:03:27.213208 144752 frontend.cpp:45] Frontend server (id: 2378144098) is listening on 0.0.0.0:9001
+I1211 05:03:27.213264 144752 backend_pool.cpp:58] Connected to backend 3438925334
+I1211 05:03:28.202642 144752 connection.cpp:28] Connection Stop
+I1211 05:03:56.852679 144752 connection.cpp:28] Connection Stop
+I1211 05:03:56.853936 144758 frontend.cpp:315] Update model route for fake:fake_0:1:224x224:57
+I1211 05:03:56.853997 144758 frontend.cpp:346] Remove backend 3438925334
+I1211 05:03:56.854025 144758 backend_pool.cpp:113] Remove backend 3438925334
+I1211 05:03:56.854032 144758 backend_pool.cpp:38] Disconnect to backend 3438925334
+I1211 05:03:56.854038 144758 connection.cpp:28] Connection Stop
+I1211 05:03:56.854116 144758 model_handler.cpp:182] Total throughput: 0
+*** Aborted at 1639199036 (unix time) try "date -d @1639199036" if you are using GNU date ***
+PC: @                0x0 (unknown)
+*** SIGFPE (@0x7fddedce8812) received by PID 144752 (TID 0x7fdde5739700) from PID 18446744073404319762; stack trace: ***
+    @     0x7fdded3b4980 (unknown)
+    @     0x7fddedce8812 nexus::app::ModelHandler::UpdateRoute()
+    @     0x7fddedcc6301 nexus::app::Frontend::UpdateBackendPoolAndModelRoute()
+    @     0x7fddedcc458f nexus::app::Frontend::UpdateModelRoutes()
+    @     0x7fddedd044df _ZZN5nexus3app10RpcService10HandleRpcsEvENKUlRKN9grpc_impl13ServerContextERKNS_17ModelRouteUpdatesEPNS_8RpcReplyEE_clES5_S8_SA_
+    @     0x7fddedd048cd _ZNSt17_Function_handlerIFvRKN9grpc_impl13ServerContextERKN5nexus17ModelRouteUpdatesEPNS4_8RpcReplyEEZNS4_3app10RpcService10HandleRpcsEvEUlS3_S7_S9_E_E9_M_invokeERKSt9_Any_dataS3_S7_OS9_
+E1211 05:03:56.857096 144752 frontend.cpp:285] Failed to connect to scheduler: Socket closed(14)
+    @     0x7fddedd0ab54 std::function<>::operator()()
+    @     0x7fddedd09a7a nexus::app::UpdateModelRoutes_Call::Proceed()
+    @     0x7fddedd04646 nexus::app::RpcService::HandleRpcs()
+    @     0x7fddedcdee56 std::__invoke_impl<>()
+    @     0x7fddedcdbaf7 std::__invoke<>()
+    @     0x7fddedce471b _ZNSt6thread8_InvokerISt5tupleIJMN5nexus19AsyncRpcServiceBaseINS2_12FrontendCtrl33WithAsyncMethod_UpdateModelRoutesINS4_26WithAsyncMethod_CheckAliveINS4_7ServiceEEEEEEEFvvEPSA_EEE9_M_invokeIJLm0ELm1EEEEDTcl8__invokespcl10_S_declvalIXT_EEEEESt12_Index_tupleIJXspT_EEE
+    @     0x7fddedce43be std::thread::_Invoker<>::operator()()
+    @     0x7fddedce3a34 std::thread::_State_impl<>::_M_run()
+    @     0x7fdded0d66df (unknown)
+    @     0x7fdded3a96db start_thread
+    @     0x7fddecb3171f clone
+    @                0x0 (unknown)

@@ -1,0 +1,30 @@
+I1211 10:31:17.387974 168770 rpc_service_base.h:46] RPC service is listening on 0.0.0.0:10001
+I1211 10:31:19.953730 168775 scheduler.cpp:98] Register server: node_type: BACKEND_NODE
+node_id: 3225160368
+server_port: "8001"
+rpc_port: "8002"
+gpu_device_name: "Tesla_V100S-PCIE-32GB"
+gpu_available_memory: 33650376704
+gpu_uuid: "fcf0dc04-2c7f-7570-499b-47b29c6d534c"
+I1211 10:31:21.404642 168776 scheduler.cpp:98] Register server: node_id: 3187200946
+server_port: "9001"
+rpc_port: "9002"
+I1211 10:31:21.405270 168777 model_db.cpp:283] Load model DB from /workdir/models/db/model_db.yml
+I1211 10:31:21.406108 168777 backend_delegate.cpp:183] Backend 3225160368 loads fake:fake_0:1:224x224:10, batch 8, max batch 8, max duty cycle 44.0182 us, throughput 181743 req/s. Backend exec cycle 44.0182 us, duty cycle: 44.0182 us
+*** Aborted at 1639218707 (unix time) try "date -d @1639218707" if you are using GNU date ***
+I1211 10:31:47.019043 168777 scheduler.cpp:115] Unregister FRONTEND_NODE 3187200946
+I1211 10:31:47.019070 168778 scheduler.cpp:115] Unregister BACKEND_NODE 3225160368
+I1211 10:31:47.019122 168777 scheduler.cpp:442] Remove frontend 3187200946
+I1211 10:31:47.019165 168777 scheduler.cpp:656] Remove model session: fake:fake_0:1:224x224:10
+I1211 10:31:47.019172 168777 backend_delegate.cpp:290] Backend 3225160368 unload model: fake:fake_0:1:224x224:10
+PC: @                0x0 (unknown)
+*** SIGTERM (@0x29300) received by PID 168770 (TID 0x7fb0b1abef00) from PID 168704; stack trace: ***
+I1211 10:31:47.019627 168778 scheduler.cpp:454] Remove backend 3225160368
+    @     0x7fb0b07bd980 (unknown)
+    @     0x7fb0b07bcd50 __GI___nanosleep
+    @     0x56212adcef0d std::this_thread::sleep_for<>()
+    @     0x56212adb2269 nexus::scheduler::Scheduler::Run()
+    @     0x56212ae01781 main
+    @     0x7fb0aba32bf7 __libc_start_main
+    @     0x56212ad7deaa _start
+    @                0x0 (unknown)

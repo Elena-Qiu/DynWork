@@ -1,0 +1,29 @@
+I1211 01:53:24.228485 102973 rpc_service_base.h:46] RPC service is listening on 0.0.0.0:10001
+I1211 01:53:26.791076 102978 scheduler.cpp:98] Register server: node_type: BACKEND_NODE
+node_id: 879183436
+server_port: "8001"
+rpc_port: "8002"
+gpu_device_name: "Tesla_V100S-PCIE-32GB"
+gpu_available_memory: 33650376704
+gpu_uuid: "fcf0dc04-2c7f-7570-499b-47b29c6d534c"
+I1211 01:53:28.244450 102981 scheduler.cpp:98] Register server: node_id: 2028635649
+server_port: "9001"
+rpc_port: "9002"
+I1211 01:53:28.244962 102980 model_db.cpp:283] Load model DB from /workdir/models/db/model_db.yml
+I1211 01:53:28.245756 102980 backend_delegate.cpp:183] Backend 879183436 loads fake:fake_0:1:224x224:15, batch 8, max batch 8, max duty cycle 59.7635 us, throughput 133861 req/s. Backend exec cycle 59.7635 us, duty cycle: 59.7635 us
+*** Aborted at 1639187625 (unix time) try "date -d @1639187625" if you are using GNU date ***
+I1211 01:53:45.364847 102981 scheduler.cpp:115] Unregister BACKEND_NODE 879183436
+I1211 01:53:45.364888 102981 scheduler.cpp:454] Remove backend 879183436
+I1211 01:53:45.364915 102981 scheduler.cpp:984] fake:fake_0:1:224x224:15 has unassigned workload 133861
+I1211 01:53:45.364943 102980 scheduler.cpp:115] Unregister FRONTEND_NODE 2028635649
+I1211 01:53:45.364946 102981 scheduler.cpp:1007] Unassigned workload fake:fake_0:1:224x224:15, 133861 req/s
+PC: @                0x0 (unknown)
+*** SIGTERM (@0x191fb) received by PID 102973 (TID 0x7fb3e38f2f00) from PID 102907; stack trace: ***
+    @     0x7fb3e25f1980 (unknown)
+    @     0x7fb3e25f0d50 __GI___nanosleep
+    @     0x55f79de34f0d std::this_thread::sleep_for<>()
+    @     0x55f79de18269 nexus::scheduler::Scheduler::Run()
+    @     0x55f79de67781 main
+    @     0x7fb3dd866bf7 __libc_start_main
+    @     0x55f79dde3eaa _start
+    @                0x0 (unknown)

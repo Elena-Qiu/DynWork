@@ -1,0 +1,38 @@
+I1211 02:05:15.215039 110721 frontend.cpp:85] App port 9001, rpc port 9002
+I1211 02:05:15.216735 110721 rpc_service_base.h:46] RPC service is listening on 0.0.0.0:9002
+I1211 02:05:15.220355 110721 model_handler.cpp:90] fake:fake_0:1:224x224:72 load balance policy: 3
+I1211 02:05:15.220430 110721 frontend.cpp:315] Update model route for fake:fake_0:1:224x224:72
+I1211 02:05:15.220989 110721 model_handler.cpp:177] - backend 3920931004: 25450
+I1211 02:05:15.221031 110721 model_handler.cpp:182] Total throughput: 25450
+I1211 02:05:15.221520 110721 frontend.cpp:45] Frontend server (id: 71647013) is listening on 0.0.0.0:9001
+I1211 02:05:15.221585 110721 backend_pool.cpp:58] Connected to backend 3920931004
+I1211 02:05:16.211506 110721 connection.cpp:28] Connection Stop
+I1211 02:05:46.770159 110721 connection.cpp:28] Connection Stop
+I1211 02:05:46.771507 110727 frontend.cpp:315] Update model route for fake:fake_0:1:224x224:72
+I1211 02:05:46.771606 110727 frontend.cpp:346] Remove backend 3920931004
+I1211 02:05:46.771647 110727 backend_pool.cpp:113] Remove backend 3920931004
+I1211 02:05:46.771656 110727 backend_pool.cpp:38] Disconnect to backend 3920931004
+I1211 02:05:46.771664 110727 connection.cpp:28] Connection Stop
+I1211 02:05:46.771764 110727 model_handler.cpp:182] Total throughput: 0
+*** Aborted at 1639188346 (unix time) try "date -d @1639188346" if you are using GNU date ***
+PC: @                0x0 (unknown)
+*** SIGFPE (@0x7f1dda195812) received by PID 110721 (TID 0x7f1dd23e7700) from PID 18446744073073678354; stack trace: ***
+    @     0x7f1dd9861980 (unknown)
+    @     0x7f1dda195812 nexus::app::ModelHandler::UpdateRoute()
+    @     0x7f1dda173301 nexus::app::Frontend::UpdateBackendPoolAndModelRoute()
+    @     0x7f1dda17158f nexus::app::Frontend::UpdateModelRoutes()
+    @     0x7f1dda1b14df _ZZN5nexus3app10RpcService10HandleRpcsEvENKUlRKN9grpc_impl13ServerContextERKNS_17ModelRouteUpdatesEPNS_8RpcReplyEE_clES5_S8_SA_
+E1211 02:05:46.775259 110721 frontend.cpp:285] Failed to connect to scheduler: Socket closed(14)
+    @     0x7f1dda1b18cd _ZNSt17_Function_handlerIFvRKN9grpc_impl13ServerContextERKN5nexus17ModelRouteUpdatesEPNS4_8RpcReplyEEZNS4_3app10RpcService10HandleRpcsEvEUlS3_S7_S9_E_E9_M_invokeERKSt9_Any_dataS3_S7_OS9_
+    @     0x7f1dda1b7b54 std::function<>::operator()()
+    @     0x7f1dda1b6a7a nexus::app::UpdateModelRoutes_Call::Proceed()
+    @     0x7f1dda1b1646 nexus::app::RpcService::HandleRpcs()
+    @     0x7f1dda18be56 std::__invoke_impl<>()
+    @     0x7f1dda188af7 std::__invoke<>()
+    @     0x7f1dda19171b _ZNSt6thread8_InvokerISt5tupleIJMN5nexus19AsyncRpcServiceBaseINS2_12FrontendCtrl33WithAsyncMethod_UpdateModelRoutesINS4_26WithAsyncMethod_CheckAliveINS4_7ServiceEEEEEEEFvvEPSA_EEE9_M_invokeIJLm0ELm1EEEEDTcl8__invokespcl10_S_declvalIXT_EEEEESt12_Index_tupleIJXspT_EEE
+    @     0x7f1dda1913be std::thread::_Invoker<>::operator()()
+    @     0x7f1dda190a34 std::thread::_State_impl<>::_M_run()
+    @     0x7f1dd95836df (unknown)
+    @     0x7f1dd98566db start_thread
+    @     0x7f1dd8fde71f clone
+    @                0x0 (unknown)

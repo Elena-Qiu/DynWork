@@ -1,0 +1,35 @@
+I1211 01:48:48.125407 98820 rpc_service_base.h:46] RPC service is listening on 0.0.0.0:10001
+I1211 01:48:50.686834 98825 scheduler.cpp:98] Register server: node_type: BACKEND_NODE
+node_id: 1759634148
+server_port: "8001"
+rpc_port: "8002"
+gpu_device_name: "Tesla_V100S-PCIE-32GB"
+gpu_available_memory: 33650376704
+gpu_uuid: "fcf0dc04-2c7f-7570-499b-47b29c6d534c"
+I1211 01:48:52.140662 98828 scheduler.cpp:98] Register server: node_id: 3129648190
+server_port: "9001"
+rpc_port: "9002"
+I1211 01:48:52.141173 98826 model_db.cpp:283] Load model DB from /workdir/models/db/model_db.yml
+I1211 01:48:52.141964 98826 backend_delegate.cpp:183] Backend 1759634148 loads fake:fake_0:1:224x224:98, batch 8, max batch 8, max duty cycle 130.955 us, throughput 61089.9 req/s. Backend exec cycle 130.955 us, duty cycle: 130.955 us
+I1211 01:49:19.128695 98820 scheduler.cpp:832] Epoch schedule
+I1211 01:49:19.128806 98820 scheduler.cpp:1120] Total used GPUs: 1
+Backend 1759634148: 1
+I1211 01:49:19.128826 98820 scheduler.cpp:1137] Model table: 
+fake:fake_0:1:224x224:98: 1759634148/61089.9/1, total share: 1
+*** Aborted at 1639187367 (unix time) try "date -d @1639187367" if you are using GNU date ***
+I1211 01:49:27.333463 98825 scheduler.cpp:115] Unregister FRONTEND_NODE 3129648190
+I1211 01:49:27.333514 98825 scheduler.cpp:442] Remove frontend 3129648190
+I1211 01:49:27.333549 98825 scheduler.cpp:656] Remove model session: fake:fake_0:1:224x224:98
+I1211 01:49:27.333562 98825 backend_delegate.cpp:290] Backend 1759634148 unload model: fake:fake_0:1:224x224:98
+I1211 01:49:27.333602 98828 scheduler.cpp:115] Unregister BACKEND_NODE 1759634148
+PC: @                0x0 (unknown)
+*** SIGTERM (@0x181c2) received by PID 98820 (TID 0x7fa6689eef00) from PID 98754; stack trace: ***
+I1211 01:49:27.334321 98828 scheduler.cpp:454] Remove backend 1759634148
+    @     0x7fa6676ed980 (unknown)
+    @     0x7fa6676ecd50 __GI___nanosleep
+    @     0x55e904c1ef0d std::this_thread::sleep_for<>()
+    @     0x55e904c02269 nexus::scheduler::Scheduler::Run()
+    @     0x55e904c51781 main
+    @     0x7fa662962bf7 __libc_start_main
+    @     0x55e904bcdeaa _start
+    @                0x0 (unknown)

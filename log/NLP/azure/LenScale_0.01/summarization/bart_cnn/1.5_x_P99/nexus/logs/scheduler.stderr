@@ -1,0 +1,41 @@
+I1211 04:57:59.086005 141222 rpc_service_base.h:46] RPC service is listening on 0.0.0.0:10001
+I1211 04:58:01.651015 141227 scheduler.cpp:98] Register server: node_type: BACKEND_NODE
+node_id: 2456431118
+server_port: "8001"
+rpc_port: "8002"
+gpu_device_name: "Tesla_V100S-PCIE-32GB"
+gpu_available_memory: 33650376704
+gpu_uuid: "fcf0dc04-2c7f-7570-499b-47b29c6d534c"
+I1211 04:58:03.101738 141229 scheduler.cpp:98] Register server: node_id: 1735543197
+server_port: "9001"
+rpc_port: "9002"
+I1211 04:58:03.102391 141228 model_db.cpp:283] Load model DB from /workdir/models/db/model_db.yml
+I1211 04:58:03.103221 141228 backend_delegate.cpp:183] Backend 2456431118 loads fake:fake_0:1:224x224:109, batch 8, max batch 8, max duty cycle 360.123 us, throughput 22214.6 req/s. Backend exec cycle 360.123 us, duty cycle: 360.123 us
+I1211 04:58:30.089290 141222 scheduler.cpp:832] Epoch schedule
+I1211 04:58:30.089406 141222 scheduler.cpp:1120] Total used GPUs: 1
+Backend 2456431118: 1
+I1211 04:58:30.089426 141222 scheduler.cpp:1137] Model table: 
+fake:fake_0:1:224x224:109: 2456431118/22214.6/1, total share: 1
+I1211 04:58:47.090674 141222 scheduler.cpp:832] Epoch schedule
+I1211 04:58:47.090744 141222 scheduler.cpp:861] fake:fake_0:1:224x224:109 estimate rps: 18.0356 (last: 18.0356, mean: 25.0693, std: 8.09387), throughput: 22214.6
+I1211 04:58:47.090787 141222 backend_delegate.cpp:341] Backend 2456431118 updates fake:fake_0:1:224x224:109, batch 2, max batch 8, new throughput 18.7392
+I1211 04:58:47.092309 141222 scheduler.cpp:1120] Total used GPUs: 1
+Backend 2456431118: 0.00149
+I1211 04:58:47.092332 141222 scheduler.cpp:1137] Model table: 
+fake:fake_0:1:224x224:109: 2456431118/18.7392/1, total share: 1
+*** Aborted at 1639198733 (unix time) try "date -d @1639198733" if you are using GNU date ***
+I1211 04:58:53.709795 141229 scheduler.cpp:115] Unregister BACKEND_NODE 2456431118
+I1211 04:58:53.709823 141230 scheduler.cpp:115] Unregister FRONTEND_NODE 1735543197
+I1211 04:58:53.709841 141229 scheduler.cpp:454] Remove backend 2456431118
+I1211 04:58:53.709882 141229 scheduler.cpp:984] fake:fake_0:1:224x224:109 has unassigned workload 18.7392
+I1211 04:58:53.709908 141229 scheduler.cpp:1007] Unassigned workload fake:fake_0:1:224x224:109, 18.7392 req/s
+PC: @                0x0 (unknown)
+*** SIGTERM (@0x22764) received by PID 141222 (TID 0x7f3af722ef00) from PID 141156; stack trace: ***
+    @     0x7f3af5f2d980 (unknown)
+    @     0x7f3af5f2cd50 __GI___nanosleep
+    @     0x56252b2e0f0d std::this_thread::sleep_for<>()
+    @     0x56252b2c4269 nexus::scheduler::Scheduler::Run()
+    @     0x56252b313781 main
+    @     0x7f3af11a2bf7 __libc_start_main
+    @     0x56252b28feaa _start
+    @                0x0 (unknown)

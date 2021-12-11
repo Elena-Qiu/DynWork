@@ -1,0 +1,47 @@
+I1211 01:57:16.124779 106652 frontend.cpp:85] App port 9001, rpc port 9002
+I1211 01:57:16.126524 106652 rpc_service_base.h:46] RPC service is listening on 0.0.0.0:9002
+I1211 01:57:16.130220 106652 model_handler.cpp:90] fake:fake_0:1:224x224:237 load balance policy: 3
+I1211 01:57:16.130286 106652 frontend.cpp:315] Update model route for fake:fake_0:1:224x224:237
+I1211 01:57:16.130795 106652 model_handler.cpp:177] - backend 2256206863: 17778.9
+I1211 01:57:16.130825 106652 model_handler.cpp:182] Total throughput: 17778.9
+I1211 01:57:16.131225 106652 frontend.cpp:45] Frontend server (id: 4005257111) is listening on 0.0.0.0:9001
+I1211 01:57:16.131278 106652 backend_pool.cpp:58] Connected to backend 2256206863
+I1211 01:57:17.121346 106652 connection.cpp:28] Connection Stop
+I1211 01:57:58.117806 106658 frontend.cpp:315] Update model route for fake:fake_0:1:224x224:237
+I1211 01:57:58.117908 106658 model_handler.cpp:177] - backend 2256206863: 21.3235
+I1211 01:57:58.117919 106658 model_handler.cpp:182] Total throughput: 21.3235
+I1211 01:58:17.120343 106658 frontend.cpp:315] Update model route for fake:fake_0:1:224x224:237
+I1211 01:58:17.120448 106658 model_handler.cpp:177] - backend 2256206863: 25.5898
+I1211 01:58:17.120462 106658 model_handler.cpp:182] Total throughput: 25.5898
+I1211 01:58:27.122193 106658 frontend.cpp:315] Update model route for fake:fake_0:1:224x224:237
+I1211 01:58:27.122288 106658 model_handler.cpp:177] - backend 2256206863: 12.7924
+I1211 01:58:27.122301 106658 model_handler.cpp:182] Total throughput: 12.7924
+I1211 01:58:27.407837 106652 connection.cpp:28] Connection Stop
+I1211 01:58:27.408491 106658 frontend.cpp:315] Update model route for fake:fake_0:1:224x224:237
+I1211 01:58:27.408536 106658 frontend.cpp:346] Remove backend 2256206863
+I1211 01:58:27.408586 106658 backend_pool.cpp:113] Remove backend 2256206863
+I1211 01:58:27.408594 106658 backend_pool.cpp:38] Disconnect to backend 2256206863
+I1211 01:58:27.408603 106658 connection.cpp:28] Connection Stop
+I1211 01:58:27.408699 106658 model_handler.cpp:182] Total throughput: 0
+*** Aborted at 1639187907 (unix time) try "date -d @1639187907" if you are using GNU date ***
+PC: @                0x0 (unknown)
+*** SIGFPE (@0x7ff4b83bd812) received by PID 106652 (TID 0x7ff4ab7fe700) from PID 18446744072505514002; stack trace: ***
+    @     0x7ff4b7a89980 (unknown)
+    @     0x7ff4b83bd812 nexus::app::ModelHandler::UpdateRoute()
+    @     0x7ff4b839b301 nexus::app::Frontend::UpdateBackendPoolAndModelRoute()
+    @     0x7ff4b839958f nexus::app::Frontend::UpdateModelRoutes()
+    @     0x7ff4b83d94df _ZZN5nexus3app10RpcService10HandleRpcsEvENKUlRKN9grpc_impl13ServerContextERKNS_17ModelRouteUpdatesEPNS_8RpcReplyEE_clES5_S8_SA_
+    @     0x7ff4b83d98cd _ZNSt17_Function_handlerIFvRKN9grpc_impl13ServerContextERKN5nexus17ModelRouteUpdatesEPNS4_8RpcReplyEEZNS4_3app10RpcService10HandleRpcsEvEUlS3_S7_S9_E_E9_M_invokeERKSt9_Any_dataS3_S7_OS9_
+    @     0x7ff4b83dfb54 std::function<>::operator()()
+    @     0x7ff4b83dea7a nexus::app::UpdateModelRoutes_Call::Proceed()
+E1211 01:58:27.412402 106652 frontend.cpp:285] Failed to connect to scheduler: Socket closed(14)
+    @     0x7ff4b83d9646 nexus::app::RpcService::HandleRpcs()
+    @     0x7ff4b83b3e56 std::__invoke_impl<>()
+    @     0x7ff4b83b0af7 std::__invoke<>()
+    @     0x7ff4b83b971b _ZNSt6thread8_InvokerISt5tupleIJMN5nexus19AsyncRpcServiceBaseINS2_12FrontendCtrl33WithAsyncMethod_UpdateModelRoutesINS4_26WithAsyncMethod_CheckAliveINS4_7ServiceEEEEEEEFvvEPSA_EEE9_M_invokeIJLm0ELm1EEEEDTcl8__invokespcl10_S_declvalIXT_EEEEESt12_Index_tupleIJXspT_EEE
+    @     0x7ff4b83b93be std::thread::_Invoker<>::operator()()
+    @     0x7ff4b83b8a34 std::thread::_State_impl<>::_M_run()
+    @     0x7ff4b77ab6df (unknown)
+    @     0x7ff4b7a7e6db start_thread
+    @     0x7ff4b720671f clone
+    @                0x0 (unknown)

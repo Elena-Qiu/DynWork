@@ -1,0 +1,35 @@
+I1211 04:44:43.433406 132715 rpc_service_base.h:46] RPC service is listening on 0.0.0.0:10001
+I1211 04:44:46.003626 132720 scheduler.cpp:98] Register server: node_type: BACKEND_NODE
+node_id: 1964870903
+server_port: "8001"
+rpc_port: "8002"
+gpu_device_name: "Tesla_V100S-PCIE-32GB"
+gpu_available_memory: 33650376704
+gpu_uuid: "fcf0dc04-2c7f-7570-499b-47b29c6d534c"
+I1211 04:44:47.449678 132723 scheduler.cpp:98] Register server: node_id: 644651465
+server_port: "9001"
+rpc_port: "9002"
+I1211 04:44:47.450152 132721 model_db.cpp:283] Load model DB from /workdir/models/db/model_db.yml
+I1211 04:44:47.451006 132721 backend_delegate.cpp:183] Backend 1964870903 loads fake:fake_0:1:224x224:69, batch 8, max batch 8, max duty cycle 119.853 us, throughput 66748.7 req/s. Backend exec cycle 119.853 us, duty cycle: 119.853 us
+I1211 04:45:14.436651 132715 scheduler.cpp:832] Epoch schedule
+I1211 04:45:14.436772 132715 scheduler.cpp:1120] Total used GPUs: 1
+Backend 1964870903: 1
+I1211 04:45:14.436800 132715 scheduler.cpp:1137] Model table: 
+fake:fake_0:1:224x224:69: 1964870903/66748.7/1, total share: 1
+*** Aborted at 1639197919 (unix time) try "date -d @1639197919" if you are using GNU date ***
+I1211 04:45:19.022398 132722 scheduler.cpp:115] Unregister FRONTEND_NODE 644651465
+I1211 04:45:19.022416 132721 scheduler.cpp:115] Unregister BACKEND_NODE 1964870903
+I1211 04:45:19.022538 132722 scheduler.cpp:442] Remove frontend 644651465
+I1211 04:45:19.022655 132722 scheduler.cpp:656] Remove model session: fake:fake_0:1:224x224:69
+I1211 04:45:19.022662 132722 backend_delegate.cpp:290] Backend 1964870903 unload model: fake:fake_0:1:224x224:69
+PC: @                0x0 (unknown)
+I1211 04:45:19.023159 132721 scheduler.cpp:454] Remove backend 1964870903
+*** SIGTERM (@0x20629) received by PID 132715 (TID 0x7f9b80fcdf00) from PID 132649; stack trace: ***
+    @     0x7f9b7fccc980 (unknown)
+    @     0x7f9b7fccbd50 __GI___nanosleep
+    @     0x55a81b940f0d std::this_thread::sleep_for<>()
+    @     0x55a81b924269 nexus::scheduler::Scheduler::Run()
+    @     0x55a81b973781 main
+    @     0x7f9b7af41bf7 __libc_start_main
+    @     0x55a81b8efeaa _start
+    @                0x0 (unknown)

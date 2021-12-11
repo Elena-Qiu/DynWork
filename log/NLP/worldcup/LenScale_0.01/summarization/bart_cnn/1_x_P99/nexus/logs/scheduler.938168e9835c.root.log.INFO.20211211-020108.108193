@@ -1,0 +1,33 @@
+Log file created at: 2021/12/11 02:01:08
+Running on machine: 938168e9835c
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I1211 02:01:08.577176 108193 rpc_service_base.h:46] RPC service is listening on 0.0.0.0:10001
+I1211 02:01:11.137975 108199 scheduler.cpp:98] Register server: node_type: BACKEND_NODE
+node_id: 819930897
+server_port: "8001"
+rpc_port: "8002"
+gpu_device_name: "Tesla_V100S-PCIE-32GB"
+gpu_available_memory: 33650376704
+gpu_uuid: "fcf0dc04-2c7f-7570-499b-47b29c6d534c"
+I1211 02:01:12.594192 108201 scheduler.cpp:98] Register server: node_id: 1832397423
+server_port: "9001"
+rpc_port: "9002"
+I1211 02:01:12.594735 108200 model_db.cpp:283] Load model DB from /workdir/models/db/model_db.yml
+I1211 02:01:12.595589 108200 backend_delegate.cpp:183] Backend 819930897 loads fake:fake_0:1:224x224:74, batch 8, max batch 8, max duty cycle 370.478 us, throughput 21593.7 req/s. Backend exec cycle 370.478 us, duty cycle: 370.478 us
+I1211 02:01:39.580708 108193 scheduler.cpp:832] Epoch schedule
+I1211 02:01:39.580807 108193 scheduler.cpp:1120] Total used GPUs: 1
+Backend 819930897: 1
+I1211 02:01:39.580826 108193 scheduler.cpp:1137] Model table: 
+fake:fake_0:1:224x224:74: 819930897/21593.7/1, total share: 1
+I1211 02:01:56.582069 108193 scheduler.cpp:832] Epoch schedule
+I1211 02:01:56.582139 108193 scheduler.cpp:861] fake:fake_0:1:224x224:74 estimate rps: 30.0489 (last: 30.0489, mean: 20.5986, std: 13.0284), throughput: 21593.7
+I1211 02:01:56.582176 108193 backend_delegate.cpp:341] Backend 819930897 updates fake:fake_0:1:224x224:74, batch 3, max batch 8, new throughput 41.8474
+I1211 02:01:56.583751 108193 scheduler.cpp:1120] Total used GPUs: 1
+Backend 819930897: 0.00276301
+I1211 02:01:56.583773 108193 scheduler.cpp:1137] Model table: 
+fake:fake_0:1:224x224:74: 819930897/41.8474/1, total share: 1
+I1211 02:01:56.635891 108201 scheduler.cpp:115] Unregister BACKEND_NODE 819930897
+I1211 02:01:56.635934 108201 scheduler.cpp:454] Remove backend 819930897
+I1211 02:01:56.635938 108198 scheduler.cpp:115] Unregister FRONTEND_NODE 1832397423
+I1211 02:01:56.635959 108201 scheduler.cpp:984] fake:fake_0:1:224x224:74 has unassigned workload 41.8474
+I1211 02:01:56.635985 108201 scheduler.cpp:1007] Unassigned workload fake:fake_0:1:224x224:74, 41.8474 req/s

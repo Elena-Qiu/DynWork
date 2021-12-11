@@ -1,0 +1,34 @@
+I1211 01:49:31.175511 99336 rpc_service_base.h:46] RPC service is listening on 0.0.0.0:10001
+I1211 01:49:33.736409 99341 scheduler.cpp:98] Register server: node_type: BACKEND_NODE
+node_id: 2062053268
+server_port: "8001"
+rpc_port: "8002"
+gpu_device_name: "Tesla_V100S-PCIE-32GB"
+gpu_available_memory: 33650376704
+gpu_uuid: "fcf0dc04-2c7f-7570-499b-47b29c6d534c"
+I1211 01:49:35.190600 99343 scheduler.cpp:98] Register server: node_id: 3280023113
+server_port: "9001"
+rpc_port: "9002"
+I1211 01:49:35.191094 99344 model_db.cpp:283] Load model DB from /workdir/models/db/model_db.yml
+I1211 01:49:35.191923 99344 backend_delegate.cpp:183] Backend 2062053268 loads fake:fake_0:1:224x224:130, batch 8, max batch 8, max duty cycle 130.955 us, throughput 61089.9 req/s. Backend exec cycle 130.955 us, duty cycle: 130.955 us
+I1211 01:50:02.178853 99336 scheduler.cpp:832] Epoch schedule
+I1211 01:50:02.178925 99336 scheduler.cpp:1120] Total used GPUs: 1
+Backend 2062053268: 1
+I1211 01:50:02.178946 99336 scheduler.cpp:1137] Model table: 
+fake:fake_0:1:224x224:130: 2062053268/61089.9/1, total share: 1
+*** Aborted at 1639187410 (unix time) try "date -d @1639187410" if you are using GNU date ***
+I1211 01:50:10.404809 99341 scheduler.cpp:115] Unregister BACKEND_NODE 2062053268
+I1211 01:50:10.404845 99341 scheduler.cpp:454] Remove backend 2062053268
+I1211 01:50:10.404867 99344 scheduler.cpp:115] Unregister FRONTEND_NODE 3280023113
+I1211 01:50:10.404873 99341 scheduler.cpp:984] fake:fake_0:1:224x224:130 has unassigned workload 61089.9
+I1211 01:50:10.404922 99341 scheduler.cpp:1007] Unassigned workload fake:fake_0:1:224x224:130, 61089.9 req/s
+PC: @                0x0 (unknown)
+*** SIGTERM (@0x183c6) received by PID 99336 (TID 0x7fc6e7542f00) from PID 99270; stack trace: ***
+    @     0x7fc6e6241980 (unknown)
+    @     0x7fc6e6240d50 __GI___nanosleep
+    @     0x55f5864f1f0d std::this_thread::sleep_for<>()
+    @     0x55f5864d5269 nexus::scheduler::Scheduler::Run()
+    @     0x55f586524781 main
+    @     0x7fc6e14b6bf7 __libc_start_main
+    @     0x55f5864a0eaa _start
+    @                0x0 (unknown)

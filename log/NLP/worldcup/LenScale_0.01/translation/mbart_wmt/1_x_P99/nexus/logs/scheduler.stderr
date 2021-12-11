@@ -1,0 +1,35 @@
+I1211 02:04:32.490813 110194 rpc_service_base.h:46] RPC service is listening on 0.0.0.0:10001
+I1211 02:04:35.050488 110199 scheduler.cpp:98] Register server: node_type: BACKEND_NODE
+node_id: 377016071
+server_port: "8001"
+rpc_port: "8002"
+gpu_device_name: "Tesla_V100S-PCIE-32GB"
+gpu_available_memory: 33650376704
+gpu_uuid: "fcf0dc04-2c7f-7570-499b-47b29c6d534c"
+I1211 02:04:36.506420 110201 scheduler.cpp:98] Register server: node_id: 4067907087
+server_port: "9001"
+rpc_port: "9002"
+I1211 02:04:36.506949 110200 model_db.cpp:283] Load model DB from /workdir/models/db/model_db.yml
+I1211 02:04:36.507797 110200 backend_delegate.cpp:183] Backend 377016071 loads fake:fake_0:1:224x224:60, batch 8, max batch 8, max duty cycle 314.341 us, throughput 25450 req/s. Backend exec cycle 314.341 us, duty cycle: 314.341 us
+I1211 02:05:03.494313 110194 scheduler.cpp:832] Epoch schedule
+I1211 02:05:03.494450 110194 scheduler.cpp:1120] Total used GPUs: 1
+Backend 377016071: 1
+I1211 02:05:03.494477 110194 scheduler.cpp:1137] Model table: 
+fake:fake_0:1:224x224:60: 377016071/25450/1, total share: 1
+*** Aborted at 1639188308 (unix time) try "date -d @1639188308" if you are using GNU date ***
+I1211 02:05:08.059257 110202 scheduler.cpp:115] Unregister FRONTEND_NODE 4067907087
+I1211 02:05:08.059298 110202 scheduler.cpp:442] Remove frontend 4067907087
+I1211 02:05:08.059300 110201 scheduler.cpp:115] Unregister BACKEND_NODE 377016071
+I1211 02:05:08.059322 110202 scheduler.cpp:656] Remove model session: fake:fake_0:1:224x224:60
+I1211 02:05:08.059330 110202 backend_delegate.cpp:290] Backend 377016071 unload model: fake:fake_0:1:224x224:60
+PC: @                0x0 (unknown)
+*** SIGTERM (@0x1ae30) received by PID 110194 (TID 0x7fc9869b9f00) from PID 110128; stack trace: ***
+I1211 02:05:08.059826 110201 scheduler.cpp:454] Remove backend 377016071
+    @     0x7fc9856b8980 (unknown)
+    @     0x7fc9856b7d50 __GI___nanosleep
+    @     0x55b35935af0d std::this_thread::sleep_for<>()
+    @     0x55b35933e269 nexus::scheduler::Scheduler::Run()
+    @     0x55b35938d781 main
+    @     0x7fc98092dbf7 __libc_start_main
+    @     0x55b359309eaa _start
+    @                0x0 (unknown)

@@ -1,0 +1,50 @@
+I1211 10:21:54.299160 163293 frontend.cpp:85] App port 9001, rpc port 9002
+I1211 10:21:54.300966 163293 rpc_service_base.h:46] RPC service is listening on 0.0.0.0:9002
+I1211 10:21:54.304965 163293 model_handler.cpp:90] fake:fake_0:1:224x224:93 load balance policy: 3
+I1211 10:21:54.305045 163293 frontend.cpp:315] Update model route for fake:fake_0:1:224x224:93
+I1211 10:21:54.305630 163293 model_handler.cpp:177] - backend 4008162222: 64229.4
+I1211 10:21:54.305671 163293 model_handler.cpp:182] Total throughput: 64229.4
+I1211 10:21:54.306174 163293 frontend.cpp:45] Frontend server (id: 2169729405) is listening on 0.0.0.0:9001
+I1211 10:21:54.306241 163293 backend_pool.cpp:58] Connected to backend 4008162222
+I1211 10:21:55.295028 163293 connection.cpp:28] Connection Stop
+I1211 10:22:36.291723 163299 frontend.cpp:315] Update model route for fake:fake_0:1:224x224:93
+I1211 10:22:36.291807 163299 model_handler.cpp:177] - backend 4008162222: 22.0319
+I1211 10:22:36.291819 163299 model_handler.cpp:182] Total throughput: 22.0319
+I1211 10:22:46.293023 163299 frontend.cpp:315] Update model route for fake:fake_0:1:224x224:93
+I1211 10:22:46.293067 163299 model_handler.cpp:177] - backend 4008162222: 22.0319
+I1211 10:22:46.293076 163299 model_handler.cpp:182] Total throughput: 22.0319
+I1211 10:22:56.294484 163299 frontend.cpp:315] Update model route for fake:fake_0:1:224x224:93
+I1211 10:22:56.294577 163299 model_handler.cpp:177] - backend 4008162222: 22.0319
+I1211 10:22:56.294591 163299 model_handler.cpp:182] Total throughput: 22.0319
+I1211 10:23:06.295765 163299 frontend.cpp:315] Update model route for fake:fake_0:1:224x224:93
+I1211 10:23:06.295809 163299 model_handler.cpp:177] - backend 4008162222: 22.0319
+I1211 10:23:06.295819 163299 model_handler.cpp:182] Total throughput: 22.0319
+I1211 10:23:06.466691 163293 connection.cpp:28] Connection Stop
+I1211 10:23:06.467233 163299 frontend.cpp:315] Update model route for fake:fake_0:1:224x224:93
+I1211 10:23:06.467264 163299 frontend.cpp:346] Remove backend 4008162222
+I1211 10:23:06.467309 163299 backend_pool.cpp:113] Remove backend 4008162222
+I1211 10:23:06.467316 163299 backend_pool.cpp:38] Disconnect to backend 4008162222
+I1211 10:23:06.467324 163299 connection.cpp:28] Connection Stop
+I1211 10:23:06.467424 163299 model_handler.cpp:182] Total throughput: 0
+*** Aborted at 1639218186 (unix time) try "date -d @1639218186" if you are using GNU date ***
+PC: @                0x0 (unknown)
+*** SIGFPE (@0x7ffa3b1b3812) received by PID 163293 (TID 0x7ffa33405700) from PID 991639570; stack trace: ***
+    @     0x7ffa3a87f980 (unknown)
+    @     0x7ffa3b1b3812 nexus::app::ModelHandler::UpdateRoute()
+    @     0x7ffa3b191301 nexus::app::Frontend::UpdateBackendPoolAndModelRoute()
+    @     0x7ffa3b18f58f nexus::app::Frontend::UpdateModelRoutes()
+    @     0x7ffa3b1cf4df _ZZN5nexus3app10RpcService10HandleRpcsEvENKUlRKN9grpc_impl13ServerContextERKNS_17ModelRouteUpdatesEPNS_8RpcReplyEE_clES5_S8_SA_
+    @     0x7ffa3b1cf8cd _ZNSt17_Function_handlerIFvRKN9grpc_impl13ServerContextERKN5nexus17ModelRouteUpdatesEPNS4_8RpcReplyEEZNS4_3app10RpcService10HandleRpcsEvEUlS3_S7_S9_E_E9_M_invokeERKSt9_Any_dataS3_S7_OS9_
+    @     0x7ffa3b1d5b54 std::function<>::operator()()
+    @     0x7ffa3b1d4a7a nexus::app::UpdateModelRoutes_Call::Proceed()
+E1211 10:23:06.471109 163293 frontend.cpp:285] Failed to connect to scheduler: Socket closed(14)
+    @     0x7ffa3b1cf646 nexus::app::RpcService::HandleRpcs()
+    @     0x7ffa3b1a9e56 std::__invoke_impl<>()
+    @     0x7ffa3b1a6af7 std::__invoke<>()
+    @     0x7ffa3b1af71b _ZNSt6thread8_InvokerISt5tupleIJMN5nexus19AsyncRpcServiceBaseINS2_12FrontendCtrl33WithAsyncMethod_UpdateModelRoutesINS4_26WithAsyncMethod_CheckAliveINS4_7ServiceEEEEEEEFvvEPSA_EEE9_M_invokeIJLm0ELm1EEEEDTcl8__invokespcl10_S_declvalIXT_EEEEESt12_Index_tupleIJXspT_EEE
+    @     0x7ffa3b1af3be std::thread::_Invoker<>::operator()()
+    @     0x7ffa3b1aea34 std::thread::_State_impl<>::_M_run()
+    @     0x7ffa3a5a16df (unknown)
+    @     0x7ffa3a8746db start_thread
+    @     0x7ffa39ffc71f clone
+    @                0x0 (unknown)

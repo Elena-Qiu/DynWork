@@ -1,0 +1,65 @@
+I1211 01:39:05.720108 96270 frontend.cpp:85] App port 9001, rpc port 9002
+I1211 01:39:05.721844 96270 rpc_service_base.h:46] RPC service is listening on 0.0.0.0:9002
+I1211 01:39:05.725823 96270 model_handler.cpp:90] fake:fake_0:1:224x224:572 load balance policy: 3
+I1211 01:39:05.725934 96270 frontend.cpp:315] Update model route for fake:fake_0:1:224x224:572
+I1211 01:39:05.726588 96270 model_handler.cpp:177] - backend 845095073: 3755.59
+I1211 01:39:05.726624 96270 model_handler.cpp:182] Total throughput: 3755.59
+I1211 01:39:05.727031 96270 frontend.cpp:45] Frontend server (id: 1563606505) is listening on 0.0.0.0:9001
+I1211 01:39:05.727085 96270 backend_pool.cpp:58] Connected to backend 845095073
+I1211 01:39:06.716444 96270 connection.cpp:28] Connection Stop
+I1211 01:39:47.712467 96276 frontend.cpp:315] Update model route for fake:fake_0:1:224x224:572
+I1211 01:39:47.712576 96276 model_handler.cpp:177] - backend 845095073: 3.5157
+I1211 01:39:47.712589 96276 model_handler.cpp:182] Total throughput: 3.5157
+I1211 01:39:57.713969 96276 frontend.cpp:315] Update model route for fake:fake_0:1:224x224:572
+I1211 01:39:57.714015 96276 model_handler.cpp:177] - backend 845095073: 3.5157
+I1211 01:39:57.714023 96276 model_handler.cpp:182] Total throughput: 3.5157
+I1211 01:40:08.715610 96276 frontend.cpp:315] Update model route for fake:fake_0:1:224x224:572
+I1211 01:40:08.715705 96276 model_handler.cpp:177] - backend 845095073: 5.27527
+I1211 01:40:08.715718 96276 model_handler.cpp:182] Total throughput: 5.27527
+I1211 01:40:18.717383 96276 frontend.cpp:315] Update model route for fake:fake_0:1:224x224:572
+I1211 01:40:18.717440 96276 model_handler.cpp:177] - backend 845095073: 10.561
+I1211 01:40:18.717454 96276 model_handler.cpp:182] Total throughput: 10.561
+I1211 01:40:48.720659 96276 frontend.cpp:315] Update model route for fake:fake_0:1:224x224:572
+I1211 01:40:48.720729 96276 model_handler.cpp:177] - backend 845095073: 8.7979
+I1211 01:40:48.720742 96276 model_handler.cpp:182] Total throughput: 8.7979
+I1211 01:41:06.723063 96276 frontend.cpp:315] Update model route for fake:fake_0:1:224x224:572
+I1211 01:41:06.723145 96276 model_handler.cpp:177] - backend 845095073: 10.561
+I1211 01:41:06.723158 96276 model_handler.cpp:182] Total throughput: 10.561
+I1211 01:41:22.725430 96276 frontend.cpp:315] Update model route for fake:fake_0:1:224x224:572
+I1211 01:41:22.725509 96276 model_handler.cpp:177] - backend 845095073: 8.7979
+I1211 01:41:22.725522 96276 model_handler.cpp:182] Total throughput: 8.7979
+I1211 01:41:32.727339 96276 frontend.cpp:315] Update model route for fake:fake_0:1:224x224:572
+I1211 01:41:32.727421 96276 model_handler.cpp:177] - backend 845095073: 5.27527
+I1211 01:41:32.727432 96276 model_handler.cpp:182] Total throughput: 5.27527
+I1211 01:41:42.729251 96276 frontend.cpp:315] Update model route for fake:fake_0:1:224x224:572
+I1211 01:41:42.729321 96276 model_handler.cpp:177] - backend 845095073: 3.5157
+I1211 01:41:42.729332 96276 model_handler.cpp:182] Total throughput: 3.5157
+I1211 01:41:45.639135 96270 connection.cpp:28] Connection Stop
+I1211 01:41:45.639815 96276 frontend.cpp:315] Update model route for fake:fake_0:1:224x224:572
+I1211 01:41:45.639853 96276 frontend.cpp:346] Remove backend 845095073
+I1211 01:41:45.639894 96276 backend_pool.cpp:113] Remove backend 845095073
+I1211 01:41:45.639901 96276 backend_pool.cpp:38] Disconnect to backend 845095073
+I1211 01:41:45.639909 96276 connection.cpp:28] Connection Stop
+I1211 01:41:45.639997 96276 model_handler.cpp:182] Total throughput: 0
+*** Aborted at 1639186905 (unix time) try "date -d @1639186905" if you are using GNU date ***
+PC: @                0x0 (unknown)
+*** SIGFPE (@0x7f4368620812) received by PID 96270 (TID 0x7f4360872700) from PID 1751255058; stack trace: ***
+    @     0x7f4367cec980 (unknown)
+    @     0x7f4368620812 nexus::app::ModelHandler::UpdateRoute()
+    @     0x7f43685fe301 nexus::app::Frontend::UpdateBackendPoolAndModelRoute()
+    @     0x7f43685fc58f nexus::app::Frontend::UpdateModelRoutes()
+    @     0x7f436863c4df _ZZN5nexus3app10RpcService10HandleRpcsEvENKUlRKN9grpc_impl13ServerContextERKNS_17ModelRouteUpdatesEPNS_8RpcReplyEE_clES5_S8_SA_
+    @     0x7f436863c8cd _ZNSt17_Function_handlerIFvRKN9grpc_impl13ServerContextERKN5nexus17ModelRouteUpdatesEPNS4_8RpcReplyEEZNS4_3app10RpcService10HandleRpcsEvEUlS3_S7_S9_E_E9_M_invokeERKSt9_Any_dataS3_S7_OS9_
+    @     0x7f4368642b54 std::function<>::operator()()
+E1211 01:41:45.644496 96270 frontend.cpp:285] Failed to connect to scheduler: Socket closed(14)
+    @     0x7f4368641a7a nexus::app::UpdateModelRoutes_Call::Proceed()
+    @     0x7f436863c646 nexus::app::RpcService::HandleRpcs()
+    @     0x7f4368616e56 std::__invoke_impl<>()
+    @     0x7f4368613af7 std::__invoke<>()
+    @     0x7f436861c71b _ZNSt6thread8_InvokerISt5tupleIJMN5nexus19AsyncRpcServiceBaseINS2_12FrontendCtrl33WithAsyncMethod_UpdateModelRoutesINS4_26WithAsyncMethod_CheckAliveINS4_7ServiceEEEEEEEFvvEPSA_EEE9_M_invokeIJLm0ELm1EEEEDTcl8__invokespcl10_S_declvalIXT_EEEEESt12_Index_tupleIJXspT_EEE
+    @     0x7f436861c3be std::thread::_Invoker<>::operator()()
+    @     0x7f436861ba34 std::thread::_State_impl<>::_M_run()
+    @     0x7f4367a0e6df (unknown)
+    @     0x7f4367ce16db start_thread
+    @     0x7f436746971f clone
+    @                0x0 (unknown)

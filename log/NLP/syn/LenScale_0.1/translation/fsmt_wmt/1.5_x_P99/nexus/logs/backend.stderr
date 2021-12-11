@@ -1,0 +1,1021 @@
+2021-12-11 10:05:54.628358: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+I1211 10:05:54.673765 161275 backend_main.cpp:74] Backend server: port 8001, rpc port 8002, workers 0, gpu 0
+I1211 10:05:54.675472 161275 rpc_service_base.h:46] RPC service is listening on 0.0.0.0:8002
+I1211 10:05:54.675602 161275 backend_server.cpp:40] Multi-batching is enabled
+I1211 10:05:54.695811 161282 worker.cpp:44] Worker 0 starts
+I1211 10:05:54.695871 161283 worker.cpp:44] Worker 1 starts
+I1211 10:05:54.695899 161284 worker.cpp:44] Worker 2 starts
+I1211 10:05:54.695974 161285 worker.cpp:44] Worker 3 starts
+I1211 10:05:54.727083 161281 gpu_executor.cpp:128] GpuExecutor started
+I1211 10:05:54.727437 161275 device.cpp:37] GPU 0 Tesla_V100S-PCIE-32GB(fcf0dc04-2c7f-7570-499b-47b29c6d534c): total memory 31.7485GB
+I1211 10:05:55.108592 161275 backend_server.cpp:99] Backend server (id: 610616001) is listening on 0.0.0.0:8001
+I1211 10:05:56.559092 161288 model_ins.cpp:84] Construct model fake:fake_0:1:224x224:701, batch 8, max batch 8
+I1211 10:05:56.559180 161288 fake_model.cpp:38] model memory usage: 2619487232 B
+I1211 10:05:56.559186 161288 fake_model.cpp:41] model memory usage: 2.61949e+09 B
+2021-12-11 10:05:56.565692: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcuda.so.1
+2021-12-11 10:05:56.567267: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1558] Found device 0 with properties: 
+pciBusID: 0000:21:00.0 name: Tesla V100S-PCIE-32GB computeCapability: 7.0
+coreClock: 1.597GHz coreCount: 80 deviceMemorySize: 31.75GiB deviceMemoryBandwidth: 1.03TiB/s
+2021-12-11 10:05:56.567282: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2021-12-11 10:05:56.569077: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2021-12-11 10:05:56.570559: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10.0
+2021-12-11 10:05:56.570893: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10.0
+2021-12-11 10:05:56.572792: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10.0
+2021-12-11 10:05:56.574149: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10.0
+2021-12-11 10:05:56.578218: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2021-12-11 10:05:56.580895: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1700] Adding visible gpu devices: 0
+2021-12-11 10:05:56.581075: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1099] Device interconnect StreamExecutor with strength 1 edge matrix:
+2021-12-11 10:05:56.581084: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1105]      0 
+2021-12-11 10:05:56.581089: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1118] 0:   N 
+2021-12-11 10:05:56.585639: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1244] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 2498 MB memory) -> physical GPU (device: 0, name: Tesla V100S-PCIE-32GB, pci bus id: 0000:21:00.0, compute capability: 7.0)
+I1211 10:05:56.739226 161288 fake_model.cpp:87] Model fake:fake_0:1:224x224:701, input: input, shape: 8x224x224x3 (150528)
+2021-12-11 10:05:57.807684: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2021-12-11 10:05:58.824634: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+I1211 10:05:59.190337 161288 fake_model.cpp:139] Output output, shape: 1x1000 (1000)
+I1211 10:05:59.193413 161288 model_ins.cpp:65] Loading model time: 2634ms
+I1211 10:05:59.193568 161288 backend_server.cpp:362] Load model instance fake:fake_0:1:224x224:701, batch: 8, backup: 0
+I1211 10:05:59.193605 161288 backend_server.cpp:379] Duty cycle: 2088.45 us
+I1211 10:06:07.578907 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 1000 us = 773.076 + 0.226924 * 1 * 1000
+I1211 10:06:07.631487 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 70714.3 us = 54667.6 + 0.226924 * 1 * 70714.3
+I1211 10:06:07.702397 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 64241.5 us = 49663.6 + 0.226924 * 1 * 64241.5
+I1211 10:06:07.766791 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 316473 us = 244658 + 0.226924 * 1 * 316473
+I1211 10:06:08.083940 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 331021 us = 134143 + 0.226924 * 5 * 173519
+I1211 10:06:08.415583 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 388226 us = 178566 + 0.226924 * 4 * 230981
+I1211 10:06:08.804267 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 274420 us = 172910 + 0.226924 * 2 * 223665
+I1211 10:06:09.078855 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 86742.7 us = 67058.7 + 0.226924 * 1 * 86742.7
+I1211 10:06:09.165763 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 127670 us = 98698.7 + 0.226924 * 1 * 127670
+I1211 10:06:09.194860 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 2.72013, drop rate: 0
+I1211 10:06:09.307421 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 468911 us = 362504 + 0.226924 * 1 * 468911
+I1211 10:06:09.776648 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 159907 us = 100756 + 0.226924 * 2 * 130332
+I1211 10:06:09.936738 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 36224 us = 28003.9 + 0.226924 * 1 * 36224
+I1211 10:06:10.024652 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 109117 us = 84356 + 0.226924 * 1 * 109117
+I1211 10:06:10.920876 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 105570 us = 81613.8 + 0.226924 * 1 * 105570
+I1211 10:06:11.194820 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 3.1334, drop rate: 0
+I1211 10:06:11.816553 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 218014 us = 168541 + 0.226924 * 1 * 218014
+I1211 10:06:12.711702 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 194117 us = 150067 + 0.226924 * 1 * 194117
+I1211 10:06:13.194726 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 2.43006, drop rate: 0
+I1211 10:06:13.607975 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 497768 us = 384812 + 0.226924 * 1 * 497768
+I1211 10:06:14.503670 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 82042 us = 63424.7 + 0.226924 * 1 * 82042
+I1211 10:06:15.194880 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 1.9586, drop rate: 0
+I1211 10:06:15.399075 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 74769.7 us = 57802.6 + 0.226924 * 1 * 74769.7
+I1211 10:06:16.293958 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 259614 us = 200701 + 0.226924 * 1 * 259614
+I1211 10:06:17.189520 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 59549.7 us = 46036.4 + 0.226924 * 1 * 59549.7
+I1211 10:06:17.194914 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 1.64257, drop rate: 0
+I1211 10:06:18.086133 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 167968 us = 129852 + 0.226924 * 1 * 167968
+I1211 10:06:18.981205 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 134913 us = 104298 + 0.226924 * 1 * 134913
+I1211 10:06:19.117163 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 857253 us = 280631 + 0.226924 * 7 * 363005
+I1211 10:06:19.195086 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 1.57914, drop rate: 0
+I1211 10:06:19.976356 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 730306 us = 218114 + 0.226924 * 8 * 282138
+I1211 10:06:20.708511 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 725032 us = 237347 + 0.226924 * 7 * 307016
+I1211 10:06:21.195174 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 6.36627, drop rate: 2.3565
+I1211 10:06:21.434646 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 377773 us = 153089 + 0.226924 * 5 * 198026
+I1211 10:06:21.812877 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 213549 us = 165090 + 0.226924 * 1 * 213549
+I1211 10:06:22.026842 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 365939 us = 282898 + 0.226924 * 1 * 365939
+I1211 10:06:22.392941 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 140756 us = 108815 + 0.226924 * 1 * 140756
+I1211 10:06:22.533872 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 187361 us = 144844 + 0.226924 * 1 * 187361
+I1211 10:06:22.721395 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 216833 us = 167629 + 0.226924 * 1 * 216833
+I1211 10:06:22.946914 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 38714.3 us = 29929.1 + 0.226924 * 1 * 38714.3
+I1211 10:06:23.195132 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 6.32821, drop rate: 1.72802
+I1211 10:06:23.203388 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 221315 us = 171093 + 0.226924 * 1 * 221315
+I1211 10:06:23.460009 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 390302 us = 301733 + 0.226924 * 1 * 390302
+I1211 10:06:23.850494 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 48906.2 us = 37808.2 + 0.226924 * 1 * 48906.2
+I1211 10:06:24.013763 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 178056 us = 137651 + 0.226924 * 1 * 178056
+I1211 10:06:24.310298 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 178610 us = 138079 + 0.226924 * 1 * 178610
+I1211 10:06:24.607396 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 142480 us = 110148 + 0.226924 * 1 * 142480
+I1211 10:06:24.904436 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 232227 us = 179529 + 0.226924 * 1 * 232227
+I1211 10:06:25.195161 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 5.41223, drop rate: 1.15833
+I1211 10:06:25.201299 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 194502 us = 150365 + 0.226924 * 1 * 194502
+I1211 10:06:25.498662 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 104443 us = 80742 + 0.226924 * 1 * 104443
+I1211 10:06:25.795320 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 422813 us = 326866 + 0.226924 * 1 * 422813
+I1211 10:06:26.218291 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 97884.2 us = 75671.9 + 0.226924 * 1 * 97884.2
+I1211 10:06:26.387607 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 183623 us = 141955 + 0.226924 * 1 * 183623
+I1211 10:06:26.684983 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 220936 us = 170800 + 0.226924 * 1 * 220936
+I1211 10:06:26.906987 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 1.21883e+06 us = 364019 + 0.226924 * 8 * 470871
+I1211 10:06:27.195272 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 4.76538, drop rate: 0.776449
+I1211 10:06:28.126261 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 369254 us = 232665 + 0.226924 * 2 * 300959
+I1211 10:06:28.495875 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 141857 us = 89383.2 + 0.226924 * 2 * 115620
+I1211 10:06:28.764408 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 211226 us = 163294 + 0.226924 * 1 * 211226
+I1211 10:06:29.072109 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 233891 us = 180816 + 0.226924 * 1 * 233891
+I1211 10:06:29.195281 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 5.70033, drop rate: 1.06428
+I1211 10:06:29.380470 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 181964 us = 140672 + 0.226924 * 1 * 181964
+I1211 10:06:29.688867 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 130189 us = 100646 + 0.226924 * 1 * 130189
+I1211 10:06:29.997049 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 289160 us = 223543 + 0.226924 * 1 * 289160
+I1211 10:06:30.440127 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 314454 us = 243097 + 0.226924 * 1 * 314454
+I1211 10:06:30.882226 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 293465 us = 226870 + 0.226924 * 1 * 293465
+I1211 10:06:31.195396 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 4.81009, drop rate: 0.713406
+I1211 10:06:31.326555 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 20794.3 us = 16075.5 + 0.226924 * 1 * 20794.3
+I1211 10:06:31.771109 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 107884 us = 83402.2 + 0.226924 * 1 * 107884
+I1211 10:06:32.212934 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 283353 us = 219053 + 0.226924 * 1 * 283353
+I1211 10:06:32.656293 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 111915 us = 86518.5 + 0.226924 * 1 * 111915
+I1211 10:06:33.099412 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 56314.8 us = 43535.6 + 0.226924 * 1 * 56314.8
+I1211 10:06:33.195470 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 3.88366, drop rate: 0.478211
+I1211 10:06:33.542721 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 155895 us = 120519 + 0.226924 * 1 * 155895
+I1211 10:06:33.984684 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 143123 us = 110645 + 0.226924 * 1 * 143123
+I1211 10:06:34.428506 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 199287 us = 154064 + 0.226924 * 1 * 199287
+I1211 10:06:34.628938 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 805369 us = 240533 + 0.226924 * 8 * 311137
+I1211 10:06:35.195677 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 3.41106, drop rate: 0.320554
+I1211 10:06:35.434888 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 273882 us = 145635 + 0.226924 * 3 * 188384
+I1211 10:06:35.709134 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 159809 us = 100695 + 0.226924 * 2 * 130252
+I1211 10:06:35.885802 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 116454 us = 90028 + 0.226924 * 1 * 116454
+I1211 10:06:36.078428 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 316074 us = 244350 + 0.226924 * 1 * 316074
+I1211 10:06:36.394687 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 308912 us = 238812 + 0.226924 * 1 * 308912
+I1211 10:06:36.703766 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 76648.8 us = 59255.4 + 0.226924 * 1 * 76648.8
+I1211 10:06:37.195649 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 5.2706, drop rate: 0.758682
+I1211 10:06:37.243624 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 272335 us = 210535 + 0.226924 * 1 * 272335
+I1211 10:06:38.021045 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 293709 us = 227060 + 0.226924 * 1 * 293709
+I1211 10:06:38.545468 161288 backend_server.cpp:368] Update model instance fake:fake_0:1:224x224:701, batch: 8 -> 4
+I1211 10:06:38.545522 161288 backend_server.cpp:379] Duty cycle: 697531 us
+I1211 10:06:38.799723 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 152804 us = 118129 + 0.226924 * 1 * 152804
+I1211 10:06:39.195652 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 4.19235, drop rate: 0.50856
+I1211 10:06:39.577826 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 230935 us = 178531 + 0.226924 * 1 * 230935
+I1211 10:06:40.355970 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 96233.7 us = 74396 + 0.226924 * 1 * 96233.7
+I1211 10:06:41.134749 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 283634 us = 219270 + 0.226924 * 1 * 283634
+I1211 10:06:41.195806 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 3.1399, drop rate: 0.340898
+I1211 10:06:41.912231 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 112503 us = 86973.6 + 0.226924 * 1 * 112503
+I1211 10:06:42.691546 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 161714 us = 125017 + 0.226924 * 1 * 161714
+I1211 10:06:43.195753 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 2.58283, drop rate: 0.228511
+I1211 10:06:43.469795 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 62667.8 us = 48447 + 0.226924 * 1 * 62667.8
+I1211 10:06:44.247785 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 92239.8 us = 71308.4 + 0.226924 * 1 * 92239.8
+I1211 10:06:45.195843 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 2.061, drop rate: 0.153175
+I1211 10:06:45.564874 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 333787 us = 258043 + 0.226924 * 1 * 333787
+I1211 10:06:46.881327 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 120503 us = 93157.8 + 0.226924 * 1 * 120503
+I1211 10:06:47.195822 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 1.71121, drop rate: 0.102676
+I1211 10:06:48.198634 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 161604 us = 124932 + 0.226924 * 1 * 161604
+I1211 10:06:48.548627 161288 backend_server.cpp:368] Update model instance fake:fake_0:1:224x224:701, batch: 4 -> 2
+I1211 10:06:48.548655 161288 backend_server.cpp:379] Duty cycle: 697897 us
+I1211 10:06:49.196054 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 1.47674, drop rate: 0.068826
+I1211 10:06:49.514569 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 122961 us = 95058.1 + 0.226924 * 1 * 122961
+I1211 10:06:50.832636 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 185718 us = 143574 + 0.226924 * 1 * 185718
+I1211 10:06:51.196055 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 1.17116, drop rate: 0.0461355
+I1211 10:06:52.149027 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 174937 us = 135239 + 0.226924 * 1 * 174937
+I1211 10:06:53.196079 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 1.11473, drop rate: 0.0309255
+I1211 10:06:53.465764 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 66963.2 us = 51767.6 + 0.226924 * 1 * 66963.2
+I1211 10:06:54.783689 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 363879 us = 281306 + 0.226924 * 1 * 363879
+I1211 10:06:55.196213 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 0.928495, drop rate: 0.02073
+I1211 10:06:56.101092 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 53878.2 us = 41652 + 0.226924 * 1 * 53878.2
+I1211 10:06:57.196233 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 0.952069, drop rate: 0.0138957
+I1211 10:06:57.417574 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 126156 us = 97527.9 + 0.226924 * 1 * 126156
+I1211 10:06:57.544031 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 244886 us = 154301 + 0.226924 * 2 * 199594
+I1211 10:06:57.789232 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 101375 us = 63875.4 + 0.226924 * 2 * 82625
+I1211 10:06:57.890944 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 469805 us = 296021 + 0.226924 * 2 * 382913
+I1211 10:06:58.360950 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 160121 us = 123786 + 0.226924 * 1 * 160121
+I1211 10:06:58.521222 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 240640 us = 186033 + 0.226924 * 1 * 240640
+I1211 10:06:58.550078 161288 backend_server.cpp:368] Update model instance fake:fake_0:1:224x224:701, batch: 2 -> 1
+I1211 10:06:58.550109 161288 backend_server.cpp:379] Duty cycle: 698080 us
+I1211 10:06:59.107656 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 181748 us = 140505 + 0.226924 * 1 * 181748
+I1211 10:06:59.196269 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 2.63215, drop rate: 0.00931459
+I1211 10:06:59.817175 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 159652 us = 123423 + 0.226924 * 1 * 159652
+I1211 10:07:00.527040 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 496964 us = 384191 + 0.226924 * 1 * 496964
+I1211 10:07:01.196339 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 2.24248, drop rate: 0.451476
+I1211 10:07:01.236645 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 178152 us = 137725 + 0.226924 * 1 * 178152
+I1211 10:07:01.945750 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 165884 us = 128241 + 0.226924 * 1 * 165884
+I1211 10:07:02.655512 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 55118.4 us = 42610.7 + 0.226924 * 1 * 55118.4
+I1211 10:07:03.196396 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 2.01413, drop rate: 0.302633
+I1211 10:07:03.364801 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 231497 us = 178965 + 0.226924 * 1 * 231497
+I1211 10:07:04.074837 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 100698 us = 77847.1 + 0.226924 * 1 * 100698
+I1211 10:07:04.783322 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 237053 us = 183260 + 0.226924 * 1 * 237053
+I1211 10:07:05.020757 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 259805 us = 200849 + 0.226924 * 1 * 259805
+I1211 10:07:05.196561 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 1.86106, drop rate: 0.202861
+I1211 10:07:05.280722 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 273015 us = 211061 + 0.226924 * 1 * 273015
+I1211 10:07:05.553911 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 178240 us = 137793 + 0.226924 * 1 * 178240
+I1211 10:07:05.732316 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 101915 us = 78788 + 0.226924 * 1 * 101915
+I1211 10:07:05.834415 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 162050 us = 125277 + 0.226924 * 1 * 162050
+I1211 10:07:05.996635 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 121046 us = 93578.1 + 0.226924 * 1 * 121046
+I1211 10:07:06.449456 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 279522 us = 216092 + 0.226924 * 1 * 279522
+I1211 10:07:07.067057 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 334036 us = 258236 + 0.226924 * 1 * 334036
+I1211 10:07:07.196555 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 3.09415, drop rate: 1.04233
+I1211 10:07:07.683677 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 54256 us = 41944 + 0.226924 * 1 * 54256
+I1211 10:07:08.300786 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 47304.1 us = 36569.7 + 0.226924 * 1 * 47304.1
+I1211 10:07:08.551411 161288 backend_server.cpp:368] Update model instance fake:fake_0:1:224x224:701, batch: 1 -> 2
+I1211 10:07:08.551455 161288 backend_server.cpp:379] Duty cycle: 697897 us
+I1211 10:07:08.918306 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 251021 us = 194058 + 0.226924 * 1 * 251021
+I1211 10:07:09.196571 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 2.55216, drop rate: 0.698693
+I1211 10:07:09.535051 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 204479 us = 158078 + 0.226924 * 1 * 204479
+I1211 10:07:10.152223 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 102167 us = 78982.7 + 0.226924 * 1 * 102167
+I1211 10:07:10.769181 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 198744 us = 153645 + 0.226924 * 1 * 198744
+I1211 10:07:11.196673 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 2.37012, drop rate: 0.468348
+I1211 10:07:11.387797 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 149602 us = 115653 + 0.226924 * 1 * 149602
+I1211 10:07:11.557775 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 79917.6 us = 61782.4 + 0.226924 * 1 * 79917.6
+I1211 10:07:11.727222 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 120205 us = 92927.7 + 0.226924 * 1 * 120205
+I1211 10:07:11.895934 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 199875 us = 154518 + 0.226924 * 1 * 199875
+I1211 10:07:12.095980 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 203457 us = 157288 + 0.226924 * 1 * 203457
+I1211 10:07:12.299593 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 159069 us = 122972 + 0.226924 * 1 * 159069
+I1211 10:07:12.458866 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 256446 us = 198252 + 0.226924 * 1 * 256446
+I1211 10:07:12.715499 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 168602 us = 130342 + 0.226924 * 1 * 168602
+I1211 10:07:12.884251 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 79193.5 us = 61222.6 + 0.226924 * 1 * 79193.5
+I1211 10:07:12.963594 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 247070 us = 191004 + 0.226924 * 1 * 247070
+I1211 10:07:13.196805 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 2.6435, drop rate: 0.313943
+I1211 10:07:13.211001 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 250916 us = 158100 + 0.226924 * 2 * 204508
+I1211 10:07:13.462236 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 199625 us = 125782 + 0.226924 * 2 * 162703
+I1211 10:07:13.662149 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 267783 us = 168728 + 0.226924 * 2 * 218256
+I1211 10:07:13.930274 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 260505 us = 164143 + 0.226924 * 2 * 212324
+I1211 10:07:14.191094 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 306818 us = 193324 + 0.226924 * 2 * 250071
+I1211 10:07:14.498302 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 259629 us = 163590 + 0.226924 * 2 * 211610
+I1211 10:07:14.758287 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 184771 us = 116423 + 0.226924 * 2 * 150597
+I1211 10:07:14.943353 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 464188 us = 292481 + 0.226924 * 2 * 378335
+I1211 10:07:15.196782 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 5.13451, drop rate: 0.572981
+I1211 10:07:15.407828 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 172150 us = 108471 + 0.226924 * 2 * 140310
+I1211 10:07:15.629341 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 100298 us = 77538.4 + 0.226924 * 1 * 100299
+I1211 10:07:16.351444 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 228477 us = 176630 + 0.226924 * 1 * 228477
+I1211 10:07:17.071856 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 51429.3 us = 39758.8 + 0.226924 * 1 * 51429.3
+I1211 10:07:17.197013 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 4.5135, drop rate: 0.532491
+I1211 10:07:17.793926 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 203657 us = 157443 + 0.226924 * 1 * 203657
+I1211 10:07:18.514659 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 341796 us = 264234 + 0.226924 * 1 * 341796
+I1211 10:07:18.553050 161288 backend_server.cpp:368] Update model instance fake:fake_0:1:224x224:701, batch: 2 -> 3
+I1211 10:07:18.553117 161288 backend_server.cpp:379] Duty cycle: 697714 us
+I1211 10:07:19.196923 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 3.50358, drop rate: 0.35694
+I1211 10:07:19.236519 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 67905.4 us = 52496.1 + 0.226924 * 1 * 67905.4
+I1211 10:07:19.957758 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 98646.9 us = 76261.6 + 0.226924 * 1 * 98646.9
+I1211 10:07:20.678933 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 226807 us = 175339 + 0.226924 * 1 * 226807
+I1211 10:07:21.197088 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 2.85947, drop rate: 0.239264
+I1211 10:07:21.399461 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 190844 us = 147537 + 0.226924 * 1 * 190844
+I1211 10:07:22.121057 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 237115 us = 183308 + 0.226924 * 1 * 237115
+I1211 10:07:22.358333 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 254511 us = 196756 + 0.226924 * 1 * 254511
+I1211 10:07:22.612998 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 133499 us = 103205 + 0.226924 * 1 * 133499
+I1211 10:07:22.746659 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 102524 us = 79259.2 + 0.226924 * 1 * 102524
+I1211 10:07:22.921671 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 313445 us = 242317 + 0.226924 * 1 * 313445
+I1211 10:07:23.197050 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 2.42771, drop rate: 0.160383
+I1211 10:07:23.235294 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 119678 us = 92520.3 + 0.226924 * 1 * 119678
+I1211 10:07:23.355121 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 99033.1 us = 76560.1 + 0.226924 * 1 * 99033.1
+I1211 10:07:23.521644 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 235650 us = 182175 + 0.226924 * 1 * 235650
+I1211 10:07:23.757499 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 61821.5 us = 47792.8 + 0.226924 * 1 * 61821.5
+I1211 10:07:23.921761 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 132054 us = 102088 + 0.226924 * 1 * 132054
+I1211 10:07:24.121155 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 157964 us = 122118 + 0.226924 * 1 * 157964
+I1211 10:07:24.279275 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 176889 us = 136749 + 0.226924 * 1 * 176889
+I1211 10:07:24.456315 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 288326 us = 222898 + 0.226924 * 1 * 288326
+I1211 10:07:24.745052 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 456570 us = 242779 + 0.226924 * 3 * 314042
+I1211 10:07:25.197146 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 3.27574, drop rate: 0.107508
+I1211 10:07:25.202049 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 290646 us = 154550 + 0.226924 * 3 * 199915
+I1211 10:07:25.493131 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 299429 us = 159220 + 0.226924 * 3 * 205956
+I1211 10:07:25.792726 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 24083.6 us = 18618.5 + 0.226924 * 1 * 24083.6
+I1211 10:07:25.846328 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 124363 us = 96142.2 + 0.226924 * 1 * 124363
+I1211 10:07:26.039083 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 158967 us = 122893 + 0.226924 * 1 * 158967
+I1211 10:07:26.231848 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 295722 us = 228616 + 0.226924 * 1 * 295722
+I1211 10:07:26.527745 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 171389 us = 132497 + 0.226924 * 1 * 171389
+I1211 10:07:26.699280 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 196080 us = 151585 + 0.226924 * 1 * 196080
+I1211 10:07:26.895506 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 71564.7 us = 55324.9 + 0.226924 * 1 * 71564.7
+I1211 10:07:27.003509 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 424479 us = 328155 + 0.226924 * 1 * 424479
+I1211 10:07:27.197139 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 4.43784, drop rate: 0.0720649
+I1211 10:07:27.428465 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 402671 us = 214118 + 0.226924 * 3 * 276969
+I1211 10:07:27.831580 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 379250 us = 201664 + 0.226924 * 3 * 260859
+I1211 10:07:28.211270 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 199890 us = 106290 + 0.226924 * 3 * 137490
+I1211 10:07:28.411602 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 281576 us = 149726 + 0.226924 * 3 * 193676
+I1211 10:07:28.693631 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 415176 us = 220768 + 0.226924 * 3 * 285571
+I1211 10:07:29.109234 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 312998 us = 166435 + 0.226924 * 3 * 215289
+I1211 10:07:29.197294 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 5.67793, drop rate: 0.0483065
+I1211 10:07:29.422667 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 334702 us = 177976 + 0.226924 * 3 * 230218
+I1211 10:07:29.757863 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 412027 us = 219093 + 0.226924 * 3 * 283405
+I1211 10:07:30.170497 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 362973 us = 193009 + 0.226924 * 3 * 249664
+I1211 10:07:30.533928 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 445694 us = 236995 + 0.226924 * 3 * 306562
+I1211 10:07:30.980135 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 297577 us = 158235 + 0.226924 * 3 * 204683
+I1211 10:07:31.197311 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 7.13569, drop rate: 0.0323808
+I1211 10:07:31.278154 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 141765 us = 75383 + 0.226924 * 3 * 97510.5
+I1211 10:07:31.420217 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 241994 us = 152479 + 0.226924 * 2 * 197236
+I1211 10:07:31.554955 161288 backend_server.cpp:368] Update model instance fake:fake_0:1:224x224:701, batch: 3 -> 4
+I1211 10:07:31.555011 161288 backend_server.cpp:379] Duty cycle: 697531 us
+I1211 10:07:31.662395 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 77540.6 us = 59944.8 + 0.226924 * 1 * 77540.6
+I1211 10:07:31.740110 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 90513 us = 69973.4 + 0.226924 * 1 * 90513
+I1211 10:07:31.924374 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 165593 us = 128016 + 0.226924 * 1 * 165593
+I1211 10:07:32.125277 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 347587 us = 268711 + 0.226924 * 1 * 347587
+I1211 10:07:32.473075 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 257061 us = 198728 + 0.226924 * 1 * 257061
+I1211 10:07:32.730545 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 173155 us = 109104 + 0.226924 * 2 * 141129
+I1211 10:07:32.927548 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 272453 us = 210627 + 0.226924 * 1 * 272453
+I1211 10:07:33.197523 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 6.76127, drop rate: 0.170116
+I1211 10:07:33.200176 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 220924 us = 170791 + 0.226924 * 1 * 220924
+I1211 10:07:33.421270 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 222304 us = 171858 + 0.226924 * 1 * 222304
+I1211 10:07:33.643741 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 153729 us = 118845 + 0.226924 * 1 * 153729
+I1211 10:07:33.797622 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 537752 us = 415723 + 0.226924 * 1 * 537752
+I1211 10:07:34.335932 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 731170 us = 336304 + 0.226924 * 4 * 435020
+I1211 10:07:35.067679 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 473701 us = 217880 + 0.226924 * 4 * 281835
+I1211 10:07:35.197441 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 6.54316, drop rate: 0.114032
+I1211 10:07:35.541719 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 427543 us = 269392 + 0.226924 * 2 * 348468
+I1211 10:07:35.969460 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 40560.2 us = 31356.1 + 0.226924 * 1 * 40560.2
+I1211 10:07:36.201570 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 213786 us = 165273 + 0.226924 * 1 * 213786
+I1211 10:07:36.648339 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 127444 us = 98524.2 + 0.226924 * 1 * 127444
+I1211 10:07:37.094439 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 171971 us = 132946 + 0.226924 * 1 * 171971
+I1211 10:07:37.197636 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 5.82028, drop rate: 0.224849
+I1211 10:07:37.539455 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 144225 us = 111497 + 0.226924 * 1 * 144225
+I1211 10:07:37.985375 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 188348 us = 145607 + 0.226924 * 1 * 188348
+I1211 10:07:38.431747 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 168337 us = 130137 + 0.226924 * 1 * 168337
+I1211 10:07:38.877847 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 357408 us = 276304 + 0.226924 * 1 * 357408
+I1211 10:07:39.197650 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 4.56081, drop rate: 0.150721
+I1211 10:07:39.323154 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 54646.2 us = 42245.7 + 0.226924 * 1 * 54646.3
+I1211 10:07:39.792438 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 58365.2 us = 45120.7 + 0.226924 * 1 * 58365.2
+I1211 10:07:40.262176 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 162776 us = 125838 + 0.226924 * 1 * 162776
+I1211 10:07:40.730688 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 77465.1 us = 59886.4 + 0.226924 * 1 * 77465.1
+I1211 10:07:41.197777 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 3.71656, drop rate: 0.101031
+I1211 10:07:41.199471 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 73406.1 us = 56748.5 + 0.226924 * 1 * 73406.1
+I1211 10:07:41.668238 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 104486 us = 80775.6 + 0.226924 * 1 * 104486
+I1211 10:07:42.137405 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 140350 us = 108501 + 0.226924 * 1 * 140350
+I1211 10:07:42.606619 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 103185 us = 79769.6 + 0.226924 * 1 * 103185
+I1211 10:07:43.074638 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 196025 us = 151542 + 0.226924 * 1 * 196025
+I1211 10:07:43.197844 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 3.29906, drop rate: 0.0677232
+I1211 10:07:43.545519 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 88418.2 us = 68354 + 0.226924 * 1 * 88418.2
+I1211 10:07:44.013911 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 123707 us = 95634.6 + 0.226924 * 1 * 123707
+I1211 10:07:44.248803 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 170819 us = 132056 + 0.226924 * 1 * 170819
+I1211 10:07:44.484460 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 92305.9 us = 71359.5 + 0.226924 * 1 * 92305.9
+I1211 10:07:44.719030 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 194719 us = 150533 + 0.226924 * 1 * 194719
+I1211 10:07:44.954041 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 129564 us = 100163 + 0.226924 * 1 * 129564
+I1211 10:07:45.188464 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 167216 us = 129271 + 0.226924 * 1 * 167216
+I1211 10:07:45.197818 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 2.87078, drop rate: 0.0453962
+I1211 10:07:45.424139 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 98203.1 us = 75918.5 + 0.226924 * 1 * 98203.1
+I1211 10:07:45.658025 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 310943 us = 240383 + 0.226924 * 1 * 310943
+I1211 10:07:45.969161 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 192274 us = 148643 + 0.226924 * 1 * 192274
+I1211 10:07:46.161608 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 64527.6 us = 49884.8 + 0.226924 * 1 * 64527.6
+I1211 10:07:46.363276 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 195354 us = 151023 + 0.226924 * 1 * 195354
+I1211 10:07:46.669519 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 57436.9 us = 44403.1 + 0.226924 * 1 * 57436.9
+I1211 10:07:46.976344 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 278174 us = 215049 + 0.226924 * 1 * 278174
+I1211 10:07:47.197882 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 3.39147, drop rate: 0.03043
+I1211 10:07:47.283025 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 150981 us = 116720 + 0.226924 * 1 * 150981
+I1211 10:07:47.588991 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 101244 us = 78269 + 0.226924 * 1 * 101244
+I1211 10:07:47.896651 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 190967 us = 147632 + 0.226924 * 1 * 190967
+I1211 10:07:48.203409 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 183632 us = 141961 + 0.226924 * 1 * 183632
+I1211 10:07:48.509871 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 151024 us = 116753 + 0.226924 * 1 * 151024
+I1211 10:07:48.816874 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 285401 us = 220637 + 0.226924 * 1 * 285401
+I1211 10:07:49.124691 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 423770 us = 327606 + 0.226924 * 1 * 423770
+I1211 10:07:49.197921 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 3.44368, drop rate: 0.0203978
+I1211 10:07:49.548614 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 146461 us = 113225 + 0.226924 * 1 * 146461
+I1211 10:07:49.715735 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 205771 us = 159076 + 0.226924 * 1 * 205771
+I1211 10:07:49.999449 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 151942 us = 117463 + 0.226924 * 1 * 151942
+I1211 10:07:50.283840 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 97693.8 us = 75524.8 + 0.226924 * 1 * 97693.8
+I1211 10:07:50.567215 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 222810 us = 172249 + 0.226924 * 1 * 222810
+I1211 10:07:50.850785 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 67901.8 us = 52493.3 + 0.226924 * 1 * 67901.8
+I1211 10:07:51.134266 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 34553.1 us = 26712.2 + 0.226924 * 1 * 34553.1
+I1211 10:07:51.198006 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 3.29741, drop rate: 0.0136731
+I1211 10:07:51.417703 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 147924 us = 114356 + 0.226924 * 1 * 147924
+I1211 10:07:51.558058 161288 backend_server.cpp:368] Update model instance fake:fake_0:1:224x224:701, batch: 4 -> 3
+I1211 10:07:51.558130 161288 backend_server.cpp:379] Duty cycle: 697714 us
+I1211 10:07:51.700565 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 440526 us = 340560 + 0.226924 * 1 * 440526
+I1211 10:07:52.141258 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 141742 us = 109577 + 0.226924 * 1 * 141742
+I1211 10:07:52.283152 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 88103.5 us = 68110.7 + 0.226924 * 1 * 88103.5
+I1211 10:07:52.391680 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 172133 us = 133072 + 0.226924 * 1 * 172133
+I1211 10:07:52.563966 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 76585 us = 59206.1 + 0.226924 * 1 * 76585
+I1211 10:07:52.640700 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 59017 us = 45624.6 + 0.226924 * 1 * 59017
+I1211 10:07:52.760717 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 273114 us = 211138 + 0.226924 * 1 * 273114
+I1211 10:07:53.034129 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 327200 us = 206166 + 0.226924 * 2 * 266683
+I1211 10:07:53.198256 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 3.34777, drop rate: 0.00916533
+I1211 10:07:53.361616 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 427487 us = 269357 + 0.226924 * 2 * 348422
+I1211 10:07:53.789422 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 247755 us = 156109 + 0.226924 * 2 * 201932
+I1211 10:07:54.037338 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 186728 us = 144355 + 0.226924 * 1 * 186728
+I1211 10:07:54.437636 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 230029 us = 177830 + 0.226924 * 1 * 230029
+I1211 10:07:54.906280 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 287207 us = 222033 + 0.226924 * 1 * 287207
+I1211 10:07:55.198122 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 4.15644, drop rate: 0.00614371
+I1211 10:07:55.376122 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 100406 us = 77621.8 + 0.226924 * 1 * 100406
+I1211 10:07:55.844224 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 186640 us = 144287 + 0.226924 * 1 * 186640
+I1211 10:07:56.312999 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 135424 us = 104693 + 0.226924 * 1 * 135424
+I1211 10:07:56.782783 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 448539 us = 346755 + 0.226924 * 1 * 448539
+I1211 10:07:57.198246 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 3.4455, drop rate: 0.00411825
+I1211 10:07:57.251439 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 134980 us = 104350 + 0.226924 * 1 * 134980
+I1211 10:07:57.719889 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 53998.9 us = 41745.2 + 0.226924 * 1 * 53998.9
+I1211 10:07:58.188516 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 208323 us = 161049 + 0.226924 * 1 * 208323
+I1211 10:07:58.397245 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 259308 us = 137886 + 0.226924 * 3 * 178360
+I1211 10:07:58.657011 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 562743 us = 299236 + 0.226924 * 3 * 387071
+I1211 10:07:59.198359 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 3.33149, drop rate: 0.00276055
+I1211 10:07:59.219980 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 214021 us = 165455 + 0.226924 * 1 * 214021
+I1211 10:07:59.434170 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 141503 us = 109393 + 0.226924 * 1 * 141503
+I1211 10:07:59.878068 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 87216.3 us = 67424.8 + 0.226924 * 1 * 87216.3
+I1211 10:08:00.393693 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 187044 us = 144599 + 0.226924 * 1 * 187044
+I1211 10:08:00.909423 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 58911.1 us = 45542.8 + 0.226924 * 1 * 58911.1
+I1211 10:08:01.198453 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 4.07981, drop rate: 0.726927
+I1211 10:08:01.424746 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 314042 us = 242778 + 0.226924 * 1 * 314042
+I1211 10:08:01.940510 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 117152 us = 90567.7 + 0.226924 * 1 * 117152
+I1211 10:08:02.455495 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 305695 us = 236326 + 0.226924 * 1 * 305695
+I1211 10:08:02.970336 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 158385 us = 122443 + 0.226924 * 1 * 158385
+I1211 10:08:03.198545 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 3.39414, drop rate: 0.487274
+I1211 10:08:03.486961 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 33288.4 us = 25734.5 + 0.226924 * 1 * 33288.4
+I1211 10:08:03.520539 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 196972 us = 124111 + 0.226924 * 2 * 160541
+I1211 10:08:03.717953 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 373751 us = 198740 + 0.226924 * 3 * 257077
+I1211 10:08:04.092133 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 465186 us = 247360 + 0.226924 * 3 * 319969
+I1211 10:08:04.557766 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 346231 us = 184107 + 0.226924 * 3 * 238148
+I1211 10:08:04.904399 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 210619 us = 132709 + 0.226924 * 2 * 171664
+I1211 10:08:05.137815 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 421003 us = 325468 + 0.226924 * 1 * 421003
+I1211 10:08:05.198705 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 4.92848, drop rate: 0.32663
+I1211 10:08:05.559005 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 149678 us = 115713 + 0.226924 * 1 * 149678
+I1211 10:08:05.708863 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 260179 us = 201138 + 0.226924 * 1 * 260179
+I1211 10:08:05.969218 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 151662 us = 117246 + 0.226924 * 1 * 151662
+I1211 10:08:06.128731 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 96256.2 us = 74413.4 + 0.226924 * 1 * 96256.2
+I1211 10:08:06.586704 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 290186 us = 224336 + 0.226924 * 1 * 290186
+I1211 10:08:07.044005 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 139510 us = 107852 + 0.226924 * 1 * 139510
+I1211 10:08:07.198727 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 4.62238, drop rate: 0.515768
+I1211 10:08:07.501763 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 265092 us = 204936 + 0.226924 * 1 * 265092
+I1211 10:08:07.959017 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 48285.2 us = 37328.1 + 0.226924 * 1 * 48285.2
+I1211 10:08:08.417469 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 240245 us = 185728 + 0.226924 * 1 * 240245
+I1211 10:08:08.874322 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 170254 us = 131619 + 0.226924 * 1 * 170254
+I1211 10:08:09.198813 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 3.75783, drop rate: 0.345729
+I1211 10:08:09.331351 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 154527 us = 119461 + 0.226924 * 1 * 154527
+I1211 10:08:09.788524 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 173864 us = 134410 + 0.226924 * 1 * 173864
+I1211 10:08:10.246306 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 135426 us = 104695 + 0.226924 * 1 * 135426
+I1211 10:08:10.702946 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 187096 us = 144640 + 0.226924 * 1 * 187096
+I1211 10:08:11.128334 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 142371 us = 110064 + 0.226924 * 1 * 142371
+I1211 10:08:11.198787 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 3.17831, drop rate: 0.231749
+I1211 10:08:11.553258 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 199666 us = 154357 + 0.226924 * 1 * 199666
+I1211 10:08:11.978264 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 286246 us = 221290 + 0.226924 * 1 * 286246
+I1211 10:08:12.403151 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 90579.3 us = 70024.7 + 0.226924 * 1 * 90579.3
+I1211 10:08:12.828040 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 91610.7 us = 70822 + 0.226924 * 1 * 91610.7
+I1211 10:08:13.198963 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 2.93826, drop rate: 0.155346
+I1211 10:08:13.253288 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 153398 us = 118589 + 0.226924 * 1 * 153398
+I1211 10:08:13.678436 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 228150 us = 176377 + 0.226924 * 1 * 228150
+I1211 10:08:14.102793 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 197922 us = 153009 + 0.226924 * 1 * 197922
+I1211 10:08:14.528364 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 228851 us = 176919 + 0.226924 * 1 * 228851
+I1211 10:08:14.952466 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 151388 us = 117035 + 0.226924 * 1 * 151388
+I1211 10:08:15.124349 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 119673 us = 92516.6 + 0.226924 * 1 * 119673
+I1211 10:08:15.198943 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 2.8102, drop rate: 0.104132
+I1211 10:08:15.295058 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 62673.1 us = 48451.1 + 0.226924 * 1 * 62673.1
+I1211 10:08:15.466121 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 174181 us = 134655 + 0.226924 * 1 * 174181
+I1211 10:08:15.640458 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 230785 us = 178415 + 0.226924 * 1 * 230785
+I1211 10:08:15.871394 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 342889 us = 265079 + 0.226924 * 1 * 342889
+I1211 10:08:16.214584 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 186341 us = 117412 + 0.226924 * 2 * 151876
+I1211 10:08:16.401090 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 234912 us = 181605 + 0.226924 * 1 * 234912
+I1211 10:08:16.636152 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 197146 us = 152409 + 0.226924 * 1 * 197146
+I1211 10:08:16.833446 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 96484.2 us = 74589.7 + 0.226924 * 1 * 96484.2
+I1211 10:08:17.199247 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 3.41658, drop rate: 0.0698016
+I1211 10:08:17.500345 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 167336 us = 129364 + 0.226924 * 1 * 167336
+I1211 10:08:18.336369 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 210224 us = 162519 + 0.226924 * 1 * 210224
+I1211 10:08:19.173877 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 303012 us = 234251 + 0.226924 * 1 * 303012
+I1211 10:08:19.199106 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 2.9167, drop rate: 0.0467894
+I1211 10:08:20.009598 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 245398 us = 189711 + 0.226924 * 1 * 245398
+I1211 10:08:20.845407 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 233980 us = 180884 + 0.226924 * 1 * 233980
+I1211 10:08:21.199309 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 2.43322, drop rate: 0.0313639
+I1211 10:08:21.682050 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 46959.5 us = 36303.3 + 0.226924 * 1 * 46959.5
+I1211 10:08:22.519649 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 139514 us = 107855 + 0.226924 * 1 * 139514
+I1211 10:08:23.199385 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 1.96071, drop rate: 0.0210238
+I1211 10:08:23.356094 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 316091 us = 244362 + 0.226924 * 1 * 316091
+I1211 10:08:23.562103 161288 backend_server.cpp:368] Update model instance fake:fake_0:1:224x224:701, batch: 3 -> 2
+I1211 10:08:23.562160 161288 backend_server.cpp:379] Duty cycle: 697897 us
+I1211 10:08:24.191774 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 57299.6 us = 44297 + 0.226924 * 1 * 57299.6
+I1211 10:08:25.027863 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 123614 us = 95563.2 + 0.226924 * 1 * 123614
+I1211 10:08:25.199615 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 1.82525, drop rate: 0.0140927
+I1211 10:08:25.206347 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 191969 us = 148406 + 0.226924 * 1 * 191969
+I1211 10:08:25.398519 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 151463 us = 117093 + 0.226924 * 1 * 151463
+I1211 10:08:25.562813 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 279828 us = 216328 + 0.226924 * 1 * 279828
+I1211 10:08:25.842797 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 135611 us = 104838 + 0.226924 * 1 * 135611
+I1211 10:08:25.978559 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 194256 us = 150175 + 0.226924 * 1 * 194256
+I1211 10:08:26.172989 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 73681.3 us = 56961.3 + 0.226924 * 1 * 73681.3
+I1211 10:08:26.278208 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 175861 us = 135954 + 0.226924 * 1 * 175861
+I1211 10:08:26.456099 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 384700 us = 297402 + 0.226924 * 1 * 384700
+I1211 10:08:26.841102 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 170513 us = 107439 + 0.226924 * 2 * 138976
+I1211 10:08:27.199537 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 2.42667, drop rate: 0.00944662
+I1211 10:08:27.562497 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 231313 us = 178822 + 0.226924 * 1 * 231313
+I1211 10:08:28.310963 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 231221 us = 178751 + 0.226924 * 1 * 231221
+I1211 10:08:29.058681 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 138888 us = 107371 + 0.226924 * 1 * 138888
+I1211 10:08:29.199597 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 2.40156, drop rate: 0.00633226
+I1211 10:08:29.807955 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 114154 us = 88249.6 + 0.226924 * 1 * 114154
+I1211 10:08:30.556011 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 221271 us = 171060 + 0.226924 * 1 * 221271
+I1211 10:08:31.199766 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 2.0879, drop rate: 0.00424464
+I1211 10:08:31.304141 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 293170 us = 226643 + 0.226924 * 1 * 293170
+I1211 10:08:32.051573 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 135024 us = 104384 + 0.226924 * 1 * 135024
+I1211 10:08:32.800529 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 300434 us = 232258 + 0.226924 * 1 * 300434
+I1211 10:08:33.199818 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 1.91051, drop rate: 0.00284527
+I1211 10:08:33.548823 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 243549 us = 188282 + 0.226924 * 1 * 243549
+I1211 10:08:34.297153 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 113079 us = 87418.4 + 0.226924 * 1 * 113079
+I1211 10:08:34.646836 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 80608.9 us = 62316.8 + 0.226924 * 1 * 80608.9
+I1211 10:08:34.997269 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 198318 us = 153315 + 0.226924 * 1 * 198318
+I1211 10:08:35.199880 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 1.61034, drop rate: 0.00190724
+I1211 10:08:35.347071 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 112122 us = 86678.6 + 0.226924 * 1 * 112122
+I1211 10:08:35.696668 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 613574 us = 474339 + 0.226924 * 1 * 613574
+I1211 10:08:36.310405 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 123929 us = 95806.8 + 0.226924 * 1 * 123929
+I1211 10:08:36.435082 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 307629 us = 237820 + 0.226924 * 1 * 307629
+I1211 10:08:36.746179 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 36432.1 us = 28164.8 + 0.226924 * 1 * 36432.1
+I1211 10:08:37.095726 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 136051 us = 105178 + 0.226924 * 1 * 136051
+I1211 10:08:37.199944 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 2.06848, drop rate: 0.00127846
+I1211 10:08:37.447153 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 92910.1 us = 71826.6 + 0.226924 * 1 * 92910.1
+I1211 10:08:37.796164 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 470908 us = 364048 + 0.226924 * 1 * 470908
+I1211 10:08:38.273483 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 74666 us = 57722.5 + 0.226924 * 1 * 74666
+I1211 10:08:38.750325 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 161068 us = 124518 + 0.226924 * 1 * 161068
+I1211 10:08:39.200109 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 2.19431, drop rate: 0.000856978
+I1211 10:08:39.227737 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 81264.2 us = 62823.4 + 0.226924 * 1 * 81264.2
+I1211 10:08:39.704316 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 336171 us = 259886 + 0.226924 * 1 * 336171
+I1211 10:08:40.181447 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 128598 us = 99415.9 + 0.226924 * 1 * 128598
+I1211 10:08:40.658537 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 155247 us = 120018 + 0.226924 * 1 * 155247
+I1211 10:08:41.135004 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 124795 us = 96475.8 + 0.226924 * 1 * 124795
+I1211 10:08:41.200155 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 2.31152, drop rate: 0.000574449
+I1211 10:08:41.611883 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 71948.3 us = 55621.5 + 0.226924 * 1 * 71948.3
+I1211 10:08:42.089020 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 158045 us = 122181 + 0.226924 * 1 * 158045
+I1211 10:08:42.566388 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 309873 us = 239555 + 0.226924 * 1 * 309873
+I1211 10:08:43.200304 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 2.20882, drop rate: 0.000385065
+I1211 10:08:43.425993 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 120646 us = 93268.5 + 0.226924 * 1 * 120646
+I1211 10:08:44.286217 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 236177 us = 182583 + 0.226924 * 1 * 236177
+I1211 10:08:45.144843 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 186418 us = 144115 + 0.226924 * 1 * 186418
+I1211 10:08:45.200271 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 1.8103, drop rate: 0.000258117
+I1211 10:08:46.004755 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 57961.4 us = 44808.6 + 0.226924 * 1 * 57961.4
+I1211 10:08:46.863809 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 215928 us = 166929 + 0.226924 * 1 * 215928
+I1211 10:08:47.200446 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 1.69157, drop rate: 0.000173021
+I1211 10:08:47.724709 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 302389 us = 233770 + 0.226924 * 1 * 302389
+I1211 10:08:48.583724 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 150143 us = 116072 + 0.226924 * 1 * 150143
+I1211 10:08:49.200496 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 1.46357, drop rate: 0.000115979
+I1211 10:08:49.445308 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 259148 us = 200341 + 0.226924 * 1 * 259148
+I1211 10:08:50.304075 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 112352 us = 86856.7 + 0.226924 * 1 * 112352
+I1211 10:08:51.164297 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 135025 us = 104384 + 0.226924 * 1 * 135025
+I1211 10:08:51.200596 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 1.31074, drop rate: 7.77433e-05
+I1211 10:08:51.302700 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 105253 us = 81368.6 + 0.226924 * 1 * 105253
+I1211 10:08:51.441265 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 245552 us = 189830 + 0.226924 * 1 * 245552
+I1211 10:08:51.686980 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 101988 us = 78844.3 + 0.226924 * 1 * 101988
+I1211 10:08:51.789121 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 370113 us = 286126 + 0.226924 * 1 * 370113
+I1211 10:08:52.159504 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 349794 us = 220403 + 0.226924 * 2 * 285099
+I1211 10:08:52.509585 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 108765 us = 68532.3 + 0.226924 * 2 * 88648.9
+I1211 10:08:52.618641 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 259392 us = 163441 + 0.226924 * 2 * 211417
+I1211 10:08:52.967195 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 122042 us = 94347.6 + 0.226924 * 1 * 122042
+I1211 10:08:53.200717 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 2.44432, drop rate: 5.21129e-05
+I1211 10:08:53.386751 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 179161 us = 138505 + 0.226924 * 1 * 179161
+I1211 10:08:53.806241 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 372761 us = 288173 + 0.226924 * 1 * 372761
+I1211 10:08:54.226379 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 99512.3 us = 76930.6 + 0.226924 * 1 * 99512.3
+I1211 10:08:54.645359 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 152567 us = 117946 + 0.226924 * 1 * 152567
+I1211 10:08:55.065120 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 119428 us = 92327 + 0.226924 * 1 * 119428
+I1211 10:08:55.200700 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 2.59466, drop rate: 3.49323e-05
+I1211 10:08:55.484743 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 196457 us = 151876 + 0.226924 * 1 * 196457
+I1211 10:08:55.904701 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 255730 us = 197699 + 0.226924 * 1 * 255730
+I1211 10:08:56.323680 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 60696.3 us = 46922.9 + 0.226924 * 1 * 60696.3
+I1211 10:08:56.744242 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 113067 us = 87409.7 + 0.226924 * 1 * 113067
+I1211 10:08:56.857590 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 495541 us = 312237 + 0.226924 * 2 * 403889
+I1211 10:08:57.200767 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 2.54702, drop rate: 2.34158e-05
+I1211 10:08:57.353444 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 298763 us = 188248 + 0.226924 * 2 * 243506
+I1211 10:08:57.652529 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 317706 us = 200185 + 0.226924 * 2 * 258946
+I1211 10:08:57.970530 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 198644 us = 125164 + 0.226924 * 2 * 161904
+I1211 10:08:58.169329 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 23786.4 us = 18388.7 + 0.226924 * 1 * 23786.4
+I1211 10:08:58.193833 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 54586 us = 42199.2 + 0.226924 * 1 * 54586
+I1211 10:08:58.483852 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 150713 us = 116512 + 0.226924 * 1 * 150713
+I1211 10:08:58.772802 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 384013 us = 296871 + 0.226924 * 1 * 384013
+I1211 10:08:59.156975 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 143813 us = 111178 + 0.226924 * 1 * 143813
+I1211 10:08:59.200974 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 4.21333, drop rate: 0.725093
+I1211 10:08:59.350682 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 57258.2 us = 44265 + 0.226924 * 1 * 57258.2
+I1211 10:08:59.640278 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 220218 us = 170245 + 0.226924 * 1 * 220218
+I1211 10:08:59.929567 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 111184 us = 85954 + 0.226924 * 1 * 111184
+I1211 10:09:00.086895 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 131785 us = 101880 + 0.226924 * 1 * 131785
+I1211 10:09:00.244136 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 54791.3 us = 42357.9 + 0.226924 * 1 * 54791.3
+I1211 10:09:00.401113 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 105299 us = 81403.9 + 0.226924 * 1 * 105299
+I1211 10:09:00.558544 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 145222 us = 112268 + 0.226924 * 1 * 145222
+I1211 10:09:00.715924 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 127844 us = 98832.9 + 0.226924 * 1 * 127844
+I1211 10:09:00.873041 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 176833 us = 136705 + 0.226924 * 1 * 176833
+I1211 10:09:01.050037 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 221796 us = 171465 + 0.226924 * 1 * 221796
+I1211 10:09:01.200979 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 3.99459, drop rate: 0.486044
+I1211 10:09:01.271988 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 112281 us = 86802 + 0.226924 * 1 * 112281
+I1211 10:09:01.384433 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 307078 us = 237395 + 0.226924 * 1 * 307078
+I1211 10:09:01.691694 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 71157.6 us = 55010.3 + 0.226924 * 1 * 71157.6
+I1211 10:09:02.823876 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 123783 us = 95693.5 + 0.226924 * 1 * 123783
+I1211 10:09:03.201050 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 4.07906, drop rate: 0.325805
+I1211 10:09:03.567065 161288 backend_server.cpp:368] Update model instance fake:fake_0:1:224x224:701, batch: 2 -> 3
+I1211 10:09:03.567129 161288 backend_server.cpp:379] Duty cycle: 697714 us
+I1211 10:09:04.147050 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 149565 us = 115625 + 0.226924 * 1 * 149565
+I1211 10:09:05.201333 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 3.06396, drop rate: 0.218394
+I1211 10:09:05.470271 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 168073 us = 129933 + 0.226924 * 1 * 168073
+I1211 10:09:06.792582 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 164796 us = 127400 + 0.226924 * 1 * 164796
+I1211 10:09:07.201282 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 2.2351, drop rate: 0.146394
+I1211 10:09:08.115671 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 179585 us = 138833 + 0.226924 * 1 * 179585
+I1211 10:09:09.201277 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 1.82791, drop rate: 0.0981306
+I1211 10:09:09.439525 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 139134 us = 107561 + 0.226924 * 1 * 139134
+I1211 10:09:10.761607 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 36698.4 us = 28370.7 + 0.226924 * 1 * 36698.4
+I1211 10:09:11.201596 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 1.40656, drop rate: 0.0657789
+I1211 10:09:12.085609 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 278622 us = 215396 + 0.226924 * 1 * 278622
+I1211 10:09:13.201548 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 1.27252, drop rate: 0.0440929
+I1211 10:09:13.408366 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 46725.6 us = 36122.4 + 0.226924 * 1 * 46725.6
+I1211 10:09:13.568621 161288 backend_server.cpp:368] Update model instance fake:fake_0:1:224x224:701, batch: 3 -> 2
+I1211 10:09:13.568682 161288 backend_server.cpp:379] Duty cycle: 697897 us
+I1211 10:09:14.732340 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 55160.5 us = 42643.3 + 0.226924 * 1 * 55160.5
+I1211 10:09:15.085069 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 144585 us = 111775 + 0.226924 * 1 * 144585
+I1211 10:09:15.201694 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 1.03427, drop rate: 0.0295564
+I1211 10:09:15.437472 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 422658 us = 326747 + 0.226924 * 1 * 422658
+I1211 10:09:15.860296 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 91914.2 us = 71056.7 + 0.226924 * 1 * 91914.2
+I1211 10:09:16.141528 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 89834.8 us = 69449.1 + 0.226924 * 1 * 89834.8
+I1211 10:09:16.493671 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 142091 us = 109848 + 0.226924 * 1 * 142091
+I1211 10:09:16.846026 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 160728 us = 124255 + 0.226924 * 1 * 160728
+I1211 10:09:17.197708 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 247384 us = 191247 + 0.226924 * 1 * 247384
+I1211 10:09:17.201642 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 1.53392, drop rate: 0.0198122
+I1211 10:09:17.550257 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 89710.5 us = 69353.1 + 0.226924 * 1 * 89710.5
+I1211 10:09:17.902256 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 226490 us = 175094 + 0.226924 * 1 * 226490
+I1211 10:09:18.254876 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 109282 us = 84483.5 + 0.226924 * 1 * 109282
+I1211 10:09:18.551462 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 127295 us = 98409 + 0.226924 * 1 * 127295
+I1211 10:09:18.847834 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 72669.4 us = 56179 + 0.226924 * 1 * 72669.4
+I1211 10:09:19.144630 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 59008.6 us = 45618.2 + 0.226924 * 1 * 59008.6
+I1211 10:09:19.201684 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 1.83599, drop rate: 0.0132805
+I1211 10:09:19.442082 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 276356 us = 213644 + 0.226924 * 1 * 276356
+I1211 10:09:19.738940 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 43944.9 us = 33972.7 + 0.226924 * 1 * 43944.9
+I1211 10:09:20.035337 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 44966.1 us = 34762.2 + 0.226924 * 1 * 44966.1
+I1211 10:09:20.331883 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 151046 us = 116770 + 0.226924 * 1 * 151046
+I1211 10:09:20.628212 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 169982 us = 131409 + 0.226924 * 1 * 169982
+I1211 10:09:20.924705 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 146033 us = 112895 + 0.226924 * 1 * 146033
+I1211 10:09:21.201786 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 2.36815, drop rate: 0.00890221
+I1211 10:09:21.222000 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 325089 us = 251319 + 0.226924 * 1 * 325089
+I1211 10:09:21.547400 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 351762 us = 221643 + 0.226924 * 2 * 286702
+I1211 10:09:21.899469 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 338402 us = 213225 + 0.226924 * 2 * 275814
+I1211 10:09:22.238217 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 474255 us = 298825 + 0.226924 * 2 * 386540
+I1211 10:09:22.712786 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 552429 us = 348082 + 0.226924 * 2 * 450255
+I1211 10:09:23.201891 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 4.38915, drop rate: 0.00596733
+I1211 10:09:23.265502 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 272159 us = 171485 + 0.226924 * 2 * 221822
+I1211 10:09:23.537827 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 160619 us = 124170 + 0.226924 * 1 * 160619
+I1211 10:09:23.698596 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 144512 us = 111719 + 0.226924 * 1 * 144512
+I1211 10:09:23.843261 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 198294 us = 153296 + 0.226924 * 1 * 198294
+I1211 10:09:24.100528 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 241204 us = 186469 + 0.226924 * 1 * 241204
+I1211 10:09:24.375579 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 108479 us = 83862.7 + 0.226924 * 1 * 108479
+I1211 10:09:24.570082 161288 backend_server.cpp:368] Update model instance fake:fake_0:1:224x224:701, batch: 2 -> 3
+I1211 10:09:24.570119 161288 backend_server.cpp:379] Duty cycle: 697714 us
+I1211 10:09:25.201927 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 4.11244, drop rate: 0.746054
+I1211 10:09:25.245213 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 122630 us = 94802 + 0.226924 * 1 * 122630
+I1211 10:09:26.113816 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 87447.5 us = 67603.6 + 0.226924 * 1 * 87447.5
+I1211 10:09:26.983389 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 62281.6 us = 48148.4 + 0.226924 * 1 * 62281.6
+I1211 10:09:27.202103 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 3.2676, drop rate: 0.500095
+I1211 10:09:27.852721 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 128902 us = 99651 + 0.226924 * 1 * 128902
+I1211 10:09:28.721590 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 75452.9 us = 58330.9 + 0.226924 * 1 * 75452.9
+I1211 10:09:29.202142 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 2.52002, drop rate: 0.335223
+I1211 10:09:29.590286 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 188355 us = 145613 + 0.226924 * 1 * 188355
+I1211 10:09:30.458441 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 149561 us = 115622 + 0.226924 * 1 * 149561
+I1211 10:09:31.202291 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 2.0189, drop rate: 0.224707
+I1211 10:09:31.327522 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 212435 us = 164228 + 0.226924 * 1 * 212435
+I1211 10:09:32.196516 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 101082 us = 78144.1 + 0.226924 * 1 * 101082
+I1211 10:09:33.065681 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 191021 us = 147674 + 0.226924 * 1 * 191021
+I1211 10:09:33.202296 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 1.86426, drop rate: 0.150626
+I1211 10:09:33.471745 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 434633 us = 336004 + 0.226924 * 1 * 434633
+I1211 10:09:33.906556 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 74839.8 us = 57856.8 + 0.226924 * 1 * 74839.8
+I1211 10:09:34.280089 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 279663 us = 216201 + 0.226924 * 1 * 279663
+I1211 10:09:34.571523 161288 backend_server.cpp:368] Update model instance fake:fake_0:1:224x224:701, batch: 3 -> 2
+I1211 10:09:34.571580 161288 backend_server.cpp:379] Duty cycle: 697897 us
+I1211 10:09:34.684870 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 137049 us = 105949 + 0.226924 * 1 * 137049
+I1211 10:09:35.089222 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 330954 us = 255852 + 0.226924 * 1 * 330954
+I1211 10:09:35.202699 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 1.7606, drop rate: 0.100967
+I1211 10:09:35.494418 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 132305 us = 102282 + 0.226924 * 1 * 132305
+I1211 10:09:35.898591 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 289471 us = 223783 + 0.226924 * 1 * 289471
+I1211 10:09:36.303776 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 244997 us = 189401 + 0.226924 * 1 * 244997
+I1211 10:09:36.707437 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 78746.8 us = 60877.2 + 0.226924 * 1 * 78746.8
+I1211 10:09:37.111558 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 124746 us = 96438.3 + 0.226924 * 1 * 124746
+I1211 10:09:37.202559 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 1.98794, drop rate: 0.0676805
+I1211 10:09:37.468484 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 328959 us = 254310 + 0.226924 * 1 * 328959
+I1211 10:09:37.825297 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 171676 us = 132719 + 0.226924 * 1 * 171676
+I1211 10:09:38.184082 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 60294 us = 46611.8 + 0.226924 * 1 * 60294
+I1211 10:09:38.541334 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 304637 us = 235508 + 0.226924 * 1 * 304637
+I1211 10:09:38.897912 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 252261 us = 195017 + 0.226924 * 1 * 252261
+I1211 10:09:39.202548 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 2.32159, drop rate: 0.0453676
+I1211 10:09:39.255584 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 350643 us = 271074 + 0.226924 * 1 * 350643
+I1211 10:09:39.612615 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 38939.8 us = 30103.4 + 0.226924 * 1 * 38939.8
+I1211 10:09:39.970535 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 96741 us = 74788.1 + 0.226924 * 1 * 96741
+I1211 10:09:40.327536 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 350305 us = 270812 + 0.226924 * 1 * 350305
+I1211 10:09:40.685461 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 225397 us = 174249 + 0.226924 * 1 * 225397
+I1211 10:09:40.911204 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 407695 us = 256886 + 0.226924 * 2 * 332290
+I1211 10:09:41.202819 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 2.39684, drop rate: 0.0304108
+I1211 10:09:41.319219 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 233785 us = 147307 + 0.226924 * 2 * 190546
+I1211 10:09:41.553331 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 194128 us = 122319 + 0.226924 * 2 * 158223
+I1211 10:09:41.747785 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 297751 us = 187611 + 0.226924 * 2 * 242681
+I1211 10:09:42.045872 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 149029 us = 93902.4 + 0.226924 * 2 * 121466
+I1211 10:09:42.195184 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 271359 us = 170981 + 0.226924 * 2 * 221170
+I1211 10:09:42.512220 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 84085.4 us = 65004.4 + 0.226924 * 1 * 84085.4
+I1211 10:09:43.018291 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 172896 us = 133662 + 0.226924 * 1 * 172896
+I1211 10:09:43.202736 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 5.25011, drop rate: 1.65181
+I1211 10:09:43.523869 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 101647 us = 78580.9 + 0.226924 * 1 * 101647
+I1211 10:09:44.029249 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 187735 us = 145133 + 0.226924 * 1 * 187735
+I1211 10:09:44.535059 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 178538 us = 138023 + 0.226924 * 1 * 178538
+I1211 10:09:44.573242 161288 backend_server.cpp:368] Update model instance fake:fake_0:1:224x224:701, batch: 2 -> 3
+I1211 10:09:44.573315 161288 backend_server.cpp:379] Duty cycle: 697714 us
+I1211 10:09:45.040287 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 125639 us = 97128.5 + 0.226924 * 1 * 125639
+I1211 10:09:45.202818 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 4.17861, drop rate: 1.10724
+I1211 10:09:45.545548 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 237496 us = 183603 + 0.226924 * 1 * 237496
+I1211 10:09:46.050554 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 68506.6 us = 52960.8 + 0.226924 * 1 * 68506.6
+I1211 10:09:46.555800 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 210022 us = 162363 + 0.226924 * 1 * 210022
+I1211 10:09:46.766033 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 315072 us = 243574 + 0.226924 * 1 * 315072
+I1211 10:09:47.081532 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 393217 us = 209091 + 0.226924 * 3 * 270466
+I1211 10:09:47.202980 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 3.46037, drop rate: 0.742205
+I1211 10:09:47.475270 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 345062 us = 183485 + 0.226924 * 3 * 237344
+I1211 10:09:47.820645 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 286902 us = 180775 + 0.226924 * 2 * 233839
+I1211 10:09:48.107731 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 104990 us = 81165.1 + 0.226924 * 1 * 104990
+I1211 10:09:48.713498 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 86916.4 us = 67193 + 0.226924 * 1 * 86916.4
+I1211 10:09:49.203033 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 4.11636, drop rate: 0.497515
+I1211 10:09:49.595105 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 158370 us = 122432 + 0.226924 * 1 * 158370
+I1211 10:09:50.477735 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 133404 us = 103131 + 0.226924 * 1 * 133404
+I1211 10:09:51.203114 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 3.08896, drop rate: 0.333494
+I1211 10:09:51.360893 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 163830 us = 126653 + 0.226924 * 1 * 163830
+I1211 10:09:52.243095 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 107023 us = 82737.2 + 0.226924 * 1 * 107023
+I1211 10:09:53.125490 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 74750.1 us = 57787.5 + 0.226924 * 1 * 74750.1
+I1211 10:09:53.203377 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 2.40027, drop rate: 0.223548
+I1211 10:09:54.008042 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 259238 us = 200411 + 0.226924 * 1 * 259238
+I1211 10:09:54.574827 161288 backend_server.cpp:368] Update model instance fake:fake_0:1:224x224:701, batch: 3 -> 2
+I1211 10:09:54.574879 161288 backend_server.cpp:379] Duty cycle: 697897 us
+I1211 10:09:54.889889 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 299985 us = 231911 + 0.226924 * 1 * 299985
+I1211 10:09:55.203209 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 2.08704, drop rate: 0.149849
+I1211 10:09:55.773948 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 168275 us = 130089 + 0.226924 * 1 * 168275
+I1211 10:09:56.656246 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 252887 us = 195501 + 0.226924 * 1 * 252887
+I1211 10:09:57.189275 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 230219 us = 177977 + 0.226924 * 1 * 230219
+I1211 10:09:57.203333 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 1.72867, drop rate: 0.100447
+I1211 10:09:57.723603 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 106627 us = 82430.8 + 0.226924 * 1 * 106627
+I1211 10:09:58.258044 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 189185 us = 146254 + 0.226924 * 1 * 189185
+I1211 10:09:58.792204 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 108627 us = 83977.3 + 0.226924 * 1 * 108627
+I1211 10:09:59.203493 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 1.63685, drop rate: 0.0673313
+I1211 10:09:59.325621 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 195360 us = 151028 + 0.226924 * 1 * 195360
+I1211 10:09:59.859679 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 44944.9 us = 34745.8 + 0.226924 * 1 * 44944.9
+I1211 10:10:00.393493 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 35396.9 us = 27364.5 + 0.226924 * 1 * 35396.9
+I1211 10:10:00.928172 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 138871 us = 107358 + 0.226924 * 1 * 138871
+I1211 10:10:01.203472 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 1.75657, drop rate: 0.0451335
+I1211 10:10:01.461585 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 92839.7 us = 71772.1 + 0.226924 * 1 * 92839.7
+I1211 10:10:01.996304 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 143461 us = 110906 + 0.226924 * 1 * 143461
+I1211 10:10:02.169226 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 252439 us = 195154 + 0.226924 * 1 * 252439
+I1211 10:10:02.421814 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 226462 us = 175072 + 0.226924 * 1 * 226462
+I1211 10:10:02.648425 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 122884 us = 94998.6 + 0.226924 * 1 * 122884
+I1211 10:10:02.771456 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 129377 us = 100018 + 0.226924 * 1 * 129377
+I1211 10:10:02.900979 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 144912 us = 112028 + 0.226924 * 1 * 144912
+I1211 10:10:03.046038 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 152217 us = 117675 + 0.226924 * 1 * 152217
+I1211 10:10:03.203527 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 2.0181, drop rate: 0.0302539
+I1211 10:10:03.209451 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 139058 us = 107503 + 0.226924 * 1 * 139058
+I1211 10:10:03.383098 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 349662 us = 270316 + 0.226924 * 1 * 349662
+I1211 10:10:03.733057 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 107781 us = 67911.8 + 0.226924 * 2 * 87846.2
+I1211 10:10:03.841015 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 136302 us = 105372 + 0.226924 * 1 * 136302
+I1211 10:10:03.977587 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 223783 us = 141004 + 0.226924 * 2 * 182394
+I1211 10:10:04.201665 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 327876 us = 206593 + 0.226924 * 2 * 267234
+I1211 10:10:04.529831 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 346521 us = 218341 + 0.226924 * 2 * 282431
+I1211 10:10:04.876673 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 498882 us = 314342 + 0.226924 * 2 * 406612
+I1211 10:10:05.203670 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 3.69339, drop rate: 0.0202798
+I1211 10:10:05.375862 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 224520 us = 141469 + 0.226924 * 2 * 182994
+I1211 10:10:05.600664 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 276922 us = 174487 + 0.226924 * 2 * 225704
+I1211 10:10:05.877871 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 146703 us = 92436.4 + 0.226924 * 2 * 119570
+I1211 10:10:06.024848 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 443518 us = 279458 + 0.226924 * 2 * 361488
+I1211 10:10:06.468652 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 471759 us = 297252 + 0.226924 * 2 * 384505
+I1211 10:10:06.576591 161288 backend_server.cpp:368] Update model instance fake:fake_0:1:224x224:701, batch: 2 -> 3
+I1211 10:10:06.576637 161288 backend_server.cpp:379] Duty cycle: 697714 us
+I1211 10:10:06.940860 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 135954 us = 72292.7 + 0.226924 * 3 * 93513.1
+I1211 10:10:07.077232 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 447723 us = 238074 + 0.226924 * 3 * 307957
+I1211 10:10:07.203681 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 5.08033, drop rate: 0.194863
+I1211 10:10:07.525418 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 201143 us = 106957 + 0.226924 * 3 * 138352
+I1211 10:10:07.726967 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 505815 us = 268965 + 0.226924 * 3 * 347915
+I1211 10:10:08.233240 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 294536 us = 156618 + 0.226924 * 3 * 202591
+I1211 10:10:08.528226 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 530524 us = 282103 + 0.226924 * 3 * 364910
+I1211 10:10:09.059245 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 171375 us = 91127.6 + 0.226924 * 3 * 117877
+I1211 10:10:09.203860 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 8.41637, drop rate: 0.822839
+I1211 10:10:09.231031 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 240537 us = 127904 + 0.226924 * 3 * 165449
+I1211 10:10:09.471729 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 148225 us = 114589 + 0.226924 * 1 * 148225
+I1211 10:10:09.620100 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 167783 us = 129709 + 0.226924 * 1 * 167783
+I1211 10:10:10.445719 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 293049 us = 226549 + 0.226924 * 1 * 293049
+I1211 10:10:11.203912 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 7.15862, drop rate: 2.18408
+I1211 10:10:11.277634 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 271347 us = 209772 + 0.226924 * 1 * 271347
+I1211 10:10:12.110302 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 152406 us = 117821 + 0.226924 * 1 * 152406
+I1211 10:10:12.942991 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 78905 us = 60999.6 + 0.226924 * 1 * 78905
+I1211 10:10:13.204035 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 5.30952, drop rate: 1.46403
+I1211 10:10:13.775179 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 70329.7 us = 54370.2 + 0.226924 * 1 * 70329.7
+I1211 10:10:14.608201 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 247760 us = 191537 + 0.226924 * 1 * 247760
+I1211 10:10:15.204216 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 3.88876, drop rate: 0.981372
+I1211 10:10:15.440691 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 83612.6 us = 64638.9 + 0.226924 * 1 * 83612.6
+I1211 10:10:16.272938 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 177103 us = 136914 + 0.226924 * 1 * 177103
+I1211 10:10:17.105259 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 328901 us = 254266 + 0.226924 * 1 * 328901
+I1211 10:10:17.204363 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 2.93639, drop rate: 0.657833
+I1211 10:10:17.445667 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 295989 us = 228822 + 0.226924 * 1 * 295989
+I1211 10:10:17.785946 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 235880 us = 182353 + 0.226924 * 1 * 235880
+I1211 10:10:18.126731 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 194624 us = 150459 + 0.226924 * 1 * 194624
+I1211 10:10:18.466830 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 186546 us = 144215 + 0.226924 * 1 * 186546
+I1211 10:10:18.807088 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 344068 us = 265991 + 0.226924 * 1 * 344068
+I1211 10:10:19.151333 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 61587.8 us = 47612 + 0.226924 * 1 * 61587.8
+I1211 10:10:19.204236 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 2.80895, drop rate: 0.440959
+I1211 10:10:19.488476 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 124795 us = 96476.4 + 0.226924 * 1 * 124795
+I1211 10:10:19.829170 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 185025 us = 143038 + 0.226924 * 1 * 185025
+I1211 10:10:20.169615 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 92775.8 us = 71722.7 + 0.226924 * 1 * 92775.8
+I1211 10:10:20.510203 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 165049 us = 127595 + 0.226924 * 1 * 165049
+I1211 10:10:21.204324 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 2.87194, drop rate: 0.295584
+I1211 10:10:21.551491 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 29598.5 us = 22881.9 + 0.226924 * 1 * 29598.5
+I1211 10:10:22.594862 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 128106 us = 99035.9 + 0.226924 * 1 * 128106
+I1211 10:10:23.204674 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 2.2548, drop rate: 0.198136
+I1211 10:10:23.637457 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 186153 us = 143910 + 0.226924 * 1 * 186153
+I1211 10:10:24.677824 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 208538 us = 161215 + 0.226924 * 1 * 208538
+I1211 10:10:25.204607 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 1.84112, drop rate: 0.132814
+I1211 10:10:25.720993 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 105970 us = 81922.7 + 0.226924 * 1 * 105970
+I1211 10:10:26.762444 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 164302 us = 127018 + 0.226924 * 1 * 164302
+I1211 10:10:27.204680 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 1.56382, drop rate: 0.0890281
+I1211 10:10:27.803997 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 67538.1 us = 52212.1 + 0.226924 * 1 * 67538.1
+I1211 10:10:28.845559 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 465793 us = 360093 + 0.226924 * 1 * 465793
+I1211 10:10:29.204903 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 1.37794, drop rate: 0.0596773
+I1211 10:10:29.888219 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 76902 us = 59451.1 + 0.226924 * 1 * 76902
+I1211 10:10:30.580423 161288 backend_server.cpp:368] Update model instance fake:fake_0:1:224x224:701, batch: 3 -> 2
+I1211 10:10:30.580485 161288 backend_server.cpp:379] Duty cycle: 697897 us
+I1211 10:10:30.930466 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 174375 us = 134805 + 0.226924 * 1 * 174375
+I1211 10:10:31.105036 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 323255 us = 249901 + 0.226924 * 1 * 323255
+I1211 10:10:31.204864 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 1.25334, drop rate: 0.0400029
+I1211 10:10:31.428632 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 527815 us = 332572 + 0.226924 * 2 * 430193
+I1211 10:10:31.956895 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 205928 us = 129753 + 0.226924 * 2 * 167841
+I1211 10:10:32.163187 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 251044 us = 158181 + 0.226924 * 2 * 204612
+I1211 10:10:32.414525 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 673233 us = 424199 + 0.226924 * 2 * 548716
+I1211 10:10:33.088066 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 326878 us = 205963 + 0.226924 * 2 * 266421
+I1211 10:10:33.204926 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 2.55426, drop rate: 0.0268147
+I1211 10:10:33.415225 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 107830 us = 67942.9 + 0.226924 * 2 * 87886.4
+I1211 10:10:33.561744 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 336357 us = 260030 + 0.226924 * 1 * 336357
+I1211 10:10:33.898253 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 156347 us = 120868 + 0.226924 * 1 * 156347
+I1211 10:10:34.071971 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 216149 us = 167100 + 0.226924 * 1 * 216149
+I1211 10:10:34.327019 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 37127 us = 28702 + 0.226924 * 1 * 37127
+I1211 10:10:34.583130 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 403786 us = 312157 + 0.226924 * 1 * 403786
+I1211 10:10:34.987217 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 341764 us = 215343 + 0.226924 * 2 * 278554
+I1211 10:10:35.205150 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 3.03089, drop rate: 0.166385
+I1211 10:10:35.329288 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 388744 us = 244945 + 0.226924 * 2 * 316845
+I1211 10:10:35.718344 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 513929 us = 323823 + 0.226924 * 2 * 418876
+I1211 10:10:36.232702 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 444874 us = 280312 + 0.226924 * 2 * 362593
+I1211 10:10:36.677892 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 210305 us = 132512 + 0.226924 * 2 * 171409
+I1211 10:10:36.888522 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 558360 us = 351819 + 0.226924 * 2 * 455090
+I1211 10:10:37.205137 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 4.88323, drop rate: 0.111531
+I1211 10:10:37.447060 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 198074 us = 153126 + 0.226924 * 1 * 198074
+I1211 10:10:37.645306 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 132040 us = 102077 + 0.226924 * 1 * 132040
+I1211 10:10:38.308327 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 66495.5 us = 51406 + 0.226924 * 1 * 66495.5
+I1211 10:10:39.050030 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 112532 us = 86995.5 + 0.226924 * 1 * 112532
+I1211 10:10:39.205236 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 4.34506, drop rate: 1.36062
+I1211 10:10:39.791803 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 203983 us = 157695 + 0.226924 * 1 * 203983
+I1211 10:10:40.533638 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 243044 us = 187891 + 0.226924 * 1 * 243044
+I1211 10:10:40.581905 161288 backend_server.cpp:368] Update model instance fake:fake_0:1:224x224:701, batch: 2 -> 3
+I1211 10:10:40.581955 161288 backend_server.cpp:379] Duty cycle: 697714 us
+I1211 10:10:41.205550 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 3.39067, drop rate: 0.912053
+I1211 10:10:41.278458 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 167455 us = 129456 + 0.226924 * 1 * 167455
+I1211 10:10:42.017096 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 221068 us = 170903 + 0.226924 * 1 * 221068
+I1211 10:10:42.758750 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 70562.7 us = 54550.3 + 0.226924 * 1 * 70562.7
+I1211 10:10:43.205349 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 2.78379, drop rate: 0.611367
+I1211 10:10:43.501360 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 111928 us = 86528.8 + 0.226924 * 1 * 111928
+I1211 10:10:44.243683 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 350813 us = 271205 + 0.226924 * 1 * 350813
+I1211 10:10:44.594942 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 209368 us = 111330 + 0.226924 * 3 * 144010
+I1211 10:10:44.804651 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 189084 us = 119141 + 0.226924 * 2 * 154113
+I1211 10:10:44.994050 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 262596 us = 165460 + 0.226924 * 2 * 214028
+I1211 10:10:45.205452 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 2.19571, drop rate: 0.409812
+I1211 10:10:45.257053 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 229813 us = 122202 + 0.226924 * 3 * 158072
+I1211 10:10:45.487308 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 477801 us = 254068 + 0.226924 * 3 * 328646
+I1211 10:10:45.965561 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 534852 us = 284405 + 0.226924 * 3 * 367887
+I1211 10:10:46.500905 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 295346 us = 157048 + 0.226924 * 3 * 203147
+I1211 10:10:46.796696 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 334873 us = 178067 + 0.226924 * 3 * 230335
+I1211 10:10:47.131999 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 406544 us = 216178 + 0.226924 * 3 * 279633
+I1211 10:10:47.205500 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 6.58132, drop rate: 0.274705
+I1211 10:10:47.538972 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 461667 us = 245489 + 0.226924 * 3 * 317548
+I1211 10:10:48.001085 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 435492 us = 231571 + 0.226924 * 3 * 299544
+I1211 10:10:48.437018 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 385405 us = 204937 + 0.226924 * 3 * 265093
+I1211 10:10:49.205571 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 6.86776, drop rate: 1.66825
+I1211 10:10:49.526546 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 94037.2 us = 72697.9 + 0.226924 * 1 * 94037.2
+I1211 10:10:50.994601 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 97692.5 us = 75523.8 + 0.226924 * 1 * 97692.5
+I1211 10:10:51.205691 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 4.78487, drop rate: 1.11826
+I1211 10:10:52.462142 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 77764.7 us = 60118 + 0.226924 * 1 * 77764.7
+I1211 10:10:53.205762 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 3.3558, drop rate: 0.749592
+I1211 10:10:53.929426 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 35191.8 us = 27206 + 0.226924 * 1 * 35191.8
+I1211 10:10:55.205915 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 2.57914, drop rate: 0.502466
+I1211 10:10:55.397353 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 78841.7 us = 60950.6 + 0.226924 * 1 * 78841.7
+I1211 10:10:56.865854 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 73669.2 us = 56951.9 + 0.226924 * 1 * 73669.2
+I1211 10:10:57.206001 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 1.91012, drop rate: 0.336813
+I1211 10:10:58.332545 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 64518.1 us = 49877.4 + 0.226924 * 1 * 64518.1
+I1211 10:10:59.206171 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 1.4288, drop rate: 0.225773
+I1211 10:10:59.799371 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 73480.4 us = 56805.9 + 0.226924 * 1 * 73480.4
+I1211 10:11:01.206246 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 1.28743, drop rate: 0.15134
+I1211 10:11:01.268277 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 226383 us = 175011 + 0.226924 * 1 * 226383
+I1211 10:11:02.735854 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 83243.9 us = 64353.9 + 0.226924 * 1 * 83243.9
+I1211 10:11:03.167116 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 78057.9 us = 60344.7 + 0.226924 * 1 * 78057.9
+I1211 10:11:03.206378 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 1.04426, drop rate: 0.101446
+I1211 10:11:03.597141 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 399600 us = 308921 + 0.226924 * 1 * 399600
+I1211 10:11:04.030297 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 148901 us = 115112 + 0.226924 * 1 * 148901
+I1211 10:11:04.461798 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 180680 us = 139679 + 0.226924 * 1 * 180680
+I1211 10:11:04.585289 161288 backend_server.cpp:368] Update model instance fake:fake_0:1:224x224:701, batch: 3 -> 2
+I1211 10:11:04.585336 161288 backend_server.cpp:379] Duty cycle: 697897 us
+I1211 10:11:04.893836 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 371880 us = 287492 + 0.226924 * 1 * 371880
+I1211 10:11:05.206499 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 1.35935, drop rate: 0.0680014
+I1211 10:11:05.835706 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 161927 us = 125182 + 0.226924 * 1 * 161927
+I1211 10:11:06.778241 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 168924 us = 130591 + 0.226924 * 1 * 168924
+I1211 10:11:07.206609 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 1.38929, drop rate: 0.0455827
+I1211 10:11:07.720399 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 131337 us = 101533 + 0.226924 * 1 * 131337
+I1211 10:11:08.663554 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 189919 us = 146821 + 0.226924 * 1 * 189919
+I1211 10:11:09.206657 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 1.26095, drop rate: 0.030555
+I1211 10:11:09.605973 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 172310 us = 133209 + 0.226924 * 1 * 172310
+I1211 10:11:11.206775 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 1.17492, drop rate: 0.0204816
+I1211 10:11:12.794517 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 207183 us = 160168 + 0.226924 * 1 * 207183
+I1211 10:11:13.206840 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 0.787572, drop rate: 0.0137293
+I1211 10:11:14.587030 161288 backend_server.cpp:368] Update model instance fake:fake_0:1:224x224:701, batch: 2 -> 1
+I1211 10:11:14.587090 161288 backend_server.cpp:379] Duty cycle: 698080 us
+I1211 10:11:15.206979 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 0.676336, drop rate: 0.00920299
+I1211 10:11:15.984247 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 88945.6 us = 68761.7 + 0.226924 * 1 * 88945.6
+I1211 10:11:17.207137 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 0.634631, drop rate: 0.00616895
+I1211 10:11:19.173868 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 100734 us = 77875.3 + 0.226924 * 1 * 100734
+I1211 10:11:19.207223 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 0.425406, drop rate: 0.00413517
+I1211 10:11:21.207259 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 0.433569, drop rate: 0.00277189
+I1211 10:11:22.363324 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 293251 us = 226705 + 0.226924 * 1 * 293251
+I1211 10:11:23.207392 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 0.29063, drop rate: 0.00185805
+I1211 10:11:25.207659 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 0.343226, drop rate: 0.00124549
+I1211 10:11:25.552031 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 357680 us = 276514 + 0.226924 * 1 * 357680
+I1211 10:11:27.207605 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 0.41134, drop rate: 0.000834877
+I1211 10:11:27.385529 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 304562 us = 235450 + 0.226924 * 1 * 304562
+I1211 10:11:29.207752 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 0.456999, drop rate: 0.000559635
+I1211 10:11:29.219782 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 207375 us = 160317 + 0.226924 * 1 * 207375
+I1211 10:11:31.053740 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 189508 us = 146504 + 0.226924 * 1 * 189508
+I1211 10:11:31.207842 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 0.454746, drop rate: 0.000375134
+I1211 10:11:32.886986 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 406472 us = 314233 + 0.226924 * 1 * 406472
+I1211 10:11:33.207885 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 0.453236, drop rate: 0.00025146
+I1211 10:11:34.719291 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 45319.7 us = 35035.6 + 0.226924 * 1 * 45319.7
+I1211 10:11:34.791692 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 214983 us = 166198 + 0.226924 * 1 * 214983
+I1211 10:11:35.006942 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 32063.9 us = 24787.8 + 0.226924 * 1 * 32063.9
+I1211 10:11:35.039204 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 129641 us = 100222 + 0.226924 * 1 * 129641
+I1211 10:11:35.169104 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 226686 us = 175245 + 0.226924 * 1 * 226686
+I1211 10:11:35.207993 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 0.452224, drop rate: 0.000168559
+I1211 10:11:35.395977 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 88641.9 us = 68526.9 + 0.226924 * 1 * 88641.9
+I1211 10:11:37.208047 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 1.1936, drop rate: 0.000112988
+I1211 10:11:37.269685 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 231728 us = 179144 + 0.226924 * 1 * 231728
+I1211 10:11:39.208251 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 0.981363, drop rate: 7.57383e-05
+I1211 10:11:39.465759 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 167405 us = 129417 + 0.226924 * 1 * 167405
+I1211 10:11:41.208369 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 0.839096, drop rate: 5.07689e-05
+I1211 10:11:41.662781 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 57186.8 us = 44209.7 + 0.226924 * 1 * 57186.8
+I1211 10:11:43.208576 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 0.743732, drop rate: 3.40314e-05
+I1211 10:11:43.861300 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 149980 us = 115946 + 0.226924 * 1 * 149980
+I1211 10:11:45.208631 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 0.679808, drop rate: 2.28119e-05
+I1211 10:11:46.056427 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 112106 us = 86666.5 + 0.226924 * 1 * 112106
+I1211 10:11:46.991870 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 58440 us = 45178.6 + 0.226924 * 1 * 58440
+I1211 10:11:47.208724 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 0.636958, drop rate: 1.52913e-05
+I1211 10:11:47.927131 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 104250 us = 80593.1 + 0.226924 * 1 * 104250
+I1211 10:11:48.862488 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 197303 us = 152530 + 0.226924 * 1 * 197303
+I1211 10:11:49.208930 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 0.756646, drop rate: 1.02501e-05
+I1211 10:11:49.796901 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 31759.6 us = 24552.6 + 0.226924 * 1 * 31759.6
+I1211 10:11:50.732460 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 139405 us = 107770 + 0.226924 * 1 * 139405
+I1211 10:11:51.177304 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 103316 us = 79871 + 0.226924 * 1 * 103316
+I1211 10:11:51.208953 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 0.836875, drop rate: 6.87082e-06
+I1211 10:11:51.622478 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 522920 us = 404257 + 0.226924 * 1 * 522920
+I1211 10:11:52.145654 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 82864.1 us = 64060.2 + 0.226924 * 1 * 82864.1
+I1211 10:11:52.512162 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 72277.8 us = 55876.3 + 0.226924 * 1 * 72277.8
+I1211 10:11:52.959057 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 290163 us = 224318 + 0.226924 * 1 * 290163
+I1211 10:11:53.208993 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 1.22033, drop rate: 4.60565e-06
+I1211 10:11:53.614920 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 88359.6 us = 68308.7 + 0.226924 * 1 * 88359.6
+I1211 10:11:54.271374 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 187592 us = 145023 + 0.226924 * 1 * 187592
+I1211 10:11:54.928241 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 127102 us = 98259.7 + 0.226924 * 1 * 127102
+I1211 10:11:55.209066 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 1.2961, drop rate: 3.08726e-06
+I1211 10:11:55.584472 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 246833 us = 190821 + 0.226924 * 1 * 246833
+I1211 10:11:56.241026 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 147471 us = 114006 + 0.226924 * 1 * 147471
+I1211 10:11:56.517145 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 150819 us = 116594 + 0.226924 * 1 * 150819
+I1211 10:11:56.793452 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 89625.5 us = 69287.3 + 0.226924 * 1 * 89625.5
+I1211 10:11:57.069574 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 142955 us = 110515 + 0.226924 * 1 * 142955
+I1211 10:11:57.209340 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 1.3469, drop rate: 2.06945e-06
+I1211 10:11:57.345176 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 517811 us = 400308 + 0.226924 * 1 * 517811
+I1211 10:11:57.863188 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 213495 us = 165048 + 0.226924 * 1 * 213495
+I1211 10:11:58.076835 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 292941 us = 226466 + 0.226924 * 1 * 292941
+I1211 10:11:58.369940 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 210194 us = 162496 + 0.226924 * 1 * 210194
+I1211 10:11:58.580294 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 407083 us = 314706 + 0.226924 * 1 * 407083
+I1211 10:11:58.987568 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 179621 us = 138860 + 0.226924 * 1 * 179621
+I1211 10:11:59.167341 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 101017 us = 78093.5 + 0.226924 * 1 * 101017
+I1211 10:11:59.209270 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 2.76538, drop rate: 1.3872e-06
+I1211 10:11:59.667021 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 181112 us = 140013 + 0.226924 * 1 * 181112
+I1211 10:12:00.189096 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 372800 us = 288203 + 0.226924 * 1 * 372800
+I1211 10:12:00.711591 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 207816 us = 160658 + 0.226924 * 1 * 207816
+I1211 10:12:01.209298 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 2.51305, drop rate: 0.296822
+I1211 10:12:01.519640 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 146598 us = 113332 + 0.226924 * 1 * 146598
+I1211 10:12:02.328043 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 97867.9 us = 75659.3 + 0.226924 * 1 * 97867.9
+I1211 10:12:03.136525 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 138505 us = 107075 + 0.226924 * 1 * 138505
+I1211 10:12:03.209360 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 2.01423, drop rate: 0.198966
+I1211 10:12:03.944561 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 57385.4 us = 44363.3 + 0.226924 * 1 * 57385.4
+I1211 10:12:04.594523 161288 backend_server.cpp:368] Update model instance fake:fake_0:1:224x224:701, batch: 1 -> 2
+I1211 10:12:04.594580 161288 backend_server.cpp:379] Duty cycle: 697897 us
+I1211 10:12:04.752077 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 176039 us = 136092 + 0.226924 * 1 * 176039
+I1211 10:12:05.087930 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 151613 us = 117208 + 0.226924 * 1 * 151613
+I1211 10:12:05.209532 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 1.82827, drop rate: 0.133371
+I1211 10:12:05.423401 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 69906.1 us = 54042.8 + 0.226924 * 1 * 69906.1
+I1211 10:12:05.758965 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 62336.5 us = 48190.8 + 0.226924 * 1 * 62336.5
+I1211 10:12:06.095959 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 146706 us = 113415 + 0.226924 * 1 * 146706
+I1211 10:12:06.432427 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 393682 us = 304346 + 0.226924 * 1 * 393682
+I1211 10:12:06.826413 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 412586 us = 259967 + 0.226924 * 2 * 336276
+I1211 10:12:07.209509 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 2.06615, drop rate: 0.0894012
+I1211 10:12:07.239295 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 272585 us = 171754 + 0.226924 * 2 * 222169
+I1211 10:12:07.512168 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 289603 us = 182477 + 0.226924 * 2 * 236040
+I1211 10:12:07.802067 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 462714 us = 291553 + 0.226924 * 2 * 377133
+I1211 10:12:08.264951 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 188210 us = 145501 + 0.226924 * 1 * 188210
+I1211 10:12:08.644731 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 111272 us = 86021.5 + 0.226924 * 1 * 111272
+I1211 10:12:09.209627 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 3.11608, drop rate: 0.241197
+I1211 10:12:09.216697 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 196440 us = 151863 + 0.226924 * 1 * 196440
+I1211 10:12:09.789222 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 74907.5 us = 57909.2 + 0.226924 * 1 * 74907.5
+I1211 10:12:10.360841 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 278694 us = 215452 + 0.226924 * 1 * 278694
+I1211 10:12:10.933130 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 124419 us = 96185.5 + 0.226924 * 1 * 124419
+I1211 10:12:11.209731 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 2.56686, drop rate: 0.161679
+I1211 10:12:11.354251 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 260326 us = 201252 + 0.226924 * 1 * 260326
+I1211 10:12:11.776316 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 199448 us = 154189 + 0.226924 * 1 * 199448
+I1211 10:12:12.196643 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 128144 us = 99064.7 + 0.226924 * 1 * 128144
+I1211 10:12:12.618818 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 162588 us = 125693 + 0.226924 * 1 * 162588
+I1211 10:12:13.039103 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 140032 us = 108255 + 0.226924 * 1 * 140032
+I1211 10:12:13.209867 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 2.56125, drop rate: 0.108377
+I1211 10:12:14.701351 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 202905 us = 156861 + 0.226924 * 1 * 202905
+I1211 10:12:15.209867 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 2.01368, drop rate: 0.072647
+I1211 10:12:16.363611 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 175343 us = 135554 + 0.226924 * 1 * 175343
+I1211 10:12:17.210002 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 1.49822, drop rate: 0.0486968
+I1211 10:12:18.026101 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 354930 us = 274388 + 0.226924 * 1 * 354930
+I1211 10:12:19.210167 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 1.33397, drop rate: 0.0326424
+I1211 10:12:19.687798 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 121197 us = 93694.3 + 0.226924 * 1 * 121197
+I1211 10:12:21.210287 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 1.07545, drop rate: 0.0218809
+I1211 10:12:21.351205 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 120316 us = 93013.5 + 0.226924 * 1 * 120316
+I1211 10:12:22.249706 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 104741 us = 80972.9 + 0.226924 * 1 * 104741
+I1211 10:12:23.148607 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 212803 us = 164513 + 0.226924 * 1 * 212803
+I1211 10:12:23.210327 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 0.902167, drop rate: 0.0146672
+I1211 10:12:24.047720 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 389404 us = 301039 + 0.226924 * 1 * 389404
+I1211 10:12:24.597213 161288 backend_server.cpp:368] Update model instance fake:fake_0:1:224x224:701, batch: 2 -> 1
+I1211 10:12:24.597275 161288 backend_server.cpp:379] Duty cycle: 698080 us
+I1211 10:12:24.946319 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 175566 us = 135726 + 0.226924 * 1 * 175566
+I1211 10:12:25.210474 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 1.08283, drop rate: 0.00983171
+I1211 10:12:25.845024 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 268339 us = 207447 + 0.226924 * 1 * 268339
+I1211 10:12:26.113552 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 49009.9 us = 37888.3 + 0.226924 * 1 * 49009.9
+I1211 10:12:26.228821 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 129828 us = 100367 + 0.226924 * 1 * 129828
+I1211 10:12:26.420037 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 145499 us = 112482 + 0.226924 * 1 * 145499
+I1211 10:12:26.610914 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 173435 us = 134079 + 0.226924 * 1 * 173435
+I1211 10:12:26.802992 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 24383.5 us = 18850.3 + 0.226924 * 1 * 24383.5
+I1211 10:12:27.057935 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 111080 us = 85873 + 0.226924 * 1 * 111080
+I1211 10:12:27.210531 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 1.23679, drop rate: 0.00659039
+I1211 10:12:27.312662 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 138973 us = 107436 + 0.226924 * 1 * 138973
+I1211 10:12:27.567575 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 314056 us = 242789 + 0.226924 * 1 * 314056
+I1211 10:12:27.881798 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 138231 us = 106863 + 0.226924 * 1 * 138231
+I1211 10:12:28.077431 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 195753 us = 151332 + 0.226924 * 1 * 195753
+I1211 10:12:28.332538 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 211495 us = 163502 + 0.226924 * 1 * 211495
+I1211 10:12:28.587463 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 280940 us = 217188 + 0.226924 * 1 * 280940
+I1211 10:12:28.868582 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 218199 us = 168685 + 0.226924 * 1 * 218199
+I1211 10:12:29.098171 161281 fake_model.cpp:311] Model fake:fake_0:1:224x224:701 forward batch, slept for 297342 us = 229868 + 0.226924 * 1 * 297342
+I1211 10:12:29.210618 161289 backend_server.cpp:422] fake:fake_0:1:224x224:701 request rate: 2.29618, drop rate: 0.00441767
+E1211 10:12:29.400038 161275 backend_server.cpp:495] Failed to connect to scheduler: Socket closed(14)
+I1211 10:12:29.400343 161275 connection.cpp:28] Connection Stop
+I1211 10:12:29.400411 161281 gpu_executor.cpp:170] GpuExecutor stopped
+I1211 10:12:29.445709 161282 worker.cpp:53] Worker 0 stopped
+I1211 10:12:29.469285 161283 worker.cpp:53] Worker 1 stopped
+I1211 10:12:29.474819 161284 worker.cpp:53] Worker 2 stopped
+I1211 10:12:29.487421 161285 worker.cpp:53] Worker 3 stopped
+W1211 10:12:31.210767 161275 rpc_service_base.h:57] There is a event in the grpc::ServerCompletionQueue not handled at 0x7fdb10001590
+W1211 10:12:31.210803 161275 rpc_service_base.h:57] There is a event in the grpc::ServerCompletionQueue not handled at 0x7fdb10000b20
+I1211 10:12:31.210827 161275 rpc_service_base.h:64] RPC service stopped
+I1211 10:12:31.210832 161275 backend_server.cpp:134] Backend server stopped
+I1211 10:12:31.216886 161275 model_ins.cpp:89] Deconstruct model fake:fake_0:1:224x224:701

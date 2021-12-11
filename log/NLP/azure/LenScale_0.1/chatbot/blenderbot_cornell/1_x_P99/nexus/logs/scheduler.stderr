@@ -1,0 +1,62 @@
+I1211 02:43:41.204216 118195 rpc_service_base.h:46] RPC service is listening on 0.0.0.0:10001
+I1211 02:43:43.768455 118200 scheduler.cpp:98] Register server: node_type: BACKEND_NODE
+node_id: 2040576077
+server_port: "8001"
+rpc_port: "8002"
+gpu_device_name: "Tesla_V100S-PCIE-32GB"
+gpu_available_memory: 33650376704
+gpu_uuid: "fcf0dc04-2c7f-7570-499b-47b29c6d534c"
+I1211 02:43:45.220672 118200 scheduler.cpp:98] Register server: node_id: 3923524127
+server_port: "9001"
+rpc_port: "9002"
+I1211 02:43:45.221161 118202 model_db.cpp:283] Load model DB from /workdir/models/db/model_db.yml
+I1211 02:43:45.222009 118202 backend_delegate.cpp:183] Backend 2040576077 loads fake:fake_0:1:224x224:106, batch 8, max batch 8, max duty cycle 604.063 us, throughput 13243.7 req/s. Backend exec cycle 604.063 us, duty cycle: 604.063 us
+I1211 02:44:12.207494 118195 scheduler.cpp:832] Epoch schedule
+I1211 02:44:12.207592 118195 scheduler.cpp:1120] Total used GPUs: 1
+Backend 2040576077: 1
+I1211 02:44:12.207612 118195 scheduler.cpp:1137] Model table: 
+fake:fake_0:1:224x224:106: 2040576077/13243.7/1, total share: 1
+I1211 02:44:29.208822 118195 scheduler.cpp:832] Epoch schedule
+I1211 02:44:29.208890 118195 scheduler.cpp:861] fake:fake_0:1:224x224:106 estimate rps: 23.5968 (last: 23.5968, mean: 18.8531, std: 6.4096), throughput: 13243.7
+I1211 02:44:29.208933 118195 backend_delegate.cpp:341] Backend 2040576077 updates fake:fake_0:1:224x224:106, batch 3, max batch 8, new throughput 28.9622
+I1211 02:44:29.210654 118195 scheduler.cpp:1120] Total used GPUs: 1
+Backend 2040576077: 0.00293548
+I1211 02:44:29.210680 118195 scheduler.cpp:1137] Model table: 
+fake:fake_0:1:224x224:106: 2040576077/28.9622/1, total share: 1
+I1211 02:44:39.211406 118195 scheduler.cpp:832] Epoch schedule
+I1211 02:44:39.211460 118195 scheduler.cpp:861] fake:fake_0:1:224x224:106 estimate rps: 13.1273 (last: 13.1273, mean: 20.7518, std: 3.82552), throughput: 28.9622
+I1211 02:44:39.211499 118195 backend_delegate.cpp:341] Backend 2040576077 updates fake:fake_0:1:224x224:106, batch 2, max batch 8, new throughput 19.297
+I1211 02:44:39.212327 118195 scheduler.cpp:1120] Total used GPUs: 1
+Backend 2040576077: 0.00235488
+I1211 02:44:39.212349 118195 scheduler.cpp:1137] Model table: 
+fake:fake_0:1:224x224:106: 2040576077/19.297/1, total share: 1
+I1211 02:44:49.213116 118195 scheduler.cpp:832] Epoch schedule
+I1211 02:44:49.213187 118195 scheduler.cpp:861] fake:fake_0:1:224x224:106 estimate rps: 8.39956 (last: 8.39956, mean: 17.0405, std: 6.26764), throughput: 19.297
+I1211 02:44:49.213224 118195 backend_delegate.cpp:341] Backend 2040576077 updates fake:fake_0:1:224x224:106, batch 1, max batch 8, new throughput 9.64291
+I1211 02:44:49.214287 118195 scheduler.cpp:1120] Total used GPUs: 1
+Backend 2040576077: 0.00177495
+I1211 02:44:49.214323 118195 scheduler.cpp:1137] Model table: 
+fake:fake_0:1:224x224:106: 2040576077/9.64291/1, total share: 1
+I1211 02:44:59.215088 118195 scheduler.cpp:832] Epoch schedule
+I1211 02:44:59.215135 118195 scheduler.cpp:861] fake:fake_0:1:224x224:106 estimate rps: 6.70579 (last: 6.70579, mean: 11.3277, std: 4.47533), throughput: 9.64291
+I1211 02:44:59.215833 118195 scheduler.cpp:1120] Total used GPUs: 1
+Backend 2040576077: 0.00177495
+I1211 02:44:59.215867 118195 scheduler.cpp:1137] Model table: 
+fake:fake_0:1:224x224:106: 2040576077/9.64291/1, total share: 1
+*** Aborted at 1639190703 (unix time) try "date -d @1639190703" if you are using GNU date ***
+I1211 02:45:03.784477 118203 scheduler.cpp:115] Unregister FRONTEND_NODE 3923524127
+I1211 02:45:03.784531 118203 scheduler.cpp:442] Remove frontend 3923524127
+I1211 02:45:03.784561 118203 scheduler.cpp:656] Remove model session: fake:fake_0:1:224x224:106
+I1211 02:45:03.784569 118203 backend_delegate.cpp:290] Backend 2040576077 unload model: fake:fake_0:1:224x224:106
+I1211 02:45:03.784561 118201 scheduler.cpp:115] Unregister BACKEND_NODE 2040576077
+PC: @                0x0 (unknown)
+*** SIGTERM (@0x1cd71) received by PID 118195 (TID 0x7f31a449ef00) from PID 118129; stack trace: ***
+I1211 02:45:03.785164 118201 scheduler.cpp:454] Remove backend 2040576077
+    @     0x7f31a319d980 (unknown)
+    @     0x7f31a319cd50 __GI___nanosleep
+    @     0x557dc58fbf0d std::this_thread::sleep_for<>()
+    @     0x557dc58df269 nexus::scheduler::Scheduler::Run()
+    @     0x557dc592e781 main
+    @     0x7f319e412bf7 __libc_start_main
+    @     0x557dc58aaeaa _start
+    @                0x0 (unknown)

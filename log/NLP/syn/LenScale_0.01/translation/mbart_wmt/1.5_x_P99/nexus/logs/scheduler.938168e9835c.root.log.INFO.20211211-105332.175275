@@ -1,0 +1,39 @@
+Log file created at: 2021/12/11 10:53:32
+Running on machine: 938168e9835c
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I1211 10:53:32.943352 175275 rpc_service_base.h:46] RPC service is listening on 0.0.0.0:10001
+I1211 10:53:35.512401 175280 scheduler.cpp:98] Register server: node_type: BACKEND_NODE
+node_id: 1353168760
+server_port: "8001"
+rpc_port: "8002"
+gpu_device_name: "Tesla_V100S-PCIE-32GB"
+gpu_available_memory: 33650376704
+gpu_uuid: "fcf0dc04-2c7f-7570-499b-47b29c6d534c"
+I1211 10:53:36.959081 175281 scheduler.cpp:98] Register server: node_id: 1940768429
+server_port: "9001"
+rpc_port: "9002"
+I1211 10:53:36.959651 175283 model_db.cpp:283] Load model DB from /workdir/models/db/model_db.yml
+I1211 10:53:36.960433 175283 backend_delegate.cpp:183] Backend 1353168760 loads fake:fake_0:1:224x224:96, batch 8, max batch 8, max duty cycle 334.505 us, throughput 23915.9 req/s. Backend exec cycle 334.505 us, duty cycle: 334.505 us
+I1211 10:54:03.946764 175275 scheduler.cpp:832] Epoch schedule
+I1211 10:54:03.946859 175275 scheduler.cpp:1120] Total used GPUs: 1
+Backend 1353168760: 1
+I1211 10:54:03.946879 175275 scheduler.cpp:1137] Model table: 
+fake:fake_0:1:224x224:96: 1353168760/23915.9/1, total share: 1
+I1211 10:54:20.948153 175275 scheduler.cpp:832] Epoch schedule
+I1211 10:54:20.948200 175275 scheduler.cpp:861] fake:fake_0:1:224x224:96 estimate rps: 20.6666 (last: 20.6666, mean: 17.2004, std: 4.66599), throughput: 23915.9
+I1211 10:54:20.948241 175275 backend_delegate.cpp:341] Backend 1353168760 updates fake:fake_0:1:224x224:96, batch 2, max batch 8, new throughput 21.3346
+I1211 10:54:20.950006 175275 scheduler.cpp:1120] Total used GPUs: 1
+Backend 1353168760: 0.00152458
+I1211 10:54:20.950028 175275 scheduler.cpp:1137] Model table: 
+fake:fake_0:1:224x224:96: 1353168760/21.3346/1, total share: 1
+I1211 10:54:33.951061 175275 scheduler.cpp:832] Epoch schedule
+I1211 10:54:33.951165 175275 scheduler.cpp:861] fake:fake_0:1:224x224:96 estimate rps: 15.7021 (last: 15.7021, mean: 20.4244, std: 1.81062), throughput: 21.3346
+I1211 10:54:33.952121 175275 scheduler.cpp:1120] Total used GPUs: 1
+Backend 1353168760: 0.00152458
+I1211 10:54:33.952144 175275 scheduler.cpp:1137] Model table: 
+fake:fake_0:1:224x224:96: 1353168760/21.3346/1, total share: 1
+I1211 10:54:39.727039 175283 scheduler.cpp:115] Unregister BACKEND_NODE 1353168760
+I1211 10:54:39.727111 175283 scheduler.cpp:454] Remove backend 1353168760
+I1211 10:54:39.727160 175282 scheduler.cpp:115] Unregister FRONTEND_NODE 1940768429
+I1211 10:54:39.727161 175283 scheduler.cpp:984] fake:fake_0:1:224x224:96 has unassigned workload 21.3346
+I1211 10:54:39.727273 175283 scheduler.cpp:1007] Unassigned workload fake:fake_0:1:224x224:96, 21.3346 req/s

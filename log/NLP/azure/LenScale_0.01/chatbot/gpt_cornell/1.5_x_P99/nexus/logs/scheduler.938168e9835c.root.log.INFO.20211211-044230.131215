@@ -1,0 +1,26 @@
+Log file created at: 2021/12/11 04:42:30
+Running on machine: 938168e9835c
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I1211 04:42:30.803680 131215 rpc_service_base.h:46] RPC service is listening on 0.0.0.0:10001
+I1211 04:42:33.377372 131220 scheduler.cpp:98] Register server: node_type: BACKEND_NODE
+node_id: 986157864
+server_port: "8001"
+rpc_port: "8002"
+gpu_device_name: "Tesla_V100S-PCIE-32GB"
+gpu_available_memory: 33650376704
+gpu_uuid: "fcf0dc04-2c7f-7570-499b-47b29c6d534c"
+I1211 04:42:34.819093 131220 scheduler.cpp:98] Register server: node_id: 3222411311
+server_port: "9001"
+rpc_port: "9002"
+I1211 04:42:34.819545 131223 model_db.cpp:283] Load model DB from /workdir/models/db/model_db.yml
+I1211 04:42:34.820412 131223 backend_delegate.cpp:183] Backend 986157864 loads fake:fake_0:1:224x224:98, batch 8, max batch 8, max duty cycle 130.986 us, throughput 61075.1 req/s. Backend exec cycle 130.986 us, duty cycle: 130.986 us
+I1211 04:43:01.806684 131215 scheduler.cpp:832] Epoch schedule
+I1211 04:43:01.806808 131215 scheduler.cpp:1120] Total used GPUs: 1
+Backend 986157864: 1
+I1211 04:43:01.806829 131215 scheduler.cpp:1137] Model table: 
+fake:fake_0:1:224x224:98: 986157864/61075.1/1, total share: 1
+I1211 04:43:14.798154 131221 scheduler.cpp:115] Unregister BACKEND_NODE 986157864
+I1211 04:43:14.798197 131221 scheduler.cpp:454] Remove backend 986157864
+I1211 04:43:14.798214 131220 scheduler.cpp:115] Unregister FRONTEND_NODE 3222411311
+I1211 04:43:14.798226 131221 scheduler.cpp:984] fake:fake_0:1:224x224:98 has unassigned workload 61075.1
+I1211 04:43:14.798250 131221 scheduler.cpp:1007] Unassigned workload fake:fake_0:1:224x224:98, 61075.1 req/s
