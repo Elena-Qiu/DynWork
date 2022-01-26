@@ -1,0 +1,433 @@
+22-01-26:16:22:42 INFO     [docker_container_manager.py:192] [default-cluster] Starting managed Redis instance in Docker
+22-01-26:16:22:49 INFO     [docker_container_manager.py:294] [default-cluster] Metric Configuration Saved at /tmp/tmpr9vi41u4.yml
+22-01-26:16:22:50 INFO     [clipper_admin.py:162] [default-cluster] Clipper is running
+22-01-26:16:22:50 INFO     [clipper_admin.py:236] [default-cluster] Application fake-model was successfully registered
+22-01-26:16:22:50 INFO     [deployer_utils.py:41] Saving function to /tmp/tmpjtw9h23tclipper
+22-01-26:16:22:50 INFO     [deployer_utils.py:51] Serialized and supplied predict function
+22-01-26:16:22:50 INFO     [python.py:192] Python closure saved
+22-01-26:16:22:50 INFO     [python.py:210] Using Python 3.7 base image
+22-01-26:16:22:50 INFO     [clipper_admin.py:534] [default-cluster] Building model Docker image with model data from /tmp/tmpjtw9h23tclipper
+22-01-26:16:22:51 INFO     [clipper_admin.py:539] [default-cluster] Step 1/2 : FROM clipper/python37-closure-container:develop
+22-01-26:16:22:51 INFO     [clipper_admin.py:539] [default-cluster]  ---> 2660542c0759
+22-01-26:16:22:51 INFO     [clipper_admin.py:539] [default-cluster] Step 2/2 : COPY /tmp/tmpjtw9h23tclipper /model/
+22-01-26:16:22:51 INFO     [clipper_admin.py:539] [default-cluster]  ---> 62d3454e3ee5
+22-01-26:16:22:51 INFO     [clipper_admin.py:539] [default-cluster] Successfully built 62d3454e3ee5
+22-01-26:16:22:51 INFO     [clipper_admin.py:539] [default-cluster] Successfully tagged default-cluster-fake-model:1
+22-01-26:16:22:51 INFO     [clipper_admin.py:541] [default-cluster] Pushing model Docker image to default-cluster-fake-model:1
+22-01-26:16:22:52 INFO     [docker_container_manager.py:433] [default-cluster] Found 0 replicas for fake-model:1. Adding 1
+22-01-26:16:22:53 INFO     [clipper_admin.py:724] [default-cluster] Successfully registered model fake-model:1
+22-01-26:16:22:53 INFO     [clipper_admin.py:642] [default-cluster] Done deploying model fake-model:1.
+22-01-26:16:22:53 INFO     [clipper_admin.py:303] [default-cluster] Model fake-model is now linked to application fake-model
+INFO: waiting for ready to serve
+INFO: waiting for ready to serve
+INFO: waiting for ready to serve
+INFO: waiting for ready to serve
+INFO: ready to go
+INFO: rock and roll
+INFO: at 2.034 ms batch [62.012] delay 27.500 ms
+INFO: at 2.034 ms fetching 62.012 ms
+INFO: at 29.539 ms batch [32.102] delay 27.500 ms
+INFO: at 29.539 ms fetching 32.102 ms
+INFO: at 57.043 ms batch [40.556] delay 27.500 ms
+INFO: at 57.043 ms fetching 40.556 ms
+INFO: at 84.547 ms batch [31.075] delay 27.500 ms
+INFO: at 84.547 ms fetching 31.075 ms
+INFO: at 112.053 ms batch [64.811] delay 27.500 ms
+INFO: at 112.053 ms fetching 64.811 ms
+INFO: at 139.556 ms batch [45.070] delay 27.500 ms
+INFO: at 139.556 ms fetching 45.070 ms
+INFO: at 167.061 ms batch [36.258] delay 27.500 ms
+INFO: at 167.061 ms fetching 36.258 ms
+INFO: at 194.565 ms batch [24.148] delay 27.500 ms
+INFO: at 194.565 ms fetching 24.148 ms
+INFO: at 222.070 ms batch [39.225] delay 27.500 ms
+INFO: at 222.070 ms fetching 39.225 ms
+INFO: at 249.575 ms batch [31.566] delay 27.500 ms
+INFO: at 249.575 ms fetching 31.566 ms
+INFO: at 277.079 ms batch [33.652] delay 27.500 ms
+INFO: at 277.079 ms fetching 33.652 ms
+INFO: at 304.583 ms batch [74.197] delay 27.500 ms
+INFO: at 304.583 ms fetching 74.197 ms
+INFO: at 332.088 ms batch [74.382] delay 13.750 ms
+INFO: at 332.088 ms fetching 74.382 ms
+INFO: at 345.842 ms batch [61.621] delay 13.750 ms
+INFO: at 345.842 ms fetching 61.621 ms
+INFO: at 359.595 ms batch [65.823] delay 13.750 ms
+INFO: at 359.595 ms fetching 65.823 ms
+INFO: at 373.348 ms batch [30.374] delay 13.750 ms
+INFO: at 373.348 ms fetching 30.374 ms
+INFO: at 387.101 ms batch [28.955] delay 13.750 ms
+INFO: at 387.101 ms fetching 28.955 ms
+INFO: at 400.855 ms batch [76.578] delay 13.750 ms
+INFO: at 400.855 ms fetching 76.578 ms
+INFO: at 414.610 ms batch [35.012] delay 13.750 ms
+INFO: at 414.610 ms fetching 35.012 ms
+INFO: at 428.363 ms batch [78.226] delay 13.750 ms
+INFO: at 428.363 ms fetching 78.226 ms
+INFO: at 442.115 ms batch [37.992] delay 13.750 ms
+INFO: at 442.115 ms fetching 37.992 ms
+INFO: at 455.868 ms batch [71.225] delay 13.750 ms
+INFO: at 455.868 ms fetching 71.225 ms
+INFO: at 469.667 ms batch [34.733] delay 13.750 ms
+INFO: at 469.667 ms fetching 34.733 ms
+INFO: at 483.433 ms batch [28.731] delay 13.750 ms
+INFO: at 483.433 ms fetching 28.731 ms
+INFO: at 497.185 ms batch [62.699] delay 13.750 ms
+INFO: at 497.185 ms fetching 62.699 ms
+INFO: at 510.937 ms batch [66.205] delay 13.750 ms
+INFO: at 510.937 ms fetching 66.205 ms
+INFO: at 524.691 ms batch [72.478] delay 13.750 ms
+INFO: at 524.691 ms fetching 72.478 ms
+INFO: at 538.445 ms batch [65.024] delay 13.750 ms
+INFO: at 538.445 ms fetching 65.024 ms
+INFO: at 552.197 ms batch [33.322] delay 9.167 ms
+INFO: at 552.197 ms fetching 33.322 ms
+INFO: at 561.365 ms batch [37.625] delay 9.167 ms
+INFO: at 561.365 ms fetching 37.625 ms
+INFO: at 570.534 ms batch [67.337] delay 9.167 ms
+INFO: at 570.534 ms fetching 67.337 ms
+INFO: at 579.703 ms batch [41.396] delay 6.875 ms
+INFO: at 579.703 ms fetching 41.396 ms
+INFO: at 586.580 ms batch [35.941] delay 6.875 ms
+INFO: at 586.580 ms fetching 35.941 ms
+INFO: at 593.457 ms batch [69.857] delay 6.875 ms
+INFO: at 593.457 ms fetching 69.857 ms
+INFO: at 600.334 ms batch [79.605] delay 6.875 ms
+INFO: at 600.334 ms fetching 79.605 ms
+INFO: at 607.212 ms batch [28.204] delay 5.500 ms
+INFO: at 607.212 ms fetching 28.204 ms
+INFO: at 612.714 ms batch [60.145] delay 5.500 ms
+INFO: at 612.714 ms fetching 60.145 ms
+INFO: at 618.216 ms batch [74.977] delay 5.500 ms
+INFO: at 618.216 ms fetching 74.977 ms
+INFO: at 623.719 ms batch [33.495] delay 5.500 ms
+INFO: at 623.719 ms fetching 33.495 ms
+INFO: at 629.221 ms batch [66.981] delay 5.500 ms
+INFO: at 629.221 ms fetching 66.981 ms
+INFO: at 634.724 ms batch [59.458] delay 4.583 ms
+INFO: at 639.308 ms batch [33.028] delay 4.583 ms
+INFO: at 643.893 ms batch [70.761] delay 4.583 ms
+INFO: at 648.478 ms batch [70.920] delay 4.583 ms
+INFO: at 653.062 ms batch [35.787] delay 4.583 ms
+INFO: at 657.647 ms batch [29.985] delay 4.583 ms
+INFO: at 662.231 ms batch [40.302] delay 3.438 ms
+INFO: at 665.670 ms batch [70.328] delay 3.438 ms
+INFO: at 669.108 ms batch [72.638] delay 3.438 ms
+INFO: at 672.547 ms batch [39.449] delay 3.438 ms
+INFO: at 675.986 ms batch [27.951] delay 3.438 ms
+INFO: at 679.427 ms batch [75.634] delay 3.438 ms
+INFO: at 682.865 ms batch [10.000] delay 3.438 ms
+INFO: at 686.304 ms batch [66.009] delay 3.438 ms
+INFO: at 689.754 ms batch [36.095] delay 3.929 ms
+INFO: at 693.684 ms batch [77.506] delay 3.929 ms
+INFO: at 697.614 ms batch [34.128] delay 3.929 ms
+INFO: at 701.544 ms batch [72.006] delay 3.929 ms
+INFO: at 705.473 ms batch [43.295] delay 3.929 ms
+INFO: at 709.403 ms batch [69.098] delay 3.929 ms
+INFO: at 713.332 ms batch [33.179] delay 3.929 ms
+INFO: at 717.262 ms batch [55.014] delay 3.438 ms
+INFO: at 720.701 ms batch [69.559] delay 3.438 ms
+INFO: at 724.139 ms batch [69.244] delay 3.438 ms
+INFO: at 727.577 ms batch [32.880] delay 3.438 ms
+INFO: at 731.016 ms batch [68.160] delay 3.438 ms
+INFO: at 734.455 ms batch [42.018] delay 3.438 ms
+INFO: at 737.893 ms batch [67.505] delay 3.438 ms
+INFO: at 741.332 ms batch [61.199] delay 3.438 ms
+INFO: at 744.770 ms batch [72.154] delay 3.056 ms
+INFO: at 747.827 ms batch [68.319] delay 3.056 ms
+INFO: at 750.883 ms batch [67.847] delay 3.056 ms
+INFO: at 753.939 ms batch [26.758] delay 3.056 ms
+INFO: at 756.996 ms batch [36.739] delay 3.056 ms
+INFO: at 760.053 ms batch [29.599] delay 3.056 ms
+INFO: at 763.109 ms batch [73.446] delay 3.056 ms
+INFO: at 766.166 ms batch [32.247] delay 3.056 ms
+INFO: at 769.222 ms batch [41.097] delay 3.056 ms
+INFO: at 772.279 ms batch [25.241] delay 3.056 ms
+INFO: at 775.338 ms batch [31.242] delay 3.056 ms
+INFO: at 778.394 ms batch [39.871] delay 3.056 ms
+INFO: at 781.451 ms batch [34.269] delay 3.056 ms
+INFO: at 784.507 ms batch [71.076] delay 3.056 ms
+INFO: at 787.564 ms batch [73.809] delay 3.056 ms
+INFO: at 790.621 ms batch [80.762] delay 3.056 ms
+INFO: at 793.678 ms batch [29.167] delay 3.056 ms
+INFO: at 796.734 ms batch [78.606] delay 3.056 ms
+INFO: at 799.791 ms batch [65.240] delay 3.056 ms
+INFO: at 802.848 ms batch [63.831] delay 3.056 ms
+INFO: at 805.904 ms batch [37.461] delay 3.056 ms
+INFO: at 808.961 ms batch [67.166] delay 3.056 ms
+INFO: at 812.017 ms batch [32.397] delay 3.056 ms
+INFO: at 815.074 ms batch [71.527] delay 3.056 ms
+INFO: at 818.131 ms batch [75.875] delay 3.056 ms
+INFO: at 821.187 ms batch [38.789] delay 3.056 ms
+INFO: at 824.244 ms batch [32.562] delay 3.056 ms
+INFO: at 827.301 ms batch [41.691] delay 2.750 ms
+INFO: at 830.053 ms batch [40.832] delay 2.750 ms
+INFO: at 832.804 ms batch [68.625] delay 2.750 ms
+INFO: at 835.556 ms batch [66.799] delay 2.750 ms
+INFO: at 838.307 ms batch [35.314] delay 2.750 ms
+INFO: at 841.058 ms batch [33.965] delay 2.750 ms
+INFO: at 843.809 ms batch [36.579] delay 2.750 ms
+INFO: at 846.559 ms batch [65.617] delay 2.750 ms
+INFO: at 849.311 ms batch [69.407] delay 2.750 ms
+INFO: at 852.061 ms batch [21.564] delay 2.750 ms
+INFO: at 854.812 ms batch [26.428] delay 3.438 ms
+INFO: at 858.251 ms batch [76.345] delay 3.438 ms
+INFO: at 861.689 ms batch [76.106] delay 3.438 ms
+INFO: at 865.128 ms batch [72.966] delay 3.438 ms
+INFO: at 868.566 ms batch [27.101] delay 3.438 ms
+INFO: at 872.005 ms batch [31.398] delay 3.438 ms
+INFO: at 875.443 ms batch [58.535] delay 3.438 ms
+INFO: at 878.882 ms batch [25.658] delay 3.438 ms
+INFO: at 882.320 ms batch [36.929] delay 3.929 ms
+INFO: at 886.250 ms batch [60.724] delay 3.929 ms
+INFO: at 890.179 ms batch [80.086] delay 3.929 ms
+INFO: at 894.109 ms batch [69.717] delay 3.929 ms
+INFO: at 898.039 ms batch [62.995] delay 3.929 ms
+INFO: at 901.969 ms batch [31.746] delay 3.929 ms
+INFO: at 905.899 ms batch [70.626] delay 3.929 ms
+INFO: at 909.828 ms batch [22.701] delay 3.929 ms
+INFO: at 913.758 ms batch [71.697] delay 3.929 ms
+INFO: at 917.688 ms batch [35.159] delay 3.929 ms
+INFO: at 921.618 ms batch [71.864] delay 3.929 ms
+INFO: at 925.547 ms batch [73.286] delay 3.929 ms
+INFO: at 929.477 ms batch [100.000] delay 3.929 ms
+INFO: at 933.407 ms batch [74.576] delay 3.929 ms
+INFO: at 937.336 ms batch [45.916] delay 4.583 ms
+INFO: at 941.921 ms batch [77.182] delay 4.583 ms
+INFO: at 946.506 ms batch [34.857] delay 4.583 ms
+INFO: at 951.091 ms batch [44.326] delay 4.583 ms
+INFO: at 955.675 ms batch [71.367] delay 4.583 ms
+INFO: at 960.259 ms batch [39.008] delay 4.583 ms
+INFO: at 964.844 ms batch [38.592] delay 4.583 ms
+INFO: at 969.428 ms batch [34.411] delay 4.583 ms
+INFO: at 974.012 ms batch [35.632] delay 4.583 ms
+INFO: at 978.597 ms batch [37.290] delay 4.583 ms
+INFO: at 983.181 ms batch [37.106] delay 4.583 ms
+INFO: at 987.765 ms batch [82.609] delay 4.583 ms
+INFO: at 992.349 ms batch [73.132] delay 4.583 ms
+INFO: at 996.934 ms batch [19.953] delay 4.583 ms
+INFO: at 1001.518 ms batch [42.847] delay 4.583 ms
+INFO: at 1006.102 ms batch [30.201] delay 4.583 ms
+INFO: at 1010.686 ms batch [39.636] delay 4.583 ms
+INFO: at 1015.271 ms batch [29.797] delay 4.583 ms
+INFO: at 1019.856 ms batch [84.225] delay 4.583 ms
+INFO: at 1024.440 ms batch [66.609] delay 4.583 ms
+INFO: at 1029.024 ms batch [65.423] delay 4.583 ms
+INFO: at 1033.609 ms batch [27.403] delay 4.583 ms
+INFO: at 1038.193 ms batch [64.090] delay 4.583 ms
+INFO: at 1042.777 ms batch [34.562] delay 4.583 ms
+INFO: at 1047.362 ms batch [62.362] delay 5.500 ms
+INFO: at 634.724 ms fetching 59.458 ms
+INFO: at 639.308 ms fetching 33.028 ms
+INFO: at 643.893 ms fetching 70.761 ms
+INFO: at 648.478 ms fetching 70.920 ms
+INFO: at 653.062 ms fetching 35.787 ms
+INFO: at 657.647 ms fetching 29.985 ms
+INFO: at 662.231 ms fetching 40.302 ms
+INFO: at 665.670 ms fetching 70.328 ms
+INFO: at 669.108 ms fetching 72.638 ms
+INFO: at 672.547 ms fetching 39.449 ms
+INFO: at 675.986 ms fetching 27.951 ms
+INFO: at 679.427 ms fetching 75.634 ms
+INFO: at 682.865 ms fetching 10.000 ms
+INFO: at 686.304 ms fetching 66.009 ms
+INFO: at 689.754 ms fetching 36.095 ms
+INFO: at 693.684 ms fetching 77.506 ms
+INFO: at 697.614 ms fetching 34.128 ms
+INFO: at 701.544 ms fetching 72.006 ms
+INFO: at 705.473 ms fetching 43.295 ms
+INFO: at 709.403 ms fetching 69.098 ms
+INFO: at 713.332 ms fetching 33.179 ms
+INFO: at 717.262 ms fetching 55.014 ms
+INFO: at 720.701 ms fetching 69.559 ms
+INFO: at 724.139 ms fetching 69.244 ms
+INFO: at 727.577 ms fetching 32.880 ms
+INFO: at 731.016 ms fetching 68.160 ms
+INFO: at 734.455 ms fetching 42.018 ms
+INFO: at 737.893 ms fetching 67.505 ms
+INFO: at 741.332 ms fetching 61.199 ms
+INFO: at 744.770 ms fetching 72.154 ms
+INFO: at 747.827 ms fetching 68.319 ms
+INFO: at 750.883 ms fetching 67.847 ms
+INFO: at 753.939 ms fetching 26.758 ms
+INFO: at 756.996 ms fetching 36.739 ms
+INFO: at 760.053 ms fetching 29.599 ms
+INFO: at 763.109 ms fetching 73.446 ms
+INFO: at 766.166 ms fetching 32.247 ms
+INFO: at 769.222 ms fetching 41.097 ms
+INFO: at 772.279 ms fetching 25.241 ms
+INFO: at 775.338 ms fetching 31.242 ms
+INFO: at 778.394 ms fetching 39.871 ms
+INFO: at 781.451 ms fetching 34.269 ms
+INFO: at 784.507 ms fetching 71.076 ms
+INFO: at 787.564 ms fetching 73.809 ms
+INFO: at 790.621 ms fetching 80.762 ms
+INFO: at 793.678 ms fetching 29.167 ms
+INFO: at 796.734 ms fetching 78.606 ms
+INFO: at 799.791 ms fetching 65.240 ms
+INFO: at 802.848 ms fetching 63.831 ms
+INFO: at 805.904 ms fetching 37.461 ms
+INFO: at 808.961 ms fetching 67.166 ms
+INFO: at 812.017 ms fetching 32.397 ms
+INFO: at 815.074 ms fetching 71.527 ms
+INFO: at 818.131 ms fetching 75.875 ms
+INFO: at 821.187 ms fetching 38.789 ms
+INFO: at 824.244 ms fetching 32.562 ms
+INFO: at 827.301 ms fetching 41.691 ms
+INFO: at 830.053 ms fetching 40.832 ms
+INFO: at 832.804 ms fetching 68.625 ms
+INFO: at 835.556 ms fetching 66.799 ms
+INFO: at 838.307 ms fetching 35.314 ms
+INFO: at 841.058 ms fetching 33.965 ms
+INFO: at 843.809 ms fetching 36.579 ms
+INFO: at 846.559 ms fetching 65.617 ms
+INFO: at 849.311 ms fetching 69.407 ms
+INFO: at 852.061 ms fetching 21.564 ms
+INFO: at 854.812 ms fetching 26.428 ms
+INFO: at 858.251 ms fetching 76.345 ms
+INFO: at 861.689 ms fetching 76.106 ms
+INFO: at 865.128 ms fetching 72.966 ms
+INFO: at 868.566 ms fetching 27.101 ms
+INFO: at 872.005 ms fetching 31.398 ms
+INFO: at 875.443 ms fetching 58.535 ms
+INFO: at 878.882 ms fetching 25.658 ms
+INFO: at 882.320 ms fetching 36.929 ms
+INFO: at 886.250 ms fetching 60.724 ms
+INFO: at 890.179 ms fetching 80.086 ms
+INFO: at 894.109 ms fetching 69.717 ms
+INFO: at 898.039 ms fetching 62.995 ms
+INFO: at 901.969 ms fetching 31.746 ms
+INFO: at 905.899 ms fetching 70.626 ms
+INFO: at 909.828 ms fetching 22.701 ms
+INFO: at 913.758 ms fetching 71.697 ms
+INFO: at 917.688 ms fetching 35.159 ms
+INFO: at 921.618 ms fetching 71.864 ms
+INFO: at 925.547 ms fetching 73.286 ms
+INFO: at 929.477 ms fetching 100.000 ms
+INFO: at 933.407 ms fetching 74.576 ms
+INFO: at 937.336 ms fetching 45.916 ms
+INFO: at 941.921 ms fetching 77.182 ms
+INFO: at 946.506 ms fetching 34.857 ms
+INFO: at 951.091 ms fetching 44.326 ms
+INFO: at 955.675 ms fetching 71.367 ms
+INFO: at 960.259 ms fetching 39.008 ms
+INFO: at 964.844 ms fetching 38.592 ms
+INFO: at 969.428 ms fetching 34.411 ms
+INFO: at 974.012 ms fetching 35.632 ms
+INFO: at 978.597 ms fetching 37.290 ms
+INFO: at 983.181 ms fetching 37.106 ms
+INFO: at 987.765 ms fetching 82.609 ms
+INFO: at 992.349 ms fetching 73.132 ms
+INFO: at 996.934 ms fetching 19.953 ms
+INFO: at 1001.518 ms fetching 42.847 ms
+INFO: at 1006.102 ms fetching 30.201 ms
+INFO: at 1010.686 ms fetching 39.636 ms
+INFO: at 1015.271 ms fetching 29.797 ms
+INFO: at 1019.856 ms fetching 84.225 ms
+INFO: at 1024.440 ms fetching 66.609 ms
+INFO: at 1029.024 ms fetching 65.423 ms
+INFO: at 1033.609 ms fetching 27.403 ms
+INFO: at 1038.193 ms fetching 64.090 ms
+INFO: at 1042.777 ms fetching 34.562 ms
+INFO: at 1047.362 ms fetching 62.362 ms
+WARNING: bookkeeping for too long: -29.917490988969803ms
+INFO: at 1082.789 ms batch [42.399] delay 5.500 ms
+INFO: at 1082.789 ms fetching 42.399 ms
+WARNING: bookkeeping for too long: -68.73368501663208ms
+INFO: at 1157.033 ms batch [63.572] delay 5.500 ms
+INFO: at 1157.033 ms fetching 63.572 ms
+WARNING: bookkeeping for too long: -9.292000010609627ms
+INFO: at 1171.837 ms batch [30.742] delay 5.500 ms
+INFO: at 1171.837 ms fetching 30.742 ms
+INFO: at 1177.339 ms batch [68.008] delay 5.500 ms
+INFO: at 1177.339 ms fetching 68.008 ms
+INFO: at 1182.842 ms batch [29.373] delay 5.500 ms
+INFO: at 1182.842 ms fetching 29.373 ms
+INFO: at 1188.344 ms batch [63.300] delay 5.500 ms
+INFO: at 1188.344 ms fetching 63.300 ms
+INFO: at 1193.847 ms batch [28.485] delay 5.500 ms
+INFO: at 1193.847 ms fetching 28.485 ms
+INFO: at 1199.349 ms batch [32.723] delay 5.500 ms
+INFO: at 1199.349 ms fetching 32.723 ms
+INFO: at 1204.851 ms batch [38.379] delay 5.500 ms
+INFO: at 1204.851 ms fetching 38.379 ms
+INFO: at 1210.353 ms batch [70.483] delay 5.500 ms
+INFO: at 1210.353 ms fetching 70.483 ms
+INFO: at 1215.855 ms batch [64.568] delay 5.500 ms
+INFO: at 1215.855 ms fetching 64.568 ms
+INFO: at 1221.357 ms batch [74.789] delay 5.500 ms
+INFO: at 1221.357 ms fetching 74.789 ms
+INFO: at 1226.860 ms batch [73.634] delay 5.500 ms
+INFO: at 1226.860 ms fetching 73.634 ms
+INFO: at 1232.362 ms batch [57.276] delay 5.500 ms
+INFO: at 1232.362 ms fetching 57.276 ms
+INFO: at 1237.864 ms batch [38.186] delay 5.500 ms
+INFO: at 1237.864 ms fetching 38.186 ms
+INFO: at 1243.366 ms batch [49.446] delay 5.500 ms
+INFO: at 1243.366 ms fetching 49.446 ms
+INFO: at 1248.868 ms batch [75.391] delay 5.500 ms
+INFO: at 1248.868 ms fetching 75.391 ms
+INFO: at 1254.370 ms batch [68.782] delay 5.500 ms
+INFO: at 1254.370 ms fetching 68.782 ms
+INFO: at 1259.872 ms batch [31.931] delay 5.500 ms
+INFO: at 1259.872 ms fetching 31.931 ms
+INFO: at 1265.374 ms batch [68.933] delay 5.500 ms
+INFO: at 1265.374 ms fetching 68.933 ms
+INFO: at 1270.876 ms batch [26.057] delay 5.500 ms
+INFO: at 1270.876 ms fetching 26.057 ms
+INFO: at 1276.379 ms batch [66.403] delay 5.500 ms
+INFO: at 1276.379 ms fetching 66.403 ms
+INFO: at 1281.880 ms batch [70.012] delay 5.500 ms
+INFO: at 1281.880 ms fetching 70.012 ms
+INFO: at 1287.382 ms batch [64.342] delay 5.500 ms
+INFO: at 1287.382 ms fetching 64.342 ms
+INFO: at 1292.884 ms batch [81.561] delay 5.500 ms
+INFO: at 1292.884 ms fetching 81.561 ms
+INFO: at 1298.387 ms batch [30.894] delay 5.500 ms
+INFO: at 1298.387 ms fetching 30.894 ms
+INFO: at 1303.889 ms batch [77.854] delay 5.500 ms
+INFO: at 1303.889 ms fetching 77.854 ms
+INFO: at 1309.392 ms batch [35.479] delay 5.500 ms
+INFO: at 1309.392 ms fetching 35.479 ms
+INFO: at 1314.894 ms batch [70.155] delay 5.500 ms
+INFO: at 1314.894 ms fetching 70.155 ms
+INFO: at 1320.396 ms batch [76.883] delay 5.500 ms
+INFO: at 1320.396 ms fetching 76.883 ms
+INFO: at 1325.898 ms batch [36.417] delay 5.500 ms
+INFO: at 1325.898 ms fetching 36.417 ms
+INFO: at 1331.401 ms batch [33.794] delay 5.500 ms
+INFO: at 1331.401 ms fetching 33.794 ms
+INFO: at 1336.903 ms batch [79.068] delay 5.500 ms
+INFO: at 1336.903 ms fetching 79.068 ms
+INFO: at 1342.405 ms batch [24.753] delay 5.500 ms
+INFO: at 1342.405 ms fetching 24.753 ms
+INFO: at 1347.908 ms batch [40.073] delay 5.500 ms
+INFO: at 1347.908 ms fetching 40.073 ms
+INFO: at 1355.934 ms batch [47.323] delay 5.500 ms
+INFO: at 1355.934 ms fetching 47.323 ms
+WARNING: bookkeeping for too long: -7.778669998049736ms
+INFO: at 1369.223 ms batch [74.005] delay 5.500 ms
+INFO: at 1369.223 ms fetching 74.005 ms
+INFO: at 1374.726 ms batch [43.756] delay 5.500 ms
+INFO: at 1374.726 ms fetching 43.756 ms
+INFO: at 1380.228 ms batch [75.174] delay 5.500 ms
+INFO: at 1380.228 ms fetching 75.174 ms
+INFO: at 1385.730 ms batch [23.488] delay 4.583 ms
+INFO: at 1390.314 ms batch [68.470] delay 4.583 ms
+INFO: at 1394.899 ms batch [72.321] delay 4.583 ms
+INFO: at 1399.484 ms batch [27.676] delay 4.583 ms
+INFO: at 1404.068 ms batch [30.570] delay 4.583 ms
+INFO: at 1408.653 ms batch [37.824] delay 4.583 ms
+INFO: at 1413.237 ms batch [67.670] delay 3.929 ms
+INFO: at 1417.166 ms batch [72.803] delay 0.000 ms
+INFO: at 1385.730 ms fetching 23.488 ms
+INFO: at 1390.314 ms fetching 68.470 ms
+INFO: at 1394.899 ms fetching 72.321 ms
+INFO: at 1399.484 ms fetching 27.676 ms
+INFO: at 1404.068 ms fetching 30.570 ms
+INFO: at 1408.653 ms fetching 37.824 ms
+INFO: at 1413.237 ms fetching 67.670 ms
+INFO: at 1417.166 ms fetching 72.803 ms
+INFO: done
+22-01-26:16:23:01 INFO     [docker_logging_utils.py:19] [default-cluster] Created logging directory: /home/cc/yuqing/log/trace/second/2_x_P99/clipper/logs
+22-01-26:16:23:47 INFO     [clipper_admin.py:1424] [default-cluster] Stopped all Clipper cluster and all model containers
