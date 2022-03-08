@@ -1,0 +1,597 @@
+[1m[21:36:31.367][info]       [REDIS] Successfully issued command "SELECT 1"
+[00m[1m[21:36:31.367][info]     [STATEDB] Persistent state DB created
+[00m[1m[21:36:31.373][info]  [TASKEXE...] TaskExecutor started
+[00m[1m[21:36:31.374][info]         [RPC] RPC thread started at address: tcp://*:7000
+[00m[1m[21:36:31.375][info]       [REDIS] Successfully issued command "CONFIG SET notify-keyspace-events AKE"
+[00m[1m[21:36:31.375][info]       [REDIS] SUBSCRIPTION STRING: __keyspace@2__:*
+[00m[1m[21:36:31.375][info]       [REDIS] SUBSCRIPTION STRING: __keyspace@3__:*
+[00m[1m[21:36:31.375][info]      [TIMERS] Starting timer thread
+[00m[1m[21:36:31.375][info]      [TIMERS] Timer thread started
+[00m[1m[21:36:31.376][info]  [QUERYPR...] Query Processor started
+[00m[1m[21:36:31.376][info]      [TIMERS] Starting timer event loop
+[00m[1m[21:36:31.376][info]       [REDIS] SUBSCRIPTION STRING: __keyspace@5__:*
+[00m[1m[21:36:31.376][info]       [REDIS] SUBSCRIPTION STRING: __keyspace@7__:*
+[00m[1m[21:36:31.377][info]       [REDIS] SUBSCRIPTION STRING: __keyspace@6__:CURRENT_MODEL_VERSION:*
+[00m[1m[21:36:31.377][info]       [REDIS] Successfully issued command "SELECT 5"
+[00m[1m[21:36:31.377][info]       [REDIS] Successfully issued command "KEYS *"
+[00m[1m[21:36:31.377][info]       [REDIS] Successfully issued command "SELECT 2"
+[00m[1m[21:36:31.377][info]       [REDIS] Successfully issued command "KEYS *"
+[00m[31m[1m[21:36:31.975][error]    [METRICS] Ratio internal:prediction_cache_hit_ratio has denominator zero!
+[00m[31m[1m[21:36:32.442][error]    [METRICS] Ratio internal:prediction_cache_hit_ratio has denominator zero!
+[00m[1m[21:36:32.458][info]       [REDIS] MESSAGE: hset
+[00m[1m[21:36:32.458][info]  [QUERYFR...] APPLICATION EVENT DETECTED. Key: fake-model, event_type: hset
+[00m[1m[21:36:32.458][info]  [QUERYFR...] New application detected: fake-model
+[00m[1m[21:36:32.458][info]       [REDIS] Successfully issued command "SELECT 5"
+[00m[1m[21:36:32.458][info]       [REDIS] Successfully issued command "HGETALL fake-model"
+[00m[1m[21:36:32.458][info]       [REDIS] 	 input_type: floats
+[00m[1m[21:36:32.458][info]       [REDIS] 	 policy: DefaultOutputSelectionPolicy
+[00m[1m[21:36:32.458][info]       [REDIS] 	 default_output: None
+[00m[1m[21:36:32.458][info]       [REDIS] 	 latency_slo_micros: 310000
+[00m[1m[21:36:32.459][info]       [REDIS] Successfully issued command "SET fake-model:0:0 {"y_hat":"None"}"
+[00m[1m[21:36:33.609][info]       [REDIS] MESSAGE: hset
+[00m[1m[21:36:33.609][info]       [REDIS] MESSAGE: set
+[00m[1m[21:36:33.609][info]  [QUERYFR...] MODEL VERSION CHANGE DETECTED. Key: fake-model, event_type: set
+[00m[1m[21:36:33.609][info]       [REDIS] Successfully issued command "SELECT 2"
+[00m[1m[21:36:33.609][info]       [REDIS] Successfully issued command "HGETALL fake-model:1"
+[00m[1m[21:36:33.609][info]       [REDIS] 	 model_name: fake-model
+[00m[1m[21:36:33.609][info]       [REDIS] 	 model_version: 1
+[00m[1m[21:36:33.609][info]       [REDIS] 	 load: 0.000000
+[00m[1m[21:36:33.609][info]       [REDIS] 	 input_type: floats
+[00m[1m[21:36:33.609][info]       [REDIS] 	 labels: 
+[00m[1m[21:36:33.609][info]       [REDIS] 	 container_name: default-cluster-fake-model:1
+[00m[1m[21:36:33.609][info]       [REDIS] 	 model_data_path: DEPRECATED
+[00m[1m[21:36:33.609][info]       [REDIS] 	 batch_size: 8
+[00m[1m[21:36:33.609][info]       [REDIS] Successfully issued command "SELECT 6"
+[00m[1m[21:36:33.609][info]       [REDIS] 	 valid: 
+[00m[1m[21:36:33.610][info]  [TASKEXE...] Registered batch size of 8 for model fake-model:1
+[00m[1m[21:36:33.610][info]       [REDIS] Successfully issued command "GET CURRENT_MODEL_VERSION:fake-model"
+[00m[1m[21:36:33.615][info]       [REDIS] MESSAGE: sadd
+[00m[1m[21:36:33.615][info]  [QUERYFR...] APP LINKS EVENT DETECTED. App name: fake-model, event_type: sadd
+[00m[1m[21:36:33.615][info]  [QUERYFR...] New model link detected for app: fake-model
+[00m[1m[21:36:33.615][info]       [REDIS] Successfully issued command "SELECT 7"
+[00m[1m[21:36:33.615][info]       [REDIS] Successfully issued command "SMEMBERS fake-model"
+[00m[1m[21:36:35.659][info]  [QUERYPR...] Found 1 tasks
+[00m[31m[1m[21:36:35.659][error] [TASKEXE...] Received task for unknown model: fake-model : 1
+[00m[31m[1m[21:36:35.660][error] [QUERYPR...] No connected models found for query with id: 0
+[00m[1m[21:36:36.664][info]  [QUERYPR...] Found 1 tasks
+[00m[31m[1m[21:36:36.664][error] [TASKEXE...] Received task for unknown model: fake-model : 1
+[00m[31m[1m[21:36:36.664][error] [QUERYPR...] No connected models found for query with id: 1
+[00m[1m[21:36:37.668][info]  [QUERYPR...] Found 1 tasks
+[00m[31m[1m[21:36:37.668][error] [TASKEXE...] Received task for unknown model: fake-model : 1
+[00m[31m[1m[21:36:37.668][error] [QUERYPR...] No connected models found for query with id: 2
+[00m[31m[1m[21:36:37.864][error]    [METRICS] Ratio internal:prediction_cache_hit_ratio has denominator zero!
+[00m[1m[21:36:38.672][info]  [QUERYPR...] Found 1 tasks
+[00m[31m[1m[21:36:38.672][error] [TASKEXE...] Received task for unknown model: fake-model : 1
+[00m[31m[1m[21:36:38.672][error] [QUERYPR...] No connected models found for query with id: 3
+[00m[1m[21:36:39.215][info]         [RPC] Found message to receive
+[00m[1m[21:36:39.215][info]         [RPC] Found message to receive
+[00m[1m[21:36:39.215][info]         [RPC] New container connected
+[00m[1m[21:36:39.215][info]         [RPC] Container added
+[00m[1m[21:36:39.216][info]       [REDIS] Successfully issued command "SELECT 3"
+[00m[1m[21:36:39.216][info]       [REDIS] Successfully issued command "HMSET fake-model,1,0 model_id fake-model:1 model_name fake-model model_version 1 model_replica_id 0 zmq_connection_id 0 batch_size 1 input_type floats"
+[00m[1m[21:36:39.216][info]       [REDIS] MESSAGE: hset
+[00m[1m[21:36:39.216][info]  [THREADPOOL] Work queue created for model fake-model:1, replica 0
+[00m[1m[21:36:39.217][info]       [REDIS] Successfully issued command "SELECT 3"
+[00m[1m[21:36:39.217][info]       [REDIS] Successfully issued command "HGETALL fake-model,1,0"
+[00m[1m[21:36:39.217][info]       [REDIS] 	 model_id: fake-model:1
+[00m[1m[21:36:39.217][info]       [REDIS] 	 model_name: fake-model
+[00m[1m[21:36:39.217][info]       [REDIS] 	 model_version: 1
+[00m[1m[21:36:39.217][info]       [REDIS] 	 model_replica_id: 0
+[00m[1m[21:36:39.217][info]       [REDIS] 	 zmq_connection_id: 0
+[00m[1m[21:36:39.217][info]       [REDIS] 	 batch_size: 1
+[00m[1m[21:36:39.217][info]       [REDIS] 	 input_type: floats
+[00m[1m[21:36:39.217][info]  [CONTAINERS] Adding new container - model: fake-model, version: 1, connection ID: 0, replica ID: 0, input_type: floats
+[00m[1m[21:36:39.217][info]  [CONTAINERS] Creating new ModelContainer for model fake-model:1, id: 0
+[00m[1m[21:36:39.217][info]  [CONTAINERS] 
+Active containers:
+	Model: fake-model:1
+		rep_id: 0, container_id: 0
+
+[00m[1m[21:36:39.217][info]       [REDIS] Successfully issued command "SELECT 2"
+[00m[1m[21:36:39.218][info]       [REDIS] Successfully issued command "HGETALL fake-model:1"
+[00m[1m[21:36:39.218][info]       [REDIS] 	 model_name: fake-model
+[00m[1m[21:36:39.218][info]       [REDIS] 	 model_version: 1
+[00m[1m[21:36:39.218][info]       [REDIS] 	 load: 0.000000
+[00m[1m[21:36:39.218][info]       [REDIS] 	 input_type: floats
+[00m[1m[21:36:39.218][info]       [REDIS] 	 labels: 
+[00m[1m[21:36:39.218][info]       [REDIS] 	 container_name: default-cluster-fake-model:1
+[00m[1m[21:36:39.218][info]       [REDIS] 	 model_data_path: DEPRECATED
+[00m[1m[21:36:39.218][info]       [REDIS] 	 batch_size: 8
+[00m[1m[21:36:39.218][info]       [REDIS] 	 valid: 
+[00m[1m[21:36:39.218][info]  [TASKEXE...] Created queue for new model: fake-model : 1
+[00m[1m[21:36:39.218][info]  [THREADPOOL] Work queue created for model fake-model:1, replica 0
+[00m[31m[1m[21:36:39.218][error] [THREADPOOL] Work queue already exists for model fake-model:1, replica 0
+[00m[1m[21:36:39.676][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:39.676][info]  [TASKEXE...] Adding task to queue. QueryID: 4, model: fake-model:1
+[00m[1m[21:36:39.676][info]  [TASKEXE...] Sending batch to model: fake-model:1 replica 0.Batch size: 1. Query IDs: 4 
+[00m[1m[21:36:39.680][info]         [RPC] Found message to receive
+[00m[1m[21:36:39.687][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:39.687][info]  [TASKEXE...] Adding task to queue. QueryID: 5, model: fake-model:1
+[00m[1m[21:36:39.687][info]  [TASKEXE...] Sending batch to model: fake-model:1 replica 0.Batch size: 1. Query IDs: 5 
+[00m[1m[21:36:39.708][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:39.708][info]  [TASKEXE...] Adding task to queue. QueryID: 6, model: fake-model:1
+[00m[1m[21:36:39.731][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:39.731][info]  [TASKEXE...] Adding task to queue. QueryID: 7, model: fake-model:1
+[00m[1m[21:36:39.739][info]         [RPC] Found message to receive
+[00m[1m[21:36:39.739][info]  [TASKEXE...] Sending batch to model: fake-model:1 replica 0.Batch size: 2. Query IDs: 6 7 
+[00m[1m[21:36:39.751][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:39.752][info]  [TASKEXE...] Adding task to queue. QueryID: 8, model: fake-model:1
+[00m[1m[21:36:39.775][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:39.775][info]  [TASKEXE...] Adding task to queue. QueryID: 9, model: fake-model:1
+[00m[1m[21:36:39.797][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:39.797][info]  [TASKEXE...] Adding task to queue. QueryID: 10, model: fake-model:1
+[00m[1m[21:36:39.816][info]         [RPC] Found message to receive
+[00m[1m[21:36:39.817][info]  [TASKEXE...] Sending batch to model: fake-model:1 replica 0.Batch size: 3. Query IDs: 8 9 10 
+[00m[1m[21:36:39.819][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:39.819][info]  [TASKEXE...] Adding task to queue. QueryID: 11, model: fake-model:1
+[00m[1m[21:36:39.840][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:39.840][info]  [TASKEXE...] Adding task to queue. QueryID: 12, model: fake-model:1
+[00m[1m[21:36:39.862][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:39.862][info]  [TASKEXE...] Adding task to queue. QueryID: 13, model: fake-model:1
+[00m[1m[21:36:39.881][info]         [RPC] Found message to receive
+[00m[1m[21:36:39.881][info]  [TASKEXE...] Sending batch to model: fake-model:1 replica 0.Batch size: 3. Query IDs: 11 12 13 
+[00m[1m[21:36:39.885][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:39.885][info]  [TASKEXE...] Adding task to queue. QueryID: 14, model: fake-model:1
+[00m[1m[21:36:39.906][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:39.906][info]  [TASKEXE...] Adding task to queue. QueryID: 15, model: fake-model:1
+[00m[1m[21:36:39.933][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:39.933][info]  [TASKEXE...] Adding task to queue. QueryID: 16, model: fake-model:1
+[00m[1m[21:36:39.961][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:39.961][info]  [TASKEXE...] Adding task to queue. QueryID: 17, model: fake-model:1
+[00m[1m[21:36:39.962][info]         [RPC] Found message to receive
+[00m[1m[21:36:39.962][info]  [TASKEXE...] Sending batch to model: fake-model:1 replica 0.Batch size: 4. Query IDs: 14 15 16 17 
+[00m[1m[21:36:39.988][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:39.988][info]  [TASKEXE...] Adding task to queue. QueryID: 18, model: fake-model:1
+[00m[1m[21:36:40.016][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:40.016][info]  [TASKEXE...] Adding task to queue. QueryID: 19, model: fake-model:1
+[00m[1m[21:36:40.037][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:40.037][info]  [TASKEXE...] Adding task to queue. QueryID: 20, model: fake-model:1
+[00m[1m[21:36:40.060][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:40.060][info]  [TASKEXE...] Adding task to queue. QueryID: 21, model: fake-model:1
+[00m[1m[21:36:40.079][info]         [RPC] Found message to receive
+[00m[1m[21:36:40.079][info]  [TASKEXE...] Sending batch to model: fake-model:1 replica 0.Batch size: 4. Query IDs: 18 19 20 21 
+[00m[1m[21:36:40.083][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:40.083][info]  [TASKEXE...] Adding task to queue. QueryID: 22, model: fake-model:1
+[00m[1m[21:36:40.104][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:40.104][info]  [TASKEXE...] Adding task to queue. QueryID: 23, model: fake-model:1
+[00m[1m[21:36:40.126][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:40.126][info]  [TASKEXE...] Adding task to queue. QueryID: 24, model: fake-model:1
+[00m[1m[21:36:40.153][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:40.154][info]  [TASKEXE...] Adding task to queue. QueryID: 25, model: fake-model:1
+[00m[1m[21:36:40.181][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:40.181][info]  [TASKEXE...] Adding task to queue. QueryID: 26, model: fake-model:1
+[00m[1m[21:36:40.210][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:40.210][info]  [TASKEXE...] Adding task to queue. QueryID: 27, model: fake-model:1
+[00m[1m[21:36:40.237][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:40.237][info]  [TASKEXE...] Adding task to queue. QueryID: 28, model: fake-model:1
+[00m[1m[21:36:40.258][info]         [RPC] Found message to receive
+[00m[1m[21:36:40.258][info]  [TASKEXE...] Sending batch to model: fake-model:1 replica 0.Batch size: 7. Query IDs: 22 23 24 25 26 27 28 
+[00m[1m[21:36:40.267][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:40.267][info]  [TASKEXE...] Adding task to queue. QueryID: 29, model: fake-model:1
+[00m[1m[21:36:40.291][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:40.291][info]  [TASKEXE...] Adding task to queue. QueryID: 30, model: fake-model:1
+[00m[1m[21:36:40.319][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:40.319][info]  [TASKEXE...] Adding task to queue. QueryID: 31, model: fake-model:1
+[00m[1m[21:36:40.345][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:40.345][info]  [TASKEXE...] Adding task to queue. QueryID: 32, model: fake-model:1
+[00m[1m[21:36:40.374][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:40.374][info]  [TASKEXE...] Adding task to queue. QueryID: 33, model: fake-model:1
+[00m[1m[21:36:40.401][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:40.401][info]  [TASKEXE...] Adding task to queue. QueryID: 34, model: fake-model:1
+[00m[1m[21:36:40.428][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:40.429][info]  [TASKEXE...] Adding task to queue. QueryID: 35, model: fake-model:1
+[00m[1m[21:36:40.435][info]         [RPC] Found message to receive
+[00m[1m[21:36:40.435][info]  [TASKEXE...] Sending batch to model: fake-model:1 replica 0.Batch size: 7. Query IDs: 29 30 31 32 33 34 35 
+[00m[1m[21:36:40.456][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:40.456][info]  [TASKEXE...] Adding task to queue. QueryID: 36, model: fake-model:1
+[00m[1m[21:36:40.484][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:40.484][info]  [TASKEXE...] Adding task to queue. QueryID: 37, model: fake-model:1
+[00m[1m[21:36:40.511][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:40.511][info]  [TASKEXE...] Adding task to queue. QueryID: 38, model: fake-model:1
+[00m[1m[21:36:40.538][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:40.538][info]  [TASKEXE...] Adding task to queue. QueryID: 39, model: fake-model:1
+[00m[1m[21:36:40.566][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:40.566][info]  [TASKEXE...] Adding task to queue. QueryID: 40, model: fake-model:1
+[00m[1m[21:36:40.593][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:40.593][info]  [TASKEXE...] Adding task to queue. QueryID: 41, model: fake-model:1
+[00m[1m[21:36:40.621][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:40.621][info]  [TASKEXE...] Adding task to queue. QueryID: 42, model: fake-model:1
+[00m[1m[21:36:40.643][info]         [RPC] Found message to receive
+[00m[1m[21:36:40.643][info]  [TASKEXE...] Sending batch to model: fake-model:1 replica 0.Batch size: 7. Query IDs: 36 37 38 39 40 41 42 
+[00m[1m[21:36:40.648][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:40.648][info]  [TASKEXE...] Adding task to queue. QueryID: 43, model: fake-model:1
+[00m[1m[21:36:40.676][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:40.676][info]  [TASKEXE...] Adding task to queue. QueryID: 44, model: fake-model:1
+[00m[1m[21:36:40.704][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:40.704][info]  [TASKEXE...] Adding task to queue. QueryID: 45, model: fake-model:1
+[00m[1m[21:36:40.731][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:40.731][info]  [TASKEXE...] Adding task to queue. QueryID: 46, model: fake-model:1
+[00m[1m[21:36:40.759][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:40.759][info]  [TASKEXE...] Adding task to queue. QueryID: 47, model: fake-model:1
+[00m[1m[21:36:40.786][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:40.786][info]  [TASKEXE...] Adding task to queue. QueryID: 48, model: fake-model:1
+[00m[1m[21:36:40.823][info]         [RPC] Found message to receive
+[00m[1m[21:36:40.823][info]  [TASKEXE...] Sending batch to model: fake-model:1 replica 0.Batch size: 6. Query IDs: 43 44 45 46 47 48 
+[00m[1m[21:36:40.823][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:40.823][info]  [TASKEXE...] Adding task to queue. QueryID: 49, model: fake-model:1
+[00m[1m[21:36:40.859][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:40.859][info]  [TASKEXE...] Adding task to queue. QueryID: 50, model: fake-model:1
+[00m[1m[21:36:40.896][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:40.896][info]  [TASKEXE...] Adding task to queue. QueryID: 51, model: fake-model:1
+[00m[1m[21:36:40.918][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:40.918][info]  [TASKEXE...] Adding task to queue. QueryID: 52, model: fake-model:1
+[00m[1m[21:36:40.935][info]         [RPC] Found message to receive
+[00m[1m[21:36:40.935][info]  [TASKEXE...] Sending batch to model: fake-model:1 replica 0.Batch size: 4. Query IDs: 49 50 51 52 
+[00m[1m[21:36:40.941][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:40.941][info]  [TASKEXE...] Adding task to queue. QueryID: 53, model: fake-model:1
+[00m[1m[21:36:40.962][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:40.962][info]  [TASKEXE...] Adding task to queue. QueryID: 54, model: fake-model:1
+[00m[1m[21:36:40.984][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:40.984][info]  [TASKEXE...] Adding task to queue. QueryID: 55, model: fake-model:1
+[00m[1m[21:36:40.995][info]         [RPC] Found message to receive
+[00m[1m[21:36:40.995][info]  [TASKEXE...] Sending batch to model: fake-model:1 replica 0.Batch size: 3. Query IDs: 53 54 55 
+[00m[1m[21:36:41.006][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:41.006][info]  [TASKEXE...] Adding task to queue. QueryID: 56, model: fake-model:1
+[00m[1m[21:36:41.028][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:41.028][info]  [TASKEXE...] Adding task to queue. QueryID: 57, model: fake-model:1
+[00m[1m[21:36:41.050][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:41.050][info]  [TASKEXE...] Adding task to queue. QueryID: 58, model: fake-model:1
+[00m[1m[21:36:41.067][info]         [RPC] Found message to receive
+[00m[1m[21:36:41.067][info]  [TASKEXE...] Sending batch to model: fake-model:1 replica 0.Batch size: 3. Query IDs: 56 57 58 
+[00m[1m[21:36:41.073][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:41.073][info]  [TASKEXE...] Adding task to queue. QueryID: 59, model: fake-model:1
+[00m[1m[21:36:41.094][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:41.094][info]  [TASKEXE...] Adding task to queue. QueryID: 60, model: fake-model:1
+[00m[1m[21:36:41.116][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:41.116][info]  [TASKEXE...] Adding task to queue. QueryID: 61, model: fake-model:1
+[00m[1m[21:36:41.138][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:41.138][info]  [TASKEXE...] Adding task to queue. QueryID: 62, model: fake-model:1
+[00m[1m[21:36:41.140][info]         [RPC] Found message to receive
+[00m[1m[21:36:41.141][info]  [TASKEXE...] Sending batch to model: fake-model:1 replica 0.Batch size: 4. Query IDs: 59 60 61 62 
+[00m[1m[21:36:41.160][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:41.160][info]  [TASKEXE...] Adding task to queue. QueryID: 63, model: fake-model:1
+[00m[1m[21:36:41.182][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:41.182][info]  [TASKEXE...] Adding task to queue. QueryID: 64, model: fake-model:1
+[00m[1m[21:36:41.204][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:41.204][info]  [TASKEXE...] Adding task to queue. QueryID: 65, model: fake-model:1
+[00m[1m[21:36:41.226][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:41.226][info]  [TASKEXE...] Adding task to queue. QueryID: 66, model: fake-model:1
+[00m[1m[21:36:41.235][info]         [RPC] Found message to receive
+[00m[1m[21:36:41.235][info]  [TASKEXE...] Sending batch to model: fake-model:1 replica 0.Batch size: 4. Query IDs: 63 64 65 66 
+[00m[1m[21:36:41.254][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:41.254][info]  [TASKEXE...] Adding task to queue. QueryID: 67, model: fake-model:1
+[00m[1m[21:36:41.281][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:41.281][info]  [TASKEXE...] Adding task to queue. QueryID: 68, model: fake-model:1
+[00m[1m[21:36:41.309][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:41.309][info]  [TASKEXE...] Adding task to queue. QueryID: 69, model: fake-model:1
+[00m[1m[21:36:41.336][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:41.336][info]  [TASKEXE...] Adding task to queue. QueryID: 70, model: fake-model:1
+[00m[1m[21:36:41.355][info]         [RPC] Found message to receive
+[00m[1m[21:36:41.355][info]  [TASKEXE...] Sending batch to model: fake-model:1 replica 0.Batch size: 4. Query IDs: 67 68 69 70 
+[00m[1m[21:36:41.373][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:41.373][info]  [TASKEXE...] Adding task to queue. QueryID: 71, model: fake-model:1
+[00m[1m[21:36:41.410][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:41.410][info]  [TASKEXE...] Adding task to queue. QueryID: 72, model: fake-model:1
+[00m[1m[21:36:41.431][info]         [RPC] Found message to receive
+[00m[1m[21:36:41.431][info]  [TASKEXE...] Sending batch to model: fake-model:1 replica 0.Batch size: 2. Query IDs: 71 72 
+[00m[1m[21:36:41.446][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:41.446][info]  [TASKEXE...] Adding task to queue. QueryID: 73, model: fake-model:1
+[00m[1m[21:36:41.473][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:41.474][info]  [TASKEXE...] Adding task to queue. QueryID: 74, model: fake-model:1
+[00m[1m[21:36:41.482][info]         [RPC] Found message to receive
+[00m[1m[21:36:41.482][info]  [TASKEXE...] Sending batch to model: fake-model:1 replica 0.Batch size: 2. Query IDs: 73 74 
+[00m[1m[21:36:41.501][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:41.501][info]  [TASKEXE...] Adding task to queue. QueryID: 75, model: fake-model:1
+[00m[1m[21:36:41.529][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:41.529][info]  [TASKEXE...] Adding task to queue. QueryID: 76, model: fake-model:1
+[00m[1m[21:36:41.551][info]         [RPC] Found message to receive
+[00m[1m[21:36:41.551][info]  [TASKEXE...] Sending batch to model: fake-model:1 replica 0.Batch size: 2. Query IDs: 75 76 
+[00m[1m[21:36:41.556][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:41.556][info]  [TASKEXE...] Adding task to queue. QueryID: 77, model: fake-model:1
+[00m[1m[21:36:41.578][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:41.578][info]  [TASKEXE...] Adding task to queue. QueryID: 78, model: fake-model:1
+[00m[1m[21:36:41.585][info]         [RPC] Found message to receive
+[00m[1m[21:36:41.585][info]  [TASKEXE...] Sending batch to model: fake-model:1 replica 0.Batch size: 2. Query IDs: 77 78 
+[00m[1m[21:36:41.600][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:41.600][info]  [TASKEXE...] Adding task to queue. QueryID: 79, model: fake-model:1
+[00m[1m[21:36:41.612][info]         [RPC] Found message to receive
+[00m[1m[21:36:41.612][info]  [TASKEXE...] Sending batch to model: fake-model:1 replica 0.Batch size: 1. Query IDs: 79 
+[00m[1m[21:36:41.622][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:41.622][info]  [TASKEXE...] Adding task to queue. QueryID: 80, model: fake-model:1
+[00m[1m[21:36:41.644][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:41.644][info]  [TASKEXE...] Adding task to queue. QueryID: 81, model: fake-model:1
+[00m[1m[21:36:41.650][info]         [RPC] Found message to receive
+[00m[1m[21:36:41.650][info]  [TASKEXE...] Sending batch to model: fake-model:1 replica 0.Batch size: 2. Query IDs: 80 81 
+[00m[1m[21:36:41.666][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:41.666][info]  [TASKEXE...] Adding task to queue. QueryID: 82, model: fake-model:1
+[00m[1m[21:36:41.694][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:41.694][info]  [TASKEXE...] Adding task to queue. QueryID: 83, model: fake-model:1
+[00m[1m[21:36:41.721][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:41.721][info]  [TASKEXE...] Adding task to queue. QueryID: 84, model: fake-model:1
+[00m[1m[21:36:41.724][info]         [RPC] Found message to receive
+[00m[1m[21:36:41.724][info]  [TASKEXE...] Sending batch to model: fake-model:1 replica 0.Batch size: 3. Query IDs: 82 83 84 
+[00m[1m[21:36:41.749][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:41.749][info]  [TASKEXE...] Adding task to queue. QueryID: 85, model: fake-model:1
+[00m[1m[21:36:41.776][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:41.776][info]  [TASKEXE...] Adding task to queue. QueryID: 86, model: fake-model:1
+[00m[1m[21:36:41.804][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:41.804][info]  [TASKEXE...] Adding task to queue. QueryID: 87, model: fake-model:1
+[00m[1m[21:36:41.815][info]         [RPC] Found message to receive
+[00m[1m[21:36:41.815][info]  [TASKEXE...] Sending batch to model: fake-model:1 replica 0.Batch size: 3. Query IDs: 85 86 87 
+[00m[1m[21:36:41.831][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:41.831][info]  [TASKEXE...] Adding task to queue. QueryID: 88, model: fake-model:1
+[00m[1m[21:36:41.859][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:41.859][info]  [TASKEXE...] Adding task to queue. QueryID: 89, model: fake-model:1
+[00m[1m[21:36:41.886][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:41.886][info]  [TASKEXE...] Adding task to queue. QueryID: 90, model: fake-model:1
+[00m[1m[21:36:41.908][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:41.908][info]  [TASKEXE...] Adding task to queue. QueryID: 91, model: fake-model:1
+[00m[1m[21:36:41.911][info]         [RPC] Found message to receive
+[00m[1m[21:36:41.911][info]  [TASKEXE...] Sending batch to model: fake-model:1 replica 0.Batch size: 4. Query IDs: 88 89 90 91 
+[00m[1m[21:36:41.930][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:41.930][info]  [TASKEXE...] Adding task to queue. QueryID: 92, model: fake-model:1
+[00m[1m[21:36:41.953][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:41.953][info]  [TASKEXE...] Adding task to queue. QueryID: 93, model: fake-model:1
+[00m[1m[21:36:41.974][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:41.974][info]  [TASKEXE...] Adding task to queue. QueryID: 94, model: fake-model:1
+[00m[1m[21:36:41.996][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:41.996][info]  [TASKEXE...] Adding task to queue. QueryID: 95, model: fake-model:1
+[00m[1m[21:36:42.024][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:42.024][info]  [TASKEXE...] Adding task to queue. QueryID: 96, model: fake-model:1
+[00m[1m[21:36:42.045][info]         [RPC] Found message to receive
+[00m[1m[21:36:42.045][info]  [TASKEXE...] Sending batch to model: fake-model:1 replica 0.Batch size: 5. Query IDs: 92 93 94 95 96 
+[00m[1m[21:36:42.051][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:42.051][info]  [TASKEXE...] Adding task to queue. QueryID: 97, model: fake-model:1
+[00m[1m[21:36:42.079][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:42.079][info]  [TASKEXE...] Adding task to queue. QueryID: 98, model: fake-model:1
+[00m[1m[21:36:42.106][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:42.106][info]  [TASKEXE...] Adding task to queue. QueryID: 99, model: fake-model:1
+[00m[1m[21:36:42.129][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:42.129][info]  [TASKEXE...] Adding task to queue. QueryID: 100, model: fake-model:1
+[00m[1m[21:36:42.150][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:42.150][info]  [TASKEXE...] Adding task to queue. QueryID: 101, model: fake-model:1
+[00m[1m[21:36:42.169][info]         [RPC] Found message to receive
+[00m[1m[21:36:42.169][info]  [TASKEXE...] Sending batch to model: fake-model:1 replica 0.Batch size: 5. Query IDs: 97 98 99 100 101 
+[00m[1m[21:36:42.173][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:42.173][info]  [TASKEXE...] Adding task to queue. QueryID: 102, model: fake-model:1
+[00m[1m[21:36:42.194][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:42.194][info]  [TASKEXE...] Adding task to queue. QueryID: 103, model: fake-model:1
+[00m[1m[21:36:42.216][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:42.216][info]  [TASKEXE...] Adding task to queue. QueryID: 104, model: fake-model:1
+[00m[1m[21:36:42.244][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:42.244][info]  [TASKEXE...] Adding task to queue. QueryID: 105, model: fake-model:1
+[00m[1m[21:36:42.272][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:42.272][info]  [TASKEXE...] Adding task to queue. QueryID: 106, model: fake-model:1
+[00m[1m[21:36:42.298][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:42.298][info]  [TASKEXE...] Adding task to queue. QueryID: 107, model: fake-model:1
+[00m[1m[21:36:42.314][info]         [RPC] Found message to receive
+[00m[1m[21:36:42.314][info]  [TASKEXE...] Sending batch to model: fake-model:1 replica 0.Batch size: 6. Query IDs: 102 103 104 105 106 107 
+[00m[1m[21:36:42.326][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:42.326][info]  [TASKEXE...] Adding task to queue. QueryID: 108, model: fake-model:1
+[00m[1m[21:36:42.348][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:42.348][info]  [TASKEXE...] Adding task to queue. QueryID: 109, model: fake-model:1
+[00m[1m[21:36:42.371][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:42.371][info]  [TASKEXE...] Adding task to queue. QueryID: 110, model: fake-model:1
+[00m[1m[21:36:42.392][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:42.392][info]  [TASKEXE...] Adding task to queue. QueryID: 111, model: fake-model:1
+[00m[1m[21:36:42.415][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:42.415][info]  [TASKEXE...] Adding task to queue. QueryID: 112, model: fake-model:1
+[00m[1m[21:36:42.437][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:42.437][info]  [TASKEXE...] Adding task to queue. QueryID: 113, model: fake-model:1
+[00m[1m[21:36:42.461][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:42.461][info]  [TASKEXE...] Adding task to queue. QueryID: 114, model: fake-model:1
+[00m[1m[21:36:42.470][info]         [RPC] Found message to receive
+[00m[1m[21:36:42.470][info]  [TASKEXE...] Sending batch to model: fake-model:1 replica 0.Batch size: 7. Query IDs: 108 109 110 111 112 113 114 
+[00m[1m[21:36:42.480][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:42.480][info]  [TASKEXE...] Adding task to queue. QueryID: 115, model: fake-model:1
+[00m[1m[21:36:42.503][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:42.503][info]  [TASKEXE...] Adding task to queue. QueryID: 116, model: fake-model:1
+[00m[1m[21:36:42.524][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:42.525][info]  [TASKEXE...] Adding task to queue. QueryID: 117, model: fake-model:1
+[00m[1m[21:36:42.546][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:42.547][info]  [TASKEXE...] Adding task to queue. QueryID: 118, model: fake-model:1
+[00m[1m[21:36:42.574][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:42.574][info]  [TASKEXE...] Adding task to queue. QueryID: 119, model: fake-model:1
+[00m[1m[21:36:42.602][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:42.602][info]  [TASKEXE...] Adding task to queue. QueryID: 120, model: fake-model:1
+[00m[1m[21:36:42.630][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:42.630][info]  [TASKEXE...] Adding task to queue. QueryID: 121, model: fake-model:1
+[00m[1m[21:36:42.639][info]         [RPC] Found message to receive
+[00m[1m[21:36:42.639][info]  [TASKEXE...] Sending batch to model: fake-model:1 replica 0.Batch size: 7. Query IDs: 115 116 117 118 119 120 121 
+[00m[1m[21:36:42.656][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:42.656][info]  [TASKEXE...] Adding task to queue. QueryID: 122, model: fake-model:1
+[00m[1m[21:36:42.693][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:42.693][info]  [TASKEXE...] Adding task to queue. QueryID: 123, model: fake-model:1
+[00m[1m[21:36:42.730][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:42.730][info]  [TASKEXE...] Adding task to queue. QueryID: 124, model: fake-model:1
+[00m[1m[21:36:42.766][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:42.766][info]  [TASKEXE...] Adding task to queue. QueryID: 125, model: fake-model:1
+[00m[1m[21:36:42.783][info]         [RPC] Found message to receive
+[00m[1m[21:36:42.783][info]  [TASKEXE...] Sending batch to model: fake-model:1 replica 0.Batch size: 4. Query IDs: 122 123 124 125 
+[00m[1m[21:36:42.794][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:42.794][info]  [TASKEXE...] Adding task to queue. QueryID: 126, model: fake-model:1
+[00m[1m[21:36:42.821][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:42.821][info]  [TASKEXE...] Adding task to queue. QueryID: 127, model: fake-model:1
+[00m[1m[21:36:42.849][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:42.849][info]  [TASKEXE...] Adding task to queue. QueryID: 128, model: fake-model:1
+[00m[1m[21:36:42.877][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:42.877][info]  [TASKEXE...] Adding task to queue. QueryID: 129, model: fake-model:1
+[00m[1m[21:36:42.898][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:42.899][info]  [TASKEXE...] Adding task to queue. QueryID: 130, model: fake-model:1
+[00m[1m[21:36:42.911][info]         [RPC] Found message to receive
+[00m[1m[21:36:42.911][info]  [TASKEXE...] Sending batch to model: fake-model:1 replica 0.Batch size: 5. Query IDs: 126 127 128 129 130 
+[00m[1m[21:36:42.920][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:42.920][info]  [TASKEXE...] Adding task to queue. QueryID: 131, model: fake-model:1
+[00m[1m[21:36:42.943][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:42.943][info]  [TASKEXE...] Adding task to queue. QueryID: 132, model: fake-model:1
+[00m[1m[21:36:42.965][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:42.965][info]  [TASKEXE...] Adding task to queue. QueryID: 133, model: fake-model:1
+[00m[1m[21:36:42.987][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:42.987][info]  [TASKEXE...] Adding task to queue. QueryID: 134, model: fake-model:1
+[00m[1m[21:36:43.014][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:43.014][info]  [TASKEXE...] Adding task to queue. QueryID: 135, model: fake-model:1
+[00m[1m[21:36:43.041][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:43.041][info]  [TASKEXE...] Adding task to queue. QueryID: 136, model: fake-model:1
+[00m[1m[21:36:43.042][info]         [RPC] Found message to receive
+[00m[1m[21:36:43.042][info]  [TASKEXE...] Sending batch to model: fake-model:1 replica 0.Batch size: 6. Query IDs: 131 132 133 134 135 136 
+[00m[1m[21:36:43.069][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:43.069][info]  [TASKEXE...] Adding task to queue. QueryID: 137, model: fake-model:1
+[00m[1m[21:36:43.097][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:43.097][info]  [TASKEXE...] Adding task to queue. QueryID: 138, model: fake-model:1
+[00m[1m[21:36:43.124][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:43.124][info]  [TASKEXE...] Adding task to queue. QueryID: 139, model: fake-model:1
+[00m[1m[21:36:43.141][info]         [RPC] Found message to receive
+[00m[1m[21:36:43.141][info]  [TASKEXE...] Sending batch to model: fake-model:1 replica 0.Batch size: 3. Query IDs: 137 138 139 
+[00m[1m[21:36:43.152][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:43.152][info]  [TASKEXE...] Adding task to queue. QueryID: 140, model: fake-model:1
+[00m[1m[21:36:43.179][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:43.179][info]  [TASKEXE...] Adding task to queue. QueryID: 141, model: fake-model:1
+[00m[1m[21:36:43.207][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:43.207][info]  [TASKEXE...] Adding task to queue. QueryID: 142, model: fake-model:1
+[00m[1m[21:36:43.226][info]         [RPC] Found message to receive
+[00m[1m[21:36:43.226][info]  [TASKEXE...] Sending batch to model: fake-model:1 replica 0.Batch size: 3. Query IDs: 140 141 142 
+[00m[1m[21:36:43.243][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:43.243][info]  [TASKEXE...] Adding task to queue. QueryID: 143, model: fake-model:1
+[00m[1m[21:36:43.280][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:43.280][info]  [TASKEXE...] Adding task to queue. QueryID: 144, model: fake-model:1
+[00m[1m[21:36:43.317][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:43.317][info]  [TASKEXE...] Adding task to queue. QueryID: 145, model: fake-model:1
+[00m[1m[21:36:43.339][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:43.339][info]  [TASKEXE...] Adding task to queue. QueryID: 146, model: fake-model:1
+[00m[1m[21:36:43.346][info]         [RPC] Found message to receive
+[00m[1m[21:36:43.346][info]  [TASKEXE...] Sending batch to model: fake-model:1 replica 0.Batch size: 4. Query IDs: 143 144 145 146 
+[00m[1m[21:36:43.361][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:43.361][info]  [TASKEXE...] Adding task to queue. QueryID: 147, model: fake-model:1
+[00m[1m[21:36:43.383][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:43.383][info]  [TASKEXE...] Adding task to queue. QueryID: 148, model: fake-model:1
+[00m[1m[21:36:43.405][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:43.405][info]  [TASKEXE...] Adding task to queue. QueryID: 149, model: fake-model:1
+[00m[1m[21:36:43.427][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:43.427][info]  [TASKEXE...] Adding task to queue. QueryID: 150, model: fake-model:1
+[00m[1m[21:36:43.449][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:43.449][info]  [TASKEXE...] Adding task to queue. QueryID: 151, model: fake-model:1
+[00m[1m[21:36:43.465][info]         [RPC] Found message to receive
+[00m[1m[21:36:43.465][info]  [TASKEXE...] Sending batch to model: fake-model:1 replica 0.Batch size: 5. Query IDs: 147 148 149 150 151 
+[00m[1m[21:36:43.471][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:43.471][info]  [TASKEXE...] Adding task to queue. QueryID: 152, model: fake-model:1
+[00m[1m[21:36:43.496][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:43.496][info]  [TASKEXE...] Adding task to queue. QueryID: 153, model: fake-model:1
+[00m[1m[21:36:43.515][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:43.515][info]  [TASKEXE...] Adding task to queue. QueryID: 154, model: fake-model:1
+[00m[1m[21:36:43.537][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:43.537][info]  [TASKEXE...] Adding task to queue. QueryID: 155, model: fake-model:1
+[00m[1m[21:36:43.555][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:43.555][info]  [TASKEXE...] Adding task to queue. QueryID: 156, model: fake-model:1
+[00m[1m[21:36:43.567][info]         [RPC] Found message to receive
+[00m[1m[21:36:43.567][info]  [TASKEXE...] Sending batch to model: fake-model:1 replica 0.Batch size: 5. Query IDs: 152 153 154 155 156 
+[00m[1m[21:36:43.573][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:43.573][info]  [TASKEXE...] Adding task to queue. QueryID: 157, model: fake-model:1
+[00m[1m[21:36:43.591][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:43.591][info]  [TASKEXE...] Adding task to queue. QueryID: 158, model: fake-model:1
+[00m[1m[21:36:43.610][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:43.610][info]  [TASKEXE...] Adding task to queue. QueryID: 159, model: fake-model:1
+[00m[1m[21:36:43.628][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:43.628][info]  [TASKEXE...] Adding task to queue. QueryID: 160, model: fake-model:1
+[00m[1m[21:36:43.646][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:43.646][info]  [TASKEXE...] Adding task to queue. QueryID: 161, model: fake-model:1
+[00m[1m[21:36:43.668][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:43.668][info]  [TASKEXE...] Adding task to queue. QueryID: 162, model: fake-model:1
+[00m[1m[21:36:43.691][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:43.691][info]  [TASKEXE...] Adding task to queue. QueryID: 163, model: fake-model:1
+[00m[1m[21:36:43.698][info]         [RPC] Found message to receive
+[00m[1m[21:36:43.698][info]  [TASKEXE...] Sending batch to model: fake-model:1 replica 0.Batch size: 7. Query IDs: 157 158 159 160 161 162 163 
+[00m[1m[21:36:43.713][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:43.713][info]  [TASKEXE...] Adding task to queue. QueryID: 164, model: fake-model:1
+[00m[1m[21:36:43.735][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:43.735][info]  [TASKEXE...] Adding task to queue. QueryID: 165, model: fake-model:1
+[00m[1m[21:36:43.757][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:43.757][info]  [TASKEXE...] Adding task to queue. QueryID: 166, model: fake-model:1
+[00m[1m[21:36:43.779][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:43.779][info]  [TASKEXE...] Adding task to queue. QueryID: 167, model: fake-model:1
+[00m[1m[21:36:43.801][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:43.801][info]  [TASKEXE...] Adding task to queue. QueryID: 168, model: fake-model:1
+[00m[1m[21:36:43.823][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:43.823][info]  [TASKEXE...] Adding task to queue. QueryID: 169, model: fake-model:1
+[00m[1m[21:36:43.845][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:43.845][info]  [TASKEXE...] Adding task to queue. QueryID: 170, model: fake-model:1
+[00m[1m[21:36:43.869][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:43.869][info]  [TASKEXE...] Adding task to queue. QueryID: 171, model: fake-model:1
+[00m[1m[21:36:43.884][info]         [RPC] Found message to receive
+[00m[1m[21:36:43.884][info]  [TASKEXE...] Sending batch to model: fake-model:1 replica 0.Batch size: 8. Query IDs: 164 165 166 167 168 169 170 171 
+[00m[1m[21:36:43.889][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:43.889][info]  [TASKEXE...] Adding task to queue. QueryID: 172, model: fake-model:1
+[00m[1m[21:36:43.911][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:43.911][info]  [TASKEXE...] Adding task to queue. QueryID: 173, model: fake-model:1
+[00m[1m[21:36:43.933][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:43.933][info]  [TASKEXE...] Adding task to queue. QueryID: 174, model: fake-model:1
+[00m[1m[21:36:43.955][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:43.955][info]  [TASKEXE...] Adding task to queue. QueryID: 175, model: fake-model:1
+[00m[1m[21:36:43.977][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:43.977][info]  [TASKEXE...] Adding task to queue. QueryID: 176, model: fake-model:1
+[00m[1m[21:36:44.005][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:44.005][info]  [TASKEXE...] Adding task to queue. QueryID: 177, model: fake-model:1
+[00m[1m[21:36:44.032][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:44.032][info]  [TASKEXE...] Adding task to queue. QueryID: 178, model: fake-model:1
+[00m[1m[21:36:44.059][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:44.059][info]  [TASKEXE...] Adding task to queue. QueryID: 179, model: fake-model:1
+[00m[1m[21:36:44.087][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:44.087][info]  [TASKEXE...] Adding task to queue. QueryID: 180, model: fake-model:1
+[00m[1m[21:36:44.098][info]         [RPC] Found message to receive
+[00m[1m[21:36:44.098][info]  [TASKEXE...] Sending batch to model: fake-model:1 replica 0.Batch size: 8. Query IDs: 172 173 174 175 176 177 178 179 
+[00m[1m[21:36:44.105][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:44.105][info]  [TASKEXE...] Adding task to queue. QueryID: 181, model: fake-model:1
+[00m[1m[21:36:44.123][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:44.123][info]  [TASKEXE...] Adding task to queue. QueryID: 182, model: fake-model:1
+[00m[1m[21:36:44.141][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:44.141][info]  [TASKEXE...] Adding task to queue. QueryID: 183, model: fake-model:1
+[00m[1m[21:36:44.160][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:44.160][info]  [TASKEXE...] Adding task to queue. QueryID: 184, model: fake-model:1
+[00m[1m[21:36:44.179][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:44.179][info]  [TASKEXE...] Adding task to queue. QueryID: 185, model: fake-model:1
+[00m[1m[21:36:44.196][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:44.196][info]  [TASKEXE...] Adding task to queue. QueryID: 186, model: fake-model:1
+[00m[1m[21:36:44.225][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:44.225][info]  [TASKEXE...] Adding task to queue. QueryID: 187, model: fake-model:1
+[00m[1m[21:36:44.252][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:44.252][info]  [TASKEXE...] Adding task to queue. QueryID: 188, model: fake-model:1
+[00m[1m[21:36:44.253][info]         [RPC] Found message to receive
+[00m[1m[21:36:44.253][info]  [TASKEXE...] Sending batch to model: fake-model:1 replica 0.Batch size: 8. Query IDs: 180 181 182 183 184 185 186 187 
+[00m[1m[21:36:44.280][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:44.280][info]  [TASKEXE...] Adding task to queue. QueryID: 189, model: fake-model:1
+[00m[1m[21:36:44.307][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:44.307][info]  [TASKEXE...] Adding task to queue. QueryID: 190, model: fake-model:1
+[00m[1m[21:36:44.329][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:44.329][info]  [TASKEXE...] Adding task to queue. QueryID: 191, model: fake-model:1
+[00m[1m[21:36:44.351][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:44.351][info]  [TASKEXE...] Adding task to queue. QueryID: 192, model: fake-model:1
+[00m[1m[21:36:44.373][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:44.373][info]  [TASKEXE...] Adding task to queue. QueryID: 193, model: fake-model:1
+[00m[1m[21:36:44.395][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:44.395][info]  [TASKEXE...] Adding task to queue. QueryID: 194, model: fake-model:1
+[00m[1m[21:36:44.417][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:44.417][info]  [TASKEXE...] Adding task to queue. QueryID: 195, model: fake-model:1
+[00m[1m[21:36:44.435][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:44.435][info]  [TASKEXE...] Adding task to queue. QueryID: 196, model: fake-model:1
+[00m[1m[21:36:44.442][info]         [RPC] Found message to receive
+[00m[1m[21:36:44.443][info]  [TASKEXE...] Sending batch to model: fake-model:1 replica 0.Batch size: 8. Query IDs: 188 189 190 191 192 193 194 195 
+[00m[1m[21:36:44.453][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:44.453][info]  [TASKEXE...] Adding task to queue. QueryID: 197, model: fake-model:1
+[00m[1m[21:36:44.472][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:44.472][info]  [TASKEXE...] Adding task to queue. QueryID: 198, model: fake-model:1
+[00m[1m[21:36:44.490][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:44.490][info]  [TASKEXE...] Adding task to queue. QueryID: 199, model: fake-model:1
+[00m[1m[21:36:44.509][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:44.509][info]  [TASKEXE...] Adding task to queue. QueryID: 200, model: fake-model:1
+[00m[1m[21:36:44.527][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:44.527][info]  [TASKEXE...] Adding task to queue. QueryID: 201, model: fake-model:1
+[00m[1m[21:36:44.555][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:44.555][info]  [TASKEXE...] Adding task to queue. QueryID: 202, model: fake-model:1
+[00m[1m[21:36:44.582][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:44.582][info]  [TASKEXE...] Adding task to queue. QueryID: 203, model: fake-model:1
+[00m[1m[21:36:44.609][info]  [QUERYPR...] Found 1 tasks
+[00m[1m[21:36:44.609][info]  [TASKEXE...] Adding task to queue. QueryID: 204, model: fake-model:1
+[00m[1m[21:36:44.611][info]         [RPC] Found message to receive
+[00m[1m[21:36:44.612][info]  [TASKEXE...] Sending batch to model: fake-model:1 replica 0.Batch size: 8. Query IDs: 196 197 198 199 200 201 202 203 
+[00m[1m[21:36:44.807][info]         [RPC] Found message to receive
+[00m[1m[21:36:44.807][info]  [TASKEXE...] Sending batch to model: fake-model:1 replica 0.Batch size: 1. Query IDs: 204 
+[00m[1m[21:36:44.829][info]         [RPC] Found message to receive
