@@ -1,0 +1,33 @@
+INFO: nexus_dir=/workdir/nexus model_dir=/workdir/DynWork/Multimodal/incoming_rate_72.73/Modal_num/one_modal/1_x_P99/nexus/models log_dir=/workdir/DynWork/Multimodal/incoming_rate_72.73/Modal_num/one_modal/1_x_P99/nexus/logs model=fake_0
+Traceback (most recent call last):
+  File "dynamic_test.py", line 508, in <module>
+    main()
+  File "dynamic_test.py", line 504, in main
+    asyncio.run(amain())
+  File "/usr/lib/python3.8/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 616, in run_until_complete
+    return future.result()
+  File "dynamic_test.py", line 499, in amain
+    async with setup_nexus(args) as client:
+  File "/usr/lib/python3.8/contextlib.py", line 171, in __aenter__
+    return await self.gen.__anext__()
+  File "dynamic_test.py", line 312, in start_nexus
+    await exec_save_output(
+  File "dynamic_test.py", line 302, in exec_save_output
+    p = await asyncio.create_subprocess_exec(
+  File "/usr/lib/python3.8/asyncio/subprocess.py", line 236, in create_subprocess_exec
+    transport, protocol = await loop.subprocess_exec(
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 1630, in subprocess_exec
+    transport = await self._make_subprocess_transport(
+  File "/usr/lib/python3.8/asyncio/unix_events.py", line 197, in _make_subprocess_transport
+    transp = _UnixSubprocessTransport(self, protocol, args, shell,
+  File "/usr/lib/python3.8/asyncio/base_subprocess.py", line 36, in __init__
+    self._start(args=args, shell=shell, stdin=stdin, stdout=stdout,
+  File "/usr/lib/python3.8/asyncio/unix_events.py", line 789, in _start
+    self._proc = subprocess.Popen(
+  File "/usr/lib/python3.8/subprocess.py", line 858, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/usr/lib/python3.8/subprocess.py", line 1704, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: PosixPath('/tmp/build/nexus-remote/scheduler')
