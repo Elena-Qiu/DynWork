@@ -1,0 +1,59 @@
+[1m[21:32:42.046][info]       [REDIS] Successfully issued command "SELECT 1"
+[00m[1m[21:32:42.046][info]     [STATEDB] Persistent state DB created
+[00m[1m[21:32:43.806][info]   [MGMTFRNTD] Add application POST request
+[00m[1m[21:32:43.806][info]       [REDIS] Successfully issued command "SELECT 5"
+[00m[1m[21:32:43.806][info]       [REDIS] Successfully issued command "HGETALL fake-model"
+[00m[1m[21:32:43.806][info]       [REDIS] Successfully issued command "SELECT 5"
+[00m[1m[21:32:43.807][info]       [REDIS] Successfully issued command "HMSET fake-model input_type floats policy DefaultOutputSelectionPolicy default_output None latency_slo_micros 298000"
+[00m[1m[21:32:44.887][info]   [MGMTFRNTD] Add model POST request
+[00m[1m[21:32:44.888][info]       [REDIS] Successfully issued command "SELECT 2"
+[00m[1m[21:32:44.888][info]       [REDIS] Successfully issued command "HGETALL fake-model:1"
+[00m[1m[21:32:44.888][info]       [REDIS] Successfully issued command "SELECT 5"
+[00m[1m[21:32:44.888][info]       [REDIS] Successfully issued command "KEYS *"
+[00m[1m[21:32:44.888][info]       [REDIS] Successfully issued command "SELECT 7"
+[00m[1m[21:32:44.889][info]       [REDIS] Successfully issued command "SMEMBERS fake-model"
+[00m[1m[21:32:44.889][info]       [REDIS] Successfully issued command "SELECT 2"
+[00m[1m[21:32:44.889][info]       [REDIS] Successfully issued command "HMSET fake-model:1 model_name fake-model model_version 1 load 0.000000 input_type floats labels  container_name default-cluster-fake-model:1 model_data_path DEPRECATED batch_size 8 valid "
+[00m[1m[21:32:44.889][info]       [REDIS] Successfully issued command "SELECT 6"
+[00m[1m[21:32:44.890][info]       [REDIS] Successfully issued command "SET CURRENT_MODEL_VERSION:fake-model 1"
+[00m[1m[21:32:44.897][info]   [MGMTFRNTD] Add application links POST request
+[00m[1m[21:32:44.897][info]       [REDIS] Successfully issued command "SELECT 5"
+[00m[1m[21:32:44.898][info]       [REDIS] Successfully issued command "HGETALL fake-model"
+[00m[1m[21:32:44.898][info]       [REDIS] 	 input_type: floats
+[00m[1m[21:32:44.898][info]       [REDIS] 	 policy: DefaultOutputSelectionPolicy
+[00m[1m[21:32:44.898][info]       [REDIS] 	 default_output: None
+[00m[1m[21:32:44.898][info]       [REDIS] 	 latency_slo_micros: 298000
+[00m[1m[21:32:44.898][info]       [REDIS] Successfully issued command "SELECT 6"
+[00m[1m[21:32:44.898][info]       [REDIS] Successfully issued command "GET CURRENT_MODEL_VERSION:fake-model"
+[00m[1m[21:32:44.898][info]       [REDIS] Successfully issued command "SELECT 2"
+[00m[1m[21:32:44.898][info]       [REDIS] Successfully issued command "HGETALL fake-model:1"
+[00m[1m[21:32:44.898][info]       [REDIS] 	 model_name: fake-model
+[00m[1m[21:32:44.898][info]       [REDIS] 	 model_version: 1
+[00m[1m[21:32:44.898][info]       [REDIS] 	 load: 0.000000
+[00m[1m[21:32:44.898][info]       [REDIS] 	 input_type: floats
+[00m[1m[21:32:44.898][info]       [REDIS] 	 labels: 
+[00m[1m[21:32:44.898][info]       [REDIS] 	 container_name: default-cluster-fake-model:1
+[00m[1m[21:32:44.898][info]       [REDIS] 	 model_data_path: DEPRECATED
+[00m[1m[21:32:44.898][info]       [REDIS] 	 batch_size: 8
+[00m[1m[21:32:44.898][info]       [REDIS] 	 valid: 
+[00m[1m[21:32:44.899][info]       [REDIS] Successfully issued command "SELECT 7"
+[00m[1m[21:32:44.899][info]       [REDIS] Successfully issued command "SMEMBERS fake-model"
+[00m[1m[21:32:44.899][info]       [REDIS] Successfully issued command "SELECT 7"
+[00m[1m[21:32:44.899][info]       [REDIS] Successfully issued command "SADD fake-model fake-model"
+[00m[1m[21:32:46.909][info]   [MGMTFRNTD] Get all models POST request
+[00m[1m[21:32:46.909][info]       [REDIS] Successfully issued command "SELECT 2"
+[00m[1m[21:32:46.909][info]       [REDIS] Successfully issued command "KEYS *"
+[00m[1m[21:32:46.909][info]       [REDIS] Successfully issued command "SELECT 2"
+[00m[1m[21:32:46.909][info]       [REDIS] Successfully issued command "HGETALL fake-model:1"
+[00m[1m[21:32:46.909][info]       [REDIS] 	 model_name: fake-model
+[00m[1m[21:32:46.909][info]       [REDIS] 	 model_version: 1
+[00m[1m[21:32:46.909][info]       [REDIS] 	 load: 0.000000
+[00m[1m[21:32:46.909][info]       [REDIS] 	 input_type: floats
+[00m[1m[21:32:46.909][info]       [REDIS] 	 labels: 
+[00m[1m[21:32:46.909][info]       [REDIS] 	 container_name: default-cluster-fake-model:1
+[00m[1m[21:32:46.909][info]       [REDIS] 	 model_data_path: DEPRECATED
+[00m[1m[21:32:46.909][info]       [REDIS] 	 batch_size: 8
+[00m[1m[21:32:46.909][info]       [REDIS] 	 valid: 
+[00m[1m[21:32:46.910][info]       [REDIS] Successfully issued command "SELECT 6"
+[00m[1m[21:32:46.910][info]       [REDIS] Successfully issued command "GET CURRENT_MODEL_VERSION:fake-model"
+[00m[1m[21:32:46.910][info]   [MGMTFRNTD] get_all_models response: [{"model_name":"fake-model","model_version":"1","input_type":"floats","labels":[""],"container_name":"default-cluster-fake-model:1","model_data_path":"DEPRECATED","is_current_version":true}]
