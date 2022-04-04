@@ -1,0 +1,63 @@
+Traceback (most recent call last):
+  File "async_dynamic_test.py", line 350, in <module>
+    main()
+  File "async_dynamic_test.py", line 346, in main
+    asyncio.run(amain())
+  File "/opt/miniconda3/envs/clipper/lib/python3.7/asyncio/runners.py", line 43, in run
+    return loop.run_until_complete(main)
+  File "/opt/miniconda3/envs/clipper/lib/python3.7/asyncio/base_events.py", line 574, in run_until_complete
+    self.run_forever()
+  File "/opt/miniconda3/envs/clipper/lib/python3.7/asyncio/base_events.py", line 541, in run_forever
+    self._run_once()
+  File "/opt/miniconda3/envs/clipper/lib/python3.7/asyncio/base_events.py", line 1786, in _run_once
+    handle._run()
+  File "/opt/miniconda3/envs/clipper/lib/python3.7/asyncio/events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "async_dynamic_test.py", line 328, in amain
+    clipper_conn, endpoint = await setup_clipper(args)
+  File "async_dynamic_test.py", line 98, in setup_clipper
+    clipper_conn.start_clipper(cache_size=0)
+  File "/home/cc/buildbed/clipper/clipper_admin/clipper_admin/clipper_admin.py", line 139, in start_clipper
+    qf_http_timeout_content, num_frontend_replicas)
+  File "/home/cc/buildbed/clipper/clipper_admin/clipper_admin/docker/docker_container_manager.py", line 178, in start_clipper
+    key=CLIPPER_DOCKER_LABEL, val=self.cluster_name)
+  File "/home/cc/buildbed/clipper/clipper_admin/clipper_admin/decorators.py", line 31, in f_retry
+    return f(*args, **kwargs)
+  File "/home/cc/buildbed/clipper/clipper_admin/clipper_admin/docker/docker_api_utils.py", line 47, in list_containers
+    return docker_client.containers.list(filters=filters)
+  File "/opt/miniconda3/envs/clipper/lib/python3.7/site-packages/docker/models/containers.py", line 961, in list
+    containers.append(self.get(r['Id']))
+  File "/opt/miniconda3/envs/clipper/lib/python3.7/site-packages/docker/models/containers.py", line 897, in get
+    resp = self.client.api.inspect_container(container_id)
+  File "/opt/miniconda3/envs/clipper/lib/python3.7/site-packages/docker/utils/decorators.py", line 19, in wrapped
+    return f(self, resource_id, *args, **kwargs)
+  File "/opt/miniconda3/envs/clipper/lib/python3.7/site-packages/docker/api/container.py", line 772, in inspect_container
+    self._get(self._url("/containers/{0}/json", container)), True
+  File "/opt/miniconda3/envs/clipper/lib/python3.7/site-packages/docker/utils/decorators.py", line 46, in inner
+    return f(self, *args, **kwargs)
+  File "/opt/miniconda3/envs/clipper/lib/python3.7/site-packages/docker/api/client.py", line 237, in _get
+    return self.get(url, **self._set_request_timeout(kwargs))
+  File "/opt/miniconda3/envs/clipper/lib/python3.7/site-packages/requests/sessions.py", line 542, in get
+    return self.request('GET', url, **kwargs)
+  File "/opt/miniconda3/envs/clipper/lib/python3.7/site-packages/requests/sessions.py", line 529, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/opt/miniconda3/envs/clipper/lib/python3.7/site-packages/requests/sessions.py", line 645, in send
+    r = adapter.send(request, **kwargs)
+  File "/opt/miniconda3/envs/clipper/lib/python3.7/site-packages/requests/adapters.py", line 450, in send
+    timeout=timeout
+  File "/opt/miniconda3/envs/clipper/lib/python3.7/site-packages/urllib3/connectionpool.py", line 710, in urlopen
+    chunked=chunked,
+  File "/opt/miniconda3/envs/clipper/lib/python3.7/site-packages/urllib3/connectionpool.py", line 449, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/opt/miniconda3/envs/clipper/lib/python3.7/site-packages/urllib3/connectionpool.py", line 444, in _make_request
+    httplib_response = conn.getresponse()
+  File "/opt/miniconda3/envs/clipper/lib/python3.7/http/client.py", line 1373, in getresponse
+    response.begin()
+  File "/opt/miniconda3/envs/clipper/lib/python3.7/http/client.py", line 319, in begin
+    version, status, reason = self._read_status()
+  File "/opt/miniconda3/envs/clipper/lib/python3.7/http/client.py", line 280, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/opt/miniconda3/envs/clipper/lib/python3.7/socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+KeyboardInterrupt
