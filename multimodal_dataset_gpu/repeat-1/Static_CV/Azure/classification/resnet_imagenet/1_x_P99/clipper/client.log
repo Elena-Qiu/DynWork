@@ -1,0 +1,49 @@
+22-04-17:19:41:25 INFO     [docker_container_manager.py:192] [default-cluster] Starting managed Redis instance in Docker
+22-04-17:19:41:27 INFO     [docker_container_manager.py:294] [default-cluster] Metric Configuration Saved at /tmp/tmp7y7bl4ra.yml
+22-04-17:19:41:27 INFO     [clipper_admin.py:162] [default-cluster] Clipper is running
+22-04-17:19:41:27 INFO     [clipper_admin.py:236] [default-cluster] Application fake-model was successfully registered
+22-04-17:19:41:27 INFO     [deployer_utils.py:41] Saving function to /tmp/tmprycm3esuclipper
+22-04-17:19:41:27 INFO     [deployer_utils.py:51] Serialized and supplied predict function
+22-04-17:19:41:27 INFO     [python.py:192] Python closure saved
+22-04-17:19:41:27 INFO     [python.py:210] Using Python 3.7 base image
+22-04-17:19:41:27 INFO     [clipper_admin.py:534] [default-cluster] Building model Docker image with model data from /tmp/tmprycm3esuclipper
+22-04-17:19:41:28 INFO     [clipper_admin.py:539] [default-cluster] Step 1/2 : FROM clipper/python37-closure-container:develop
+22-04-17:19:41:28 INFO     [clipper_admin.py:539] [default-cluster]  ---> 2660542c0759
+22-04-17:19:41:28 INFO     [clipper_admin.py:539] [default-cluster] Step 2/2 : COPY /tmp/tmprycm3esuclipper /model/
+22-04-17:19:41:28 INFO     [clipper_admin.py:539] [default-cluster]  ---> 146833470320
+22-04-17:19:41:28 INFO     [clipper_admin.py:539] [default-cluster] Successfully built 146833470320
+22-04-17:19:41:28 INFO     [clipper_admin.py:539] [default-cluster] Successfully tagged default-cluster-fake-model:1
+22-04-17:19:41:28 INFO     [clipper_admin.py:541] [default-cluster] Pushing model Docker image to default-cluster-fake-model:1
+22-04-17:19:41:28 INFO     [docker_container_manager.py:433] [default-cluster] Found 0 replicas for fake-model:1. Adding 1
+22-04-17:19:41:29 INFO     [clipper_admin.py:724] [default-cluster] Successfully registered model fake-model:1
+22-04-17:19:41:29 INFO     [clipper_admin.py:642] [default-cluster] Done deploying model fake-model:1.
+22-04-17:19:41:29 INFO     [clipper_admin.py:303] [default-cluster] Model fake-model is now linked to application fake-model
+INFO: waiting for ready to serve
+INFO: waiting for ready to serve
+INFO: waiting for ready to serve
+INFO: waiting for ready to serve
+INFO: waiting for ready to serve
+INFO: waiting for ready to serve
+INFO: waiting for ready to serve
+INFO: waiting for ready to serve
+INFO: waiting for ready to serve
+INFO: waiting for ready to serve
+ERROR: replicas take too long to spin up, possibly died. Check container log
+ERROR: error when starting clipper, clean up before bubble up the error: TypeError
+22-04-17:19:42:23 INFO     [clipper_admin.py:1424] [default-cluster] Stopped all Clipper cluster and all model containers
+Traceback (most recent call last):
+  File "async_dynamic_test.py", line 351, in <module>
+    main()
+  File "async_dynamic_test.py", line 347, in main
+    asyncio.run(amain())
+  File "/opt/miniconda3/envs/clipper/lib/python3.7/asyncio/runners.py", line 43, in run
+    return loop.run_until_complete(main)
+  File "/opt/miniconda3/envs/clipper/lib/python3.7/asyncio/base_events.py", line 587, in run_until_complete
+    return future.result()
+  File "async_dynamic_test.py", line 329, in amain
+    clipper_conn, endpoint = await setup_clipper(args)
+  File "async_dynamic_test.py", line 158, in setup_clipper
+    raise e
+  File "async_dynamic_test.py", line 149, in setup_clipper
+    raise TypeError('Bad python model')
+TypeError: Bad python model
