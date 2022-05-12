@@ -5,12 +5,12 @@ import random
 def chatbot_blenderbot_model(dataset, args):
     from transformers import BlenderbotSmallTokenizer, BlenderbotSmallForConditionalGeneration
     tokenizer = BlenderbotSmallTokenizer.from_pretrained('facebook/blenderbot_small-90M')
-    model =  BlenderbotSmallForConditionalGeneration.from_pretrained('facebook/blenderbot_small-90M')
+    model =  BlenderbotSmallForConditionalGeneration.from_pretrained('facebook/blenderbot_small-90M').to(args.device)
     dataset = random.sample(dataset, args.num)
     args.print('InputLen,InferenceLatency,OutputLen')
     for data in dataset:
         # print("Users: ", data)
-        input_ids = tokenizer.encode(data + tokenizer.eos_token, return_tensors='pt')
+        input_ids = tokenizer.encode(data + tokenizer.eos_token, return_tensors='pt').to(args.device)
         input_length = input_ids.size()[1]
         start = time.perf_counter()
         output_ids = model.generate(input_ids, max_length=1024, pad_token_id=tokenizer.eos_token_id)
@@ -24,12 +24,12 @@ def chatbot_blenderbot_model(dataset, args):
 def chatbot_gpt_model(dataset, args):
     from transformers import AutoModelForCausalLM, AutoTokenizer
     tokenizer = AutoTokenizer.from_pretrained("microsoft/DialoGPT-small")
-    model = AutoModelForCausalLM.from_pretrained("microsoft/DialoGPT-small")
+    model = AutoModelForCausalLM.from_pretrained("microsoft/DialoGPT-small").to(args.device)
     dataset = random.sample(dataset, args.num)
     args.print('InputLen,InferenceLatency,OutputLen')
     for data in dataset:
         # print("Users: ", data)
-        input_ids = tokenizer.encode(data + tokenizer.eos_token, return_tensors='pt')
+        input_ids = tokenizer.encode(data + tokenizer.eos_token, return_tensors='pt').to(args.device)
         input_length = input_ids.size()[1]
         start = time.perf_counter()
         output_ids = model.generate(input_ids, max_length=1024, pad_token_id=tokenizer.eos_token_id)
@@ -43,7 +43,7 @@ def chatbot_gpt_model(dataset, args):
 
 def summarize_bart_model(dataset, args):
     from transformers import BartTokenizer, BartForConditionalGeneration
-    model = BartForConditionalGeneration.from_pretrained('facebook/bart-large-cnn')
+    model = BartForConditionalGeneration.from_pretrained('facebook/bart-large-cnn').to(args.device)
     tokenizer = BartTokenizer.from_pretrained('facebook/bart-large-cnn')
     random.shuffle(dataset)
     args.print('InputLen,InferenceLatency,OutputLen')
@@ -51,12 +51,12 @@ def summarize_bart_model(dataset, args):
     for data in dataset:
         if count >= args.num:
             break
-        inputs = tokenizer([data], max_length=512, truncation=True, return_tensors='pt')
-        input_length = inputs["input_ids"].size()[1]
+        input_ids = tokenizer([data], max_length=512, truncation=True, return_tensors='pt')["input_ids"].to(args.device)
+        input_length = input_ids.size()[1]
         if input_length != 512:
             count += 1
             start = time.perf_counter()
-            summary_ids = model.generate(inputs['input_ids'], min_length=1, max_length=512)
+            summary_ids = model.generate(input_ids, min_length=1, max_length=512)
             end = time.perf_counter()
             latency = (end - start)*1000
             output_length = summary_ids.size()[1]
@@ -66,7 +66,7 @@ def summarize_bart_model(dataset, args):
 
 def summarize_t5_model(dataset, args):
     from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
-    model = AutoModelForSeq2SeqLM.from_pretrained("t5-base")
+    model = AutoModelForSeq2SeqLM.from_pretrained("t5-base").to(args.device)
     tokenizer = AutoTokenizer.from_pretrained("t5-base")
     random.shuffle(dataset)
     args.print('InputLen,InferenceLatency,OutputLen')
@@ -74,12 +74,12 @@ def summarize_t5_model(dataset, args):
     for data in dataset:
         if count >= args.num:
             break
-        inputs = tokenizer("summarize: " + data, max_length=512, truncation=True, return_tensors='pt')
-        input_length = inputs["input_ids"].size()[1]
+        input_ids = tokenizer("summarize: " + data, max_length=512, truncation=True, return_tensors='pt')["input_ids"].to(args.device)
+        input_length = input_ids.size()[1]
         if input_length != 512:
             count += 1
             start = time.perf_counter()
-            summary_ids = model.generate(inputs['input_ids'], min_length=1, max_length=512)
+            summary_ids = model.generate(input_ids, min_length=1, max_length=512)
             end = time.perf_counter()
             latency = (end - start)*1000
             output_length = summary_ids.size()[1]
@@ -89,16 +89,16 @@ def summarize_t5_model(dataset, args):
 # english to chinese
 def translate_mbart_model(dataset, args):
     from transformers import MBartForConditionalGeneration, MBart50TokenizerFast
-    model = MBartForConditionalGeneration.from_pretrained("facebook/mbart-large-50-many-to-many-mmt")
+    model = MBartForConditionalGeneration.from_pretrained("facebook/mbart-large-50-many-to-many-mmt").to(args.device)
     tokenizer = MBart50TokenizerFast.from_pretrained("facebook/mbart-large-50-many-to-many-mmt")
     dataset = random.sample(dataset, args.num)
     args.print('InputLen,InferenceLatency,OutputLen')
     for data in dataset:
         tokenizer.src_lang = "en_XX"
-        inputs = tokenizer(data, return_tensors="pt")
-        input_length = inputs["input_ids"].size()[1]
+        input_ids = tokenizer(data, return_tensors="pt")["input_ids"].to(args.device)
+        input_length = input_ids.size()[1]
         start = time.perf_counter()
-        generated_tokens = model.generate(inputs['input_ids'], max_length=1024, 
+        generated_tokens = model.generate(input_ids, max_length=1024, 
                                     forced_bos_token_id=tokenizer.lang_code_to_id["zh_CN"])
         end = time.perf_counter()
         latency = (end - start)*1000
@@ -110,12 +110,12 @@ def translate_mbart_model(dataset, args):
 def translate_fsmt_model(dataset, args):
     from transformers import FSMTForConditionalGeneration, FSMTTokenizer
     tokenizer = FSMTTokenizer.from_pretrained("facebook/wmt19-en-de")
-    model = FSMTForConditionalGeneration.from_pretrained("facebook/wmt19-en-de")
+    model = FSMTForConditionalGeneration.from_pretrained("facebook/wmt19-en-de").to(args.device)
     dataset = random.sample(dataset, args.num)
     args.print('InputLen,InferenceLatency,OutputLen')
     for data in dataset:
         tokenizer.src_lang = "en_XX"
-        input_ids = tokenizer.encode(data, return_tensors="pt")
+        input_ids = tokenizer.encode(data, return_tensors="pt").to(args.device)
         input_length = input_ids.size()[1]
         start = time.perf_counter()
         output_ids = model.generate(input_ids, max_length=1024)
