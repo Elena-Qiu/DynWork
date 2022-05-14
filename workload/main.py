@@ -4,25 +4,28 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import get_dataset
 import model
+import batch_model
 
 all_tasks = ["chatbot", "summarization", "translation"]
 
-chatbot_dataset = {"cornell": get_dataset.get_chatbot_cornell_dataset,
-                   "convAI": get_dataset.get_chatbot_convAI_dataset}
-chatbot_model = {"gpt": model.chatbot_gpt_model,
-                 "blenderbot": model.chatbot_blenderbot_model}
+chatbot_task = {"dataset":     {"cornell": get_dataset.get_chatbot_cornell_dataset,
+                                "convAI": get_dataset.get_chatbot_convAI_dataset},
+                "model":       {"gpt": model.chatbot_gpt_model,
+                                "blenderbot": model.chatbot_blenderbot_model},
+                "batch_model": {"gpt": batch_model.chatbot_gpt_batch_model,
+                                "blenderbot": batch_model.chatbot_blenderbot_batch_model}}
 
-summarizion_dataset = {"cnn": get_dataset.get_summarize_cnn_dataset}
-summarizion_model = {"t5": model.summarize_t5_model,
-                   "bart": model.summarize_bart_model}
+summarization_task = {"dataset":     {"cnn": get_dataset.get_summarize_cnn_dataset}, 
+                      "model":       {"t5": model.summarize_t5_model,
+                                      "bart": model.summarize_bart_model},
+                      "batch_model": {"t5": batch_model.summarize_t5_batch_model,
+                                      "bart": batch_model.summarize_bart_batch_model}}
 
-translation_dataset = {"wmt": get_dataset.get_translate_wmt_dataset}
-translation_model = {"mbart": model.translate_mbart_model,
-                   "fsmt": model.translate_fsmt_model}
-
-chatbot_task = {"dataset": chatbot_dataset, "model": chatbot_model}
-summarization_task = {"dataset": summarizion_dataset, "model": summarizion_model}
-translation_task = {"dataset": translation_dataset, "model": translation_model}
+translation_task = {"dataset":     {"wmt": get_dataset.get_translate_wmt_dataset}, 
+                    "model":       {"gpt": model.chatbot_gpt_model,
+                                    "blenderbot": model.chatbot_blenderbot_model},
+                    "batch_model": {"gpt": batch_model.chatbot_gpt_batch_model,
+                                    "blenderbot": batch_model.chatbot_blenderbot_batch_model}}
 
 task_content = {"chatbot": chatbot_task, "summarization": summarization_task, "translation": translation_task}
 
@@ -37,10 +40,10 @@ def remove_outliers(df):
     return df
 
 
-def plot(df, figsize=(16,5)):
+def plot(df, batch_df, figsize=(20,5)):
     fig = plt.figure(figsize=figsize, dpi=300)
-    axs = fig.subplot_mosaic('''ABC
-                                ABC
+    axs = fig.subplot_mosaic('''ABCD
+                                ABCD
                              ''')
 
     # InputLen vs InferenceLatency scatter
@@ -58,15 +61,22 @@ def plot(df, figsize=(16,5)):
     axs['C'].set_xlabel("InputLen")
     axs['C'].set_ylabel("OutputLen")
 
+    # BatchSize vs InferenceLatency (ms)
+    axs['D'].plot(batch_df.BatchSize, batch_df.InferenceLatency)
+    axs['D'].set_xlabel("BatchSize")
+    axs['D'].set_ylabel("InferenceLatency (ms)")
+
     return fig
 
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument("--num", type=int, help="Number of datapoints to get", default=100)
+    parser.add_argument("--num", type=int, help="Number of datapoints to get", default=3000)
     parser.add_argument("--task", type=str, help="Specify the task",
                         choices=["chatbot", "summarization", "translation", "all"], default="chatbot")
+    parser.add_argument("--max_batch", type=int, help="Max batch size to test", default=128)
     args = parser.parse_args()
+    args.iter = 20
     task_names = all_tasks if args.task == "all" else [args.task]
 
     root = "./log"
@@ -78,6 +88,7 @@ if __name__ == '__main__':
         task_dict = task_content[task_name]
         datasets = task_dict["dataset"]
         models = task_dict["model"]
+        batch_models = task_dict["batch_model"]
         output_dir = os.path.join(root, task_name)
         if not os.path.exists(output_dir):
             os.makedirs(output_dir)
@@ -85,8 +96,8 @@ if __name__ == '__main__':
             for dataset_name, dataset_func in datasets.items():
                 print("INFO: Begin running model " + model_name + " and dataset " + dataset_name)
                 dataset= dataset_func()
-                # get the outputfile name
-                output_filename = "{}_{}_{}_original.csv".format(task_name, model_name, dataset_name)
+                # collect latency data
+                output_filename = "{}_{}_{}.csv".format(task_name, model_name, dataset_name)
                 output_path = os.path.join(output_dir, output_filename)
                 with open(output_path, 'w+') as f:
                     def printer(*args, **kwargs):
@@ -94,19 +105,26 @@ if __name__ == '__main__':
                         f.flush()
                     args.print = printer
                     model_func(dataset, args)
-                # save the original df
+                # remove outliers
                 df = pd.read_csv(output_path)
-                fig = plot(df)
-                plt.tight_layout()
-                fig.savefig(output_path[:-4] + ".png")
-                plt.cla()
-                plt.close("all")
-                # save the df without outliers
-                output_filename = "{}_{}_{}.csv".format(task_name, model_name, dataset_name)
-                output_path = os.path.join(output_dir, output_filename)
                 df = remove_outliers(df)
                 df.to_csv(output_path)
-                fig = plot(df)
+
+                # collect batch data
+                print("INFO: Begin testing batch of model " + model_name + " and dataset " + dataset_name)
+                batch_model_func = batch_models[model_name]
+                batch_output_filename = "{}_{}_{}_batch.csv".format(task_name, model_name, dataset_name)
+                batch_output_path = os.path.join(output_dir, batch_output_filename)
+                with open(batch_output_path, 'w+') as f:
+                    def printer(*args, **kwargs):
+                        print(*args, **{'file': f, **kwargs})
+                        f.flush()
+                    args.print = printer
+                    batch_model_func(dataset, args)
+                # save the batch_size vs latency
+                batch_df = pd.read_csv(batch_output_path)
+                # plot figure
+                fig = plot(df, batch_df)
                 plt.tight_layout()
                 fig.savefig(output_path[:-4] + ".png")
                 plt.cla()
