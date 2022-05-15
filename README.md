@@ -7,9 +7,9 @@ This repo generates dynamic workloads. There are two main parts:
 
 ## Prerequisite
 
-This code requires `Python 3.8`
+This repo requires `Python 3.8`
 
-The packages are included in `requirments.txt`
+The package requirements are stated in `requirments.txt`
 
 ## Trace
 
