@@ -1,9 +1,9 @@
 # DynWork
 
-This repo generates dynamic workload. There are two main parts:
+This repo generates dynamic workloads. There are two main parts:
 
-- Multimodal workload from real NLP datasets
-- Multimodal synthesized workload
+- Multimodal workloads from real NLP datasets
+- Multimodal synthesized workloads
 
 ## Prerequisite
 
@@ -71,7 +71,7 @@ python generate_multimodal_rea_dataset.py --dir ./log/multimodal_real_dataset --
 - `buckets.csv`: It divides each bucket into 10 bins and records the start value, the end value and the count of each bin. *BucketStart* and *BucketEnd* are set to 0.
 - `jobs.png`: It plots the histogram of the inference latency of the workload and the concurrency as follows.
 
-<img src="/Users/pleple/Library/Application Support/typora-user-images/截屏2022-05-15 下午4.05.29.png" alt="截屏2022-05-15 下午4.05.29" style="zoom: 33%;" />
+<img src="./images/multimodal_real_dataset.png" alt="multimodal_real_dataset" style="zoom:33%;" />
 
 ## Multimodal_Synthesized
 
@@ -105,4 +105,4 @@ python generate_multimodal_synthesized.py --dir ./log/multimodal_synthesized --i
 
 The same four files will be generated as in **Multimodal_Real_Dataset** execpt that in `jobs.png`, it plots the PDF of the inference latency of the workload as follows.
 
-<img src="/Users/pleple/Library/Application Support/typora-user-images/截屏2022-05-15 下午4.49.58.png" alt="截屏2022-05-15 下午4.49.58" style="zoom:33%;" />
+<img src="./images/multimodal_synthesized.png" alt="multimodal_real_dataset" style="zoom:33%;" />

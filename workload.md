@@ -70,4 +70,4 @@
 - wmt
   - Workshop on Statistical Machine Translation
   - Source: http://statmt.org/wmt18/translation-task.html#download (news-commentary-v13.en.gz)
-  - Citation: [*Findings of the 2018 Conference on Machine Translation (WMT18)*](
+  - Citation: [*Findings of the 2018 Conference on Machine Translation (WMT18)*](https://aclanthology.org/W18-6401.pdf)
