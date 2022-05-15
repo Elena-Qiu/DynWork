@@ -100,7 +100,7 @@ This part contains 13 synthesized workloads following mixture distribution with 
 We normalize the inference latency of all workloads to `[10, 100] ms` and it can be changed in `generate_multimodal_synthesized.py`.
 
 ```
-python generate_multimodal_synthesized.py --dir ./log/multimodal_synthesized --inputlen_path .inputlen_sample.csv --latencies_path latencies_sample.csv --trace azure --batch 8 --rate_downgrade 0.25 --trace_num 50
+python generate_multimodal_synthesized.py --dir ./log/multimodal_synthesized --inputlen_path ./synthesized_sample/inputlen_sample.csv --latencies_path ./synthesized_sample/latencies_sample.csv --trace azure --batch 8 --rate_downgrade 0.25 --trace_num 50
 ```
 
 The same four files will be generated as in **Multimodal_Real_Dataset** execpt that in `jobs.png`, it plots the PDF of the inference latency of the workload as follows.

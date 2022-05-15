@@ -26,8 +26,8 @@ tasks = {
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("--dir", type=str, help="Directory to store the data", default="./log/multimodal_synthesized")
-    parser.add_argument("--inputlen_path", type=str, help="Path to get the inputlen sample data", default="inputlen_sample.csv")
-    parser.add_argument("--latencies_path", type=str, help="Path to get the latencies sample data", default="latencies_sample.csv")
+    parser.add_argument("--inputlen_path", type=str, help="Path to get the inputlen sample data", default="./synthesized_sample/inputlen_sample.csv")
+    parser.add_argument("--latencies_path", type=str, help="Path to get the latencies sample data", default="./synthesized_sample/latencies_sample.csv")
     parser.add_argument("--trace", type=str, help="Trace to generate jobs",
                         choices=["worldcup", "azure", "all"], default = "all")
     parser.add_argument("--trace_num", type=int, help="Number of trace points to use", default=50)
