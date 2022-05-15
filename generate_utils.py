@@ -1,10 +1,9 @@
-import os
-import pandas as pd
-import matplotlib.pyplot as plt
+import pandas as pd 
 import numpy as np
+import os
+import math
 import random
-import plot_utils as pu
-
+import matplotlib.pyplot as plt
 
 # worldcup config, time between '1998-06-25 22:00:01' and '1998-06-27 22:00:00'
 worldcup_start =  '1998-06-26 10:00:01'
@@ -15,55 +14,10 @@ azure_day = 8
 azure_offset = 1500
 azure_hashfunction_num = 11
 
-all_tasks = ["chatbot", "summarization", "translation"]
-chatbot_task = {"dataset": ["cornell", "convAI"], "model": ["gpt", "blenderbot"]}
-summarization_task = {"dataset": ["cnn"], "model": ["t5", "bart"]}
-translation_task = {"dataset": ["wmt"], "model": ["mbart", "fsmt"]}
-task_content = {"chatbot": chatbot_task, "summarization": summarization_task, "translation": translation_task}
-all_traces = ["worldcup", "azure"]
-
-
-def GetLength(df, num):
-    if num <= len(df):
-        idx = random.sample(range(len(df)), k=num)
-    else:
-        idx = random.choices(range(len(df)), k=num)
-    df = df.loc[df.index[idx]][["InputLen", "InferenceLatency"]]
-    df = df.reset_index(drop=True)
-    df = df.rename(columns={"InferenceLatency": "Length"})
-    return df
-
-
-def GetTimestamp(rate, args, trace_df):
-    # the number of trace samples if the interval is one second
-    trace_sample_num = args.num/rate
-    # get the interval value to get target number of trace samples
-    time_interval = (trace_sample_num / args.trace_point) * 1000
-    target_trace_rate = rate * time_interval/1000
-    # get the sample points from the trace
-    trace_total_num = len(trace_df)
-    step = max(1, int(trace_total_num/args.trace_point))
-    index = list(np.arange(0, trace_total_num, step))
-    sub_df = trace_df.iloc[index, :]
-    sub_df = sub_df[['count']]
-    sub_df = sub_df.reset_index(drop=True)
-    # scale the trace according to the target rate
-    trace_mean = sub_df['count'].mean()
-    scaled_sub_df = sub_df * target_trace_rate / trace_mean
-    count_list = scaled_sub_df['count'].to_list()
-    count_list = list(map(lambda x: int(x) if x > 1 else 1, count_list))
-    # timestamp is on ms basis
-    timestamp = []
-    for i, count in enumerate(count_list):
-        timestamp.extend(np.linspace(i*time_interval, (i+1)*time_interval, count, endpoint=False))
-    return timestamp, sub_df, time_interval
-
-
 def GetWorldcupTrace(trace_root):
     data_dir = os.path.join(trace_root, "worldcup")
     filename = 'rate.csv'
     data_path = os.path.join(data_dir, filename)
-
     # get original trace df
     trace_df = pd.read_csv(data_path, index_col=0, parse_dates=True)
     trace_df = trace_df[worldcup_start:worldcup_end]
@@ -72,13 +26,9 @@ def GetWorldcupTrace(trace_root):
 
 
 def GetAzureTrace(trace_root):
-    data_dir = os.path.join(trace_root, "azure")
+    data_dir = trace_root + "/azure"
     data_filename = "invocations_per_function_md.anon.d"
-    ordered_filename = "ordered.csv"
-    rate_filename = "rate.csv"
     data_path = os.path.join(data_dir, data_filename)
-    ordered_path = os.path.join(data_dir, ordered_filename)
-    rate_path = os.path.join(data_dir, rate_filename)
 
     def get_day_name(day):
         if day < 10:
@@ -113,7 +63,6 @@ def GetAzureTrace(trace_root):
         ordered_df = df.sort_values(by=['total'], ascending=[0])
         ordered_df = ordered_df[column_names]
         ordered_df = ordered_df.reset_index(drop=True)
-        # ordered_df.to_csv(ordered_path + get_day_name(day) +".csv", index=False)
         return ordered_df
 
     def get_rate(num_hash, offset, day):
@@ -126,8 +75,7 @@ def GetAzureTrace(trace_root):
         ordered_df.loc["count"] = ordered_df.apply(lambda x: x.sum())
         trace_df = ordered_df.loc["count"].copy().to_frame()
         trace_df["minute"] = np.arange(1, 1441, 1).tolist()
-        trace_df = trace_df[["minute", "count"]]
-        # rate_df.to_csv(rate_path + get_day_name(day) +".csv", index=False)
+        trace_df = trace_df[["minute", "count"]].head(400)
         return trace_df
 
     get_azure_dataset()
@@ -137,112 +85,149 @@ def GetAzureTrace(trace_root):
     return trace_df
 
 
-trace_func_dict = {"worldcup": GetWorldcupTrace, "azure": GetAzureTrace}
-# the rate in worldcup is per second; the rate in azure is per minute
-trace_per_dict = {"worldcup": 1, "azure": 60}
+def GetTimeStamp(arg_dict):
+    '''
+    max_throughput = batch_size/avg_latency (per second)
+    we set rate = max_throughput * rate_interval * rate_downgrade (per second)
+    we set time_interval(ms) in order to get appropriate scaled value for each trace point
+    For example, if I have a workload of rate = 1 per second, then I choose the time_interval
+    as 3300 ms so that I can get the rate_per_interval as 3.3 per second. Then I scale the 
+    mean of trace points to 3.3, namely each trace point corresponds to the number of jobs in each
+    3300 ms.
+    '''
+    point_num = arg_dict["point_num"]
+    rate = arg_dict["rate"]
+    trace_num = arg_dict["trace_num"]
+    if arg_dict["trace"] == "worldcup" :
+        trace_df = GetWorldcupTrace(arg_dict["root"])
+    else:
+        trace_df = GetAzureTrace(arg_dict["root"])
+    trace_sample_num = point_num/rate
+
+    # get the interval value to get target number of trace samples
+    time_interval = (trace_sample_num / trace_num) * 1000
+    target_trace_rate = rate * time_interval/1000
+
+    # get the sample points from the trace
+    trace_total_num = len(trace_df)
+    step = max(1, math.floor((trace_total_num/trace_num)))
+    index = list(np.arange(0, trace_total_num, step))
+    sub_df = trace_df.iloc[index, :]
+    sub_df = sub_df[['count']]
+    sub_df = sub_df.reset_index(drop=True)
+
+    # scale the trace according to the target rate
+    trace_mean = sub_df['count'].mean()
+    scaled_sub_df = sub_df * target_trace_rate / trace_mean
+    count_list = scaled_sub_df['count'].to_list()
+    count_list = list(map(lambda x: math.ceil(x) if x > 1 else 1, count_list))
+
+    # timestamp is on ms basis
+    timestamp = []
+    for i, count in enumerate(count_list):
+        timestamp.extend(np.linspace(i*time_interval, (i+1)*time_interval, count, endpoint=False))
+    return timestamp[0:point_num], scaled_sub_df
 
 
-def plot(trace_df, job_df, figsize=(12, 12)):
-    fig = plt.figure(figsize=figsize, dpi=300)
-    axs = fig.subplot_mosaic('''AB
-                                AC
-                                AD
-                                ''')
-    # trace
-    ax = trace_df.plot(ax=axs['C'], legend=None)
-    ax.set_ylabel('Rate($S^{-1}$)')
-    ax.set_xlabel('Time')
-    ax.set_title('Trace')
+def GetInferLen(arg_dict):
+    modal_num = arg_dict["modal_num"]
+    mu = arg_dict["mu"]
+    sigma = arg_dict["sigma"]
+    max_length = arg_dict.get("max_length", None)
+    min_length = arg_dict.get("min_length", None)
+    size = arg_dict["size"]
+    point_num = arg_dict["point_num"]
+    data = []
+    index_list = []
+    for _ in range(size):
+        index = np.random.choice(modal_num, 1)[0]
+        data.append(np.random.normal(mu[index], sigma[index]))
+        index_list.append(index)
+    data_index = np.column_stack((data, index_list))
+    if min_length is not None and max_length is not None:
+        data_index[:,0] = ((data_index[:,0] - min(data_index[:,0]))/(max(data_index[:,0]) - min(data_index[:,0]))) * (max_length - min_length) + min_length
+    data_index = data_index[np.argsort(data_index[:, 0])]
+    sample_data = []
+    sample_index = []
+    for i in np.arange(0, size-1, int(size/(point_num-1))):
+        sample_data.append(float(data_index[i][0]))
+        sample_index.append(int(data_index[i][1]))
+    sample_data.append(float(data_index[size-1][0]))
+    sample_index.append(int(data_index[size-1][1]))
+    random_num = random.randint(0, 100)
+    random.seed(random_num)
+    random.shuffle(sample_data)
+    random.shuffle(sample_index)
+    return sample_data, sample_index
 
-    # InferenceLatency cdf
-    ax = pu.cdf(job_df.Length, ax=axs['B'])
-    ax.set_ylabel('CDF')
-    ax.set_xlabel('InferenceLatency (ms)')
 
-    # InputLen vs InferenceLatency scatter
-    axs['D'].scatter(job_df.InputLen, job_df.Length)
-    axs['D'].set_xlabel("InputLen")
-    axs['D'].set_ylabel("InferenceLatency (ms)")
+def GetBuckets(df):
+    bin_num = 10
+    hist_df_list = []
 
-    # job timeline
-    ax = pu.job_timeline(job_df.JobId, job_df.Admitted, job_df.Admitted + job_df.Length, ax=axs['A'])
-    ax.set_title('Release Timeline')
-    ax.set_ylabel('Job')
-    ax.set_xlabel('Time')
-    return fig
+    for idx in range(df["BucketIdx"].max()+1):
+        cur_job_df = df[df.BucketIdx == idx]
+        cur_hist_df = pd.cut(cur_job_df["Length"], bin_num, right=False, retbins=False).value_counts().to_frame(name="BinValue").sort_index()
+        cur_hist_df["BinStart"] = cur_hist_df.index.categories.left
+        cur_hist_df["BinEnd"] = cur_hist_df.index.categories.right
+        cur_hist_df = cur_hist_df.reset_index(drop=True)
+        cur_hist_df["BucketIdx"] = idx
+        cur_hist_df["BucketStart"] = 0
+        cur_hist_df["BucketEnd"] = 0
+        cur_hist_df["BinIdx"] = range(bin_num)
+        cur_hist_df = cur_hist_df[["BucketIdx", "BucketStart", "BucketEnd", "BinIdx", "BinStart", "BinEnd", "BinValue"]]
+        hist_df_list.append(cur_hist_df)
+    hist_df = pd.concat(hist_df_list)
+    return hist_df
 
 
-def GenerateJobs(args):
-    trace_names = all_traces if args.trace == "all" else [args.trace]
-    for trace_name in trace_names:
-        print("INFO: Begin Trace "+ trace_name)
-        # get the trace df for calculate timestamp
-        trace_func = trace_func_dict[trace_name]
-        trace_df = trace_func(args.trace_root)
-        output_dir = os.path.join(args.output, trace_name, 'LenScale_{}'.format(args.length_scale))
-        if not os.path.exists(output_dir):
-            os.makedirs(output_dir)
-        scale_log_path = os.path.join(output_dir, args.log)
-        with open(scale_log_path, 'w+') as f:
-            def printer(*args, **kwargs):
-                print(*args, **{'file': f, **kwargs})
-                f.flush()
-            printer("Trace,Task,Model,Dataset,Rate_Downgrade,Length_Scale,Batch,Rate,Time_Interval,Rate_per_Interval,Trace_point,Scale_Factor")
-            task_names = all_tasks if args.task == "all" else [args.task]
-            # begin generating requests for each task
-            for task_name in task_names:
-                print("INFO: Begin generating jobs of task "+ task_name)
-                task_dict = task_content[task_name]
-                for model_name in task_dict["model"]:
-                    for dataset_name in task_dict["dataset"]:
-                        model_dataset_name = "{}_{}".format(model_name, dataset_name)
-                        # make the log directory for each model-dataset combination
-                        log_model_dataset_dir = os.path.join(output_dir, task_name, model_dataset_name)
-                        if not os.path.exists(log_model_dataset_dir):
-                            os.makedirs(log_model_dataset_dir)
-                        # get the sample df for this model-dataset
-                        input_filename = "{}_{}_{}.csv".format(task_name, model_name, dataset_name)
-                        input_path = os.path.join(args.sample_root, task_name, input_filename)
-                        input_df = pd.read_csv(input_path)
+def plot(df, figname, bar=True):
+    def concurrency(jobs, started, finished) -> pd.Series:
+        data = jobs.melt(
+        value_vars=[started, finished],
+        var_name='Status',
+        value_name='Time'
+        ).sort_values('Time').set_index('Time')['Status'].map({
+        started: 1,
+        finished: -1,
+        }).cumsum()
+        data = data.reset_index()
+        d1 = data.drop_duplicates('Time', keep="first")
+        d2 = data.drop_duplicates('Time', keep="last")
+        data = pd.concat([d1,d2.loc[list(set(d2.index) - set(d1.index))]])
+        data = data.sort_index().sort_values('Time').set_index('Time')
+        return data.Status
+    
+    plt.figure(figsize=(12, 6))
+    if bar:
+        plt.subplot(1,2,1)
+        inputlen = df["Length"].to_list()
+        plt.hist(inputlen, bins=100, density=True)
+        plt.xlabel("Latency (ms)")
+        plt.ylabel("Probability")
+        plt.title("Latency")
+    else:
+        from scipy.stats import kde
+        
+        plt.figure(figsize=(12, 6))
+        plt.subplot(1,2,1)
+        inputlen = df["Length"].to_list()
+        density = kde.gaussian_kde(inputlen)
+        x = np.linspace(min(inputlen), max(inputlen), 1000)
+        y = density(x)
+        plt.plot(x, y)
+        plt.ylim([0, max(y)+ 0.002])
+        plt.xlabel("Latency (ms)")
+        plt.ylabel("Probability")
+        plt.title("Latency PDF")
 
-                        # calculate the max_throughput and generate timestamp
-                        avg_latency = input_df["InferenceLatency"].mean() * args.length_scale
-                        max_throughput = args.batch/(avg_latency/1000)
-                        # rate is based on the second base
-                        rate = max_throughput * args.rate_downgrade
-                        timestamp, trace_sub_df, time_interval = GetTimestamp(rate, args, trace_df)
-                        target_trace_rate = rate * time_interval / 1000
-                        scale_factor = (trace_sub_df['count'].mean()/trace_per_dict[trace_name])/rate
-                        scaled_trace_df = trace_sub_df * rate / trace_sub_df['count'].mean()
-                        printer("{},{},{},{},{},{},{},{},{},{},{},{}".format(trace_name,task_name,
-                                    model_name,dataset_name,args.rate_downgrade,args.length_scale,
-                                    args.batch,rate,time_interval, target_trace_rate,args.trace_point,scale_factor))
-                        
-                        # randomly choose requests from sample df
-                        length_df = GetLength(input_df, len(timestamp))
-                        length_df["Length"] *= args.length_scale
-                        # assign jobid for each request and concate all columns
-                        jobid = list(np.arange(len(timestamp)))
-                        job_df = pd.DataFrame(list(zip(jobid, timestamp)), columns = ["JobId", "Admitted"])
-                        job_df = pd.concat([job_df, length_df], axis=1)
-                        job_df = job_df[["JobId", "InputLen", "Length", "Admitted"]]
-
-                        # save jobs.csv
-                        job_filename = "jobs.csv"
-                        job_path = os.path.join(log_model_dataset_dir, job_filename)
-                        job_df.to_csv(job_path, index=False)
-                        # plot
-                        fig = plot(scaled_trace_df, job_df)
-                        plt.tight_layout()
-                        fig.savefig(job_path[:-4] + ".png")
-                        plt.cla()
-                        plt.close("all")
-                        print("INFO: Finish getting jobs of model {} and dataset {} ".format(model_name, dataset_name))
-
-                        # update latencies.csv
-                        batch_latencies_file_name = "{}_{}_batch.csv".format(task_name, model_dataset_name)
-                        batch_latencies_file_path = os.path.join(args.batch_root, task_name, batch_latencies_file_name)
-                        batch_df = pd.read_csv(batch_latencies_file_path)
-                        batch_df['InferenceLatency'] = batch_df['InferenceLatency'] * args.length_scale
-                        trace_batch_path = os.path.join(log_model_dataset_dir, "latencies.csv")
-                        batch_df.to_csv(trace_batch_path, index=False)
+    plt.subplot(1,2,2)
+    # lengthP99 = df[["Length"]].quantile(0.99)["Length"]
+    df['Deadline'] = df['Admitted'] + df["Length"]
+    status = concurrency(df,'Admitted','Deadline')
+    plt.plot(status)
+    plt.xlabel("Time (ms)")
+    plt.ylabel("Job Num")
+    plt.title("Concurrency")
+    plt.savefig(figname)
+    plt.clf()

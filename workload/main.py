@@ -21,11 +21,15 @@ summarization_task = {"dataset":     {"cnn": get_dataset.get_summarize_cnn_datas
                       "batch_model": {"t5": batch_model.summarize_t5_batch_model,
                                       "bart": batch_model.summarize_bart_batch_model}}
 
+# translation_task = {"dataset":     {"wmt": get_dataset.get_translate_wmt_dataset}, 
+#                     "model":       {"mbart": model.translate_mbart_model,
+#                                     "fsmt": model.translate_fsmt_model},
+#                     "batch_model": {"mbart": batch_model.translate_mbart_batch_model,
+#                                     "fsmt": batch_model.translate_fsmt_batch_model}}
+
 translation_task = {"dataset":     {"wmt": get_dataset.get_translate_wmt_dataset}, 
-                    "model":       {"gpt": model.chatbot_gpt_model,
-                                    "blenderbot": model.chatbot_blenderbot_model},
-                    "batch_model": {"gpt": batch_model.chatbot_gpt_batch_model,
-                                    "blenderbot": batch_model.chatbot_blenderbot_batch_model}}
+                    "model":       {"fsmt": model.translate_fsmt_model},
+                    "batch_model": {"fsmt": batch_model.translate_fsmt_batch_model}}
 
 task_content = {"chatbot": chatbot_task, "summarization": summarization_task, "translation": translation_task}
 
@@ -71,17 +75,18 @@ def plot(df, batch_df, figsize=(20,5)):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
+    parser.add_argument("--dir", type=str, help="Directory to store the data", default="./log")
     parser.add_argument("--num", type=int, help="Number of datapoints to get", default=3000)
     parser.add_argument("--task", type=str, help="Specify the task",
-                        choices=["chatbot", "summarization", "translation", "all"], default="chatbot")
+                        choices=["chatbot", "summarization", "translation", "all"], default="all")
+    parser.add_argument("--device", type=str, help="Device to use, cpu or cuda", default="cpu")
     parser.add_argument("--max_batch", type=int, help="Max batch size to test", default=128)
     args = parser.parse_args()
     args.iter = 20
     task_names = all_tasks if args.task == "all" else [args.task]
 
-    root = "./log"
-    if not os.path.exists(root):
-        os.makedirs(root)
+    if not os.path.exists(args.dir):
+        os.makedirs(args.dir)
 
     for task_name in task_names:
         print("INFO: Begin task "+ task_name)
@@ -89,7 +94,7 @@ if __name__ == '__main__':
         datasets = task_dict["dataset"]
         models = task_dict["model"]
         batch_models = task_dict["batch_model"]
-        output_dir = os.path.join(root, task_name)
+        output_dir = os.path.join(args.dir, task_name)
         if not os.path.exists(output_dir):
             os.makedirs(output_dir)
         for model_name, model_func in models.items():
@@ -108,7 +113,7 @@ if __name__ == '__main__':
                 # remove outliers
                 df = pd.read_csv(output_path)
                 df = remove_outliers(df)
-                df.to_csv(output_path)
+                df.to_csv(output_path, index=False)
 
                 # collect batch data
                 print("INFO: Begin testing batch of model " + model_name + " and dataset " + dataset_name)

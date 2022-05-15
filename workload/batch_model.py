@@ -8,10 +8,10 @@ def get_sample_data(dataset, tokenizer):
     if 512 in dataset_length:
         remove_idx = dataset_length.index(512)
         dataset_length_idx = dataset_length_idx[:remove_idx]
-    print(f"CHOOSE LENGTH {dataset_length_idx[int(len(dataset_length_idx)*0.8)][0]}")
+    # print(f"CHOOSE LENGTH {dataset_length_idx[int(len(dataset_length_idx)*0.8)][0]}")
     sample_idx = dataset_length_idx[int(len(dataset_length_idx)*0.8)][1]
     sample_data = dataset[sample_idx]
-    print(f"CHOOSE SAMPLE {sample_data}")
+    # print(f"CHOOSE SAMPLE {sample_data}")
     return sample_data
 
 
@@ -21,7 +21,7 @@ def chatbot_blenderbot_batch_model(dataset, args):
     model =  BlenderbotSmallForConditionalGeneration.from_pretrained('facebook/blenderbot_small-90M').to(args.device)
     sample_data = get_sample_data(dataset, tokenizer)
     args.print('BatchSize,InferenceLatency')
-    for i in range(args.max):
+    for i in range(args.max_batch):
         inputs = tokenizer([sample_data + tokenizer.eos_token for _ in range(i+1)], return_tensors='pt')
         time_list = []
         for _ in range(args.iter):
@@ -41,7 +41,7 @@ def chatbot_gpt_batch_model(dataset, args):
     model = AutoModelForCausalLM.from_pretrained("microsoft/DialoGPT-small").to(args.device)
     sample_data = get_sample_data(dataset, tokenizer)
     args.print('BatchSize,InferenceLatency')
-    for i in range(args.max):
+    for i in range(args.max_batch):
         inputs = tokenizer([sample_data + tokenizer.eos_token for _ in range(i+1)], max_length=1024, 
                                                                 truncation=True, return_tensors='pt')
         time_list = []
@@ -62,7 +62,7 @@ def summarize_bart_batch_model(dataset, args):
     tokenizer = BartTokenizer.from_pretrained('facebook/bart-large-cnn')
     sample_data = get_sample_data(dataset, tokenizer)
     args.print('BatchSize,InferenceLatency')
-    for i in range(args.max):
+    for i in range(args.max_batch):
         inputs = tokenizer([sample_data for _ in range(i+1)], max_length=512, truncation=True, 
                                                                 return_tensors='pt')
         time_list = []
@@ -83,7 +83,7 @@ def summarize_t5_batch_model(dataset, args):
     tokenizer = AutoTokenizer.from_pretrained("t5-base")
     sample_data = get_sample_data(dataset, tokenizer)
     args.print('BatchSize,InferenceLatency')
-    for i in range(args.max):
+    for i in range(args.max_batch):
         inputs = tokenizer([sample_data for _ in range(i+1)], return_tensors='pt')
         time_list = []
         for _ in range(args.iter):
@@ -105,7 +105,7 @@ def translate_mbart_batch_model(dataset, args):
     tokenizer.src_lang = "en_XX"
     sample_data = get_sample_data(dataset, tokenizer)
     args.print('BatchSize,InferenceLatency')
-    for i in range(args.max):
+    for i in range(args.max_batch):
         inputs = tokenizer([sample_data for _ in range(i+1)], return_tensors="pt")
         time_list = []
         for _ in range(args.iter):
@@ -127,7 +127,7 @@ def translate_fsmt_batch_model(dataset, args):
     tokenizer.src_lang = "en_XX"
     sample_data = get_sample_data(dataset, tokenizer)
     args.print('BatchSize,InferenceLatency')
-    for i in range(args.max):
+    for i in range(args.max_batch):
         inputs = tokenizer([sample_data for _ in range(i+1)], return_tensors="pt")
         time_list = []
         for _ in range(args.iter):

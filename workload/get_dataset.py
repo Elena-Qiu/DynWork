@@ -2,7 +2,7 @@ import datasets
 import json
 import os
 
-root = "./dataset"
+root = "./.dataset"
 if not os.path.exists(root):
     os.makedirs(root)
 
@@ -16,7 +16,7 @@ def get_translate_wmt_dataset():
         dir_path = os.path.join(root, dir_name)
         if not os.path.exists(dir_path):
             os.makedirs(dir_path)
-        url = "http://data.statmt.org/wmt18/translation-task/news-commentary-v13.en.gz"
+        url = "https://data.statmt.org/wmt18/translation-task/news-commentary-v13.en.gz"
         print("INFO: Downloading dataset wmt")
         os.system("curl -s -o {}.gz {}".format(file_path, url))
         print("INFO: Extracting dataset wmt")

@@ -1,97 +1,108 @@
-## NLP
+# DynWork
 
-### Chatbot
+This repo generates dynamic workload. There are two main parts:
 
-#### Model
+- Multimodal workload from real NLP datasets
+- Multimodal synthesized workload
 
-- blenderbot
-  - facebook/blenderbot_small-90M
-  - Source: https://huggingface.co/facebook/blenderbot_small-90M
-  - Github: https://github.com/facebookresearch/ParlAI
-  - Citation: [*Recipes for building an open-domain chatbot*](https://arxiv.org/abs/2004.13637)
+## Prerequisite
 
-- gpt
-  - microsoft/DialoGPT-small
-  - Source: https://huggingface.co/microsoft/DialoGPT-small
-  - Github: https://github.com/microsoft/DialoGPT 
-  - Citation: [*DialoGPT: Large-Scale Generative Pre-training for Conversational Response Generation*](https://arxiv.org/abs/1911.00536)
+This code requires `Python 3.8`
 
-#### Dataset
+The packages are included in `requirments.txt`
 
-- cornell
-  - Cornell Movie-Dialogs Corpus 
-  - Source: https://www.cs.cornell.edu/~cristian/Cornell_Movie-Dialogs_Corpus.html
-  - Citation: [*Chameleons in imagined conversations: A new approach to understanding coordination of linguistic style in dialogs*](https://arxiv.org/abs/1106.3077)
-- convAI
-  - ConvAI2 Dataset
-  - Source: http://convai.io/data  (data_tolokers.json)
-  - Github: https://github.com/DeepPavlov/convai
-  - Citation: [*The Second Conversational Intelligence Challenge (ConvAI2)*](https://arxiv.org/abs/1902.00098)
+## Trace
 
-### Summarization
+There are two traces provided: WordCup and Azure.
 
-#### Model
+- Worldcup
+  - Source: https://github.com/chengtx/WorldCup98
+  - We pre-processed the data and stored its rate (incoming request per second) from `1998-06-25 22:00:01 `  to `1998-06-27 22:00:00 ` in `trace_data/worldcup/rate.csv`
+- Azure
+  - Source: https://azurecloudpublicdataset2.blob.core.windows.net/azurepublicdatasetv2/azurefunctions_dataset2019/azurefunctions-dataset2019.tar.xz
 
-- bart
-  - facebook/bart-large-cnn
-  - Source: https://huggingface.co/facebook/bart-large-cnn 
-  - Github: https://github.com/pytorch/fairseq/tree/master/examples/bart 
-  - Citation: [*BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension*](https://arxiv.org/abs/1910.13461)
+> The configs for truncating the trace are specified in `generate_utils.py` and they can be changed as commented.
 
-- t5
-  - google/t5-base
-  - Source: https://huggingface.co/t5-base 
-  - Github: [https](https://github.com/google-research/text-to-text-transfer-transformer)[://github.com/google-research/text-to-text-transfer-transformer](https://github.com/google-research/text-to-text-transfer-transformer) 
-  - Citation: [*Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer*](https://arxiv.org/abs/1910.10683)
+## Multimodal_Real_Dataset
 
-#### Dataset
+This part contains 8 workloads with two modalities generated from real NLP datasets.
 
-- cnn
-  - CNN-DailyMail 
-  - Source: https://huggingface.co/datasets/cnn_dailymail 
-  - Github: https://github.com/abisee/cnn-dailymail
-  - Citation: *[Get To The Point: Summarization with Pointer-Generator Networks](https://arxiv.org/pdf/1704.04368.pdf)*
+### Workload Setting
 
-### Translation
+| Task          | Model      | Dataset |
+| ------------- | ---------- | ------- |
+| Chatbot       | GPT        | Cornell |
+| Chatbot       | GPT        | Cornell |
+| Chatbot       | Blenderbot | ConvAI  |
+| Chatbot       | Blenderbot | ConvAI  |
+| Summarization | T5         | CNN     |
+| Summarization | Bart       | CNN     |
+| Translation   | FSMT       | WMT     |
+| Translation   | MBart      | WMT     |
 
-#### Model
+**For detailed informtion of the models and datasets, please refer to `workload.md`**
 
-- mbart
-  - facebook/mbart-large-50-many-to-many-mmt
-  - Source: https://huggingface.co/facebook/mbart-large-50-many-to-many-mmt
-  - Github: https://github.com/pytorch/fairseq/tree/main/examples/mbart
-  - Citation: [*Multilingual Translation with Extensible Multilingual Pretraining and Finetuning*](https://arxiv.org/abs/2008.00401)
-- fsmt
-  - facebook/wmt19-en-de
-  - Source: https://huggingface.co/facebook/wmt19-en-de
-  - Github: https://github.com/pytorch/fairseq/blob/main/examples/wmt19/README.md
-  - Citation: [*Facebook FAIR's WMT19 News Translation Task Submission*](https://arxiv.org/abs/1907.06616)
+### Usage
 
-#### Dataset
+1. **Generate sample data under `workload` directory.**  
 
-- wmt
-  - Workshop on Statistical Machine Translation
-  - Source: http://statmt.org/wmt18/translation-task.html#download (news-commentary-v13.en.gz)
-  - Citation: [*Findings of the 2018 Conference on Machine Translation (WMT18)*](https://aclanthology.org/W18-6401.pdf)
+```
+cd workload
+python main.py --dir ./log --num 3000 --task chatbot --device cuda:0 --max_batch 128
+```
 
-## Static_CV
+​       Three files will be generated for each workload:
 
-#### Classification
+- `{task}_{model}_{dataset}.csv`: It records the input length, the output length and the inference latency for each sentence job.
+- `{task}_{model}_{dataset}_batch.csv`: It records the inference latency for one sentence job as the batch size increases. To get steady results, we warm 10 times and repeat 10 times to get the mean for each batch size.
+- `{task}_{model}_{dataset}.png`: It plots *InputLen vs InferenceLatency*, *OutputLen vs InferenceLatency*, *InputLen vs OutputLen*, *BatchSize vs InferenceLatency* for each workload.
 
-#### Model
+2. **Generate workloads with two modalities using sample data.** The workloads follow the mixture distribution and the two modalities are the `P5` and `P95` of the inference latency of the sample data. The `Admitted` time are generated following a specific trace and its rate can be scaled by adjusting the `rate_downgrade` argument.
 
-- Resnet50
-  - Source: https://pytorch.org/hub/pytorch_vision_resnet/
-  - Citation: [*Deep Residual Learning for Image Recognition*](https://arxiv.org/abs/1512.03385)
-- Inception v3
-  - Source: https://pytorch.org/hub/pytorch_vision_inception_v3/
-  - Citation: [*Rethinking the Inception Architecture for Computer Vision*](https://arxiv.org/abs/1512.00567)
+```
+cd ../
+python generate_multimodal_rea_dataset.py --dir ./log/multimodal_real_dataset --sample_dir ./workload/log --trace azure --task chatbot --batch 8 --rate_downgrade 0.25 --num 1000 --trace_num 100
+```
 
-#### Dataset
+​		Four files will be generated for each workload:
 
-- ImageNet
-  - Source: https://image-net.org/
-  - Citation: [*ImageNet Large Scale Visual Recognition Challenge*](https://arxiv.org/abs/1409.0575)
+- `jobs.bucketed.csv`: It records *JobId, InputLen, Length, Admitted, BucketIdx* of the jobs, where *Length* is the inference latency and *BucktIdx* is the modality it belongs to.
+- `latencies.csv`: It is the copy of the original `{task}_{model}_{dataset}_batch.csv`
+- `buckets.csv`: It divides each bucket into 10 bins and records the start value, the end value and the count of each bin. *BucketStart* and *BucketEnd* are set to 0.
+- `jobs.png`: It plots the histogram of the inference latency of the workload and the concurrency as follows.
 
+<img src="/Users/pleple/Library/Application Support/typora-user-images/截屏2022-05-15 下午4.05.29.png" alt="截屏2022-05-15 下午4.05.29" style="zoom: 33%;" />
 
+## Multimodal_Synthesized
 
+This part contains 13 synthesized workloads following mixture distribution with various $\mu$ and $\sigma$.
+
+### Workload Setting
+
+| Task          | Modality_num | $\mu$                                    | $\sigma$                 | job_num |
+| ------------- | ------------ | ---------------------------------------- | ------------------------ | ------- |
+| Modal_num     | 1            | [0]                                      | [1]                      | 200     |
+| Modal_num     | 2            | [-3, 3]                                  | [1, 1]                   | 200     |
+| Modal_num     | 3            | [-6, 0, 6]                               | [1, 1, 1]                | 200     |
+| Modal_num     | 4            | [-20, -10, 0, 10]                        | [1, 1, 1, 1]             | 800     |
+| Modal_num     | 5            | [-45, -30, -15, 0, 15]                   | [1, 1, 1, 1, 1]          | 800     |
+| Modal_num     | 6            | [-60, -40, -20, 0, 20, 40]               | [1, 1, 1, 1, 1, 1]       | 800     |
+| Modal_num     | 7            | [-200, -150, -100, -50, 0, 50, 100]      | [1, 1, 1, 1, 1, 1, 1]    | 2500    |
+| Modal_num     | 8            | [-240, -180, -120, -60, 0, 60, 120, 180] | [1, 1, 1, 1, 1, 1, 1, 1] | 2500    |
+| Equal_Std     | 2            | [-3, 3]                                  | [0.5, 0.5]               | 200     |
+| Equal_Std     | 2            | [-3, 3]                                  | [1, 1]                   | 200     |
+| Equal_Std     | 2            | [-3, 3]                                  | [2, 2]                   | 200     |
+| Not_Equal_Std | 2            | [-3, 3]                                  | [0.5, 2]                 | 200     |
+| Not_Equal_Std | 2            | [-3, 3]                                  | [2, 0.5]                 | 200     |
+
+### Usage
+
+We normalize the inference latency of all workloads to `[10, 100] ms` and it can be changed in `generate_multimodal_synthesized.py`.
+
+```
+python generate_multimodal_synthesized.py --dir ./log/multimodal_synthesized --inputlen_path .inputlen_sample.csv --latencies_path latencies_sample.csv --trace azure --batch 8 --rate_downgrade 0.25 --trace_num 50
+```
+
+The same four files will be generated as in **Multimodal_Real_Dataset** execpt that in `jobs.png`, it plots the PDF of the inference latency of the workload as follows.
+
+<img src="/Users/pleple/Library/Application Support/typora-user-images/截屏2022-05-15 下午4.49.58.png" alt="截屏2022-05-15 下午4.49.58" style="zoom:33%;" />
