@@ -21,15 +21,11 @@ summarization_task = {"dataset":     {"cnn": get_dataset.get_summarize_cnn_datas
                       "batch_model": {"t5": batch_model.summarize_t5_batch_model,
                                       "bart": batch_model.summarize_bart_batch_model}}
 
-# translation_task = {"dataset":     {"wmt": get_dataset.get_translate_wmt_dataset}, 
-#                     "model":       {"mbart": model.translate_mbart_model,
-#                                     "fsmt": model.translate_fsmt_model},
-#                     "batch_model": {"mbart": batch_model.translate_mbart_batch_model,
-#                                     "fsmt": batch_model.translate_fsmt_batch_model}}
-
 translation_task = {"dataset":     {"wmt": get_dataset.get_translate_wmt_dataset}, 
-                    "model":       {"fsmt": model.translate_fsmt_model},
-                    "batch_model": {"fsmt": batch_model.translate_fsmt_batch_model}}
+                    "model":       {"mbart": model.translate_mbart_model,
+                                    "fsmt": model.translate_fsmt_model},
+                    "batch_model": {"mbart": batch_model.translate_mbart_batch_model,
+                                    "fsmt": batch_model.translate_fsmt_batch_model}}
 
 task_content = {"chatbot": chatbot_task, "summarization": summarization_task, "translation": translation_task}
 
