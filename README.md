@@ -32,8 +32,8 @@ This part contains 8 workloads with two modalities generated from real NLP datas
 | Task          | Model      | Dataset |
 | ------------- | ---------- | ------- |
 | Chatbot       | GPT        | Cornell |
-| Chatbot       | GPT        | Cornell |
-| Chatbot       | Blenderbot | ConvAI  |
+| Chatbot       | GPT        | ConvAI |
+| Chatbot       | Blenderbot | Cornell  |
 | Chatbot       | Blenderbot | ConvAI  |
 | Summarization | T5         | CNN     |
 | Summarization | Bart       | CNN     |
